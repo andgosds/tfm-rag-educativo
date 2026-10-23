@@ -1,0 +1,19 @@
+{
+  "run_id": "dense_e5_base_v2_pooled_v1_22q",
+  "model_id": "intfloat/e5-base-v2",
+  "model_revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+  "embedding_dimension": 768,
+  "document_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "normalize_embeddings": true,
+  "max_seq_length": 512,
+  "batch_size": 16,
+  "device": "cuda",
+  "document_count": 288,
+  "truncated_passage_count": 15,
+  "truncated_query_count": 0,
+  "corpus_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/processed/chunks_v1.jsonl",
+  "corpus_sha256": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+  "golden_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/golden_set_pilot_v1.jsonl",
+  "golden_sha256": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5"
+}

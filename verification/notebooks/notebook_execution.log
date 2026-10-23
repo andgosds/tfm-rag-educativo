@@ -1,0 +1,12 @@
+00_entorno_corpus_y_dataset.ipynb: passed (3.68 s)
+01_preguntas_evidencias_y_qrels.ipynb: passed (3.622 s)
+02_recuperacion_y_explicitud.ipynb: passed (3.839 s)
+03_respuestas_evaluacion_y_decisiones.ipynb: passed (3.814 s)
+04_comparaciones_finales_y_verificacion.ipynb: passed (68.839 s)
+Informe: outputs/local_runs/final_experiment_20260930/REPLAY_notebook_ejecucion_3e66cb891c0a/notebooks_validation.json
+
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.

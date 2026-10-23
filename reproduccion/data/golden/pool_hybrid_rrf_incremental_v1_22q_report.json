@@ -1,0 +1,15 @@
+{
+  "source_run_path": "v1/outputs/runs/hybrid_rrf_k60_pooled_v1_22q.jsonl",
+  "source_run_sha256": "ab278eb83292cd9dad89a9df37f1c961f4aa6e3b45c3260e055f5885b1ee00e8",
+  "qrels_path": "v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+  "qrels_sha256": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+  "prior_pool_path": "v1/data/golden/pool_bm25_dense_v1_22q.jsonl",
+  "prior_pool_sha256": "092c45694d614b7a31f85a794d331cc2e349c8e64c277361b856630ad261c6eb",
+  "prior_pool_candidate_count": 340,
+  "candidate_count": 220,
+  "existing_prior_pool_count": 220,
+  "new_candidate_count": 0,
+  "new_candidate_qid_count": 0,
+  "criterion": "(qid, chunk_id) absent from prior technical pool",
+  "pool_path": "v1/data/golden/pool_hybrid_rrf_incremental_v1_22q.jsonl"
+}

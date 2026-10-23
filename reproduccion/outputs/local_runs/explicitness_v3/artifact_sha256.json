@@ -1,0 +1,16 @@
+{
+  "query_diagnostics.jsonl": "5bb8290da7cffec4e0c10cbfc4742f0141f8739ec13d9a51ca981478edf019ab",
+  "execution_metadata.json": "495413f6a5f789dd467659d17086278da5967ca0d17f5f9f2337a0d08efce467",
+  "formulations.jsonl": "7520db83e458e96a0c3f7500b11fbfcbe8ec0ae912b09e63ff4b685954984e7b",
+  "verification.json": "398e5d53d4bceb09f8f13d6baba435f09863b4a536a1caa49ba67b2fce8b1a17",
+  "configuration.json": "1fd30dade199e60ce45a2b07bcc3b9794196c169b07b01300799f55b62b47a91",
+  "embeddings/document_ids.json": "51174400da4567d04fd715bc5c02b29dd8e697f87c9ba9ccc5fa133d035dbd84",
+  "embeddings/documents.npy": "744672a4b94a1bce8729e51c187cf77a87fcc1c536e2a3201c91d6acbc439b73",
+  "runs/explicitness_v3_rerank.jsonl": "7bdb6fdf82b8a06c8135378559f1e88329ed2897169ca6fdf594b07465a5d9b6",
+  "runs/explicitness_v3_bm25.jsonl": "89c9bd8d45ff092cfdb37365868c3ff44efebe1483132e4a1c35f0937d16408b",
+  "runs/explicitness_v3_rrf.jsonl": "6ff7b67b4c094b7ebb8027695340e76d8b6b1f84ca011e679eb9fb4887b9c3a9",
+  "runs/explicitness_v3_dense.jsonl": "8146050a86e13299d1d317fadb9d9ca71678ac1810d60029b55f95df2c8dc0ba",
+  "pools/pending_judgment_reuse.jsonl": "7a304e46041edcb12cfe872d5e5e4c03b114745e984847950a3f80b3476b246d",
+  "pools/technical_pool.jsonl": "a191b687ec0f1b2f6ab4e0b5d37f8d7a578565090add53e734ec0f789e592629",
+  "pools/blind_review_queue.jsonl": "693116bdb8fa9fee7cf6dd46cfc6283af03020f25b07c4945efd2997b8d1b94b"
+}

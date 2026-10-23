@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-23T10:35:31.716304+02:00",
+  "fresh_python_environment": true,
+  "python_original_worktrees_blocked": true,
+  "external_network_blocked_for_python": true,
+  "loopback_allowed_for_http_tests": true,
+  "guard": "Python audit hook inherited by Python subprocesses",
+  "os_namespace_sandbox": false,
+  "R_uses_installed_system_library": true,
+  "protected_document_sha256": {
+    "tfm_v2_4_apendices_tecnicos.pdf": "cbfa089b0f183553c029e9bae0ea539e8e3c56a6fbbb1eb790d682ccc0b9bffe",
+    "tfm_AndresGonzalezSanchez.pdf": "e7c02aeb15ae6f507cf8ef67f88af59860e055affd1cef744f8ba424abd4b7a0",
+    "tfm_sponsor_AndresGonzalezSanchez.pdf": "e2cc919c3110feb0f2366a5e8a1cd06de2499970672d50db1874fb75c7cf4861",
+    "tfm_v2_4_apendices_tecnicos.qmd": "fbdf8d3dcf39bff3f226e40b807e14d6c2530d34b3f536971ea1ecf4c1c2d01a",
+    "tfm_v2_4_sponsor.qmd": "e94f06d1b3c9f19eb77540d77d544804bb43f4d527de714cc9de420b611bfd6c",
+    "tfm_v2_4.pdf": "e7c02aeb15ae6f507cf8ef67f88af59860e055affd1cef744f8ba424abd4b7a0",
+    "tfm_v2_4_apendices_tecnicos.typ": "aeaa0e1c0857d9f81d105f0b23a83627999e560fa656cef02dd875456f7e47d4",
+    "tfm_v2_4.typ": "9e39ebee94baa96c57077702e568c09164b4d6dec8a83a667b82d32a8a0d82f8",
+    "tfm_v2_4.qmd": "65bbac361b8823e13b12427a41f1067d438b2b602bb6a3f1b99bd4088a5acc68",
+    "tfm_v2_4_sponsor.pdf": "e2cc919c3110feb0f2366a5e8a1cd06de2499970672d50db1874fb75c7cf4861"
+  },
+  "protected_documents_unchanged": true
+}

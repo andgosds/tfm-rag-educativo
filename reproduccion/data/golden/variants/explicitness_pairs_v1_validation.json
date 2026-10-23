@@ -1,0 +1,37 @@
+{
+  "reviewer": "hermes-assistant",
+  "review_date": "2026-09-18T18:26:59.867640+00:00",
+  "current_source": "v1/data/golden/variants/explicitness_pairs_v1_consolidated.jsonl",
+  "supersedes_for_execution": [
+    "explicitness_pairs_v1_draft.jsonl",
+    "explicitness_pairs_v1_review.csv",
+    "explicitness_pairs_v1_assistant_review.json"
+  ],
+  "input_hashes": {
+    "v1/data/golden/golden_set_pilot_v1.jsonl": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "v1/data/golden/golden_set_pilot_v1_1.jsonl": "b0c8e76c4827155910b64b5760718dcb4c216e004345312eb7235172212a3b79",
+    "v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+    "v1/data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "v1/data/golden/variants/explicitness_pairs_v1_assistant_review.json": "46209e078c4d2dad6a7ce215740a1539fef9c4c3bca696b4d4fd135846368cca"
+  },
+  "n_pairs": 7,
+  "n_formulations": 14,
+  "status": "ready_for_candidate_retrieval_not_final_evaluation",
+  "independent_human_adjudication": false,
+  "q013_separate_review": {
+    "reference_equivalence": "accepted_by_assistant",
+    "canonical_support": "accepted_by_assistant",
+    "evidence_ids": [
+      "openstax_intro_stats_2e:8.1:chunk-001",
+      "openstax_intro_stats_2e:8.2:chunk-003"
+    ],
+    "rationale": "La primera sección respalda normal con sigma conocida; la segunda t al estimar sigma, condiciones y n−1. Retirar Student t no altera la evidencia necesaria.",
+    "golden_status_unchanged": "draft; no se fabrican revisiones independientes ni adjudicación humana",
+    "included_in_explicitness_experiment": false
+  },
+  "checks": {
+    "canonical_quotes_verbatim": true,
+    "historical_inputs_unchanged": true,
+    "original_questions_preserved": true
+  }
+}

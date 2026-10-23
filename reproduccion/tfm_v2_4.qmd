@@ -1,0 +1,1874 @@
+---
+title: "Comparación de técnicas de recuperación de información en un sistema RAG educativo"
+subtitle: "Memoria de analista · Trabajo Fin de Máster · Máster en Data Science y Big Data · Universidad de Sevilla"
+author: "Andrés González Sánchez"
+date: "2026-10-14"
+lang: es
+bibliography:
+  - bibliografia/tfm_bibliografia_semilla.bib
+  - bibliografia/tfm_v2_2_ampliaciones.bib
+csl: bibliografia/apa.csl
+citeproc: true
+format:
+  typst:
+    toc: true
+    toc-depth: 2
+    papersize: a4
+    include-in-header:
+      text: |
+        #show table: it => align(center, block({
+          set align(left)
+          it
+        }))
+        #show <tbl-fuentes-corpus>: it => {
+          set par(justify: false)
+          show table: body => {
+            set text(size: 9pt)
+            set text(hyphenate: false)
+            if body.columns == (100pt, 45pt, 1fr, 38pt, 76pt) {
+              body
+            } else {
+              let options = body.fields()
+              let cells = options.remove("children")
+              options.insert("columns", (100pt, 45pt, 1fr, 38pt, 76pt))
+              options.insert("inset", (x: 3pt, y: 4pt))
+              table(..cells, ..options)
+            }
+          }
+          it
+        }
+        #show <tbl-expl-v3-pareado>: it => {
+          set par(justify: false)
+          show table: body => {
+            set text(size: 9pt)
+            set text(hyphenate: false)
+            if body.columns == (65pt, 95pt, 1fr, 65pt, 45pt, 55pt) {
+              body
+            } else {
+              let options = body.fields()
+              let cells = options.remove("children")
+              options.insert("columns", (65pt, 95pt, 1fr, 65pt, 45pt, 55pt))
+              options.insert("inset", (x: 3pt, y: 4pt))
+              options.insert("fill", (x, y) => if y >= 5 { rgb("#F2F5F7") } else { none })
+              table(..cells, ..options)
+            }
+          }
+          it
+        }
+        #show <tbl-capacidad-separacion>: it => {
+          set par(justify: false)
+          show table: body => {
+            set text(size: 9pt)
+            set text(hyphenate: false)
+            show regex("[a-z0-9]+−[a-z0-9]+"): pair => box(pair)
+            show regex("\\[[^\\]]+\\]"): interval => box(text(size: 8pt, interval))
+            if body.columns == (65pt, 85pt, 85pt, 1fr) {
+              body
+            } else {
+              let options = body.fields()
+              let cells = options.remove("children")
+              options.insert("columns", (65pt, 85pt, 85pt, 1fr))
+              options.insert("inset", (x: 3pt, y: 4pt))
+              options.insert("fill", (x, y) => if y >= 5 and y <= 8 { rgb("#F2F5F7") } else { none })
+              table(..cells, ..options)
+            }
+          }
+          it
+        }
+        #show <tbl-capacidad-explicitud>: it => {
+          set par(justify: false)
+          show table: body => {
+            set text(size: 9pt)
+            show regex("\\[[^\\]]+\\]"): interval => box(text(size: 8pt, interval))
+            if body.columns == (50pt, 1fr, 1fr, 1fr, 1fr) {
+              body
+            } else {
+              let options = body.fields()
+              let cells = options.remove("children")
+              options.insert("columns", (50pt, 1fr, 1fr, 1fr, 1fr))
+              options.insert("inset", (x: 2pt, y: 4pt))
+              table(..cells, ..options)
+            }
+          }
+          it
+        }
+        #show <tbl-capacidad-interaccion>: it => {
+          set par(justify: false)
+          show table: body => {
+            set text(size: 9pt)
+            set table(inset: (x: 3pt, y: 4pt))
+            show regex("\\[[^\\]]+\\]"): interval => box(text(size: 8pt, interval))
+            body
+          }
+          it
+        }
+        #show <tbl-expl-v3-recuperacion>: it => {
+          let source = csv("outputs/local_runs/academic_corrections_20260930/retrieval/evaluation/aggregate_metrics.csv")
+          let header = source.first()
+          let field = name => header.position(item => item == name)
+          let rows = source.slice(1).filter(row => row.at(field("cohort")) == "all_pairs")
+          let methods = ("bm25", "dense", "rrf", "rerank")
+          let metrics = ("recall", "precision", "mrr", "ndcg", "recall", "precision", "mrr", "ndcg")
+          let cuts = ("5", "5", "5", "5", "10", "10", "10", "10")
+          set table(fill: (x, y) => {
+            if y == 0 or x == 0 { none } else {
+              let group = rows.filter(row => row.at(field("k")) == cuts.at(y - 1))
+              let column = group.map(row => float(row.at(field(metrics.at(y - 1)))))
+              let index = group.position(row => row.at(field("method")) == methods.at(x - 1))
+              let low = calc.min(..column)
+              let high = calc.max(..column)
+              let weight = if high == low { 1 } else { (column.at(index) - low) / (high - low) }
+              color.mix((white, (1 - weight) * 100%), (rgb("#C6DEEA"), weight * 100%))
+            }
+          })
+          it
+        }
+        #show <tbl-capacidad-niveles>: it => {
+          let source = csv("outputs/local_runs/academic_corrections_20260930/capacity/release_run1/h6_niveles_common.csv")
+          let header = source.first()
+          let rows = source.slice(1).filter(row => row.at(header.position(item => item == "scope")) == "primary_content")
+          let criteria = ("faithfulness", "factual_correctness", "behavior_ok", "citations_ok")
+          let scores = rows.map(row => criteria.map(name => float(row.at(header.position(item => item == name)))))
+          set table(fill: (x, y) => {
+            if y == 0 or x == 0 { none } else {
+              let column = scores.map(row => row.at(x - 1))
+              let low = calc.min(..column)
+              let high = calc.max(..column)
+              let weight = if high == low { 1 } else { (scores.at(y - 1).at(x - 1) - low) / (high - low) }
+              color.mix((white, (1 - weight) * 100%), (rgb("#C6DEEA"), weight * 100%))
+            }
+          })
+          it
+        }
+        #show <tbl-final-recuperadores>: it => {
+          let source = csv("outputs/local_runs/final_experiment_20260930/analysis/per_retriever.csv")
+          let header = source.first()
+          let criteria = ("faithfulness_mean", "factual_correctness_mean", "behavior_ok_mean", "citations_ok_mean")
+          let scores = source.slice(1).map(row => criteria.map(name => float(row.at(header.position(item => item == name)))))
+          set table(fill: (x, y) => {
+            if y == 0 or x < 2 { none } else {
+              let start = int(calc.floor((y - 1) / 4)) * 4
+              let column = scores.slice(start, start + 4).map(row => row.at(x - 2))
+              let low = calc.min(..column)
+              let high = calc.max(..column)
+              let weight = if high == low { 1 } else { (scores.at(y - 1).at(x - 2) - low) / (high - low) }
+              color.mix((white, (1 - weight) * 100%), (rgb("#C6DEEA"), weight * 100%))
+            }
+          })
+          it
+        }
+---
+
+# Resumen {.unnumbered}
+
+Un sistema RAG educativo debe recuperar evidencia suficiente y generar respuestas que la utilicen correctamente. Este trabajo compara estrategias de recuperación para mejorar la **corrección y la fundamentación** de las respuestas, considerando también su eficiencia operativa.
+
+El corpus contiene **288 fragmentos de dos manuales OpenStax en inglés**. El golden set reúne 26 preguntas base con dos formulaciones equivalentes, explícita e implícita: diecisiete requieren respuesta, cinco corrección fundamentada y cuatro abstención. Las preguntas se vinculan a referencias y evidencias cuando están disponibles. Los juicios de relevancia, graduados en 0/1/2, no cubren todos los pares de pregunta y fragmento.
+
+Se cruzan cuatro recuperadores (BM25, recuperación densa, Reciprocal Rank Fusion (RRF) y RRF con reordenación) con tres generadores locales: Gemma 4 E4B, Qwen 3.5 4B y Qwen 3.5 9B. De las **624 combinaciones previstas, 604 producen respuestas válidas**. Los veinte fallos corresponden a Gemma. La unidad estadística es la pregunta base, no cada formulación.
+
+Las variantes híbridas alcanzan las mejores medias de recuperación: nDCG\@10 de 0,706 en BM25, 0,677 en densa, 0,728 en RRF y 0,735 con reordenación. La formulación explícita favorece descriptivamente Recall y nDCG, pero **ningún contraste conserva significación tras el ajuste por comparaciones múltiples**.
+
+Las respuestas se evalúan por fundamentación, corrección y conducta en escala 0–2, y soporte de citas en 0–1. Dos jueces automáticos puntuaron las 604 respuestas. El investigador validó **233 criterios discrepantes en 158 respuestas**, mientras 446 conservaron consenso sin revisión humana individual. La comparación de recuperadores se realiza dentro de cada generador y sobre las mismas celdas por criterio. Las tareas de abstención se excluyen del análisis principal de contenido.
+
+**No hay un recuperador universalmente superior.** Con Qwen 4B, la reordenación maximiza fundamentación y corrección. Con Qwen 9B, RRF favorece fundamentación y citas, y la reordenación corrección y conducta. Con Gemma, la recuperación densa maximiza corrección, la reordenación fundamentación y RRF citas. Qwen 9B presenta las mejores medias de contenido en el soporte común entre modelos, sin demostrar que absorba la penalización de la formulación implícita.
+
+El análisis exploratorio de perfiles muestra que en los tres modelos aparecen tanto respuestas bien respaldadas pero incompletas como respuestas correctas sin sustento completo en los fragmentos. Los contrastes emparejados permiten valorar la magnitud y la incertidumbre de las diferencias, sin equiparar significación estadística y utilidad operativa. Los registros de tiempo y consumo de tokens describen la ejecución, aunque no determinan por sí solos un óptimo de latencia y coste. La generalización de estos resultados queda acotada por el tamaño muestral, la cobertura parcial de los juicios de relevancia y las decisiones incorporadas en el reanálisis. En conjunto, el estudio evalúa **fiabilidad informativa, no eficacia pedagógica**.
+
+## Palabras clave {.unnumbered}
+
+Information Retrieval, Retrieval-Augmented Generation, RAG educativo, recuperación híbrida, reranking, golden set, groundedness, abstención, evaluación de sistemas RAG.
+
+# Abstract {.unnumbered}
+
+An educational RAG system must retrieve sufficient evidence and generate responses that use it correctly. This study compares retrieval strategies to improve response **correctness and groundedness**, while also considering operational efficiency.
+
+The corpus contains **288 chunks from two English-language OpenStax textbooks**. The golden set comprises 26 base questions with two equivalent formulations, explicit and implicit: seventeen require an answer, five a grounded correction and four abstention. Questions are linked to reference answers and evidence where available. Relevance judgments, graded 0/1/2, do not cover the entire corpus.
+
+Four retrievers (BM25, dense retrieval, Reciprocal Rank Fusion (RRF) and RRF with reranking) are crossed with three local generators: Gemma 4 E4B, Qwen 3.5 4B and Qwen 3.5 9B. Of the **624 planned combinations, 604 produce valid responses**. All twenty failures belong to Gemma. The statistical unit is the base question, not each formulation.
+
+The hybrid variants achieve the highest mean retrieval scores: nDCG\@10 of 0.706 for BM25, 0.677 for dense retrieval, 0.728 for RRF and 0.735 with reranking. Explicit phrasing descriptively favours Recall and nDCG, but **no contrast remains significant after adjustment for multiple comparisons**.
+
+Responses are assessed for groundedness, correctness and behaviour on a 0–2 scale, and citation support on a 0–1 scale. Two automatic judges scored all 604 responses. The researcher validated **233 disputed criteria in 158 responses**, while 446 retained consensus without individual human review. Retrievers are compared within each generator over the same cells per criterion. Abstention tasks are excluded from the primary content analysis.
+
+**No retriever is universally superior.** With Qwen 4B, reranking maximises groundedness and correctness. With Qwen 9B, RRF favours groundedness and citations, and reranking correctness and behaviour. With Gemma, dense retrieval maximises correctness, reranking groundedness and RRF citations. Qwen 9B achieves the highest mean content scores on the common support across models, without demonstrating that it absorbs the implicit-phrasing penalty.
+
+Exploratory profile analysis shows that both well-grounded yet incomplete answers and correct answers without full evidence support occur across all three models. Paired contrasts quantify the magnitude and uncertainty of differences, without equating statistical significance with operational usefulness. Generation times and token counts describe the execution, without establishing a latency or cost optimum on their own. Generalisation remains bounded by the sample size, the non-exhaustive relevance judgments and the analysis decisions introduced during reanalysis. Overall, the study evaluates **informational reliability, not pedagogical effectiveness**.
+
+## Keywords {.unnumbered}
+
+Information Retrieval, Retrieval-Augmented Generation, educational RAG, hybrid retrieval, reranking, groundedness, abstention, RAG evaluation, BM25, RRF.
+
+# 1. Introducción
+
+## 1.1. Contexto y motivación
+
+La **inteligencia artificial generativa** (IAG) está cada día más presente en el proceso de enseñanza-aprendizaje. Esto se explica por las oportunidades que ofrece al alumno para la tutorización personalizada y a los docentes como apoyo a la enseñanza [@bastani2025guardrails] y [@kestin2025aitutoring]. Su incorporación, sin embargo, no está exenta de retos y dificultades.
+
+Los modelos de lenguaje, por sí solos, permiten responder preguntas y explicar conceptos a partir del conocimiento aprendido durante el entrenamiento de las redes neuronales que los componen. Estas respuestas pueden incluir datos inventados o afirmaciones sin respaldo, lo que se conoce como **«alucinaciones»**, aunque el conjunto resulte plenamente plausible [@niu2024ragtruth]. Son muy convincentes hasta cuando cometen errores.
+
+Para reducir estas alucinaciones destacan los sistemas que utilizan técnicas de **generación aumentada por recuperación de información** (RAG, *Retrieval-Augmented Generation*). Un sistema RAG incorpora información recuperada de fuentes externas al contexto de generación [@lewis2020rag]. Vincular el sistema a un corpus delimitado facilita localizar y auditar la evidencia, pero no garantiza que el modelo la utilice correctamente. La ausencia de un fragmento necesario y el uso incorrecto de un fragmento disponible son fallos distintos que requieren análisis separados.
+
+La estrategia de recuperación determina qué evidencia recibe el generador. Los métodos léxicos, densos, híbridos y de reranking pueden seleccionar y ordenar fragmentos diferentes, con consecuencias para la cobertura y el coste del sistema [@ru2024ragchecker] y [@wang2024ragbestpractices]. La comparación propuesta mantiene constantes el corpus y el contrato de generación dentro de cada modelo y evalúa por separado recuperación, calidad de respuesta y eficiencia [@es2024ragas] y [@ru2024ragchecker]. Así, la elección del recuperador se apoya en resultados observados y no en la calidad aparente de una conversación.
+
+La fiabilidad del contenido no basta, sin embargo, para establecer el valor educativo de una herramienta. En un experimento con estudiantes de matemáticas de secundaria, @bastani2025guardrails observaron que un asistente basado en GPT-4 mejoraba el rendimiento durante la práctica, pero sus usuarios obtenían peores resultados al ser evaluados después sin IA. Una variante del mismo modelo con *guardrails* pedagógicos, orientada a ofrecer pistas en lugar de respuestas directas, mitigó ampliamente ese perjuicio. Por su parte, @kestin2025aitutoring encontraron mayores ganancias de aprendizaje con un tutor diseñado conforme a principios pedagógicos que con clases de aprendizaje activo, en una intervención breve de física universitaria. Ambos estudios muestran la importancia de evaluar diseños y condiciones de uso concretos, sin confundir el **desempeño asistido** con el **aprendizaje autónomo**.
+
+## 1.2. Problema y pregunta de investigación
+
+Las técnicas de recuperación no funcionan igual en todas las situaciones. Un método puede localizar bien las coincidencias de vocabulario y otro reconocer mejor una relación entre conceptos expresados de forma distinta. El resultado depende del corpus, del idioma, del tipo de pregunta y de la configuración del pipeline. También cambia el coste de obtenerlo.
+
+El problema consiste en determinar qué estrategia proporciona la evidencia más útil para un sistema RAG educativo. Para estudiarlo se comparan las técnicas bajo condiciones controladas, manteniendo constantes los demás componentes. El objetivo no es valorar un *chatbot* como producto final, sino analizar cómo cambia la calidad y la fundamentación de sus respuestas cuando cambia la recuperación.
+
+La pregunta de investigación es:
+
+> ¿Qué técnica de IR maximiza la corrección y el groundedness en un sistema RAG educativo manteniendo una latencia y un coste aceptables?
+
+## 1.3. Objetivos e hipótesis
+
+El objetivo general es comparar sistemáticamente distintas técnicas de recuperación dentro de un sistema RAG educativo y valorar su relación con la **corrección, la fundamentación y la eficiencia**. Se busca orientar la elección de una configuración, sin asumir que la alternativa más compleja será la más adecuada ni que exista un ganador único para todos los criterios.
+
+Los objetivos específicos son:
+
+1.  **O1. Documentar el corpus.** Seleccionar fuentes educativas abiertas y registrar su procedencia, licencia y alcance.
+2.  **O2. Preparar los datos.** Aplicar limpieza, normalización y una segmentación común que permita comparar recuperadores sobre las mismas unidades.
+3.  **O3. Construir la referencia de evaluación.** Crear preguntas, respuestas de referencia y juicios de relevancia, y comprobar la equivalencia de las formulaciones explícita e implícita.
+4.  **O4. Comparar la recuperación.** Implementar BM25, recuperación densa, híbrida y reranking, y medir cobertura, orden y sensibilidad a la formulación de la pregunta.
+5.  **O5. Comparar las respuestas RAG.** Evaluar fundamentación, corrección, conducta y citas dentro de cada generador, y analizar cómo cambian los resultados con la formulación y el generador.
+6.  **O6. Interpretar los compromisos y recomendar.** Analizar errores, fallos de salida y eficiencia operativa para orientar una elección condicionada.
+
+**Los objetivos definen qué se evalúa y las hipótesis anticipan qué patrón se espera.** Las siguientes hipótesis conservan los identificadores del protocolo registrado y sus enmiendas. H1 mantiene su predicción con una redacción paralela a H3. H3 se reformula posteriormente para estudiar el efecto sobre la conducta sin restringirlo a la recuperación densa, por lo que su nueva formulación no se presenta como una predicción registrada:
+
+1.  **H1. Efecto de la formulación sobre la recuperación.** La formulación implícita reduce la calidad de recuperación respecto a la formulación explícita.
+2.  **H2. Sensibilidad según el recuperador.** La formulación implícita reduce la cobertura de BM25, mientras la recuperación densa y los métodos híbridos conservan la cobertura, pero pierden calidad de ordenación.
+3.  **H3. Efecto de la formulación sobre la conducta.** La formulación implícita reduce el cumplimiento de la conducta esperada en la respuesta RAG respecto a la formulación explícita.
+4.  **H4. Compromiso operativo de RRF.** RRF conserva el mejor compromiso entre calidad de recuperación, calidad de respuesta y latencia.
+5.  **H5. Separación entre recuperadores y capacidad.** Al aumentar la capacidad del generador, la separación entre estrategias de recuperación se mantiene o disminuye, sin invertir su orden relativo.
+6.  **H6. Calidad y efecto de formulación.** Al aumentar la capacidad del generador, mejoran la fundamentación y la corrección, y se conserva el signo del efecto de la formulación explícita frente a la implícita.
+
+O1–O3 construyen la base de evaluación. **O4 se vincula con H1–H2, O5 con H3, H5 y H6, y O6 con H4.** H1 evalúa la evidencia recuperada y H3 el cumplimiento de la tarea: responder, corregir una premisa falsa o abstenerse según corresponda. Un deterioro de la recuperación no implica necesariamente un deterioro de la conducta. Su operacionalización y sus límites se detallan en §5.1. H4 exige una valoración conjunta, y la selección de tres generadores de dos familias limita la interpretación de capacidad en H5–H6.
+
+## 1.4. Alcance y estructura
+
+La aportación principal es la **construcción de los datos y la evaluación comparativa**, no el prototipo RAG. El trabajo modela las relaciones entre pregunta base, formulación, fragmento, condición experimental y juicio de evaluación. Esta estructura permite conservar la procedencia de cada observación, distinguir valores ausentes de fallos y realizar comparaciones sobre preguntas comunes. No incluye despliegue en producción, estudio con estudiantes ni comparación multilingüe. Se mantiene el inglés en corpus, consultas y modelos de recuperación.
+
+# 2. Marco teórico y estado del arte
+
+## 2.1. Recuperación de información
+
+Ante una consulta, un sistema de **recuperación de información** (IR) localiza documentos pertinentes y decide en qué orden presentarlos. Para ello combina una colección, una representación de sus documentos, un índice y una función de puntuación. En este trabajo el documento recuperable es un **fragmento**, no el manual completo. La puntuación ordena candidatos, pero no constituye por sí misma una probabilidad de que puedan responder a la pregunta.
+
+Los **métodos léxicos** representan el texto a partir de sus términos. TF-IDF pondera cada palabra por su frecuencia local y su capacidad para discriminar documentos. Estas representaciones son dispersas: cada documento utiliza solo una parte del vocabulario. Un índice invertido asocia cada término con los documentos que lo contienen y permite localizar coincidencias sin recorrer toda la colección [@manning2008introduction].
+
+**BM25** conserva la coincidencia de términos y añade saturación de frecuencia y normalización por longitud [@robertson2009bm25]. La variante implementada puntúa una consulta $q$ y un fragmento $d$ mediante:
+
+$$s_{\mathrm{BM25}}(q,d)=\sum_{t\in T_q} f(t,q)\,\operatorname{IDF}(t)
+\frac{f(t,d)(k_1+1)}{f(t,d)+k_1\left(1-b+b\frac{|d|}{\bar{\ell}}\right)}.$$
+
+Aquí, $T_q$ contiene los términos distintos de la consulta, $f(t,q)$ y $f(t,d)$ son sus frecuencias, $|d|$ es la longitud del fragmento en tokens y $\bar{\ell}$ la longitud media de la colección. El factor $f(t,q)$ reproduce la ponderación de términos repetidos que utiliza la implementación. Para un término presente en $df(t)$ de los $N$ fragmentos se emplea la IDF no negativa, con logaritmo natural:
+
+$$\operatorname{IDF}(t)=\log\left(1+\frac{N-df(t)+0{,}5}{df(t)+0{,}5}\right).$$
+
+La **IDF** da más peso a términos poco frecuentes. La fracción limita cuánto aporta repetir una palabra: la puntuación crece, pero se satura. La normalización corrige la ventaja de los fragmentos largos, que tienen más oportunidades de contener los términos buscados. Un término ausente no aporta puntuación.
+
+Dos parámetros controlan este comportamiento. El parámetro $k_1$ regula la saturación: los valores altos permiten que las repeticiones sigan aportando peso durante más tiempo. El parámetro $b$ regula cuánto influye la longitud del documento respecto a la longitud media de la colección. Con $b=0$ no se aplica esa normalización y con $b=1$ se aplica por completo [@manning2008introduction]. En este experimento se fijaron ambos antes de examinar los resultados, sin ajustarlos sobre las preguntas de evaluación.
+
+En un corpus educativo, BM25 resulta útil cuando la consulta contiene vocabulario preciso del temario. Una pregunta sobre «intervalo de confianza» puede localizar fragmentos que emplean esa expresión sin necesitar un modelo de lenguaje. Su limitación aparece cuando la pregunta y el documento expresan la misma idea con palabras distintas: **la coincidencia léxica no equivale a equivalencia semántica**. Esta diferencia justifica compararlo con recuperación densa y estudiar si la combinación de ambas señales mejora los resultados.
+
+## 2.2. Recuperación semántica, híbrida y reranking
+
+### Recuperación densa
+
+La **recuperación densa** transforma consultas y fragmentos en vectores aprendidos (*embeddings*) de dimensión fija. Un bi-encoder codifica ambos textos por separado, lo que permite calcular y guardar los vectores del corpus antes de recibir consultas [@karpukhin2020dpr]. Frente a la coincidencia literal, busca proximidad en un espacio que captura relaciones aprendidas entre expresiones. Una pregunta que describa la incertidumbre de una estimación puede así recuperar un pasaje sobre intervalos de confianza sin emplear ese término.
+
+Si $\mathbf{e}_q$ y $\mathbf{e}_d$ representan consulta y fragmento, la similitud coseno es:
+
+$$s_{\mathrm{dense}}(q,d)=\frac{\mathbf{e}_q^{\mathsf T}\mathbf{e}_d}
+{\|\mathbf{e}_q\|_2\,\|\mathbf{e}_d\|_2}.$$
+
+Con vectores normalizados a norma uno, equivale al **producto escalar**. E5-base-v2 utiliza prefijos distintos para consultas y pasajes y embeddings normalizados [@intfloat2026e5base]. El experimento compara exhaustivamente el vector de consulta con los 288 del corpus. Esta estrategia facilita el control en una colección pequeña. En colecciones mayores pueden utilizarse índices de vecinos aproximados, con otro compromiso entre rapidez y exactitud.
+
+La proximidad semántica no garantiza evidencia suficiente. Un fragmento puede tratar del mismo tema sin resolver la pregunta. El entrenamiento, el dominio y la longitud máxima del codificador condicionan el resultado. **La similitud no es confianza calibrada**, ni su escala puede compararse directamente con BM25.
+
+### Recuperación híbrida por fusión de rankings
+
+La **recuperación híbrida** reúne señales léxicas y semánticas. En lugar de sumar puntuaciones de escalas incompatibles, Reciprocal Rank Fusion (RRF) suma contribuciones de las posiciones en cada ranking [@cormack2009rrf]:
+
+$$s_{\mathrm{RRF}}(q,d)=\sum_{m\in M_d}\frac{1}{k_0+r_m(q,d)}.$$
+
+$M_d$ contiene los rankings de entrada en los que aparece el fragmento, $r_m(q,d)$ es su posición (contada desde uno) y $k_0>0$ suaviza la diferencia entre posiciones. Si un fragmento no aparece en un ranking truncado, ese ranking no aporta nada a su puntuación. El fragmento recibe crédito una vez por cada lista en la que figura, no por sus repeticiones dentro de ella.
+
+Aquí se fusionan los diez primeros resultados de BM25 y dense y se retienen diez candidatos. **Profundidad de fusión y tamaño de salida son decisiones distintas**, aunque ambas valgan diez en este diseño. RRF puede aprovechar aciertos complementarios y favorecer candidatos bien situados en las dos listas, pero también desplazar un pasaje útil fuera del corte. Su ventaja debe comprobarse frente a los mismos juicios de relevancia.
+
+Por ejemplo, supóngase una consulta con tres fragmentos candidatos y $k_0=60$. BM25 ordena A, B y C, mientras la lista densa incluida en la fusión contiene B y C. RRF calcula:
+
+| Fragmento | Posición BM25 | Posición densa | Cálculo RRF         | Puntuación |
+|-----------|--------------:|---------------:|---------------------|-----------:|
+| A         |             1 |    No incluido | $1/(60+1)$          |    0,01639 |
+| B         |             2 |              1 | $1/(60+2)+1/(60+1)$ |    0,03252 |
+| C         |             3 |              2 | $1/(60+3)+1/(60+2)$ |    0,03200 |
+
+: *Ejemplo ilustrativo de fusión de rankings mediante RRF* {#tbl-ejemplo-rrf}
+
+El orden fusionado es **B, C, A**. Aunque A encabeza BM25, B y C reciben aportaciones de ambas listas y lo superan. El ejemplo muestra cómo RRF favorece coincidencias entre recuperadores sin sumar sus puntuaciones originales. Si un fragmento no figura en una lista incluida en la fusión, esa lista no aporta puntuación. Estos valores ilustran el mecanismo, no son resultados del experimento.
+
+### Reordenación mediante cross-encoder
+
+El **reranking** introduce una segunda fase sobre candidatos ya recuperados. Un cross-encoder procesa conjuntamente la consulta y cada pasaje y produce una puntuación de relevancia, $s_{\mathrm{CE}}(q,d)=g_\theta(q,d)$ [@nogueira2019passage]. A diferencia del bi-encoder, puede representar interacciones entre los tokens de ambos textos durante la puntuación. Esa comparación conjunta suele exigir más cómputo y no permite reutilizar una única representación del pasaje para cualquier consulta.
+
+En este estudio, MiniLM-L6-v2 reordena los diez candidatos de RRF y los cinco primeros forman el contexto generativo. Puede llevar evidencia útil a posiciones tempranas, pero **no recuperar un fragmento que falte entre los candidatos**. Por construcción, Precision y Recall a diez posiciones permanecen iguales a RRF. A cinco posiciones pueden cambiar porque cambia la selección, además de MRR y nDCG por el nuevo orden. Su utilidad debe valorarse junto con la latencia y la posible truncación de los pares pregunta–fragmento.
+
+## 2.3. Generación aumentada por recuperación (RAG)
+
+En *Retrieval-Augmented Generation*, la búsqueda de información se incorpora al proceso de generación de la respuesta. El flujo recibe una consulta y recupera documentos o fragmentos relevantes. Después selecciona el contexto y construye el *prompt* que utilizará el modelo generativo. La respuesta depende, por tanto, de un **componente de recuperación** y de otro de **generación**.
+
+![Flujo básico de un sistema RAG. La preparación del corpus se realiza antes de las consultas. Durante el uso, el generador recibe la pregunta, las instrucciones y los fragmentos recuperados. Elaboración propia a partir de @lewis2020rag.](figures/rag_simple.svg){#fig-rag-simple width="100%"}
+
+La evidencia que llega al contexto limita en la práctica lo que el sistema puede responder de forma sustentada. Cuando falta un fragmento relevante, el modelo puede ofrecer una respuesta incompleta o recurrir a su conocimiento paramétrico. Esto obliga a evaluar por separado el ranking y la respuesta final: la calidad de uno no permite dar por supuesta la del otro.
+
+## 2.4. Estrategias de chunking para RAG
+
+Al segmentar los documentos mediante *chunking* se decide **qué unidad podrá recuperar el sistema**. Los fragmentos amplios conservan más contexto, pero también pueden incorporar información irrelevante. Los fragmentos pequeños facilitan localizar evidencia concreta, aunque corren el riesgo de separar una afirmación de la explicación que necesita. La decisión afecta tanto al ranking como al contexto disponible para generar la respuesta.
+
+| Estrategia | Ventaja principal | Limitación |
+|------------------------|------------------------|------------------------|
+| Documento completo | Conserva el contexto global | Comprime demasiados conceptos y añade ruido |
+| Tamaño fijo con solapamiento | Simple, rápido y reproducible | Ignora la estructura y duplica contenido |
+| Párrafos o frases | Respeta unidades lingüísticas | Produce longitudes heterogéneas |
+| Recursiva sensible a estructura | Combina límites documentales y control de tamaño | Depende de una estructura fuente fiable |
+| Semántica o basada en LLM | Busca cambios conceptuales | Añade coste, parámetros y dependencia del modelo |
+| Jerárquica o proposicional | Ofrece granularidad fina o multiescala | Incrementa la complejidad del corpus y la recuperación |
+
+: *Estrategias de segmentación consideradas para el corpus* {#tbl-estrategias-chunking}
+
+La literatura no permite afirmar que una estrategia de segmentación sea superior en todos los casos. Una evaluación sistemática reciente no encontró mejoras consistentes que justificaran siempre el coste del semantic chunking frente a los métodos de tamaño fijo [@qu2025semanticchunking]. Por otra parte, propuestas guiadas por el contenido global, como PIC, han mejorado el retrieval y la respuesta en determinados benchmarks [@wang2025segmentation]. Estos resultados sitúan la elección en las condiciones de uso: la estructura del documento, las preguntas y el objetivo experimental.
+
+En este experimento se compara la recuperación, no el chunking. Por ese motivo se aplica una única estrategia a todo el corpus y se conserva sin cambios entre condiciones. Así, las técnicas de recuperación trabajan sobre la misma representación documental.
+
+## 2.5. Evaluación de sistemas IR y RAG
+
+Evaluar Information Retrieval supone comprobar si se encuentra la documentación relevante y si aparece en posiciones útiles del ranking [@manning2008introduction] y [@jarvelin2002cumulated]. En RAG, la evaluación end-to-end añade otra pregunta: si ese contexto permite generar una respuesta correcta, pertinente y sustentada [@es2024ragas] y [@ru2024ragchecker]. Recuperar información y utilizarla bien son aspectos relacionados, pero distintos.
+
+Esta distinción también debe mantenerse entre corrección, groundedness y citation correctness. El modelo puede dar una respuesta correcta a partir de su conocimiento paramétrico sin que los fragmentos recuperados la respalden. Por ello, la evaluación considera estas dimensiones por separado y las acompaña de medidas de latencia y coste, necesarias para valorar la eficiencia del sistema.
+
+## 2.6. Abstención, respondibilidad y confianza calibrada
+
+Responder a todas las consultas no es necesariamente un comportamiento adecuado en un sistema de pregunta-respuesta. SQuAD 2.0 formalizó esta dificultad al incorporar preguntas plausibles cuya respuesta no figura en el contexto [@rajpurkar2018squad2]. La *selective question answering* lleva esta idea a la decisión de responder: el sistema contesta si su confianza supera un umbral y se abstiene si no lo hace. El propósito es atender el mayor número posible de preguntas sin aumentar excesivamente el error [@kamath2020selectiveqa].
+
+En RAG, decidir si corresponde abstenerse exige distinguir la información que existe en el corpus de la que ha llegado al contexto recuperado. Un modelo puede rendir bien con evidencia suficiente y, aun así, responder incorrectamente cuando esta falta [@joren2025sufficientcontext]. Para interpretar el fallo hay que localizar su origen: la información puede no estar en el corpus, no haberse recuperado o haberse utilizado mal durante la generación.
+
+Los marcos recientes de evaluación de RAG incluyen preguntas no respondibles y mecanismos para controlar este riesgo. UAEval4RAG muestra que el rechazo de consultas depende de los componentes y del prompt, y que debe equilibrarse con la precisión en preguntas respondibles [@peng2025uaeval4rag]. Otros trabajos proponen una negativa activa ante una confianza baja y vinculan esa confianza con la calidad de la recuperación y el uso del contexto [@chen2024controllingrisk]. La abstención se estudia así como parte del comportamiento del sistema, no de manera aislada.
+
+En un tutor educativo, abstenerse cuando corresponde evita presentar una respuesta sin sustento como si fuera conocimiento. Esto puede favorecer una confianza justificada: respuestas más fiables, sin promover una confianza indiscriminada en la herramienta. Aquí se evalúan la recuperación, la fundamentación y la adecuación de responder o abstenerse. No se mide la confianza percibida por los estudiantes, porque para ello haría falta un estudio específico con usuarios.
+
+## 2.7. Recursos educativos abiertos
+
+Los recursos educativos abiertos permiten acceder a materiales cuyas licencias autorizan determinados usos y formas de reutilización. Para incorporarlos a un corpus no basta con que sean accesibles: es necesario registrar su procedencia, la licencia, el método de acceso y la fecha de adquisición. Esta documentación permite conocer las condiciones en las que se obtuvieron y pueden utilizarse.
+
+La elección de las fuentes requiere considerar también la calidad del texto, la cobertura temática, el idioma, el formato y su estabilidad. La apertura legal no resuelve por sí sola estas cuestiones. Desde el punto de vista metodológico, una colección pequeña, reproducible y bien documentada puede ser más defendible que otra de mayor tamaño cuyo origen resulte incierto.
+
+## 2.8. Diseño pedagógico: guardrails y andamiaje
+
+El **andamiaje** (*scaffolding*) describe el apoyo que permite a un estudiante afrontar una tarea que todavía no puede resolver de forma autónoma. En la formulación clásica, el tutor adapta su intervención tanto a la tarea como al aprendiz: reduce la complejidad, mantiene la orientación y señala los aspectos relevantes para avanzar [@wood1976tutoring]. En una herramienta de IA, esta ayuda puede tomar la forma de preguntas guía, pistas graduadas o *feedback* sobre un intento previo. No se trata de retirar toda dificultad, sino de sostener la participación del alumno para que asuma progresivamente la resolución.
+
+Los *guardrails* pedagógicos **delimitan el comportamiento** de la herramienta, mientras que el andamiaje **organiza la ayuda** que se ofrece ante la dificultad observada. Evitar la entrega inmediata de una solución es un ejemplo de guardrail. Decidir qué apoyo necesita el alumno corresponde al andamiaje. Son funciones complementarias, no equivalentes. El contraste entre GPT Base y GPT Tutor ilustra el valor de restringir las respuestas directas, y el tutor de Kestin y colaboradores incluye explícitamente el andamiaje entre sus principios de diseño [@bastani2025guardrails] y [@kestin2025aitutoring]. Ahora bien, estos experimentos comparan conjuntos de decisiones y no permiten aislar el efecto de cada componente. Limitar una respuesta no garantiza, por sí solo, que la ayuda sea pedagógicamente adecuada.
+
+La recuperación puede aportar la evidencia con la que elaborar explicaciones, pistas o feedback, pero no decide cómo presentar esa ayuda al estudiante. El experimento evalúa esa base informativa y las respuestas generadas, sin implementar ni comparar políticas de andamiaje adaptativo. Por ello, **una mejora de *groundedness* no demuestra una mejora del aprendizaje**. Incluso una respuesta fundamentada puede sustituir el razonamiento que el alumno necesita practicar. La validación educativa exige estudiar la interacción y el desempeño posterior del estudiante, además de comprobar la fiabilidad técnica.
+
+# 3. Corpus y dataset experimental
+
+## 3.1. Evaluación y selección de fuentes
+
+La construcción del corpus partió de recursos educativos abiertos, atendiendo a que su licencia y accesibilidad permiten documentar y reproducir la adquisición [@unesco2019oer]. Se revisaron colecciones como OpenStax, LibreTexts y Procomún según su procedencia, licencia, estabilidad, estructura y adecuación temática. Esta valoración sirvió para orientar el diseño experimental y fue cualitativa: no se atribuyeron puntuaciones cuantitativas a fuentes que no llegaron a procesarse.
+
+La elección de OpenStax responde a la disponibilidad de manuales universitarios oficiales, PDF estables y una organización por capítulos y secciones que facilita seguir la procedencia de la evidencia. Los documentos seleccionados contienen texto embebido, de modo que no fue necesario recurrir a OCR, y se distribuyen con licencia CC BY-NC-SA 4.0 [@openstax2026licensing]. Trabajar con este subconjunto, en lugar de una colección más amplia y heterogénea, reduce la variabilidad de formatos y editoriales. Esto permite concentrar la comparación experimental en la recuperación de evidencia.
+
+Los contenidos se limitaron al ámbito técnico de la estadística y la ciencia de datos. En este dominio es posible plantear preguntas con respuestas relativamente canónicas, condiciones de aplicación explícitas y evidencia localizable. El corpus se utiliza, por tanto, para validar el protocolo en una colección controlada, no para representar el conjunto de los recursos educativos abiertos.
+
+## 3.2. Descripción y procedencia del corpus
+
+Se utilizaron dos manuales de OpenStax publicados en inglés. Sus PDF se descargaron de las páginas oficiales el 11 de agosto de 2026 y se guardaron sin cambios en la capa de datos brutos. La URL, el ISBN, la fecha de publicación y el hash SHA-256 de cada archivo quedaron registrados para identificar de forma inequívoca las versiones empleadas.
+
+| Fuente | Capítulos | Contenido principal | Páginas | Licencia |
+|------------------|-----------------:|------------------|--------:|------------------|
+| *Introductory Statistics 2e* | 6–9 | Distribución normal, teorema central del límite, intervalos de confianza y contraste de hipótesis | 91 | CC BY-NC-SA 4.0 |
+| *Principles of Data Science* | 3–4 | Estadística descriptiva, probabilidad, inferencia, regresión y ANOVA | 99 | CC BY-NC-SA 4.0 |
+| **Total** | **6 capítulos** |  | **190** |  |
+
+: *Fuentes, contenido y licencia del corpus experimental* {#tbl-fuentes-corpus}
+
+Las páginas corresponden al material extraído de los capítulos seleccionados, no a la extensión completa de los manuales.
+
+La selección conserva de manera deliberada contenidos que se solapan entre los manuales. Los intervalos de confianza y el contraste de hipótesis se explican con distinta extensión y redacción, lo que permite comprobar si los recuperadores localizan evidencia pertinente en más de un documento. Junto a estos contenidos compartidos, la estadística descriptiva, la probabilidad, el teorema central del límite, la regresión y ANOVA amplían los conceptos disponibles para las consultas.
+
+El material incluido comprende introducciones, secciones numeradas, definiciones, explicaciones, ejemplos, código y tablas legibles. Se dejaron fuera los prefacios, índices generales, referencias, soluciones, tareas y baterías de ejercicios al final de los capítulos. Estas exclusiones se realizaron sobre los datos derivados. Los PDF originales no se modificaron.
+
+## 3.3. Extracción, limpieza y segmentación del corpus
+
+El procesamiento se organizó en dos etapas para separar la extracción de la segmentación. Primero, PyMuPDF 1.28.2 localizó los capítulos mediante los marcadores internos de los PDF y asignó cada página a su sección. La limpieza retiró encabezados y pies repetidos sin eliminar el texto ni los metadatos necesarios para regresar a la fuente. Esta etapa produjo un registro JSONL por página, con libro, capítulo, sección, página física, página impresa, licencia y hash del documento original.
+
+Después se aplicó una **segmentación recursiva sensible a la estructura documental**. Los límites de libro, capítulo y sección son obligatorios. Dentro de cada sección se agrupan párrafos y, si es necesario, frases completas. De esta manera se aprovecha la organización pedagógica de OpenStax y se mantiene el control de longitud. El corte fijo no se eligió como configuración principal porque puede dividir unidades explicativas. Las opciones semánticas o basadas en LLM, por su parte, habrían añadido coste y variabilidad a una decisión que no se compara en el experimento.
+
+Se estableció un objetivo de **300 palabras por fragmento** y un **solapamiento de hasta 60 palabras**, siempre mediante frases completas. Reutilizar ese texto permite que una explicación próxima al punto de corte pueda recuperarse desde ambos chunks. Los límites de longitud buscan evitar tanto unidades con información insuficiente como fragmentos demasiado amplios.
+
+| Parámetro              |            Valor |
+|------------------------|-----------------:|
+| Límite estructural     |          Sección |
+| Tamaño objetivo        |     300 palabras |
+| Mínimo orientativo     |     100 palabras |
+| Máximo flexible        |     380 palabras |
+| Solapamiento máximo    |      60 palabras |
+| Unidad de solapamiento | Frases completas |
+
+: *Parámetros de la estrategia de segmentación* {#tbl-parametros-chunking}
+
+Para poder seguir su procedencia, cada fragmento (*chunk*) mantiene un identificador estable, su posición en la sección y las páginas y registros intermedios de los que procede. Se conservan por separado el texto original y una versión enriquecida con los títulos del libro, capítulo y sección. La versión enriquecida se empleó en la indexación. El texto original permite mostrar y auditar la evidencia sin mezclarla con los metadatos añadidos.
+
+El dataset de chunks fue el mismo para las cuatro estrategias. Al no cambiar la segmentación, las diferencias observadas pueden atribuirse principalmente al método de recuperación. Las expresiones matemáticas con posibles pérdidas de extracción no se reconstruyeron de forma automática: se marcaron para revisión manual antes de utilizarlas como evidencia en preguntas de cálculo.
+
+## 3.4. Composición y estadísticas
+
+De la extracción se obtuvieron 190 registros de página con 68.495 palabras y 409.015 caracteres. La segmentación transformó ese material en 288 unidades, repartidas entre 36 secciones. Todas respetaron los límites previstos: ninguna tuvo menos de 100 palabras ni superó las 380.
+
+| Indicador                    | Resultado |
+|------------------------------|----------:|
+| Documentos                   |         2 |
+| Capítulos                    |         6 |
+| Secciones                    |        36 |
+| Registros de página          |       190 |
+| Chunks                       |       288 |
+| Palabras extraídas           |    68.495 |
+| Chunks con riesgo de fórmula |         5 |
+
+: *Composición del corpus procesado* {#tbl-composicion-corpus}
+
+```{r}
+#| label: fig-chunks-capitulo
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Distribución de los chunks por fuente y capítulo."
+#| fig-width: 7
+#| fig-height: 4.5
+
+library(dplyr)
+library(ggplot2)
+library(jsonlite)
+
+conexion <- file("data/processed/chunks_v1.jsonl", open = "r")
+chunks <- stream_in(conexion, verbose = FALSE) |>
+  as_tibble()
+close(conexion)
+
+chunks_capitulo <- chunks |>
+  count(source_title, chapter_id, name = "chunks") |>
+  mutate(
+    fuente = if_else(
+      source_title == "Introductory Statistics 2e",
+      "Introductory Statistics 2e",
+      "Principles of Data Science"
+    ),
+    etiqueta = paste(
+      if_else(
+        fuente == "Introductory Statistics 2e",
+        "Intro. Statistics 2e",
+        "Principles of Data Science"
+      ),
+      paste0("Cap. ", chapter_id),
+      sep = " · "
+    )
+  )
+
+ggplot(chunks_capitulo, aes(x = reorder(etiqueta, chunks), y = chunks, fill = fuente)) +
+  geom_col(width = 0.7) +
+  geom_text(aes(label = chunks), hjust = -0.3, size = 3) +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.08))) +
+  scale_fill_manual(values = c("#315C8C", "#C56A31")) +
+  labs(x = NULL, y = "Número de chunks", fill = "Fuente") +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "bottom", panel.grid.major.y = element_blank())
+```
+
+Los capítulos no tienen la misma extensión, y esa diferencia se aprecia en @fig-chunks-capitulo, especialmente en el capítulo 4 de *Principles of Data Science*. Conviene tenerlo en cuenta al interpretar los resultados agregados. Una fuente con más chunks puede ofrecer mayor cobertura, pero también aportar más candidatos no relevantes.
+
+```{=typst}
+#pagebreak()
+```
+| Longitud de los chunks | Palabras |
+|------------------------|---------:|
+| Mínimo                 |      107 |
+| Percentil 25           |      281 |
+| Mediana                |      291 |
+| Media                  |   281,62 |
+| Percentil 75           |      296 |
+| Máximo                 |      327 |
+
+: *Estadísticos de longitud de los chunks* {#tbl-longitud-chunks}
+
+```{r}
+#| label: fig-longitud-chunks
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Distribución de la longitud de los chunks. La línea discontinua indica el objetivo de 300 palabras."
+#| fig-width: 7
+#| fig-height: 4
+
+chunks |>
+  ggplot(aes(x = word_count)) +
+  geom_histogram(binwidth = 10, boundary = 100, fill = "#315C8C", color = "white") +
+  geom_vline(xintercept = 300, linetype = "dashed", color = "#A64032", linewidth = 0.8) +
+  scale_x_continuous(breaks = seq(100, 350, 50), limits = c(100, 350)) +
+  labs(x = "Palabras por chunk", y = "Frecuencia") +
+  theme_minimal(base_size = 10)
+```
+
+La distribución concentrada de @fig-longitud-chunks muestra que se mantiene una longitud homogénea sin imponer cortes exactos. La procedencia por páginas también queda registrada: de los 288 chunks, 108 utilizan una página, 171 abarcan dos y 9 reúnen tres páginas consecutivas. El contenido residual de una página se integró en su sección, sin crear un fragmento independiente.
+
+## 3.5. Calidad, limitaciones y sesgos
+
+La comprobación de calidad combinó pruebas automatizadas con una auditoría de trazabilidad. La suite revisó límites de sección, tamaños, estabilidad de identificadores, páginas de origen y solapamiento. Se encontró solapamiento en los 252 límites internos entre chunks consecutivos, con una media de 50,05 palabras y un máximo de 60. Además, una regeneración aislada produjo archivos idénticos byte a byte, lo que confirma que el procesamiento es reproducible.
+
+Las fórmulas representadas como objetos gráficos o expresiones complejas constituyen la principal limitación técnica. El control inicial marcó cinco chunks con riesgo de extracción incompleta. Un barrido posterior de las justificaciones de los jueces identificó señales de pérdida matemática en veinte. Son controles de distinto alcance, no dos estimaciones de una misma prueba. Se conservó el corpus congelado para mantener la trazabilidad experimental. El protocolo exige contrastar con la fuente cualquier evidencia que dependa de una expresión perdida. Esa comprobación no equivale a reconstruir el texto que recibió el sistema.
+
+La selección impone también tres restricciones: ambas fuentes son de la misma editorial, están en inglés y pertenecen al ámbito de la estadística y la ciencia de datos. Estas condiciones facilitan el control del experimento a costa de reducir la diversidad editorial, lingüística y temática. Los resultados permiten comparar recuperadores en este escenario, no generalizar a otros dominios o idiomas.
+
+# 4. Golden set y anotación
+
+## 4.1. Diseño y selección de preguntas
+
+El golden set se construyó a partir de los 288 fragmentos del corpus. Incluye preguntas respondibles ancladas a pasajes concretos y consultas diseñadas para comprobar los límites del sistema ante evidencia insuficiente o premisas falsas. Cada unidad registra su enunciado en inglés, su tipo semántico y la conducta esperada, junto con los fragmentos de soporte y la respuesta de referencia cuando están disponibles. De este modo, que una pregunta sea respondible depende de la evidencia contenida en la colección y no solo de que pertenezca al temario.
+
+Un inventario previo contiene treinta preguntas base, pero cuatro de ellas (q-v1-009, q-v1-010, q-v1-018 y q-v1-021) no disponen de una pareja de formulaciones admitida en la ejecución y quedaron fuera del experimento. El conjunto ejecutado reúne 26 preguntas base y 52 formulaciones. De esas preguntas base, diecisiete exigen respuesta ordinaria, cinco corrección fundamentada y cuatro abstención. Las cuatro preguntas excluidas de la ejecución se conservan en el registro documental sin intervenir en los resultados.
+
+El tipo semántico distingue preguntas factuales, explicativas, comparativas y procedimentales. Esta clasificación se anota independientemente de la conducta esperada: una pregunta factual puede carecer de evidencia y una procedimental puede partir de una premisa que requiera corrección. Separar ambos ejes evita tratar la dificultad o la ambigüedad como si fueran explicitud.
+
+La @tbl-preguntas-tipo-conducta cruza ambos ejes en el conjunto ejecutado. Cada pregunta base se cuenta una sola vez, sin duplicarla por sus dos formulaciones.
+
+| Tipo de pregunta | Respuesta | Corrección | Abstención |  Total |
+|------------------|----------:|-----------:|-----------:|-------:|
+| Factual          |         3 |          2 |          2 |      7 |
+| Explicativa      |         4 |          2 |          0 |      6 |
+| Comparativa      |         6 |          0 |          0 |      6 |
+| Procedimental    |         4 |          1 |          2 |      7 |
+| **Total**        |    **17** |      **5** |      **4** | **26** |
+
+: *Preguntas base según tipo semántico y conducta esperada* {#tbl-preguntas-tipo-conducta}
+
+El **apéndice B** recoge las 26 preguntas ejecutadas, sus dos formulaciones, tipo y conducta. Los identificadores conservan su procedencia histórica, sin definir grupos de resultados diferentes.
+
+El caso **q-v3-007** limita la homogeneidad del conjunto: el inventario inicial lo clasifica por evidencia insuficiente, pero el archivo de generación exige corrección fundamentada sin una referencia correctiva disponible. Esta discrepancia se mantiene explícita, sin cambiar retrospectivamente la etiqueta.
+
+## 4.2. Respuestas y evidencias de referencia
+
+Cada tarea respondible dispone de una respuesta de referencia breve y de los fragmentos que contienen la evidencia necesaria para construirla. Esta separación permite evaluar dos dimensiones distintas: la respuesta de referencia sirve para contrastar la corrección del contenido, mientras que los fragmentos efectivamente entregados al generador permiten valorar su fundamentación. Que un modelo acierte la respuesta no demuestra que el buscador le haya suministrado la evidencia que la sostiene.
+
+Los identificadores de fragmento y las citas literales conservan el vínculo entre cada pregunta y el corpus. Los conjuntos canónicos distinguen la evidencia mínima necesaria de los pasajes redundantes. No obstante, dado que no se dispone de un cálculo final homogéneo de suficiencia canónica para las 26 preguntas base, las métricas de recuperación evalúan la selección, la cobertura y el orden de los fragmentos relevantes conocidos, no la respondibilidad completa del contexto.
+
+## 4.3. Protocolo de anotación
+
+Los **qrels son los juicios de relevancia** (*query relevance judgments*). Vinculan una pregunta con un fragmento y un grado de utilidad para resolverla. No son las puntuaciones del buscador ni evaluaciones de la respuesta generada. Constituyen la referencia externa con la que se compara el ranking de los cuatro métodos.
+
+La relevancia se gradúa en **0/1/2**: cero no contribuye a responder. Uno aporta contexto relacionado pero insuficiente. Dos aporta evidencia directamente útil, sola o junto con otros fragmentos. El juicio corresponde a **pregunta base × fragmento** y se comparte entre las dos formulaciones admitidas como equivalentes. En una pregunta con premisa falsa, la evidencia que permite refutarla puede recibir grado 2. Cuando no existe evidencia suficiente, no se inventan positivos para poder calcular Recall.
+
+La @tbl-apendice-anotacion recoge las definiciones operacionales que distinguen el grado de relevancia, la suficiencia de la evidencia y la decisión final de anotación.
+
+| Elemento | Definición operacional |
+|------------------------------------|------------------------------------|
+| Grado 0 | El chunk no contribuye a responder la pregunta |
+| Grado 1 | El chunk aporta contexto relacionado, pero insuficiente |
+| Grado 2 | El chunk contiene evidencia directamente útil, por sí solo o combinado |
+| Evidencia canónica | Conjunto mínimo de chunks de grado 2 necesario para construir la respuesta |
+| Evidencia suficiente | La pregunta puede responderse con el corpus sin conocimiento externo |
+| Adjudicación | Decisión final que prevalece sobre las revisiones auxiliares |
+
+: *Criterios de anotación del golden set* {#tbl-apendice-anotacion}
+
+La obtención de los qrels sigue esta secuencia:
+
+1.  **Reunir candidatos.** Se unen los diez primeros resultados de los cuatro recuperadores para las dos formulaciones. Este *pooling* limita la anotación a fragmentos que han recuperado los sistemas, en lugar de juzgar todas las combinaciones posibles del corpus.
+2.  **Eliminar duplicados.** Si varias estrategias o formulaciones recuperan el mismo fragmento para una base, se conserva una sola unidad de juicio. Los candidatos nuevos y los asociados a evidencia histórica se reúnen en la revisión final, sin copiar automáticamente su grado anterior.
+3.  **Juzgar a ciegas.** Dos jueces automáticos, **gpt-6-sol (juez A, mediante OpenAI Codex, razonamiento alto)** y **mimo-v2.6-pro (juez B, mediante OpenCode Go)**, reciben en sesiones aisladas las dos preguntas y el texto completo del fragmento, pero no el método de origen, su posición ni su puntuación. Cada uno asigna un grado y una justificación. Un conflicto de equivalencia se señala, no se resuelve promediando las formulaciones.
+4.  **Resolver y consolidar.** Las discrepancias y los casos de riesgo se someten a arbitraje o validación humana. La decisión humana prevalece cuando existe, seguida del laudo y del consenso. Se conserva el grado final y su procedencia, incluidos los ceros.
+
+Durante la anotación se aclaró qué evidencia cuenta como suficiente cuando una pregunta contiene una premisa falsa o pide comprobar una afirmación. Un fragmento puede recibir grado 2 si aporta el hecho necesario para detectar el error, aunque no refute expresamente la pregunta. Por ejemplo, un pasaje que sitúe aproximadamente el 95 % de los valores de una distribución normal dentro de dos desviaciones típicas permite rechazar que ese porcentaje corresponda a una sola. La mera relación temática sigue siendo insuficiente para asignar grado 2.
+
+Con este criterio revisado se volvieron a evaluar los 120 pares pregunta base × fragmento de las cinco preguntas base señaladas en la auditoría de premisas. Los nuevos juicios sustituyeron a los anteriores para esos mismos pares. Los otros 458 conservaron el juicio de la primera revisión. Así, el conjunto final contiene 578 pares con un único grado por par, no una suma de las dos revisiones como observaciones independientes. Se conservan el cambio de criterio y la revisión de origen de cada grado para reconstruir la anotación.
+
+El pool final reúne **578 pares base × fragmento**, correspondientes a 26 preguntas base y 223 fragmentos distintos. Un mismo fragmento puede aparecer asociado a varias preguntas. La @tbl-pool-final resume los grados asignados y el origen de la decisión final.
+
+| Clasificación | Categoría                  |   Pares |
+|---------------|----------------------------|--------:|
+| Relevancia    | Grado 0                    |     174 |
+| Relevancia    | Grado 1                    |     308 |
+| Relevancia    | Grado 2                    |      96 |
+| Procedencia   | Consenso de los dos jueces |     483 |
+| Procedencia   | Arbitraje                  |      29 |
+| Procedencia   | Decisión humana            |      66 |
+| **Conjunto**  | **Total de pares únicos**  | **578** |
+
+: *Distribución y procedencia de los juicios del pool final* {#tbl-pool-final}
+
+Relevancia y procedencia son dos clasificaciones de los mismos pares, no conjuntos que deban sumarse. Las cuatro estrategias se evalúan contra esta misma referencia. **No juzgado no significa irrelevante**: la ceguera reduce el anclaje al ranking, pero no convierte el pool en exhaustivo ni elimina los sesgos compartidos entre evaluadores.
+
+Las pruebas automáticas verifican la unicidad de los identificadores, la existencia de los fragmentos citados, la correspondencia de las citas literales y la coherencia entre cada pregunta, su referencia y la conducta esperada. Cuando un fragmento presenta pérdidas en fórmulas matemáticas, su relevancia se juzga a partir del texto conservado, sin reconstruir de manera implícita la expresión original. Asimismo, el registro distingue entre consenso automático, arbitraje asistido y decisión del investigador, por lo que un juicio adjudicado no equivale a una anotación de varios evaluadores humanos independientes.
+
+## 4.4. Pares de formulación explícita e implícita
+
+Cada pregunta base admitida en el experimento cuenta con dos versiones equivalentes: una explícita y otra implícita. Ambas mantienen la misma intención informativa y manipulan **la presencia del término técnico**, no la dificultad conceptual. La versión explícita emplea la terminología del manual, mientras que la implícita describe la misma idea con lenguaje cotidiano, sin introducir sinónimos técnicos que restituyan la coincidencia léxica.
+
+La equivalencia se comprueba con una **rúbrica binaria de aceptación**: cada criterio se marca como cumplido o incumplido y la pareja se admite solo si cumple los tres. No asigna una puntuación graduada de calidad.
+
+| ID | Criterio | Condición de cumplimiento |
+|-------------------|-------------------|----------------------------------|
+| **R1** | Intención idéntica | Ambas versiones piden el mismo contenido, sin añadir vaguedad ni exigencias |
+| **R2** | Conducta esperada idéntica | Ambas requieren respuesta, corrección o abstención según el mismo criterio |
+| **R3** | Término técnico retirado | El término declarado aparece en la explícita y no en la implícita |
+
+: *Rúbrica binaria de equivalencia de los pares de formulación* {#tbl-rubrica-equivalencia}
+
+R1 y R2 se revisan manualmente y con un juez automático aislado. Las discrepancias se adjudican con una justificación. R3 comprueba presencia y ausencia por lemas del término declarado, de modo que las flexiones cuentan como presencia.
+
+El solape léxico global se conserva solo como diagnóstico: dos preguntas pueden reutilizar vocabulario general y aumentar el solape aunque la versión implícita retire el término técnico. Por eso no sirve como criterio de aceptación. Las parejas que incumplen algún criterio y las preguntas realmente ambiguas se excluyen, sin reformularlas para salvar el resultado.
+
+La **pregunta base es la unidad independiente**: sus dos versiones generan observaciones relacionadas, no dos preguntas independientes.
+
+# 5. Diseño experimental
+
+## 5.1. Factores, unidades y comparaciones
+
+El experimento compara estrategias de recuperación sobre las mismas preguntas y examina si sus diferencias se mantienen al cambiar la formulación o el generador. Para ello cruza **cuatro recuperadores, dos formulaciones y tres generadores** sobre un corpus fijo. La recuperación se evalúa por la evidencia que localiza y ordena. La respuesta RAG se evalúa por su fundamentación, corrección, conducta y citas. Esta separación permite estudiar ambas etapas sin asumir que una mejora del ranking se traducirá necesariamente en una respuesta mejor.
+
+Los tres factores cumplen funciones distintas:
+
+- **Recuperador:** cambia el procedimiento que selecciona y ordena los fragmentos disponibles para responder.
+- **Formulación:** cambia la presencia del término técnico, conservando la necesidad informativa y la conducta esperada.
+- **Generador:** cambia el modelo que utiliza la pregunta y los fragmentos para producir la respuesta.
+
+La **unidad de análisis es la pregunta base**. Sus dos formulaciones y las respuestas obtenidas con distintos recuperadores y generadores son mediciones relacionadas del mismo caso, no preguntas independientes. Una celda de generación identifica una pregunta base, una de sus formulaciones, un recuperador y un generador. Por tanto, el número de respuestas producidas no amplía por sí mismo el número de casos independientes: el conjunto sigue compuesto por 26 preguntas base.
+
+| Componente | Diseño ejecutado |
+|------------------------------------|------------------------------------|
+| Corpus | Dos manuales OpenStax en inglés, seis capítulos y 288 fragmentos |
+| Preguntas | 26 bases, 52 formulaciones equivalentes (implícita/explícita) |
+| Recuperadores | BM25, dense, RRF y RRF con reranking |
+| Generadores | Gemma 4 E4B, Qwen 3.5 4B y Qwen 3.5 9B |
+| Contexto | Cinco fragmentos por respuesta, ventana de 8192 tokens |
+| Cobertura generativa | 624 celdas previstas, 604 aceptadas y veinte fallidas |
+| Evaluación | Rúbrica ordinal común, dos jueces y validación humana de discrepancias |
+
+: *Diseño y cobertura del experimento final* {#tbl-diseno-experimento}
+
+Cada comparación mantiene fijos los otros factores. **Los recuperadores se comparan dentro de cada generador**, sobre las mismas preguntas y formulaciones. El efecto de formulación se examina manteniendo recuperador y generador. Para comparar generadores se emparejan las mismas preguntas, formulaciones y estrategias.
+
+La @tbl-hipotesis-evaluacion vincula cada hipótesis con la comparación que permite examinarla. H3 conserva su identificador, pero su formulación actual es posterior al registro y no presupone un deterioro exclusivo de dense.
+
+| Hipótesis | Comparación | Alcance de la comprobación |
+|------------------------|------------------------|------------------------|
+| H1. Efecto de la formulación sobre la recuperación | Recuperación explícita frente a implícita | Diferencias de Recall y nDCG por base, cortes 5 y 10 |
+| H2. Sensibilidad según el recuperador | Sensibilidad de cobertura y orden según el método | Diferencias de recuperación por formulación, no basta comparar significación aislada |
+| H3. Efecto de la formulación sobre la conducta | Cumplimiento de la conducta esperada: explícita frente a implícita | Requiere un contraste emparejado por recuperador dentro de cada generador. Reformulación posterior al registro |
+| H4. Compromiso operativo de RRF | Balance de recuperación, respuesta y latencia | Comparación final end-to-end, eficiencia complementaria, sin utilidad ni umbral predefinidos |
+| H5. Separación entre recuperadores y capacidad | Amplitud de las diferencias y conservación del orden entre estrategias | Tres modelos de dos familias no definen una curva causal. Una amplitud menor no demuestra que se conserve el orden |
+| H6. Calidad y efecto de formulación | Niveles de contenido y signo del efecto de formulación | Contrastes emparejados e interacción generador × formulación |
+
+: *Operacionalización de las hipótesis y límites de su evaluación* {#tbl-hipotesis-evaluacion}
+
+## 5.2. Estrategias de recuperación
+
+Las cuatro condiciones contrastan una referencia léxica, una alternativa semántica, su combinación y una reordenación posterior. Todas trabajan sobre el mismo texto de cada fragmento, enriquecido con los títulos del libro, capítulo y sección. Los modelos y parámetros no se ajustaron sobre las métricas observadas de recuperación para evitar el overfitting.
+
+**BM25** aporta la referencia basada en coincidencias de términos. Permite examinar qué ocurre cuando la consulta conserva o retira vocabulario técnico del corpus. El texto se transforma a minúsculas y se conservan las secuencias alfanuméricas, sin aplicar stemming ni eliminar stopwords. Se fijaron $k_1=1{,}5$ y $b=0{,}75$, con la IDF no negativa $\log(1+(N-df+0{,}5)/(df+0{,}5))$.
+
+La **recuperación densa** permite comparar esa referencia con una representación semántica aprendida. Utiliza E5-base-v2, embeddings normalizados de 768 dimensiones y los prefijos `passage:` para los fragmentos y `query:` para las preguntas. La búsqueda calcula el producto escalar de forma exhaustiva sobre los 288 vectores.
+
+La **recuperación híbrida mediante RRF** examina si combinar las dos señales mejora la selección. Fusiona los rankings top-10 de BM25 y dense con $k_0=60$. Cada fragmento recibe la suma $\sum_{m\in M_d} 1/(60+r_m)$ sobre los rankings en los que aparece. La fusión conserva diez resultados y resuelve los empates por el identificador del fragmento. Utilizar posiciones evita sumar directamente puntuaciones léxicas y densas de escalas distintas.
+
+La **recuperación híbrida con reranking** examina qué aporta reordenar esos mismos diez candidatos. Utiliza un *cross-encoder* **MiniLM-L6-v2** entrenado en MS MARCO, que procesa cada par pregunta–fragmento en GPU, con una longitud máxima de 512 tokens y lotes de 16. Los empates se resuelven por identificador. El conjunto de diez candidatos permanece idéntico al de RRF, de modo que el reranking puede modificar el orden y la selección de los cinco primeros, pero no ampliar la cobertura a diez posiciones.
+
+## 5.3. Selección de generadores
+
+El generador se incluye como factor porque una misma evidencia puede dar lugar a respuestas distintas según el modelo que la interprete. Se seleccionaron **Gemma 4 E4B, Qwen 3.5 4B y Qwen 3.5 9B**, ejecutados localmente mediante **Ollama**. Cada uno recibe las mismas preguntas y, para una misma condición de recuperación, los mismos fragmentos. La comparación permite examinar si las diferencias entre recuperadores y formulaciones se mantienen al cambiar el modelo de respuesta.
+
+**Qwen 3.5 4B y Qwen 3.5 9B permiten una comparación dentro de la misma familia y versión**, con distinto tamaño. Gemma 4 E4B incorpora un contraste entre familias. Sin embargo, los tres modelos no constituyen una escala pura de capacidad: la comparación con Gemma cambia también la arquitectura, y el número de parámetros no identifica por sí solo la capacidad. Dos tamaños de Qwen aportan un contraste pero no una curva general de escalado. Por ello, H5 y H6 se interpretan dentro de estos límites.
+
+La selección incluyó pruebas de viabilidad del formato de salida y de las citas, con casos de respuesta ordinaria, corrección y abstención. Los modelos que no cumplían el contrato o excedían las restricciones operativas quedaron fuera del análisis principal. Gemma 3 4B se excluyó después de observar fallos de cita.
+
+## 5.4. Condiciones controladas y procedimiento de ejecución
+
+**Corpus, segmentación, preguntas admitidas y referencia de relevancia son comunes a las cuatro estrategias.** También se mantiene el texto indexado, con sus metadatos e identificadores. Las dos formulaciones de cada base conservan la necesidad informativa y la conducta esperada. Corpus, consultas, referencias y respuestas están en inglés, al igual que los modelos de recuperación elegidos. **No se incorpora traducción ni se evalúa búsqueda entre idiomas**, porque introduciría otro factor que este diseño no permite separar.
+
+El presupuesto de contexto se fija en **cinco fragmentos por respuesta**. Los rankings se evalúan en los cortes cinco y diez, pero solo los cinco primeros se entregan al generador. Todos los generadores utilizan una instrucción común, temperatura cero, semilla fija registrada, ventana de 8192 tokens y límite de salida de 300 tokens. Los parámetros se mantienen dentro de cada comparación.
+
+La ejecución de cada celda sigue cuatro pasos:
+
+1.  **Recuperar y ordenar.** Se procesa la formulación de la pregunta con la estrategia correspondiente. BM25 y dense producen rankings propios. RRF fusiona ambos y el reranker reordena los candidatos de la fusión.
+2.  **Construir el contexto.** Se seleccionan los cinco primeros fragmentos y se suministran al modelo junto con la pregunta y la instrucción común.
+3.  **Generar y validar la salida.** La respuesta debe declarar conducta, texto e identificadores de cita pertenecientes al contexto. Si incumple el contrato, se permiten hasta tres intentos en total por celda. Se guardan las salidas brutas y el consumo acumulado.
+4.  **Conservar el resultado.** Una salida que supera la validación se registra como aceptada. Si se agotan los intentos sin cumplir el contrato, se registra un fallo. Las respuestas aceptadas pasan a la evaluación con la rúbrica común.
+
+**Aceptar una salida no significa considerarla correcta.** La validación comprueba el contrato de formato y pertenencia de las citas. La evaluación posterior determina si el contenido está fundamentado, responde correctamente y cumple la conducta esperada.
+
+## 5.5. Entorno y reproducibilidad
+
+El pipeline experimental combina la implementación de BM25 en Python con un entorno aislado de Python 3.12 para recuperación densa y reranking, basado en PyTorch, Sentence Transformers y NumPy. Los generadores locales se ejecutaron mediante Ollama. Para facilitar la reproducción y la auditoría, los metadatos de las ejecuciones conservan las revisiones exactas de los modelos, los parámetros, los prompts y los hashes del corpus, las preguntas y los rankings.
+
+La evaluación válida utilizó los jueces **gpt-6-sol** y **mimo-v2.6-pro**, con arbitraje delegado de **gpt-6-astra** y validación humana de los criterios discrepantes.
+
+# 6. Métricas y procedimiento de evaluación
+
+## 6.1. Evaluación de recuperación
+
+Las métricas distinguen **selección útil, cobertura, primer acierto y calidad del orden** y se calculan en los cortes $k=5$ y $k=10$. Para una pregunta $q$, sea $R_q$ el conjunto de fragmentos con relevancia de grado 2 y $L_{q,k}$ los primeros $k$ resultados.
+
+| Métrica | Dimensión que aporta | Qué no demuestra |
+|------------------------|------------------------|------------------------|
+| **Precision\@k** | Proporción de resultados directamente útiles. Detecta ruido en la selección | Que se haya recuperado toda la evidencia necesaria |
+| **Recall\@k** | Cobertura de la evidencia relevante conocida. Detecta omisiones | Que la evidencia aparezca pronto o forme un contexto suficiente |
+| **MRR\@k** | Rapidez con la que aparece el primer acierto en el ranking | Cobertura de los demás fragmentos relevantes |
+| **nDCG\@k** | Calidad del orden, considerando grados de utilidad y posición | Que la respuesta generada sea correcta o fundamentada |
+
+: *Aportación y límites de las métricas de recuperación* {#tbl-metricas-recuperacion}
+
+### Precisión y cobertura
+
+**Precision\@k** (precisión en los primeros $k$ resultados) es la proporción de fragmentos relevantes entre los $k$ primeros del ranking. Se calcula dividiendo el número de fragmentos relevantes recuperados por $k$, que fija cuántos resultados se examinan.
+
+**Recall\@k** (cobertura en los primeros $k$ resultados) es la proporción de los fragmentos relevantes conocidos para una pregunta que aparecen entre esos resultados. Se divide el mismo número de aciertos por el total de fragmentos relevantes identificados en los qrels, no por el tamaño del corpus.
+
+$$\operatorname{Precision}@k(q)=\frac{|L_{q,k}\cap R_q|}{k},
+\qquad
+\operatorname{Recall}@k(q)=\frac{|L_{q,k}\cap R_q|}{|R_q|}.$$
+
+En ambas fórmulas, $|L_{q,k}\cap R_q|$ cuenta los fragmentos que son a la vez recuperados y relevantes. El denominador de Precision es $k$, mientras que el de Recall es $|R_q|$, el total de fragmentos relevantes conocidos para la pregunta. En este experimento solo el **grado 2** cuenta como relevante para ambas métricas. Un Recall alto no garantiza que los fragmentos formen un conjunto suficiente para responder, ni incluye evidencia que aún no se haya juzgado.
+
+### Posición del primer acierto
+
+Sea $r_q$ la posición del primer fragmento de grado 2. El rango recíproco truncado es:
+
+$$\operatorname{RR}@k(q)=
+\begin{cases}
+1/r_q, & \text{si existe un acierto en las primeras } k \text{ posiciones},\\
+0, & \text{en otro caso}.
+\end{cases}$$
+
+**MRR** es la media de estos rangos recíprocos: premia encontrar pronto el primer acierto, pero no indica cuánta evidencia adicional se recupera.
+
+### Calidad graduada del orden
+
+nDCG utiliza los tres grados de relevancia y da mayor valor a los fragmentos útiles situados al principio. Si $rel_{q,i}$ es el grado del resultado en la posición $i$:
+
+$$\operatorname{DCG}@k(q)=\sum_{i=1}^{k}\frac{2^{rel_{q,i}}-1}{\log_2(i+1)},
+\qquad
+\operatorname{nDCG}@k(q)=\frac{\operatorname{DCG}@k(q)}{\operatorname{IDCG}@k(q)}.$$
+
+La ganancia es cero, uno o tres para los grados 0, 1 y 2. **IDCG es el mejor orden posible de todos los qrels conocidos de la pregunta**, no solo de los fragmentos recuperados. Su denominador es común entre métodos. El índice nDCG vale uno cuando el ranking alcanza ese ideal.
+
+Como ejemplo ilustrativo, si hay cuatro fragmentos de grado 2 y se recuperan dos en las posiciones segunda y quinta, Precision\@5 es 0,40, Recall\@5 es 0,50 y RR\@5 es 0,50. El ejemplo distingue selección, cobertura y primer acierto. No procede de los resultados del experimento.
+
+Cada indicador se promedia entre las dos formulaciones y después entre las **26 preguntas base**. Seis carecen de grado 2: sus métricas estrictas conservan el cero del contrato histórico, no un fallo en localizar evidencia suficiente conocida. Se añade una sensibilidad sobre las veinte bases con grado 2, incluidas correcciones. El agregado principal no mide respondibilidad ni se restringe a respuestas ordinarias.
+
+## 6.2. Evaluación de respuestas RAG
+
+La evaluación toma como referencia las dimensiones de fundamentación y corrección utilizadas en RAGAS, pero las operacionaliza mediante una rúbrica ordinal propia. Se añaden criterios de cumplimiento de la conducta esperada y soporte de citas para distinguir respuestas ordinarias, correcciones de premisas falsas y abstenciones. Las puntuaciones se obtienen mediante dos jueces y validación humana de las discrepancias, no mediante los cálculos implementados en RAGAS.
+
+La **fundamentación** en la evidencia (*groundedness*) expresa hasta qué punto las afirmaciones de una respuesta están respaldadas por los fragmentos recuperados.
+
+La **corrección** expresa hasta qué punto una respuesta coincide con la referencia en los hechos y conceptos necesarios para resolver la pregunta. Se valora tanto la exactitud de lo afirmado como la ausencia de omisiones importantes, sin exigir que se reproduzca literalmente la respuesta de referencia.
+
+La **conducta** expresa hasta qué punto la respuesta actúa como requiere la tarea: responder cuando existe evidencia suficiente, corregir una premisa falsa o abstenerse cuando no es posible resolver la pregunta con el contexto disponible.
+
+La rúbrica común permite contrastar dos jueces criterio por criterio y presentar las discrepancias a validación humana con las mismas anclas.
+
+| Criterio | Escala | Anclas del instrumento |
+|--------------------|--------------------|--------------------------------|
+| Fundamentación | 0–2 | 2: todo lo afirmado está respaldado, 1: idea principal respaldada con detalles sin soporte, 0: contradicción o afirmaciones no contenidas |
+| Corrección | 0–2 | 2: coincidencia esencial con la referencia, 1: incompleta o con desajuste menor, 0: incorrecta o responde a otra cuestión |
+| Conducta | 0–2 | 2: comportamiento esperado, 1: omisión material o desviación parcial, 0: conducta incorrecta |
+| Citas | 0–1 | 1: respaldan lo afirmado, o abstención sin citas, 0: no corresponden a la evidencia utilizada |
+
+: *Rúbrica ordinal de evaluación de las respuestas* {#tbl-rubrica-respuestas}
+
+Una respuesta puede ser correcta según la referencia y carecer de respaldo en el contexto, o estar fundamentada pero omitir una parte necesaria. Asimismo, una cita puede pertenecer al top-5 sin apoyar lo afirmado. **Corrección, fundamentación y soporte de citas no son intercambiables.** Las puntuaciones 0–2 son categorías ordenadas.
+
+Los dos jueces evalúan las mismas respuestas, referencias y textos completos de los cinco fragmentos, mediante sesiones aisladas y lotes de diez. La condición de recuperador se mantiene separada de los criterios de juicio. El aislamiento evita acceso a otros veredictos, pero no garantiza completa independencia estadística ni elimina sesgos de familia de modelos.
+
+## 6.3. Conducta esperada y aplicabilidad de las métricas
+
+El cumplimiento de la conducta esperada se evalúa por lo que hace el contenido de la respuesta y no por la etiqueta que declara el modelo: dar por válida una premisa errónea o abstenerse cuando los fragmentos contienen evidencia suficiente supone incumplir la tarea. Este criterio y el soporte de las citas se evalúan sobre las respuestas válidas de las 26 preguntas base, incluidas las tareas de abstención y la abstención sin citas. El análisis principal de fundamentación y corrección, en cambio, se concentra en las 509 respuestas válidas de las 22 preguntas base que exigen responder o corregir. Las 95 respuestas correspondientes a tareas de abstención conservan sus puntuaciones históricas de contenido únicamente para el análisis de sensibilidad.
+
+Los cuatro casos en los que la corrección resulta no aplicable se mantienen como valores ausentes sin sustituirlos por cero, y los veinte fallos de generación se contabilizan por separado. De este modo se evita confundir **la calidad de las respuestas aceptadas con la capacidad de producir una salida válida**.
+
+## 6.4. Agregación, emparejamiento e incertidumbre
+
+Las comparaciones siguen tres pasos: **seleccionar observaciones comunes, calcular diferencias emparejadas y resumirlas por pregunta base**. Así se evita atribuir al método una diferencia causada por evaluar preguntas distintas.
+
+El *soporte común* depende de qué se compara:
+
+| Comparación | Observaciones que se conservan |
+|--------------------------|----------------------------------------------|
+| Recuperadores | Las mismas formulaciones con puntuación en las cuatro estrategias, dentro de cada generador y criterio |
+| Generadores | Las mismas preguntas, formulaciones y recuperadores con puntuación en los modelos comparados |
+| Formulaciones | Las dos versiones de una base, para el mismo recuperador y generador |
+| Interacción generador × formulación | Las cuatro respuestas que cruzan dos generadores y dos formulaciones, para la misma base y recuperador |
+
+: *Selección de observaciones comunes para las comparaciones emparejadas* {#tbl-soportes-comparacion}
+
+Se calcula primero la diferencia entre los métodos en cada caso comparable. Después se promedian esas diferencias dentro de cada pregunta base y, finalmente, entre preguntas, con **igual peso por pregunta**. Dentro de cada generador y criterio, las seis parejas de recuperadores utilizan exactamente los mismos casos. Fundamentación y corrección se restringen a tareas de respuesta o corrección. Conducta y citas incluyen también tareas de abstención. Cada resultado informa cuántos casos y preguntas lo sustentan.
+
+En generación, los intervalos de confianza del 95 % se calculan mediante bootstrap: se seleccionan al azar preguntas del conjunto evaluado, permitiendo repeticiones, y se vuelve a calcular la diferencia media entre métodos. El proceso se repite 5.000 veces para estimar cuánto depende el resultado de las preguntas incluidas. La semilla fija permite reproducirlo. Cada intervalo corresponde a una comparación concreta, no al conjunto de comparaciones, por lo que no demuestra que un método sea globalmente superior.
+
+La diferencia entre el método con mayor media y el de menor media es descriptiva. Como ambos se eligen después de ver los resultados, el azar puede haber favorecido al primero y perjudicado al segundo. Por eso, su separación puede parecer mayor de lo que se observaría con otras preguntas, y el intervalo calculado no corrige ese efecto de selección.
+
+En recuperación, el test de signos binomial exacto bilateral utiliza la dirección de las diferencias, excluye empates y calcula p como el doble de la cola menor [@smucker2007significance]. Holm ajusta dos familias de dieciséis contrastes: Recall/nDCG principales y Precision/MRR complementarios (cuatro métodos y dos cortes). Los soportes y las familias se definieron en el reanálisis, no en el pre-registro inicial.
+
+La magnitud del cambio, la incertidumbre estadística y la utilidad operativa deben interpretarse por separado. La diferencia de medias estima el tamaño del efecto observado y el intervalo de confianza expresa su incertidumbre muestral. Que un intervalo incluya cero impide excluir una diferencia nula al nivel considerado, pero no demuestra que los métodos comparados sean equivalentes ni sustituye la valoración de su utilidad práctica.
+
+## 6.5. Acuerdo entre jueces y resolución de discrepancias
+
+Los 578 juicios de relevancia (qrels) y las 604 respuestas tienen cadenas de revisión distintas. En generación, el acuerdo A–B fue 93,0 % en fundamentación ($\kappa=0{,}679$), 87,6 % en corrección ($\kappa=0{,}710$), 86,9 % en conducta ($\kappa=0{,}662$) y 93,9 % en citas ($\kappa=0{,}516$).
+
+El porcentaje expresa coincidencias exactas. El **coeficiente $\kappa$ de Cohen** descuenta el acuerdo esperado por azar a partir de las distribuciones de categorías de ambos jueces:
+
+$$\kappa=\frac{p_o-p_e}{1-p_e},$$
+
+donde $p_o$ es el acuerdo observado y $p_e$ el esperado. Ninguna de las dos medidas demuestra exactitud: los jueces pueden coincidir en un error.
+
+Las discrepancias se presentaron a un árbitro delegado con jueces anonimizados. Se validaron manualmente **233 criterios discrepantes en 158 celdas** y se introdujeron 28 correcciones al arbitraje. Las 446 celdas restantes conservaron el consenso de los jueces y no se revisaron individualmente.
+
+La consolidación elige consenso cuando los jueces coinciden y decisión validada cuando discrepan. Se conserva procedencia por criterio sin modificar las puntuaciones automáticas originales. La selección por discrepancia permite resolver dudas, pero no estimar precisión poblacional del evaluador ni sustituir una doble anotación humana independiente.
+
+# 7. Resultados
+
+## 7.1. Calidad de recuperación por estrategia
+
+La evaluación de la recuperación abarca las 26 preguntas base en sus dos formulaciones y compara los cuatro métodos frente a los mismos juicios de relevancia y el mismo ideal global de nDCG (§6.1). Las estrategias híbridas alcanzan las medias más altas en los indicadores evaluados y empatan entre sí en cobertura y precisión en el corte de diez posiciones (@tbl-expl-v3-recuperacion). Esta comparación entre buscadores es descriptiva, ya que las hipótesis registradas para esta etapa (H1 y H2) contrastan el efecto de la formulación y no la superioridad global de los métodos híbridos.
+
+| Métrica       |  BM25 | Dense |       RRF | RRF + reranking |
+|---------------|------:|------:|----------:|----------------:|
+| Recall\@5     | 0,373 | 0,383 |     0,427 |       **0,430** |
+| Precision\@5  | 0,304 | 0,315 |     0,338 |       **0,350** |
+| MRR\@5        | 0,545 | 0,521 |     0,573 |       **0,596** |
+| nDCG\@5       | 0,683 | 0,645 |     0,719 |       **0,733** |
+| Recall\@10    | 0,507 | 0,518 | **0,548** |       **0,548** |
+| Precision\@10 | 0,225 | 0,227 | **0,246** |       **0,246** |
+| MRR\@10       | 0,547 | 0,526 |     0,573 |       **0,599** |
+| nDCG\@10      | 0,706 | 0,677 |     0,728 |       **0,735** |
+
+: *Calidad de recuperación por estrategia y corte* {#tbl-expl-v3-recuperacion}
+
+Medias macro sobre 26 bases y sus dos formulaciones. Precision, Recall y MRR usan grado 2. nDCG usa grados 0/1/2 e ideal global por base.
+
+En seis preguntas no hay ningún fragmento juzgado de grado 2. Por convención, Precision, Recall y MRR reciben cero en esas preguntas. **Ese cero no demuestra que el recuperador haya omitido evidencia suficiente conocida.**
+
+Para examinar cuánto influye esta convención, se calculan también las métricas sobre las veinte preguntas que sí tienen algún fragmento de grado 2, incluidas las que requieren corregir una premisa falsa. Este conjunto es distinto de las 22 tareas que exigen responder o corregir: que una tarea requiera una respuesta no garantiza que tenga evidencia de grado 2 anotada. Las seis preguntas sin grado 2 se identifican en el apéndice B.
+
+La recuperación densa obtiene mayor cobertura media que BM25 en ambos cortes, pero presenta menor MRR, que valora la posición del primer acierto, y menor nDCG, que considera el orden y los grados de relevancia. Al combinar ambas listas mediante RRF mejoran descriptivamente tanto la cobertura como el orden. Aplicar después reranking sobre esos mismos diez candidatos eleva MRR y nDCG y modifica la selección de los cinco fragmentos que recibe el generador, sin cambiar la cobertura ni la precisión a diez posiciones.
+
+La @fig-recuperacion-cortes separa **cobertura y orden** al ampliar el corte de cinco a diez resultados. El Recall aumenta en las cuatro estrategias, mientras las diferencias de nDCG reflejan que añadir resultados y ordenarlos bien no son la misma operación. El empate de los híbridos en Recall a diez posiciones no se repite en nDCG.
+
+```{r}
+#| label: fig-recuperacion-cortes
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Cobertura y orden por estrategia y corte. Medias macro sobre 26 bases. Los segmentos unen los cortes 5 y 10, no son IC. Recall usa grado 2 y nDCG grados 0/1/2."
+#| fig-width: 7
+#| fig-height: 3.1
+
+ir <- read.csv("outputs/local_runs/academic_corrections_20260930/retrieval/evaluation/aggregate_metrics.csv") |>
+  filter(cohort == "all_pairs")
+stopifnot(nrow(ir) == 8, all(ir$n_base == 26))
+
+metodos_ir <- c("bm25", "dense", "rrf", "rerank")
+nombres_ir <- c("BM25", "Densa", "RRF", "RRF + reranking")
+ir_l <- bind_rows(lapply(c("recall", "ndcg"), function(cr) {
+  tibble(
+    metodo = factor(ir$method, levels = rev(metodos_ir), labels = rev(nombres_ir)),
+    corte = factor(ir$k, levels = c(5, 10), labels = c("k = 5", "k = 10")),
+    metrica = factor(cr, levels = c("recall", "ndcg"),
+      labels = c("Recall (cobertura)", "nDCG (orden graduado)")),
+    valor = ir[[cr]]
+  )
+}))
+
+ggplot(ir_l, aes(x = valor, y = metodo)) +
+  geom_line(aes(group = metodo), orientation = "y", color = "grey65") +
+  geom_point(aes(shape = corte, color = corte), size = 2.8) +
+  facet_wrap(~metrica, nrow = 1) +
+  scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.2)) +
+  scale_color_manual(values = c("#315C8C", "#C56A31")) +
+  labs(title = "Cobertura y orden de la recuperación",
+    x = "Valor de la métrica", y = NULL, shape = "Corte", color = "Corte") +
+  theme_minimal(base_size = 9) +
+  theme(legend.position = "bottom", panel.grid.major.y = element_blank())
+```
+
+## 7.2. Comparación de recuperadores dentro de cada generador {#sec-final-retrievers}
+
+Para comparar los recuperadores dentro de cada generador, se conservan únicamente las formulaciones con puntuación disponible en las cuatro estrategias para el criterio evaluado. Así, todos los recuperadores se comparan sobre los mismos casos. Las preguntas para las que se espera abstención se excluyen de fundamentación y corrección, pero se incluyen en conducta y citas.
+
+La @tbl-final-recuperadores presenta las medias por pregunta base y el número de formulaciones utilizadas en cada criterio. Permite comparar recuperadores dentro de un mismo generador. No debe utilizarse para comparar directamente los niveles entre generadores, porque los casos incluidos pueden ser distintos.
+
+| Modelo | Método | Fundamentación |     Corrección |       Conducta |          Citas |
+|------------|------------|-----------:|-----------:|-----------:|-----------:|
+| Gemma  | bm25   |     1,806 (34) |     1,500 (33) |     1,568 (41) |     0,955 (41) |
+| Gemma  | dense  |     1,833 (34) | **1,583** (33) | **1,591** (41) |     0,932 (41) |
+| Gemma  | rrf    |     1,750 (34) |     1,556 (33) | **1,591** (41) | **1,000** (41) |
+| Gemma  | rerank | **1,861** (34) |     1,472 (33) |     1,500 (41) |     0,932 (41) |
+| Qwen4  | bm25   |     1,523 (44) |     1,591 (43) |     1,615 (52) | **0,904** (52) |
+| Qwen4  | dense  |     1,773 (44) |     1,614 (43) |     1,577 (52) | **0,904** (52) |
+| Qwen4  | rrf    |     1,773 (44) |     1,636 (43) | **1,712** (52) | **0,904** (52) |
+| Qwen4  | rerank | **1,932** (44) | **1,682** (43) |     1,692 (52) | **0,904** (52) |
+| Qwen9  | bm25   |     1,886 (44) |     1,568 (43) |     1,673 (52) | **0,981** (52) |
+| Qwen9  | dense  |     1,795 (44) |     1,614 (43) |     1,750 (52) |     0,962 (52) |
+| Qwen9  | rrf    | **1,977** (44) |     1,705 (43) |     1,750 (52) | **0,981** (52) |
+| Qwen9  | rerank |     1,932 (44) | **1,727** (43) | **1,788** (52) |     0,942 (52) |
+
+: *Calidad de respuesta por recuperador y generador sobre soporte común* {#tbl-final-recuperadores}
+
+Fundamentación, corrección y conducta: escala 0–2. Citas: 0–1. Gemma, Qwen4 y Qwen9 designan Gemma 4 E4B, Qwen 3.5 4B y Qwen 3.5 9B. Rerank designa RRF con reranking. Los paréntesis cuentan formulaciones por estrategia, no unidades independientes. En Gemma, contenido dispone de 18 bases y 34 formulaciones (33 en corrección). Conducta y citas reúnen 22 bases y 41 formulaciones. En ambos Qwen, contenido reúne 22 bases y 44 formulaciones (43 en corrección). Conducta y citas reúnen 26 bases y 52 formulaciones.
+
+**No hay un recuperador que maximice simultáneamente todos los criterios** (@fig-recuperadores-contenido). Con Gemma, dense presenta la mayor corrección (1,583), reranking la mayor fundamentación (1,861) y RRF el máximo de citas (1,000). Con Qwen 4B, reranking alcanza las mayores medias de contenido (1,932 en fundamentación y 1,682 en corrección), mientras RRF obtiene la mayor conducta (1,712). Las citas empatan. Con Qwen 9B, RRF maximiza fundamentación (1,977) y comparte con BM25 el máximo de citas (0,981). Reranking alcanza la mayor corrección (1,727) y conducta (1,788), con citas inferiores (0,942).
+
+Para cada generador y criterio se comparan las seis parejas de recuperadores sobre los mismos casos. Se resta la puntuación del método de origen a la del método de destino: **una diferencia positiva favorece al segundo**. Los resultados completos incluyen las 72 comparaciones (seis pares por tres generadores y cuatro criterios), sus IC bootstrap y el número de preguntas base con diferencias positivas, negativas o nulas.
+
+Los máximos anteriores son descriptivos. Los intervalos son puntuales y post-hoc, sin ajuste por comparaciones múltiples.
+
+```{r}
+#| label: fig-recuperadores-contenido
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Fundamentación y corrección por recuperador. Medias macro en soporte común dentro de cada generador, sin IC. Gemma: 18 bases, 34 formulaciones (33 en corrección). Cada Qwen: 22 bases, 44 formulaciones (43 en corrección). Los soportes difieren entre modelos. Escala del instrumento: 0–2."
+#| fig-width: 7
+#| fig-height: 5.1
+
+calidad <- read.csv("outputs/local_runs/final_experiment_20260930/analysis/per_retriever.csv")
+stopifnot(nrow(calidad) == 12, !anyDuplicated(calidad[c("generator_model", "retrieval_condition")]))
+calidad_l <- bind_rows(lapply(c("faithfulness", "factual_correctness"), function(cr) {
+  tibble(
+    generador = factor(calidad$generator_model,
+      levels = c("gemma4:e4b", "qwen3.5:4b", "qwen3.5:9b"),
+      labels = c("Gemma E4B", "Qwen 4B", "Qwen 9B")),
+    metodo = factor(calidad$retrieval_condition, levels = rev(metodos_ir), labels = rev(nombres_ir)),
+    criterio = factor(cr, levels = c("faithfulness", "factual_correctness"),
+      labels = c("Fundamentación", "Corrección")),
+    valor = calidad[[paste0(cr, "_mean")]]
+  )
+}))
+
+ggplot(calidad_l, aes(x = valor, y = metodo, color = metodo)) +
+  geom_point(size = 3) +
+  geom_text(aes(label = format(round(valor, 3), nsmall = 3, decimal.mark = ",")),
+    hjust = 1.4, size = 3, color = "grey25") +
+  facet_grid(generador ~ criterio) +
+  scale_x_continuous(limits = c(1.25, 2.05), breaks = seq(1.3, 2, 0.2),
+    labels = function(x) format(x, nsmall = 1, decimal.mark = ",")) +
+  scale_color_manual(values = c("#A64032", "#398477", "#C56A31", "#315C8C")) +
+  labs(title = "Calidad de contenido según el recuperador",
+    subtitle = "Comparación dentro de cada generador",
+    x = "Media macro (instrumento 0–2)", y = NULL) +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "none", panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(),
+    strip.text = element_text(face = "bold"),
+    strip.text.y = element_text(angle = 0),
+    plot.title = element_text(face = "bold", size = 12))
+```
+
+La @fig-diferencias-emparejadas representa los seis contrastes por generador para los dos criterios de contenido, sin seleccionar solo el par más favorable. Un valor positivo favorece al método de destino. Los intervalos muestran la incertidumbre de la diferencia, no la variabilidad de las respuestas individuales. Son puntuales y post-hoc, por lo que no acreditan superioridad ajustada entre estrategias.
+
+```{r}
+#| label: fig-diferencias-emparejadas
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Diferencias emparejadas entre recuperadores. Destino menos origen, escala 0–2. IC percentiles del 95 % con 5.000 remuestreos de bases, puntuales y post-hoc, sin ajuste por multiplicidad. Soporte propio de cada generador y criterio."
+#| fig-width: 7
+#| fig-height: 6.2
+
+contrastes <- read.csv("outputs/local_runs/final_experiment_20260930/analysis/paired_contrasts.csv") |>
+  filter(criterion %in% c("faithfulness", "factual_correctness"))
+stopifnot(nrow(contrastes) == 36,
+  !anyDuplicated(contrastes[c("generator_model", "criterion", "from_condition", "to_condition")]))
+pares <- c("dense - bm25", "rrf - bm25", "rerank - bm25",
+  "rrf - dense", "rerank - dense", "rerank - rrf")
+contrastes <- contrastes |>
+  mutate(par = factor(paste(to_condition, "-", from_condition), levels = rev(pares)),
+    generador = factor(generator_model,
+      levels = c("gemma4:e4b", "qwen3.5:4b", "qwen3.5:9b"),
+      labels = c("Gemma E4B", "Qwen 4B", "Qwen 9B")),
+    criterio = factor(criterion, levels = c("faithfulness", "factual_correctness"),
+      labels = c("Fundamentación", "Corrección")))
+ggplot(contrastes, aes(x = diff, y = par)) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey60") +
+  geom_segment(aes(x = ic95_lo, xend = ic95_hi, yend = par), color = "#315C8C") +
+  geom_point(size = 2, color = "#315C8C") +
+  facet_grid(generador ~ criterio) +
+  labs(title = "Diferencias de contenido e incertidumbre",
+    subtitle = "Valores positivos favorecen al recuperador de destino",
+    x = "Diferencia de medias por base (destino - origen)", y = NULL) +
+  theme_minimal(base_size = 9) +
+  theme(panel.grid.major.y = element_blank(), strip.text.y = element_text(angle = 0))
+```
+
+## 7.3. Efecto de la formulación sobre la recuperación {#sec-explicitness-retrieval}
+
+La comparación pregunta si **mencionar el término técnico facilita recuperar la evidencia**. Para cada una de las 26 preguntas base se comparan sus versiones explícita e implícita, manteniendo el recuperador. La @tbl-expl-v3-pareado muestra el cambio medio en cobertura (Recall\@10) y calidad de ordenación (nDCG\@10). Se resta el resultado de la versión implícita al de la explícita: **un Δ positivo favorece la formulación explícita**.
+
+La prueba de signos (exacta y bilateral) cuenta en cuántas preguntas mejora o empeora cada métrica y excluye los empates. Evalúa la dirección de los cambios, no su magnitud media. Se informa tanto la p de cada prueba como la p ajustada por Holm, que controla el riesgo de obtener resultados significativos por azar al realizar varias comparaciones. El ajuste comprende dieciséis contrastes de Recall y nDCG, entre cuatro estrategias y dos cortes (cinco y diez resultados). Esta agrupación se definió durante el reanálisis, no en el pre-registro inicial (§6.4).
+
+| Métrica    | Estrategia        |      Δ |   +/−/0 |     p | p Holm |
+|------------|-------------------|-------:|--------:|------:|-------:|
+| Recall\@10 | BM25              | +0,136 | 11/2/13 | 0,022 |  0,337 |
+| Recall\@10 | Dense             | +0,118 |  9/4/13 | 0,267 |  1,000 |
+| Recall\@10 | RRF               | +0,141 | 11/3/12 | 0,057 |  0,688 |
+| Recall\@10 | RRF + *reranking* | +0,141 | 11/3/12 | 0,057 |  0,688 |
+| nDCG\@10   | BM25              | +0,096 |  19/6/1 | 0,015 |  0,234 |
+| nDCG\@10   | Dense             | +0,100 |  18/8/0 | 0,076 |  0,688 |
+| nDCG\@10   | RRF               | +0,097 |  18/7/1 | 0,043 |  0,563 |
+| nDCG\@10   | RRF + *reranking* | +0,106 |  18/6/2 | 0,023 |  0,337 |
+
+: *Efecto de la formulación sobre la recuperación a diez posiciones* {#tbl-expl-v3-pareado}
+
+Δ: diferencia media explícita − implícita. +/−/0: preguntas que favorecen la versión explícita, favorecen la implícita o empatan. Por ejemplo, 11/2/13 indica once mejoras, dos empeoramientos y trece empates. p: valor nominal. p Holm: valor ajustado por comparaciones múltiples.
+
+**La formulación explícita obtiene mejores medias en las cuatro estrategias (H1).** Tanto Recall\@10 como nDCG\@10 disminuyen al retirar el término técnico. El patrón es compatible con la penalización prevista por H1: no solo se recupera menos evidencia relevante, también empeora la calidad de su ordenación. Es un resultado descriptivo del conjunto evaluado, no una mejora demostrada para cualquier pregunta.
+
+**La prueba estadística no confirma ese patrón tras el ajuste por comparaciones múltiples.** Ninguna de las pruebas mostradas mantiene p \< 0,05 con Holm. Por ejemplo, BM25 pasa de p = 0,022 a p ajustada = 0,337 en Recall\@10. Por tanto, H1 recibe apoyo descriptivo, pero no confirmación estadística ajustada. Esto tampoco demuestra que la formulación carezca de efecto.
+
+**La recuperación densa y la híbrida no conservan la cobertura como anticipaba H2.** La diferencia de Recall\@10 es +0,118 en dense, frente a +0,136 en BM25 y +0,141 en ambos híbridos. No se reproduce la expectativa de que los métodos semánticos mantengan la cobertura y sufran principalmente en la ordenación. H2 no recibe apoyo claro, aunque estas medias tampoco demuestran que un recuperador sea estadísticamente más sensible que otro.
+
+El análisis adicional de las veinte preguntas con evidencia suficiente anotada (grado 2) conserva el mismo patrón: diferencias de Recall\@10 de +0,177 en BM25, +0,153 en dense y +0,183 en los híbridos, sin significación tras Holm. La interpretación sigue limitada por el tamaño del conjunto y los empates, que reducen las preguntas que contribuyen a la prueba de signos. Además, parte de las preguntas procede de la exploración previa, por lo que el experimento no constituye una confirmación independiente. Los resultados completos de los 32 contrastes y de este análisis adicional se conservan en los artefactos del reanálisis.
+
+## 7.4. Calidad y sensibilidad a la formulación según el generador {#sec-capacidad}
+
+La comparación entre Gemma 4 E4B, Qwen 3.5 4B y Qwen 3.5 9B mantiene constantes el prompt y el techo de contexto. Para una misma pregunta y recuperador, los tres generadores reciben los mismos cinco fragmentos. El cruce de tres modelos, 52 formulaciones y cuatro recuperadores define las 624 celdas previstas. Al combinar dos tamaños de la familia Qwen con un modelo de otra arquitectura, este análisis permite contrastar el rendimiento de los generadores y su sensibilidad al método de búsqueda, sin interpretar los tres modelos como una curva causal de capacidad.
+
+Las tareas que requieren responder o corregir reúnen 509 respuestas aceptadas de 22 preguntas base, mientras que las 95 respuestas a tareas de abstención se analizan aparte. Para comparar los tres generadores sobre los mismos casos, la @tbl-capacidad-niveles conserva solo las observaciones con puntuación disponible en los tres modelos para la misma pregunta, formulación y recuperador (157 celdas por generador en fundamentación, conducta y citas, y 154 en corrección), con igual peso por pregunta base.
+
+| Generador  | Fundamentación | Corrección |  Conducta |     Citas |
+|------------|---------------:|-----------:|----------:|----------:|
+| gemma4:e4b |          1,784 |      1,499 |     1,523 |     0,943 |
+| qwen3.5:4b |          1,743 |      1,598 |     1,602 |     0,902 |
+| qwen3.5:9b |      **1,899** |  **1,649** | **1,680** | **0,948** |
+
+: *Calidad de respuesta por generador sobre soporte común* {#tbl-capacidad-niveles}
+
+Qwen 9B presenta las mayores medias de contenido y conducta en ese soporte, pero Gemma mantiene una media de citas próxima a él (@fig-capacidad). La calidad varía con el generador y con el recuperador. No se ha estimado un modelo conjunto que permita ordenar su importancia.
+
+La **conformidad de la etiqueta** indica si el tipo de respuesta que declara el modelo (respuesta ordinaria, corrección fundamentada o abstención) coincide con el esperado para la pregunta. Se evalúa por separado de la conducta efectiva, que depende de lo que hace el contenido de la respuesta. Sobre todas las respuestas válidas, Qwen 4B declara la etiqueta esperada en el 43 % de los casos, frente al 74 % de Gemma y el 83 % de Qwen 9B. Qwen 4B utiliza con frecuencia «corrección fundamentada» cuando solo ofrece una respuesta ordinaria, sin corregir ninguna premisa falsa. Esta discrepancia es un error de etiquetado, pero no implica por sí misma que la respuesta sea incorrecta o incumpla la tarea. Tampoco mide la confianza del modelo, porque la etiqueta describe una actuación, no un grado de seguridad.
+
+```{r}
+#| label: fig-capacidad
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Calidad por generador sobre observaciones comunes. Medias macro e IC del 95 % por base. Tareas de respuesta y corrección: 22 bases y 157 celdas por modelo (154 en corrección). Citas: 0–1, otros criterios: 0–2."
+#| fig-width: 7
+#| fig-height: 4
+
+niveles <- read.csv("outputs/local_runs/academic_corrections_20260930/capacity/release_run1/h6_niveles_common.csv")
+niveles <- niveles[niveles$scope == "primary_content", ]
+
+metricas <- c(
+  faithfulness = "Fundamentación",
+  factual_correctness = "Corrección",
+  behavior_ok = "Conducta",
+  citations_ok = "Citas"
+)
+
+niveles_l <- bind_rows(lapply(names(metricas), function(cr) {
+  tibble(
+    generador = factor(niveles$generator_model,
+      levels = c("qwen3.5:9b", "qwen3.5:4b", "gemma4:e4b"),
+      labels = c("Qwen 9B", "Qwen 4B", "Gemma E4B")),
+    metrica = factor(metricas[[cr]], levels = unname(metricas)),
+    valor = niveles[[cr]],
+    inferior = vapply(niveles[[paste0(cr, "_ic95")]], function(x) fromJSON(x)[1], numeric(1)),
+    superior = vapply(niveles[[paste0(cr, "_ic95")]], function(x) fromJSON(x)[2], numeric(1))
+  )
+}))
+
+limites_niveles <- tibble(
+  metrica = factor(unname(metricas), levels = unname(metricas)),
+  generador = factor("Qwen 9B", levels = levels(niveles_l$generador)),
+  minimo = 0, maximo = c(2, 2, 2, 1)
+)
+ggplot(niveles_l, aes(x = valor, y = generador)) +
+  geom_blank(data = limites_niveles, aes(x = minimo)) +
+  geom_blank(data = limites_niveles, aes(x = maximo)) +
+  geom_segment(aes(x = inferior, xend = superior, yend = generador), color = "#315C8C") +
+  geom_point(size = 2.7, color = "#315C8C") +
+  facet_wrap(~metrica, scales = "free_x", nrow = 2) +
+  scale_x_continuous(labels = function(x) format(x, decimal.mark = ",")) +
+  labs(title = "Calidad de respuesta según el generador",
+    x = "Media macro e IC del 95 %", y = NULL) +
+  theme_minimal(base_size = 10) +
+  theme(panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(),
+    strip.text = element_text(face = "bold"),
+    plot.title = element_text(face = "bold", size = 12))
+```
+
+### Separación entre estrategias (H5) {#sec-h5}
+
+H5 espera que las diferencias entre recuperadores no aumenten al aumentar la capacidad del generador y que su orden no se invierta. La @tbl-capacidad-separacion muestra, para cada modelo y criterio, la diferencia entre el recuperador con mayor media y el de menor media. Todos se evalúan sobre las mismas 18 preguntas base y 34 formulaciones (33 en corrección), comunes a los tres generadores y los cuatro recuperadores.
+
+| Generador  | Criterio       | Comparación  | Diferencia \[IC 95 %\]  |
+|------------|----------------|--------------|-------------------------|
+| gemma4:e4b | Fundamentación | rerank−rrf   | 0,111 \[−0,083; 0,278\] |
+| gemma4:e4b | Corrección     | dense−rerank | 0,111 \[−0,111; 0,361\] |
+| gemma4:e4b | Conducta       | dense−bm25   | 0,083 \[−0,222; 0,389\] |
+| gemma4:e4b | Citas          | rrf−dense    | 0,083 \[0,000; 0,222\]  |
+| qwen3.5:4b | Fundamentación | rerank−bm25  | 0,389 \[0,167; 0,639\]  |
+| qwen3.5:4b | Corrección     | rerank−bm25  | 0,083 \[−0,167; 0,333\] |
+| qwen3.5:4b | Conducta       | rerank−dense | 0,111 \[−0,028; 0,278\] |
+| qwen3.5:4b | Citas          | bm25−rerank  | 0,028 \[−0,056; 0,111\] |
+| qwen3.5:9b | Fundamentación | rrf−bm25     | 0,111 \[0,000; 0,250\]  |
+| qwen3.5:9b | Corrección     | rrf−bm25     | 0,167 \[0,000; 0,361\]  |
+| qwen3.5:9b | Conducta       | rerank−bm25  | 0,139 \[−0,083; 0,361\] |
+| qwen3.5:9b | Citas          | bm25−dense   | 0,028 \[0,000; 0,083\]  |
+
+: *Separación descriptiva entre recuperadores por generador y criterio* {#tbl-capacidad-separacion}
+
+Extremos seleccionados sobre soporte común: 18 bases y 34 formulaciones (33 en corrección). IC del 95 % puntual. Escala 0–2, citas 0–1. Se indican las identidades mejor−peor. La selección de extremos sesga al alza la separación.
+
+Las diferencias entre recuperadores no muestran una evolución consistente al comparar los generadores. En fundamentación, la distancia entre la mayor y la menor media aumenta en Qwen 4B y vuelve a disminuir en Qwen 9B. Corrección y conducta siguen otros patrones, y el recuperador con mejor media cambia según el modelo y el criterio. Además, al comparar Gemma con Qwen cambian tanto la familia como la capacidad del modelo, por lo que no se puede atribuir la diferencia únicamente a esta última.
+
+### Sensibilidad de las métricas a la capacidad (H6) {#sec-h6}
+
+H6 espera mejores puntuaciones de fundamentación y corrección con generadores de mayor capacidad, además de conservar el signo del efecto de formulación. La primera parte recibe **apoyo parcial**. Cada pareja de modelos se compara solo sobre sus casos comunes y las diferencias se agregan por las mismas 22 preguntas base.
+
+Entre Qwen 4B y 9B, la fundamentación mejora +0,148 \[0,040 a 0,267\], sobre 176 celdas. En corrección, la diferencia es +0,034 \[−0,153 a 0,176\], sobre 174. El primer intervalo es compatible con una mejora de la media, mientras el segundo mantiene incertidumbre sobre su dirección.
+
+Al comparar Gemma con Qwen 9B, la diferencia es +0,115 \[0,010 a 0,223\] en fundamentación y +0,146 \[−0,019 a 0,289\] en corrección, sobre 157 y 155 celdas, respectivamente. El patrón vuelve a distinguir una mejora estimada de fundamentación de una diferencia de corrección cuyo intervalo incluye cero.
+
+A diferencia de la tabla de recuperación, en la @tbl-capacidad-explicitud se resta la puntuación explícita a la implícita (implícita − explícita), de modo que un valor negativo refleja una pérdida ante la pregunta implícita. Las diferencias de fundamentación y corrección son negativas en los tres modelos. Este patrón es descriptivo, porque varios intervalos incluyen cero. Tampoco se observa que un generador mayor reduzca esa penalización. En fundamentación, Qwen 9B presenta una caída media mayor que los otros dos modelos.
+
+| Generador | Fundamentación | Corrección | Conducta | Citas |
+|---------------|---------------|---------------|---------------|---------------|
+| gemma4:e4b | −0,133 \[−0,303; 0,038\] | −0,121 \[−0,322; 0,057\] | −0,133 \[−0,292; 0,011\] | +0,049 \[−0,061; 0,174\] |
+| qwen3.5:4b | −0,098 \[−0,242; 0,038\] | −0,167 \[−0,375; 0,038\] | −0,155 \[−0,375; 0,045\] | −0,019 \[−0,133; 0,091\] |
+| qwen3.5:9b | −0,170 \[−0,341; −0,023\] | −0,136 \[−0,295; 0,000\] | −0,080 \[−0,205; 0,023\] | −0,091 \[−0,227; 0,011\] |
+
+: *Efecto de la formulación sobre la respuesta por generador* {#tbl-capacidad-explicitud}
+
+Implícita − explícita en soporte común entre tres modelos: 22 bases y 74 bloques base × recuperador (71 en corrección). Rúbrica 0–2, citas 0–1. IC del 95 % puntual.
+
+Para comprobar si un generador reduce la penalización de la formulación implícita, se calcula primero la diferencia **implícita − explícita** en cada modelo. Después se resta el efecto del modelo de origen al del modelo de destino. Para cada pregunta y recuperador se conservan solo los casos con las cuatro respuestas evaluables: dos formulaciones en dos modelos. Las diferencias se promedian primero dentro de cada pregunta base y después entre preguntas.
+
+Un resultado positivo indica una penalización menor y uno negativo, mayor. La @tbl-capacidad-interaccion muestra que los IC de contenido incluyen cero: **no se acredita absorción de la penalización por implicitud**. Que un efecto sea significativo en un modelo y no en otro no demuestra una diferencia entre ambos.
+
+| Comparación | Δ fundamentación | Δ corrección | Bloques (F/C) |
+|------------------|------------------|------------------|------------------:|
+| Gemma → Qwen 4B | +0,034 \[−0,136; 0,193\] | −0,045 \[−0,295; 0,205\] | 74/71 |
+| Gemma → Qwen 9B | −0,038 \[−0,292; 0,193\] | −0,015 \[−0,246; 0,220\] | 74/72 |
+| Qwen 4B → Qwen 9B | −0,045 \[−0,205; 0,114\] | +0,068 \[−0,091; 0,239\] | 88/86 |
+
+: *Interacción entre generador y formulación en las métricas de contenido* {#tbl-capacidad-interaccion}
+
+Diferencia del efecto implícita − explícita: destino menos origen. 22 bases por contraste, IC del 95 % puntual y soporte común propio de cada par de modelos. Bloques (F/C): fundamentación/corrección.
+
+Si se consideran todas las respuestas válidas de cada modelo (en lugar del soporte común a los tres) y se añaden las 95 respuestas a tareas de abstención, la media de corrección pasa de 1,502 a 1,539 en Gemma, de 1,618 a 1,652 en Qwen 4B y de 1,649 a 1,703 en Qwen 9B. Este aumento incorpora las puntuaciones históricas asignadas a las tareas de abstención y no demuestra mayor capacidad para responder preguntas de contenido. Los veinte fallos siguen contabilizados aparte, sin recibir un cero de calidad.
+
+## 7.5. Tiempos de generación, consumo de tokens y fallos de salida {#sec-final-operation}
+
+La @tbl-final-operacion resume el tiempo de generación y el consumo de tokens de las respuestas aceptadas en cada combinación de modelo y recuperador. A diferencia de las métricas de calidad, que se agregan por pregunta base, estos valores son medias aritméticas simples sobre las respuestas válidas de cada fila. Tanto las 604 respuestas aceptadas como los veinte fallos cuentan con registros de tiempo y tokens. Los consumos de los fallos se contabilizan aparte para no alterar el promedio de las salidas válidas.
+
+| Modelo | Método | Tiempo (s) | Entrada | Salida | Válidas | Fallos |
+|--------|--------|-----------:|--------:|-------:|--------:|-------:|
+| Gemma  | bm25   |      2,810 |  2405,9 |  126,3 |      48 |      4 |
+| Gemma  | dense  |      3,135 |  2491,1 |  153,4 |      49 |      3 |
+| Gemma  | rrf    |      2,985 |  2436,4 |  141,9 |      44 |      8 |
+| Gemma  | rerank |      2,974 |  2415,0 |  138,0 |      47 |      5 |
+| Qwen4  | bm25   |      2,731 |  2391,6 |   97,9 |      52 |      0 |
+| Qwen4  | dense  |      2,537 |  2398,4 |   86,9 |      52 |      0 |
+| Qwen4  | rrf    |      2,556 |  2369,7 |   94,9 |      52 |      0 |
+| Qwen4  | rerank |      2,632 |  2507,4 |   98,3 |      52 |      0 |
+| Qwen9  | bm25   |      3,906 |  2343,6 |   88,1 |      52 |      0 |
+| Qwen9  | dense  |      3,867 |  2306,2 |   96,2 |      52 |      0 |
+| Qwen9  | rrf    |      3,841 |  2322,4 |   93,9 |      52 |      0 |
+| Qwen9  | rerank |      3,945 |  2363,1 |   96,9 |      52 |      0 |
+
+: *Registros de generación: medias de unidades aceptadas y fallos separados* {#tbl-final-operacion}
+
+Entrada y salida se expresan en tokens. El tiempo corresponde a generación y reintentos, sin incluir recuperación ni evaluación. Las medias registradas van de 2,537 a 3,945 segundos entre combinaciones. Cada total ya incorpora sus intentos correctivos.
+
+Estas observaciones no permiten ordenar causalmente la eficiencia del recuperador: intervienen longitud del contexto y de la respuesta, reintentos, carga, orden de ejecución y tokenizador. Tampoco estiman latencia end-to-end ni coste monetario. Son una descripción de la campaña, útil para dimensionar pero no para demostrar H4 completamente.
+
+La @fig-tiempo-generacion muestra la distribución de los tiempos registrados, que permite distinguir la duración habitual de las respuestas de los casos más lentos.
+
+```{r}
+#| label: fig-tiempo-generacion
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Distribución del tiempo de generación por modelo y estrategia de recuperación. Respuestas aceptadas (n = 604), incluidos los reintentos."
+#| fig-width: 7
+#| fig-height: 5.4
+
+datos_tiempo <- read.csv(
+  "outputs/local_runs/final_experiment_20260930/analysis/operational_cells.csv",
+  na.strings = c("", "NA", "na")
+)
+stopifnot(
+  nrow(datos_tiempo) == 624,
+  !anyDuplicated(datos_tiempo[c("qid", "generator_model", "retrieval_condition")]),
+  all(datos_tiempo$status %in% c("accepted", "failed")),
+  is.numeric(datos_tiempo$latency_s),
+  all(is.finite(datos_tiempo$latency_s)),
+  all(datos_tiempo$latency_s >= 0),
+  sum(datos_tiempo$status == "failed") == 20
+)
+
+tiempos <- datos_tiempo |>
+  filter(status == "accepted") |>
+  mutate(
+    generador = factor(generator_model,
+      levels = c("gemma4:e4b", "qwen3.5:4b", "qwen3.5:9b"),
+      labels = c("Gemma E4B", "Qwen 4B", "Qwen 9B")),
+    metodo = factor(retrieval_condition,
+      levels = rev(metodos_ir), labels = rev(nombres_ir))
+  )
+stopifnot(nrow(tiempos) == 604, !anyNA(tiempos$generador), !anyNA(tiempos$metodo))
+
+tiempos_medias <- tiempos |>
+  group_by(generador, metodo, generator_model, retrieval_condition) |>
+  summarise(n = n(), media = mean(latency_s), .groups = "drop")
+referencia_tiempo <- read.csv(
+  "outputs/local_runs/final_experiment_20260930/analysis/operational.csv"
+)
+stopifnot(
+  nrow(tiempos_medias) == 12, nrow(referencia_tiempo) == 12,
+  !anyDuplicated(referencia_tiempo[c("generator_model", "retrieval_condition")])
+)
+comprobacion_tiempos <- inner_join(
+  tiempos_medias, referencia_tiempo,
+  by = c("generator_model", "retrieval_condition")
+)
+stopifnot(
+  nrow(comprobacion_tiempos) == 12,
+  all(comprobacion_tiempos$n == comprobacion_tiempos$accepted),
+  all(abs(comprobacion_tiempos$media - comprobacion_tiempos$latency_s_mean) < 1e-9)
+)
+
+ggplot(tiempos, aes(x = latency_s, y = metodo)) +
+  geom_boxplot(orientation = "y", width = 0.55, linewidth = 0.4,
+    fill = "#DCE6F0", color = "#315C8C", outlier.shape = 1, outlier.alpha = 0.7) +
+  geom_point(data = tiempos_medias, aes(x = media, shape = "Media"),
+    color = "#C56A31", size = 2.4) +
+  facet_wrap(~generador, ncol = 1, scales = "fixed") +
+  scale_x_continuous(limits = c(0, NA),
+    labels = function(x) format(x, trim = TRUE, decimal.mark = ","),
+    expand = expansion(mult = c(0, 0.03))) +
+  scale_shape_manual(values = c(Media = 18), name = NULL) +
+  labs(title = "Tiempo de generación por modelo y estrategia",
+    subtitle = "Respuestas aceptadas · tiempo acumulado con reintentos",
+    x = "Tiempo de generación (s)", y = NULL) +
+  theme_minimal(base_size = 9) +
+  theme(legend.position = "bottom", panel.grid.major.y = element_blank(),
+    panel.grid.minor = element_blank(), strip.text = element_text(face = "bold"),
+    plot.title = element_text(face = "bold", size = 11))
+```
+
+La @fig-completitud-final muestra otra dimensión de la decisión: **producir una salida válida no equivale a producir contenido de calidad**. Los dos Qwen completan sus celdas, mientras Gemma presenta fallos con las cuatro estrategias. El mayor número de fallos en RRF no demuestra que la fusión sea su causa, dado el orden secuencial y la ausencia de réplicas.
+
+```{r}
+#| label: fig-completitud-final
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Completitud del contrato de salida por combinación. Respuestas válidas sobre 52 previstas. Escala: 80–100 %. Representa completitud, no corrección ni fundamentación. Los fallos se mantienen fuera de las medias de calidad."
+#| fig-width: 7
+#| fig-height: 2.8
+
+operacion <- read.csv("outputs/local_runs/final_experiment_20260930/analysis/operational.csv") |>
+  mutate(
+    total = accepted + failed,
+    completitud = accepted / total,
+    generador = factor(generator_model,
+      levels = c("qwen3.5:9b", "qwen3.5:4b", "gemma4:e4b"),
+      labels = c("Qwen 9B", "Qwen 4B", "Gemma E4B")),
+    metodo = factor(retrieval_condition, levels = metodos_ir, labels = nombres_ir)
+  )
+stopifnot(nrow(operacion) == 12, all(operacion$total == 52),
+  sum(operacion$accepted) == 604, sum(operacion$failed) == 20,
+  all(operacion$completitud >= 0.8 & operacion$completitud <= 1))
+
+ggplot(operacion, aes(x = metodo, y = generador, fill = completitud)) +
+  geom_tile(color = "white", linewidth = 1) +
+  geom_text(aes(label = paste0(accepted, "/", total)), size = 3.4) +
+  scale_fill_gradient(low = "#D88B73", high = "#9AC5D0", limits = c(0.8, 1),
+    breaks = c(0.8, 0.9, 1), labels = c("80 %", "90 %", "100 %")) +
+  labs(title = "Completitud del contrato de salida",
+    x = NULL, y = NULL, fill = "Válidas") +
+  theme_minimal(base_size = 9) +
+  theme(panel.grid = element_blank(), legend.position = "bottom")
+```
+
+## 7.6. Relación entre fundamentación y corrección de las respuestas
+
+Una puntuación alta de fundamentación no implica que la respuesta resuelva toda la pregunta. Para localizar este desacople se cruzan las puntuaciones finales de fundamentación y corrección en las tareas de contenido.
+
+La @tbl-perfiles-contenido distribuye las respuestas aceptadas con ambos criterios numéricos en cuatro perfiles mutuamente excluyentes. El valor 2 expresa cumplimiento completo de las anclas de cada criterio. «Menor» reúne los valores 0 y 1 y, por tanto, errores y cumplimientos parciales distintos. Se excluyen las tareas de abstención y cuatro puntuaciones de corrección no aplicable. Son recuentos de respuestas, no preguntas independientes ni medias sobre soporte común para comparar modelos.
+
+| Generador | Ambos en 2 | F = 2, C \< 2 | C = 2, F \< 2 | Ambos \< 2 | Evaluables |
+|-----------|-----------:|--------------:|--------------:|-----------:|-----------:|
+| Gemma E4B |         93 |            38 |             3 |         21 |        155 |
+| Qwen 4B   |        105 |            38 |            11 |         21 |        175 |
+| Qwen 9B   |        122 |            38 |             9 |          6 |        175 |
+
+: *Perfiles de fundamentación y corrección en respuestas aceptadas* {#tbl-perfiles-contenido}
+
+Recuentos de celdas, con soportes propios por generador.
+
+F: fundamentación. C: corrección. Los valores inferiores a 2 reúnen cumplimiento parcial y error.
+
+```{r}
+#| echo: false
+#| results: hide
+unidades <- read.csv("outputs/local_runs/final_experiment_20260930/analysis/joined_cells.csv",
+  na.strings = c("", "NA", "na"))
+stopifnot(nrow(unidades) == 604,
+  !anyDuplicated(unidades[c("qid", "generator_model", "retrieval_condition")]))
+contenido <- unidades |> filter(expected_behavior %in% c("answer", "grounded_correction"))
+stopifnot(nrow(contenido) == 509,
+  sum(is.na(contenido$faithfulness) | is.na(contenido$factual_correctness)) == 4)
+perfiles <- contenido |>
+  filter(!is.na(faithfulness), !is.na(factual_correctness)) |>
+  group_by(generator_model) |>
+  summarise(ambos = sum(faithfulness == 2 & factual_correctness == 2),
+    solo_fund = sum(faithfulness == 2 & factual_correctness < 2),
+    solo_corr = sum(factual_correctness == 2 & faithfulness < 2),
+    menores = sum(faithfulness < 2 & factual_correctness < 2),
+    evaluables = n(), .groups = "drop")
+esperado <- rbind(c(93, 38, 3, 21, 155), c(105, 38, 11, 21, 175), c(122, 38, 9, 6, 175))
+stopifnot(identical(perfiles$generator_model, c("gemma4:e4b", "qwen3.5:4b", "qwen3.5:9b")),
+  all(as.matrix(perfiles[, -1]) == esperado))
+```
+
+En los tres generadores aparecen respuestas plenamente respaldadas por el contexto que no alcanzan corrección completa. También existen respuestas correctas que no están enteramente sustentadas por la evidencia suministrada. **El respaldo y la resolución de la tarea deben examinarse por separado**. Estos perfiles localizan unidades para una revisión cualitativa posterior. Distinguir falta de evidencia, omisión y uso incorrecto del contexto exige inspeccionar cada respuesta con sus fragmentos, y no puede inferirse solo de esta tabla.
+
+# 8. Discusión
+
+## 8.1. Respuesta a la pregunta de investigación y balance de hipótesis
+
+La pregunta de investigación del trabajo es:
+
+> ¿Qué técnica de IR maximiza la corrección y el groundedness en un sistema RAG educativo manteniendo una latencia y un coste aceptables?
+
+**Los resultados no permiten identificar una técnica que maximice simultáneamente todos esos criterios.** Las variantes híbridas presentan las mayores medias de recuperación, pero su ventaja en la respuesta final depende del generador y de la dimensión evaluada. Con Qwen 3.5 4B, RRF con reranking obtiene las mayores medias de fundamentación y corrección. Con Qwen 3.5 9B, RRF alcanza la mayor fundamentación, mientras que RRF con reranking obtiene la mayor corrección. Con Gemma 4 E4B, el reranking encabeza la fundamentación y la recuperación densa, la corrección. Estos máximos son descriptivos y no acreditan una superioridad estadística ajustada entre estrategias.
+
+La respuesta a la pregunta es, por tanto, **una elección condicionada al generador y a las prioridades del sistema**, no una recomendación universal. La evidencia permite seleccionar combinaciones candidatas según se priorice fundamentación, corrección, conducta o soporte de citas. Sin embargo, no demuestra cuál ofrece el mejor compromiso de calidad, latencia y coste. Para resolver esa parte de la pregunta sería necesario definir cómo se ponderan los criterios, establecer límites operativos aceptables y medir el sistema completo sobre las consultas finales. Los tiempos y tokens registrados describen la campaña, pero no constituyen un benchmark controlado de latencia end-to-end ni una estimación del coste total.
+
+**H1. Efecto de la formulación sobre la recuperación.** Esta hipótesis anticipaba que la formulación implícita reduciría la calidad de recuperación respecto a la explícita. Se esperaba que retirar el término técnico, manteniendo la necesidad informativa, dificultara localizar y ordenar la evidencia pertinente. Los resultados siguen esa dirección: las formulaciones explícitas obtienen mayores medias de Recall y nDCG en las cuatro estrategias. No obstante, las diferencias no mantienen significación tras el ajuste Holm por comparaciones múltiples. **H1 recibe apoyo descriptivo, pero no confirmación estadística ajustada.**
+
+**H2. Sensibilidad según el recuperador.** Se esperaba que la formulación implícita redujera la cobertura de BM25, mientras que la recuperación densa y los métodos híbridos conservaran la cobertura y se deterioraran principalmente en la ordenación. Los resultados no reproducen esa distinción: la recuperación densa y la híbrida también presentan menores medias de cobertura con las preguntas implícitas. Aunque la caída media de Recall es algo menor en dense que en BM25, ese patrón no basta para demostrar que un recuperador sea estadísticamente más resistente al cambio de formulación. **H2 no recibe apoyo claro**, porque la pérdida observada no se limita a la coincidencia léxica ni afecta únicamente al orden en los métodos semánticos.
+
+**H3. Efecto de la formulación sobre la conducta.** Esta hipótesis plantea que las preguntas implícitas reducen el cumplimiento de la conducta esperada en la respuesta RAG. Esa conducta consiste en responder cuando corresponde, corregir una premisa falsa o abstenerse cuando no existe evidencia suficiente. Su evaluación exige comparar las dos formulaciones de cada pregunta manteniendo el recuperador y el generador. **H3 permanece pendiente de ese contraste específico.** El deterioro de recuperación observado en H1 no demuestra por sí mismo un deterioro de la conducta: un contexto menos completo puede seguir siendo suficiente, y una abstención puede ser adecuada ante la falta de evidencia.
+
+**H4. Compromiso operativo de RRF.** Esta hipótesis proponía que RRF conservaría el mejor equilibrio entre calidad de recuperación, calidad de respuesta y latencia. La campaña final muestra que RRF es una alternativa competitiva, pero no encabeza todos los criterios ni todos los generadores. Sin un criterio conjunto de decisión y unos límites de servicio definidos, **H4 no queda demostrada**. RRF puede formar parte de la selección de alternativas, pero no puede recomendarse como opción óptima por defecto a partir de esta evidencia.
+
+**H5. Separación entre recuperadores y capacidad.** Se esperaba que, al aumentar la capacidad del generador, las diferencias entre estrategias de recuperación se mantuvieran o disminuyeran, sin invertir su orden relativo. Los resultados no muestran un patrón consistente entre criterios. Sobre los casos comunes, la separación de fundamentación disminuye entre Qwen 4B y Qwen 9B, mientras que la de corrección aumenta. Además, el recuperador con mayor media cambia según el generador y el criterio, por lo que una menor distancia entre extremos no basta para afirmar que se conserva el orden. La comparación entre Gemma y Qwen introduce también un cambio de familia, no solo de capacidad. **H5 no recibe apoyo consistente**, y el diseño no permite atribuir causalmente esas diferencias a una única dimensión de capacidad.
+
+**H6. Calidad y efecto de formulación.** Esta hipótesis anticipaba mejores puntuaciones de fundamentación y corrección con generadores de mayor capacidad, junto con la conservación de la dirección del efecto de formulación. La primera parte recibe apoyo parcial. Entre Qwen 4B y Qwen 9B, la fundamentación aumenta en promedio 0,148 puntos en la escala 0–2, con un intervalo de confianza del 95 % de 0,040 a 0,267. La diferencia de corrección es menor y su intervalo incluye cero, por lo que su dirección sigue siendo incierta. Estos intervalos corresponden a comparaciones individuales del reanálisis y no acreditan superioridad ajustada por comparaciones múltiples.
+
+La segunda parte de H6 se reproduce descriptivamente: las preguntas implícitas obtienen menores medias de fundamentación y corrección en los tres generadores. Sin embargo, conservar esa dirección no significa que un generador mayor reduzca la desventaja de las preguntas implícitas. El análisis adicional que compara el efecto de formulación entre modelos no demuestra esa reducción. **H6 recibe, por tanto, apoyo parcial**, sin establecer una mejora general de todos los criterios ni una compensación de la penalización por formulación implícita.
+
+La combinación de recuperación y generación debe evaluarse como un conjunto, separando la evidencia recuperada, la calidad de la respuesta y la capacidad de producir una salida válida. La elección final requiere validar la configuración candidata con preguntas nuevas y comprobar que su calidad y sus exigencias operativas satisfacen las necesidades del servicio.
+
+## 8.2. Compromisos entre calidad y viabilidad operativa
+
+Recuperar evidencia y utilizarla correctamente son etapas distintas. Mejorar nDCG no asegura una respuesta más precisa, ni citar un fragmento del top-5 garantiza que ese pasaje respalde lo afirmado. Por ello, cualquier ventaja en el ranking debe comprobarse en la respuesta final.
+
+Sobre los casos comunes entre modelos, Qwen 9B alcanza las mayores medias de fundamentación y corrección, aunque no todas las diferencias de corrección excluyen cero en sus intervalos puntuales. Gemma obtiene puntuaciones de citas próximas a las de Qwen 9B, pero registra veinte fallos de salida. La calidad de las respuestas aceptadas y la proporción de salidas válidas deben valorarse juntas para no favorecer a un modelo solo por las consultas que logra completar.
+
+El benchmark previo refleja el cómputo adicional del reranking, pero no se integra con la calidad de generación. Como los tiempos y tokens de esta campaña son descriptivos, una decisión operativa exige medir el sistema completo bajo la infraestructura y la demanda reales del servicio.
+
+## 8.3. Alcance lingüístico y transferibilidad
+
+Dado que el corpus, las consultas y las respuestas evaluadas están en inglés, los resultados no pueden trasladarse de forma directa a materiales en español, colecciones bilingües o escenarios de recuperación entre idiomas (*cross-lingual*). Una extensión a otro contexto docente requeriría construir preguntas equivalentes y juicios de relevancia propios, además de validar modelos adecuados a la lengua y la escala de la colección. Modificar la estrategia de segmentación, el número de fragmentos candidatos o la amplitud del contexto entregado al generador también puede alterar el orden relativo de los buscadores. Las conclusiones describen el comportamiento de este sistema, no una jerarquía universal.
+
+## 8.4. Limitaciones y amenazas a la validez
+
+El conjunto evaluado consta de 26 preguntas base como unidades independientes de análisis. Siete proceden de la exploración que originó las hipótesis y su rúbrica de equivalencia se formalizó después. La selección de soportes comunes, el ajuste de Holm y parte de las reglas de aplicabilidad también se definieron durante el reanálisis.
+
+Los qrels proceden de los candidatos recuperados por los cuatro métodos y no cubren todo el corpus. Seis preguntas base carecen de fragmentos de grado 2 (incluida una tarea de respuesta), por lo que su cero en las métricas estrictas responde a esa convención de cálculo y no demuestra que el buscador haya omitido evidencia suficiente conocida. Además, los juicios automáticos o asistidos no equivalen a una anotación humana independiente, que permitiría contrastar los juicios con evaluadores humanos, aunque con un mayor coste de anotación.
+
+La revisión humana se concentró en las 158 respuestas con discrepancias, mientras las otras 446 conservaron el consenso automático sin inspección individual. A esto se suma que el juez B participó en el diseño de preguntas y el árbitro comparte proveedor con el juez A.
+
+La evaluación presenta también excepciones que reducen su uniformidad. La regla especial de q-v3-007 se aplicó a los criterios discrepantes revisados, pero no al consenso automático. Existen además cuatro valores de corrección no aplicable y se conservan puntuaciones históricas de contenido en las 95 respuestas a tareas de abstención, utilizadas solo en el análisis adicional.
+
+El uso de soporte común reduce la muestra disponible y condiciona la calidad a las salidas aceptadas, con fallos concentrados en Gemma. Los intervalos de confianza son puntuales y elegir a posteriori el mejor y el peor recuperador sesga al alza su separación. Que un intervalo incluya cero no demuestra equivalencia. Tampoco se estima el peso causal conjunto del generador y del recuperador.
+
+La generación se ejecutó de forma secuencial y sin réplicas, con hasta tres intentos en total por celda para cumplir el formato. El corte de cinco fragmentos no iguala la longitud en tokens y el reranker puede truncar pasajes largos. Faltan un benchmark del sistema completo sobre las consultas finales y medidas de concurrencia, energía, amortización y coste total. El benchmark complementario describe una ejecución serial en una RTX 2060 SUPER.
+
+El control inicial señaló cinco fragmentos con riesgo en fórmulas y la revisión posterior de las justificaciones detectó señales de pérdida matemática en veinte. Son controles de distinto alcance, no una auditoría exhaustiva. Corregir estas pérdidas exigiría crear una nueva versión del corpus y reconstruir fragmentos, rankings y qrels. Se desconoce su efecto sobre las métricas y el orden de los métodos.
+
+## 8.5. Recomendaciones para seleccionar una configuración RAG
+
+**La elección de la configuración depende del generador y del criterio prioritario.** Con Qwen 3.5 9B, RRF es una candidata cuando se priorizan la fundamentación y el soporte de citas, mientras que RRF con reranking alcanza las mayores medias de corrección y cumplimiento de la conducta esperada. Con Qwen 3.5 4B, RRF con reranking ofrece las mayores medias de fundamentación y corrección, sin fallos de salida en esta ejecución, y RRF encabeza la adecuación conductual. Con Gemma 4 E4B, la recuperación densa lidera la corrección, el reranking la fundamentación y RRF el soporte de citas. Sin embargo, los fallos de salida en las cuatro estrategias, especialmente con RRF, exigen cautela operativa. En todos los casos se trata de máximos descriptivos que no acreditan superioridad estadística ajustada ni se resumen en un índice compuesto.
+
+Incorporar la fase adicional de reordenación mediante un cross-encoder solo resulta justificable si la mejora en la respuesta final compensa el cómputo añadido dentro de un presupuesto de latencia verificable. Por ello, BM25 sigue siendo la referencia sencilla frente a la que deben demostrar su valor tanto la fusión híbrida como el reranking.
+
+Antes de implantar una configuración en un entorno real, es necesario fijar de antemano las prioridades y los umbrales de aceptación, validar el sistema con preguntas nuevas y registrar tanto los fallos de salida como las decisiones de abstención. La utilidad educativa exige además evaluar cómo se presenta esa ayuda al estudiante para sostener su aprendizaje autónomo, no solo verificar el respaldo documental del contenido.
+
+# 9. Conclusiones y trabajo futuro
+
+## 9.1. Síntesis y contribuciones
+
+La aportación de Data Science es la construcción de un dataset relacional y una comparación trazable de **cuatro recuperadores, dos formulaciones y tres generadores** sobre 288 fragmentos de material educativo abierto. Las 26 bases producen 604 respuestas válidas y veinte fallos de 624 celdas previstas.
+
+**La combinación de señales léxicas y semánticas ofrece los mejores resultados medios de recuperación en este corpus.** RRF y reranking alcanzan Recall\@10 de 0,548, frente a 0,507 de BM25 y 0,518 de dense. Reranking obtiene el mayor nDCG\@10 (0,735), seguido de RRF (0,728). Estas diferencias identifican candidatos para una validación posterior, pero la comparación entre técnicas es descriptiva y no acredita superioridad estadística global (@tbl-expl-v3-recuperacion).
+
+**Recuperar más evidencia no equivale a situarla mejor.** Dense supera a BM25 en cobertura a diez posiciones, pero presenta menor MRR y nDCG. El reranker, por su parte, mejora el orden sobre los mismos diez candidatos de RRF y puede modificar los cinco pasajes entregados al generador, sin ampliar la cobertura a diez. La distinción entre selección y orden permite localizar qué aporta cada intervención.
+
+**Mejorar el ranking no garantiza mejorar todas las dimensiones de la respuesta.** Con Gemma, reranking alcanza la mayor fundamentación, pero dense la mayor corrección. Con Qwen 4B, reranking encabeza ambos criterios. Con Qwen 9B, RRF obtiene la mayor fundamentación y reranking la mayor corrección y conducta. El soporte de citas introduce otro compromiso. Son máximos descriptivos sobre preguntas comunes dentro de cada generador, no una clasificación universal ni una superioridad ajustada (@tbl-final-recuperadores). La decisión debe recaer sobre una combinación y un criterio prioritario.
+
+**El vocabulario de la pregunta sigue siendo una fuente de sensibilidad.** La formulación explícita favorece las medias de recuperación, pero ningún contraste de formulación mantiene significación tras el ajuste Holm. Esto deja abierta la magnitud y generalidad del efecto, no demuestra que las formulaciones sean equivalentes en rendimiento. El patrón observado justifica evaluarlo con preguntas nuevas y con técnicas que reduzcan el desajuste de vocabulario.
+
+**Un generador mayor puede mejorar el uso del contexto, pero no se ha demostrado que sustituya una buena recuperación.** Entre Qwen 4B y 9B, la fundamentación aumenta +0,148 en la escala 0–2, con IC 95 % puntual de 0,040 a 0,267. La corrección aumenta +0,034, con IC de −0,153 a 0,176. La primera estimación es compatible con una mejora de la media, mientras la segunda mantiene incertidumbre sobre su dirección. Además, la interacción entre generador y formulación no demuestra absorción de la penalización por implicitud, ni se observa una reducción consistente de las diferencias entre recuperadores.
+
+**La calidad condicional y la completitud deben evaluarse juntas.** Los dos Qwen producen todas sus salidas previstas y los veinte fallos corresponden a Gemma. El recuento es un resultado observado, pero una única ejecución secuencial no permite atribuir causalmente los fallos al tamaño del modelo o al recuperador, ni estimar disponibilidad de servicio. Excluirlos de las medias de calidad no debe excluirlos de la decisión operativa.
+
+En conjunto, el trabajo identifica patrones útiles para seleccionar alternativas, aunque no demuestre un ganador universal. **La ausencia de un nivel de significación suficiente no invalida la descripción de los resultados, pero limita su generalización y la fuerza de la recomendación**. La pregunta sobre el mejor compromiso de calidad, latencia y coste queda parcialmente abierta hasta fijar un umbral de servicio y medir el sistema completo.
+
+## 9.2. Cumplimiento de objetivos
+
+**O1. Documentar el corpus.** Se seleccionaron dos manuales abiertos de OpenStax, se registraron las versiones utilizadas, su procedencia y licencia, y se delimitó el material incluido y excluido. El resultado es un corpus trazable, aunque restringido a textos en inglés de una misma editorial en el ámbito de la estadística y la ciencia de datos.
+
+**O2. Preparar los datos.** La limpieza, la normalización y la segmentación por secciones produjeron 288 fragmentos con identificadores estables y referencias a sus secciones y páginas de origen. Mantener esta representación en las cuatro estrategias permitió compararlas sobre las mismas unidades, con la limitación de las pérdidas de extracción en algunas fórmulas matemáticas.
+
+**O3. Construir la referencia de evaluación.** El experimento final reúne 26 preguntas base y 52 formulaciones equivalentes, vinculadas a la conducta esperada y a las respuestas y evidencias de referencia cuando están disponibles. Se documentaron los criterios de admisión de las parejas y la procedencia de los juicios de relevancia. Esta referencia permite comparar los métodos con criterios comunes, si bien los qrels se limitan al pool evaluado y las excepciones documentadas en la memoria reducen su homogeneidad.
+
+**O4. Comparar la recuperación.** Se implementaron BM25, recuperación densa, fusión híbrida mediante RRF y RRF con reranking, y se evaluaron su cobertura, ordenación y sensibilidad a la formulación de la pregunta. Las estrategias utilizaron el mismo corpus y los mismos juicios de relevancia. El objetivo comparativo está realizado y permite distinguir entre recuperar más evidencia y situarla mejor en el ranking. El apoyo descriptivo de H1 y el apoyo insuficiente de H2 son resultados de esa comparación.
+
+**O5. Comparar las respuestas RAG.** Se evaluaron 604 respuestas aceptadas de tres generadores mediante una rúbrica común, dos jueces y validación humana de las discrepancias, aplicando las reglas de evaluación de cada criterio. Se compararon recuperadores dentro de cada modelo y se analizaron diferencias entre generadores y efectos de formulación sobre el contenido. Sin embargo, sigue pendiente el contraste específico de H3, en su formulación revisada, sobre el efecto de la pregunta explícita o implícita en la conducta esperada. **El objetivo está parcialmente cumplido**, porque esa comparación concreta no se ha completado. La falta de apoyo consistente a H5 y el apoyo parcial a H6 deben distinguirse de ese contraste pendiente.
+
+**O6. Interpretar los compromisos y recomendar.** Se formularon recomendaciones según el generador y el criterio prioritario, se contabilizaron los fallos y se describieron los tiempos de generación y el consumo de tokens. Los perfiles de fundamentación y corrección permiten seleccionar casos para una revisión cualitativa posterior, pero no identifican por sí solos la causa de cada error. La valoración operativa sigue siendo parcial: faltan un benchmark del sistema completo sobre las consultas finales, un umbral de servicio y un coste total cuantificado. Por ello, el trabajo orienta la selección de alternativas, pero no demuestra el óptimo previsto en H4.
+
+El estudio evalúa **fiabilidad informativa**, sin participantes ni medidas de aprendizaje, confianza percibida o rentabilidad. Los resultados previos documentan el desarrollo metodológico, pero no se suman a la muestra ni determinan la conclusión final.
+
+## 9.3. Trabajo futuro
+
+### Validación independiente y calidad del corpus
+
+Una primera línea consiste en ampliar el golden set con nuevas preguntas base, parejas de formulación equivalentes y anotación humana independiente, fijando el tamaño muestral mediante un análisis de potencia previo. Esta ampliación y una validación externa permitirían comprobar si los patrones observados se mantienen fuera de la muestra actual. Asimismo, reparar la extracción de las expresiones matemáticas degradadas exigiría crear una nueva versión del corpus y reconstruir los fragmentos, los rankings y los juicios de relevancia para cuantificar el impacto de la pérdida de fórmulas.
+
+### Nuevas técnicas de recuperación
+
+La comparación podría extenderse a representaciones léxicas aprendidas mediante **SPLADE**, que expande y pondera términos [@formal2021splade], y a **ColBERT**, que compara representaciones por token mediante interacción tardía [@khattab2020colbert]. Estas técnicas permitirían estudiar otras formas de reducir el desajuste de vocabulario. De forma complementaria, la reformulación de consultas (*query rewriting*) y la generación de varias consultas (*multi-query*) actuarían sobre la pregunta antes de la búsqueda, controlando el coste adicional y el riesgo de desviar la intención original. Cada intervención se aislaría sobre el mismo corpus y conjunto de preguntas, ampliando el pool de candidatos y reevaluando todos los métodos frente a los mismos juicios de relevancia. Si se modificara la segmentación, también serían necesarios nuevos juicios sobre los fragmentos resultantes.
+
+### Generadores de mayor tamaño y capacidad
+
+Comparar varios tamaños dentro de **una misma familia y versión**, incluyendo modelos mayores, permitiría estudiar con mayor control si aprovechan mejor la evidencia y modifican las diferencias entre buscadores. Este diseño mantendría constantes las instrucciones, el contexto y la configuración de generación, con pruebas de evidencia completa, parcial y ausente. La evaluación conjunta de la calidad de las respuestas, la proporción de salidas válidas y el consumo de recursos orientaría la inversión en generación o recuperación, sin equiparar el número de parámetros con la capacidad del modelo.
+
+### Grafos de conocimiento y recuperación relacional
+
+Incorporar un **grafo de conceptos vinculado a los pasajes** permitiría evaluar consultas que requieren conectar definiciones y procedimientos repartidos entre varias secciones de los manuales. Esta recuperación relacional, orientada a localizar pasajes conectados, se distinguiría de propuestas como GraphRAG, diseñadas para responder preguntas de síntesis global mediante resúmenes de comunidades [@edge2024graphrag]. Su comparación exigiría preguntas que evalúen esas relaciones y conservar el vínculo entre cada respuesta y sus fuentes.
+
+### Viabilidad operativa y transferencia educativa
+
+Un benchmark integrado debería medir de forma conjunta la recuperación, la generación, la proporción de salidas válidas y el coste total bajo umbrales de servicio definidos previamente. La extensión al español requeriría un corpus, preguntas y juicios de relevancia propios. En el plano educativo, un estudio con estudiantes permitiría comparar la entrega de respuestas directas con el uso de pistas graduadas, distinguiendo el desempeño asistido durante la tarea del aprendizaje autónomo posterior y la retención a medio plazo [@bastani2025guardrails]. **La mejora técnica del sistema no demuestra por sí sola una mejora del aprendizaje**.
+
+```{=typst}
+#pagebreak()
+```
+
+# Bibliografía {.unnumbered}
+
+::: {#refs}
+:::
+
+# Apéndices {.unnumbered}
+
+## A. Corpus y fuentes analizadas
+
+Los dos manuales de OpenStax se descargaron de sus páginas oficiales el 11 de agosto de 2026 y se conservaron sin cambios. El inventario de fuentes registra URL, licencia, ISBN, fechas de publicación y acceso, y hash SHA-256.
+
+Se incluyeron definiciones, explicaciones, ejemplos, código y tablas extraíbles. Se excluyeron prefacios, índices, referencias, soluciones y baterías finales de ejercicios. Las exclusiones afectan solo a datos derivados.
+
+La extracción produjo 190 registros de página y 68.495 palabras. La segmentación por secciones, con objetivo de 300 palabras y hasta 60 de solapamiento, generó **288 fragmentos trazables a sus páginas**. El control inicial marcó cinco riesgos de fórmula y el barrido posterior señaló veinte fragmentos con posible pérdida matemática. Son controles distintos. El corpus permanece congelado.
+
+## B. Golden set y anotación
+
+El conjunto ejecutado contiene **26 preguntas base y 52 formulaciones**. El paquete experimental conserva las parejas, el golden de generación y los juicios finales de relevancia. Los identificadores mantienen su procedencia histórica.
+
+Cuatro bases del inventario previo no tienen pareja admitida ejecutada: q-v1-009, q-v1-010, q-v1-018 y q-v1-021. No se cuentan como observaciones ni se sustituyen por otras preguntas.
+
+Seis bases no tienen fragmentos juzgados de grado 2: q-v1-007, q-v1-019, q-v1-022, q-v3-003, q-v3-006 y q-v3-007. Se incluyen en el agregado principal de recuperación con cero en Precision, Recall y MRR. El análisis adicional conserva solo las veinte bases con algún grado 2.
+
+Los **578 juicios base × fragmento** distinguen 483 consensos, 29 laudos y 66 decisiones humanas. Las revisiones auxiliares permanecen registradas. Los inventarios previos y el pool histórico están en el suplemento, fuera de las estimaciones principales.
+
+### B.1. Preguntas del conjunto ejecutado
+
+Cada ficha conserva el identificador, la pregunta explícita, su formulación implícita, el tipo semántico y la conducta esperada. Los textos se mantienen en inglés, tal como se utilizaron en el experimento.
+
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-001**
+
+**Explícita:** How does increasing the sample size affect the sampling distribution of the sample mean?
+
+**Implícita:** How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?
+
+tipo: explicativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-002**
+
+**Explícita:** How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?
+
+**Implícita:** In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?
+
+tipo: comparativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-003**
+
+**Explícita:** What sequence of steps should be followed to conduct a hypothesis test?
+
+**Implícita:** What sequence of steps should be followed to evaluate a claim about a population using sample data?
+
+tipo: procedimental, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-004**
+
+**Explícita:** Why is the median a suitable measure of center when a dataset contains extreme outliers?
+
+**Implícita:** Why is the middle value of the ordered dataset a suitable measure of center when a dataset contains extreme outliers?
+
+tipo: explicativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-005**
+
+**Explícita:** What two aspects of the relationship between an independent and a dependent variable are summarized by the correlation coefficient?
+
+**Implícita:** What two aspects of the relationship between an independent and a dependent variable are summarized by the measure of linear association between them?
+
+tipo: factual, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-006**
+
+**Explícita:** If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?
+
+**Implícita:** If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the range estimated from sample data for a population parameter, and why?
+
+tipo: comparativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-007**
+
+**Explícita:** According to the selected sources, what is the Pearson correlation between weekly study time and final exam score?
+
+**Implícita:** According to the selected sources, what value describes how strongly weekly study time and final exam score move together in a straight-line pattern?
+
+tipo: factual, conducta esperada: abstención.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-008**
+
+**Explícita:** Why does the standard error of the sample mean increase as the sample size becomes larger?
+
+**Implícita:** Why does the standard deviation of the sampling distribution of the mean increase as the sample size becomes larger?
+
+tipo: explicativa, conducta esperada: corrección.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-011**
+
+**Explícita:** For a standardized normal variable, what values define its center and spread, and how should the sign and magnitude of its standardized score be interpreted?
+
+**Implícita:** For the normal distribution in its reference form, what values define its center and spread, and how should the sign and magnitude of its standardized score be interpreted?
+
+tipo: factual, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-012**
+
+**Explícita:** With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?
+
+**Implícita:** With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?
+
+tipo: explicativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-013**
+
+**Explícita:** Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the latter case?
+
+**Implícita:** Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how does the number of deviations that are free to vary enter the latter case?
+
+tipo: comparativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-014**
+
+**Explícita:** What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?
+
+**Implícita:** What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?
+
+tipo: procedimental, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-015**
+
+**Explícita:** How do the ordinary mean, a trimmed mean, and the median respond differently to extreme observations?
+
+**Implícita:** How do the ordinary mean, the mean computed after discarding a fixed fraction of the lowest and highest values, and the median respond differently to extreme observations?
+
+tipo: comparativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-016**
+
+**Explícita:** How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?
+
+**Implícita:** How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?
+
+tipo: comparativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-017**
+
+**Explícita:** When is one-way ANOVA an appropriate choice, and how are its null and alternative hypotheses framed?
+
+**Implícita:** When is one-way ANOVA an appropriate choice, and how are the two competing claims that it tests framed?
+
+tipo: procedimental, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-019**
+
+**Explícita:** According to the selected sources, what is the Shapiro-Wilk p-value for the women's heights dataset?
+
+**Implícita:** According to the selected sources, what is the p-value of the formal test of normality applied to the women's heights dataset?
+
+tipo: factual, conducta esperada: abstención.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-020**
+
+**Explícita:** Why does increasing the confidence level make the confidence interval narrower when all other inputs are fixed?
+
+**Implícita:** Why does increasing the probability attached to the interval make the confidence interval narrower when all other inputs are fixed?
+
+tipo: explicativa, conducta esperada: corrección.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v1-022**
+
+**Explícita:** How should a chi-square test of independence be conducted for a contingency table?
+
+**Implícita:** How should one proceed to test whether two categorical variables are related in a contingency table?
+
+tipo: procedimental, conducta esperada: abstención.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-001**
+
+**Explícita:** Is it true that the Central Limit Theorem can only be applied when the population from which the samples are drawn follows a normal distribution?
+
+**Implícita:** Is it true that the theorem describing how sample means and sums become bell-shaped can only be applied when the population from which the samples are drawn follows a normal distribution?
+
+tipo: factual, conducta esperada: corrección.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-002**
+
+**Explícita:** Is it true that about 95% of the values of a normally distributed variable lie within one standard deviation of the mean?
+
+**Implícita:** Is it true that about 95% of the values of a variable following the classic bell-shaped distribution lie within one standard deviation of the mean?
+
+tipo: factual, conducta esperada: corrección.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-003**
+
+**Explícita:** How is the required sample size determined when a study must estimate a population mean within a given error bound, and how does the calculation differ when it must estimate a population proportion?
+
+**Implícita:** How is the number of observations that must be collected determined when a study must estimate a population mean within a given error bound, and how does the calculation differ when it must estimate a population proportion?
+
+tipo: comparativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-004**
+
+**Explícita:** How is a straight-line regression model fitted to a scatterplot and used for prediction, and what do its slope and intercept represent?
+
+**Implícita:** How is a straight-line model of the relationship between two variables fitted to a scatterplot and used for prediction, and what do its slope and crossing point represent?
+
+tipo: procedimental, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-005**
+
+**Explícita:** What does the confidence level of an interval estimate represent?
+
+**Implícita:** What does the stated percentage attached to an interval estimate represent?
+
+tipo: factual, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-006**
+
+**Explícita:** How is a logistic regression model fitted to a binary outcome, and how are its coefficients interpreted?
+
+**Implícita:** How is the regression model used for an outcome that takes only two values fitted, and how are its coefficients interpreted?
+
+tipo: procedimental, conducta esperada: abstención.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-007**
+
+**Explícita:** By how much does the power of a test increase when the sample size doubles at a fixed significance level?
+
+**Implícita:** By how much does the ability of a test to detect a real effect increase when the sample size doubles at a fixed significance level?
+
+tipo: procedimental, conducta esperada: corrección.
+
+```{=typst}
+]
+```
+```{=typst}
+#block(breakable: false)[
+```
+**q-v3-008**
+
+**Explícita:** How do discrete and continuous probability distributions relate to the sampling distributions used in statistical inference?
+
+**Implícita:** How do the distributions describing the probabilities of individual outcomes relate to the distributions describing the probabilities of statistics computed from samples, which are used to make inferences?
+
+tipo: explicativa, conducta esperada: respuesta.
+
+```{=typst}
+]
+```
+
+
+

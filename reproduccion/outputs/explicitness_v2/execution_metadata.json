@@ -1,0 +1,19 @@
+{
+  "python": "3.12.13",
+  "numpy": "2.5.2",
+  "torch": "2.13.0+cu130",
+  "sentence_transformers": "5.7.0",
+  "gpu": "NVIDIA GeForce RTX 2060 SUPER",
+  "timing": "single-pass synchronized stages; not warmed repeated operational benchmark",
+  "bm25_build_ms": 25.098565999996936,
+  "dense_model_load_ms": 662.2812000000522,
+  "truncated_passage_count": 15,
+  "truncated_query_count": 0,
+  "corpus_encode_ms": 5925.484076999965,
+  "embedding_dimension": 768,
+  "dense_parameter_dtype": "torch.float32",
+  "reranker_model_load_ms": 183.35860099978163,
+  "reranker_parameter_dtype": "torch.float32",
+  "truncated_pair_count": 3,
+  "reranker_pair_count": 140
+}

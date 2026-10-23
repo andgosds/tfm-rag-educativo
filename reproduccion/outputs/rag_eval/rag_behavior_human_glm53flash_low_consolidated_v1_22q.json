@@ -1,0 +1,339 @@
+{
+  "primary_judge_for_unaudited_cases": "glm53flash_low",
+  "case_count": 44,
+  "source_counts": {
+    "glm53flash_low": 16,
+    "human_adjudication": 28
+  },
+  "by_retrieval_condition": {
+    "rrf": {
+      "n": 22,
+      "automatic_mean": 1.9090909090909092,
+      "final_mean": 2.0,
+      "human_override_n": 13
+    },
+    "rrf_rerank": {
+      "n": 22,
+      "automatic_mean": 1.9545454545454546,
+      "final_mean": 2.0,
+      "human_override_n": 15
+    }
+  },
+  "paired": {
+    "common_qid_count": 22,
+    "rerank_wins": 0,
+    "ties": 22,
+    "rrf_wins": 0,
+    "mean_delta_rerank_minus_rrf": 0.0
+  },
+  "per_case": [
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-001",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-002",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-003",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-004",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-005",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-006",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-007",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-008",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-009",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-010",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-011",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-012",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-013",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-014",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-015",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-016",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-017",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-018",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-019",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-020",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-021",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-022",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-001",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-002",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-003",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-004",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-005",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-006",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-007",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-008",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-009",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-010",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-011",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-012",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-013",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-014",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-015",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-016",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-017",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-018",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-019",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-020",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-021",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-022",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    }
+  ]
+}

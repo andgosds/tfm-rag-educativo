@@ -1,0 +1,128 @@
+{
+  "scope": "final_delivery_artifact_contracts",
+  "table_count": 11,
+  "numeric_cells": 389,
+  "tables": [
+    {
+      "table": "tbl-expl-v3-recuperacion",
+      "numeric_cells": 32,
+      "expected_numeric_cells": 32
+    },
+    {
+      "table": "tbl-expl-v3-pareado",
+      "numeric_cells": 48,
+      "expected_numeric_cells": 48
+    },
+    {
+      "table": "tbl-capacidad-niveles",
+      "numeric_cells": 12,
+      "expected_numeric_cells": 12
+    },
+    {
+      "table": "tbl-capacidad-separacion",
+      "numeric_cells": 36,
+      "expected_numeric_cells": 36
+    },
+    {
+      "table": "tbl-capacidad-explicitud",
+      "numeric_cells": 36,
+      "expected_numeric_cells": 36
+    },
+    {
+      "table": "tbl-capacidad-interaccion",
+      "numeric_cells": 24,
+      "expected_numeric_cells": 24
+    },
+    {
+      "table": "tbl-final-recuperadores",
+      "numeric_cells": 96,
+      "expected_numeric_cells": 96
+    },
+    {
+      "table": "tbl-final-operacion",
+      "numeric_cells": 60,
+      "expected_numeric_cells": 60
+    },
+    {
+      "table": "tbl-perfiles-contenido",
+      "numeric_cells": 15,
+      "expected_numeric_cells": 15
+    },
+    {
+      "table": "tbl-preguntas-tipo-conducta",
+      "numeric_cells": 20,
+      "expected_numeric_cells": 20
+    },
+    {
+      "table": "tbl-pool-final",
+      "numeric_cells": 10,
+      "expected_numeric_cells": 10
+    }
+  ],
+  "experiment": {
+    "accepted": 604,
+    "evaluated": 604,
+    "judge_a": 604,
+    "judge_b": 604,
+    "planned": 624,
+    "failed": 20,
+    "human_cells": 158,
+    "human_criteria": 233,
+    "acta_records": 159,
+    "convention_records": 1,
+    "consensus_cells": 446,
+    "scales": {
+      "faithfulness": [
+        0,
+        2
+      ],
+      "factual_correctness": [
+        0,
+        2
+      ],
+      "behavior_ok": [
+        0,
+        2
+      ],
+      "citations_ok": [
+        0,
+        1
+      ]
+    },
+    "criterion_denominators": {
+      "faithfulness": 604,
+      "factual_correctness": 600,
+      "behavior_ok": 604,
+      "citations_ok": 604
+    },
+    "criterion_provenance": {
+      "consenso_jueces": 2183,
+      "validacion_humana": 233
+    },
+    "full_cell_key_checked": true
+  },
+  "attempts": {
+    "accepted": 614,
+    "failed": 60
+  },
+  "pdf": {
+    "main_pages": 57,
+    "sponsor_pages": 9,
+    "appendix_pages": 9,
+    "main_table_captions": 24
+  },
+  "appendix": {
+    "source": "tfm_v2_4_apendices_tecnicos.qmd",
+    "pdf": "tfm_v2_4_apendices_tecnicos.pdf",
+    "pdf_pages": 9,
+    "tables_checked": 2,
+    "shell_blocks_checked": 6,
+    "shell_blocks_whole_and_copyable": true,
+    "unresolved_references": [],
+    "source_sha256": "fbdf8d3dcf39bff3f226e40b807e14d6c2530d34b3f536971ea1ecf4c1c2d01a",
+    "pdf_sha256": "cbfa089b0f183553c029e9bae0ea539e8e3c56a6fbbb1eb790d682ccc0b9bffe"
+  },
+  "new_inference": false,
+  "documents_rendered": false
+}
+

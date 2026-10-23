@@ -1,0 +1,45 @@
+{
+  "run_id": "hybrid_rrf_k60_pooled_v1_22q",
+  "method": "hybrid_rrf",
+  "source_run_ids": [
+    "bm25_pooled_v1_22q",
+    "dense_e5_base_v2_pooled_v1_22q"
+  ],
+  "source_run_paths": [
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/runs/bm25_pooled_v1_22q.jsonl",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/runs/dense_e5_base_v2_pooled_v1_22q.jsonl"
+  ],
+  "source_run_sha256": {
+    "bm25": "059a17e20c70ea7e9d83b246a826630b41b54273362bb9083908258fb01dcd82",
+    "dense": "8b48c5e9d8c0cd439ec67b38eeb0196834b899600e7ed6b37d02ca73a7561394"
+  },
+  "golden_set_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/golden_set_pilot_v1.jsonl",
+  "golden_set_sha256": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+  "qrels_source_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+  "qrels_sha256": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+  "query_count": 22,
+  "metric_query_count": 13,
+  "unanswerable_query_count": 9,
+  "source_candidate_count": 176,
+  "k0": 60,
+  "fusion_depth": 10,
+  "cutoffs": [
+    5,
+    10
+  ],
+  "binary_relevance_grade": 2,
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "tie_break": "descending_rrf_score_then_ascending_chunk_id",
+  "latency_interpretation": "estimated_from_recorded_source_query_latencies_plus_measured_fusion",
+  "total_fusion_latency_ms": 0.16963300367933698,
+  "mean_fusion_latency_ms": 0.007710591076333499,
+  "mean_query_latency_serial_estimate_ms": 8.415030454340343,
+  "mean_query_latency_parallel_estimate_ms": 6.345173181712611,
+  "document_count": 288,
+  "chunks_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/processed/chunks_v1.jsonl",
+  "chunks_sha256": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a"
+}

@@ -1,0 +1,34 @@
+{
+  "base_questions": 7,
+  "formulations": 14,
+  "chunks": 288,
+  "rankings": {
+    "bm25": 140,
+    "dense": 140,
+    "rrf": 140,
+    "rerank": 140
+  },
+  "technical_formulation_chunk_pairs": 220,
+  "base_chunk_union": 156,
+  "historical_technical_pool_pairs": 340,
+  "new_base_chunk_pairs": 45,
+  "seen_base_chunk_pairs": 111,
+  "new_formulation_chunk_pairs": 45,
+  "seen_formulation_chunk_pairs": 175,
+  "blind_review_units": 122,
+  "pending_reuse_units": 98,
+  "unjudged_seen_review_units": 78,
+  "historical_grade_zero_reuse_units": 7,
+  "historical_decision_modes": {
+    "original_or_direct_human": 62,
+    "assistant_on_behalf_of_andres": 32,
+    "user_advised_after_assistant_review": 4
+  },
+  "final_qrels_ready": false,
+  "quality_metrics_computed": false,
+  "generation_executed": false,
+  "candidate_set_equality": true,
+  "protected_v1_files": 277,
+  "changed_v1_files": [],
+  "verified": true
+}

@@ -1,0 +1,16 @@
+{"base_qid": "q-v3-001", "explicitness": "explicit", "question": "Is it true that the Central Limit Theorem can only be applied when the population from which the samples are drawn follows a normal distribution?"}
+{"base_qid": "q-v3-001", "explicitness": "implicit", "question": "Is it true that the theorem describing how sample means and sums become bell-shaped can only be applied when the population from which the samples are drawn follows a normal distribution?"}
+{"base_qid": "q-v3-002", "explicitness": "explicit", "question": "Is it true that about 95% of the values of a normally distributed variable lie within one standard deviation of the mean?"}
+{"base_qid": "q-v3-002", "explicitness": "implicit", "question": "Is it true that about 95% of the values of a variable following the classic bell-shaped distribution lie within one standard deviation of the mean?"}
+{"base_qid": "q-v3-003", "explicitness": "explicit", "question": "How is the required sample size determined when a study must estimate a population mean within a given error bound, and how does the calculation differ when it must estimate a population proportion?"}
+{"base_qid": "q-v3-003", "explicitness": "implicit", "question": "How is the number of observations that must be collected determined when a study must estimate a population mean within a given error bound, and how does the calculation differ when it must estimate a population proportion?"}
+{"base_qid": "q-v3-004", "explicitness": "explicit", "question": "How is a straight-line regression model fitted to a scatterplot and used for prediction, and what do its slope and intercept represent?"}
+{"base_qid": "q-v3-004", "explicitness": "implicit", "question": "How is a straight-line model of the relationship between two variables fitted to a scatterplot and used for prediction, and what do its slope and crossing point represent?"}
+{"base_qid": "q-v3-005", "explicitness": "explicit", "question": "What does the confidence level of an interval estimate represent?"}
+{"base_qid": "q-v3-005", "explicitness": "implicit", "question": "What does the stated percentage attached to an interval estimate represent?"}
+{"base_qid": "q-v3-006", "explicitness": "explicit", "question": "How is a logistic regression model fitted to a binary outcome, and how are its coefficients interpreted?"}
+{"base_qid": "q-v3-006", "explicitness": "implicit", "question": "How is the regression model used for an outcome that takes only two values fitted, and how are its coefficients interpreted?"}
+{"base_qid": "q-v3-007", "explicitness": "explicit", "question": "By how much does the power of a test increase when the sample size doubles at a fixed significance level?"}
+{"base_qid": "q-v3-007", "explicitness": "implicit", "question": "By how much does the ability of a test to detect a real effect increase when the sample size doubles at a fixed significance level?"}
+{"base_qid": "q-v3-008", "explicitness": "explicit", "question": "How do discrete and continuous probability distributions relate to the sampling distributions used in statistical inference?"}
+{"base_qid": "q-v3-008", "explicitness": "implicit", "question": "How do the distributions describing the probabilities of individual outcomes relate to the distributions describing the probabilities of statistics computed from samples, which are used to make inferences?"}

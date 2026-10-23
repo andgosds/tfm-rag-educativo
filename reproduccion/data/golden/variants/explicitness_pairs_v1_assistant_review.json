@@ -1,0 +1,168 @@
+{
+  "source": "v1/data/golden/variants/explicitness_pairs_v1_draft.jsonl",
+  "source_sha256": "3c13b22fbb472ad9f568ec52bac9883f46cd0478fa9a29251e6ecd141985ebbd",
+  "scope": "Revisión delegada de formulación, no adjudicación humana ni validación del pool. Este archivo contiene las propuestas vigentes tras revisar el borrador.",
+  "records": [
+    {
+      "base_qid": "q-v1-001",
+      "decision": "retain_human_accepted",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359622+00:00",
+      "explicit_question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+      "implicit_question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+      "rationale": "Se conserva la aceptación humana de la formulación ajustada.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": {
+        "decision": "accept_adjusted_wording",
+        "reviewer": "andres",
+        "recorded_at": "2026-09-18T18:17:31.586005+00:00",
+        "scope": "Aceptación de la formulación emparejada; evidencia y reutilización de qrels pendientes."
+      }
+    },
+    {
+      "base_qid": "q-v1-002",
+      "decision": "accept_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359636+00:00",
+      "explicit_question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+      "implicit_question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+      "rationale": "Misma distinción entre verdad y decisión; no exigir los nombres de los errores como condición adicional.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-003",
+      "decision": "accept_adjusted_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359639+00:00",
+      "explicit_question": "What sequence of steps should be followed to conduct a hypothesis test?",
+      "implicit_question": "What sequence of steps should be followed to determine whether sample data provide sufficient evidence against a claim about a population?",
+      "rationale": "Se elimina decidir si rechazar la afirmación genérica; se pide el procedimiento para evaluar evidencia contra una afirmación poblacional.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-004",
+      "decision": "exclude_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359642+00:00",
+      "explicit_question": "Why is the median a suitable measure of center when a dataset contains extreme outliers?",
+      "implicit_question": "Why is the central value of an ordered dataset a suitable measure of center when the dataset contains extreme outliers?",
+      "rationale": "La descripción revela el mecanismo de robustez solicitado y simplifica el caso par.",
+      "reference_equivalence_assessment": "not_approved",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-005",
+      "decision": "exclude_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359645+00:00",
+      "explicit_question": "What two aspects of the relationship between an independent and a dependent variable are summarized by the correlation coefficient?",
+      "implicit_question": "What two aspects of the relationship between an independent and a dependent variable are summarized by a numerical measure of their association?",
+      "rationale": "Medida numérica de asociación no identifica de forma suficiente el coeficiente buscado.",
+      "reference_equivalence_assessment": "not_approved",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-006",
+      "decision": "accept_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359648+00:00",
+      "explicit_question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+      "implicit_question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the range estimated from sample data for a population parameter, and why?",
+      "rationale": "Conserva nivel, porcentajes y condiciones; no revela dirección del cambio. Explicitud relativa a confidence interval.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-011",
+      "decision": "exclude_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359651+00:00",
+      "explicit_question": "For a standardized normal variable, what values define its center and spread, and how should the sign and magnitude of its standardized score be interpreted?",
+      "implicit_question": "For a normally distributed variable expressed as distances from its mean in units of its standard deviation, what values define its center and spread, and how should the sign and magnitude of those distances be interpreted?",
+      "rationale": "La definición sustitutiva entrega parte sustancial de la interpretación solicitada.",
+      "reference_equivalence_assessment": "not_approved",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-012",
+      "decision": "accept_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359656+00:00",
+      "explicit_question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+      "implicit_question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?",
+      "rationale": "Conserva condiciones y efectos solicitados; no revela dirección del cambio.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-013",
+      "decision": "needs_user_decision",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359660+00:00",
+      "explicit_question": "Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the Student t case?",
+      "implicit_question": "Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the latter case?",
+      "rationale": "El original ya proporciona Student t como parte de la respuesta pedida. Retirarlo mezcla explicitud y eliminación de una pista de respuesta.",
+      "reference_equivalence_assessment": "not_approved",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-014",
+      "decision": "accept_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359663+00:00",
+      "explicit_question": "What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?",
+      "implicit_question": "What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?",
+      "rationale": "Conserva procedimiento y objeto; ninguna versión proporciona factor 1.5 ni límites.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-015",
+      "decision": "exclude_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359666+00:00",
+      "explicit_question": "How do the ordinary mean, a trimmed mean, and the median respond differently to extreme observations?",
+      "implicit_question": "How do the average of all observations, an average computed after removing a proportion of observations from each end of the ordered data, and the central value of the ordered data respond differently to extreme observations?",
+      "rationale": "Las descripciones entregan mecanismos de robustez y alteran mucho longitud y carga informativa.",
+      "reference_equivalence_assessment": "not_approved",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-016",
+      "decision": "accept_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359669+00:00",
+      "explicit_question": "How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?",
+      "implicit_question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+      "rationale": "Conserva conteo/medición y valores posibles; explicita nombres sin proporcionar la respuesta sobre el conjunto de valores.",
+      "reference_equivalence_assessment": "compatible_by_assistant",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    },
+    {
+      "base_qid": "q-v1-017",
+      "decision": "exclude_assistant",
+      "reviewer": "hermes-assistant",
+      "reviewed_at": "2026-09-18T18:18:50.359671+00:00",
+      "explicit_question": "When is one-way ANOVA an appropriate choice, and how are its null and alternative hypotheses framed?",
+      "implicit_question": "When is a test that compares population means across groups defined by a single factor an appropriate choice, and how are its null and alternative hypotheses framed?",
+      "rationale": "Describir el contraste por su uso responde parcialmente a cuándo procede y no identifica ANOVA de forma única.",
+      "reference_equivalence_assessment": "not_approved",
+      "qrels_reuse_confirmed": false,
+      "human_decision": null
+    }
+  ]
+}

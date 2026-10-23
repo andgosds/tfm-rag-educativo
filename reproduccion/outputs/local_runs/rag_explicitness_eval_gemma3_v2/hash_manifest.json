@@ -1,0 +1,19 @@
+{
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_2_scores.jsonl": "c9dd052d02f136011af2b4ac5125d072953278d4c4a0e8f3c925d7edc17586c5",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/campaign.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/summary.json": "014bc2613cbb685551c70595eab0b68cd6bd1a31cee7027e9ef08198bdf93a0c",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/risk_queue_augmented.jsonl": "c90711e8caebc674dcc42d9fe34cf0f1533fd4425897343cb67e42f194d2b31b",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/scores.jsonl": "0f4b01403268e82d7038a4ee99aed0b2f91276b7ecd2e730911d8d1b92aecb34",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/campaign_input_interleaved.jsonl": "cf4436fded5d2ba2bb3c977b92b62c94667a9f0b2e8edaaaa4b167527a79fdca",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_1_scores.jsonl": "e836ef37011504cf56f7cce548b47334479731f8d83b820038da693ef2492a13",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/run_smoke.py": "dbe3fd52399610dced491fc931c311f989d31173db91046a5d379e9efd90d10c",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/evaluation_config.json": "80289758ca44d560635713b5cc9838e0f8bffffec641a55255982f35593be336",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/evaluation_audit.json": "07acc33dc5a8ccf0f1832521352e93fe15e7e2ec12bb98936930ef158f011fab",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_input.jsonl": "9b51546fc19afcd15d783295071420443b2de3cf5c45d4c4ae9f583dd3f32557",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/run_campaign.py": "f024934e48440b35d70f7da31f940366b54f06d46cff2df0afa3ae168f52807c",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_1_summary.json": "932ed1950d3fb18ce476e805475bd07884abeb8e23f92f02b1b4963656594ad5",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_1_risk.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_2_summary.json": "2795774f17f64a9c7d04fe5071fd97b9d42bddacd223ce2937e38b08e9a1faec",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/risk_queue.jsonl": "6303ae95fa1dac3aed27b472adb09d854163d520210b5ba74ded775e27705b54",
+  "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_eval_gemma3_v2/smoke_2_risk.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

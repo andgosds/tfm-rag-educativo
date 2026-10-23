@@ -1,0 +1,46 @@
+{
+  "status": "descriptive_coverage_with_proposed_annotations",
+  "inputs_sha256": {
+    "v1/data/golden/golden_set_pilot_v1.jsonl": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "v1/data/golden/answerability_resolutions_v1_22q.json": "cd70b77fa7a410aca84c5737ef4cc0588217df736039c9244bc3067658a5d190",
+    "v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+    "v1/data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a"
+  },
+  "n_questions": 22,
+  "counts": {
+    "expected_behavior": {
+      "answer": 13,
+      "abstain": 7,
+      "grounded_correction": 2
+    },
+    "canonical_structure": {
+      "single_chunk": 9,
+      "not_applicable": 9,
+      "multiple_sections": 1,
+      "multiple_chunks_same_section": 3
+    },
+    "tema_propuesto": {
+      "Distribución muestral": 2,
+      "Contrastes de hipótesis": 2,
+      "Centro y valores extremos": 2,
+      "Correlación": 3,
+      "Intervalos de confianza": 4,
+      "Inferencia bayesiana": 1,
+      "Normal y estandarización": 2,
+      "Dispersión y valores extremos": 1,
+      "Variables aleatorias": 1,
+      "ANOVA": 2,
+      "Pruebas de normalidad": 1,
+      "Tablas de contingencia": 1
+    },
+    "concept_explicitness_proposed": {
+      "explicit": 20,
+      "implicit": 2
+    }
+  },
+  "notes": [
+    "No se consultaron resultados por estrategia para asignar nuevas etiquetas.",
+    "Las etiquetas nuevas requieren revisión humana.",
+    "La estructura canónica no demuestra un mínimo global de evidencia: el pool puede contener alternativas."
+  ]
+}

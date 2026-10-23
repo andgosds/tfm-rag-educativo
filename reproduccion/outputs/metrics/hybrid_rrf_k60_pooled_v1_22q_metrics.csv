@@ -1,0 +1,9 @@
+run_id,query_scope,metric,k,value,query_count
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,precision,5,0.5846153846153845,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,recall,5,0.6506410256410257,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,mrr,5,0.8846153846153846,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,ndcg,5,0.7431033747970108,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,precision,10,0.4230769230769231,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,recall,10,0.8846153846153846,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,mrr,10,0.8846153846153846,13
+hybrid_rrf_k60_pooled_v1_22q,answerable_with_grade2_qrels,ndcg,10,0.8167374833092306,13

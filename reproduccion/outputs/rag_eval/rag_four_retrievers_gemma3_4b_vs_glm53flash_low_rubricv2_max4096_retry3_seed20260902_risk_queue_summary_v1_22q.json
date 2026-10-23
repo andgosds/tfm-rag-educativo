@@ -1,0 +1,39 @@
+{
+  "source_case_count": 88,
+  "queued_case_count": 61,
+  "queued_unique_qids": 21,
+  "preserved_adjudication_count": 27,
+  "pending_adjudication_count": 34,
+  "by_condition": {
+    "bm25": 17,
+    "dense": 16,
+    "rrf": 13,
+    "rrf_rerank": 15
+  },
+  "by_expected_behavior": {
+    "abstain": 28,
+    "answer": 25,
+    "grounded_correction": 8
+  },
+  "reason_counts": {
+    "behavior_score_disagreement": 35,
+    "factual_correctness_interjudge_delta_at_least_0.5": 7,
+    "faithfulness_interjudge_delta_at_least_0.5": 8,
+    "gemma_evaluation_error": 12,
+    "gemma_factual_correctness_below_0.5": 1,
+    "gemma_faithfulness_below_0.5": 23,
+    "glm_factual_correctness_below_0.5": 6,
+    "glm_faithfulness_below_0.5": 18,
+    "reported_behavior_mismatch": 12,
+    "sensitive_behavior:abstain": 28,
+    "sensitive_behavior:grounded_correction": 8
+  },
+  "rules": {
+    "include_non_answer_behavior": true,
+    "include_any_evaluation_error": true,
+    "include_behavior_score_disagreement": true,
+    "include_reported_behavior_mismatch": true,
+    "low_metric_threshold": 0.5,
+    "interjudge_absolute_delta_threshold": 0.5
+  }
+}

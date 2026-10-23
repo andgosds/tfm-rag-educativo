@@ -1,0 +1,974 @@
+{
+  "run_id": "hybrid_rrf_k60_pooled_v1_22q",
+  "binary_relevance_grade": 2,
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "queries": [
+    {
+      "qid": "q-v1-001",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 6,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.1:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 9,
+          "bm25_rank": 5,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.1:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": 4,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.intro:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 4,
+          "bm25_rank": null,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 2,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 8,
+          "bm25_rank": null,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-006",
+          "relevance_grade": 1,
+          "hybrid_rank": 3,
+          "bm25_rank": 10,
+          "dense_rank": 8
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-017",
+          "relevance_grade": 2,
+          "hybrid_rank": 10,
+          "bm25_rank": null,
+          "dense_rank": 5
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-002",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.1:chunk-001",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 9
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.2:chunk-001",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 1,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.2:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 2,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.2:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 4,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.2:chunk-004",
+          "relevance_grade": 1,
+          "hybrid_rank": 7,
+          "bm25_rank": 9,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.3:chunk-001",
+          "relevance_grade": 1,
+          "hybrid_rank": 5,
+          "bm25_rank": 5,
+          "dense_rank": 6
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.4:chunk-006",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 10
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.5:chunk-005",
+          "relevance_grade": 2,
+          "hybrid_rank": 8,
+          "bm25_rank": 7,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.5:chunk-015",
+          "relevance_grade": 1,
+          "hybrid_rank": 4,
+          "bm25_rank": 3,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-007",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": 6,
+          "dense_rank": 5
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-003",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.5:chunk-016",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 5,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.5:chunk-021",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": 10,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.5:chunk-022",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": 9,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.intro:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 4,
+          "bm25_rank": null,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-001",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": 8,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 8,
+          "bm25_rank": null,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 4,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 8
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-021",
+          "relevance_grade": 1,
+          "hybrid_rank": 10,
+          "bm25_rank": 6,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-023",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 7,
+          "dense_rank": 9
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-024",
+          "relevance_grade": 2,
+          "hybrid_rank": 9,
+          "bm25_rank": null,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-035",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 6
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-004",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-007",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 1,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-008",
+          "relevance_grade": 2,
+          "hybrid_rank": 5,
+          "bm25_rank": 6,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 2,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 3,
+          "dense_rank": 1
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-005",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-005",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 1,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": 6,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-008",
+          "relevance_grade": 2,
+          "hybrid_rank": 5,
+          "bm25_rank": 10,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-009",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": 8,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-011",
+          "relevance_grade": 1,
+          "hybrid_rank": 9,
+          "bm25_rank": 5,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-021",
+          "relevance_grade": 1,
+          "hybrid_rank": 10,
+          "bm25_rank": null,
+          "dense_rank": 8
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-006",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 10,
+          "bm25_rank": null,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 2,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 4,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.3:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 10
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.3:chunk-005",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": 7,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 6,
+          "dense_rank": 1
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-007",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-006",
+          "relevance_grade": 1,
+          "hybrid_rank": 3,
+          "bm25_rank": 3,
+          "dense_rank": 7
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-008",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.1:chunk-001",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 10
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 8,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.3:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": 3,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+          "relevance_grade": 1,
+          "hybrid_rank": 8,
+          "bm25_rank": 5,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-011",
+          "relevance_grade": 1,
+          "hybrid_rank": 2,
+          "bm25_rank": 4,
+          "dense_rank": 4
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-009",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-004",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 8
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-005",
+          "relevance_grade": 1,
+          "hybrid_rank": 7,
+          "bm25_rank": null,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-006",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": 1,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-011",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 10
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-017",
+          "relevance_grade": 1,
+          "hybrid_rank": 3,
+          "bm25_rank": 3,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-018",
+          "relevance_grade": 1,
+          "hybrid_rank": 10,
+          "bm25_rank": null,
+          "dense_rank": 7
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-010",
+      "answerability": "unanswerable",
+      "qrel_ranks": []
+    },
+    {
+      "qid": "q-v1-011",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:6.1:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 3,
+          "dense_rank": 9
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:6.1:chunk-003",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:6.1:chunk-005",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 7,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-014",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 1,
+          "dense_rank": 1
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-012",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": 3,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 8,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": null,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.5:chunk-001",
+          "relevance_grade": 1,
+          "hybrid_rank": 9,
+          "bm25_rank": 5,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 2,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 10,
+          "bm25_rank": null,
+          "dense_rank": 5
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-013",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-001",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": 6,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 4,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-004",
+          "relevance_grade": 2,
+          "hybrid_rank": 4,
+          "bm25_rank": 10,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-005",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 8
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 1,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-007",
+          "relevance_grade": 2,
+          "hybrid_rank": 5,
+          "bm25_rank": 9,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-008",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": 2,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.intro:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 9
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.4:chunk-001",
+          "relevance_grade": 2,
+          "hybrid_rank": 10,
+          "bm25_rank": 7,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 3,
+          "dense_rank": 6
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-012",
+          "relevance_grade": 2,
+          "hybrid_rank": 8,
+          "bm25_rank": null,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-026",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 10
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": 8,
+          "dense_rank": null
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-014",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+          "relevance_grade": 1,
+          "hybrid_rank": 7,
+          "bm25_rank": 6,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-004",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 3,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-005",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 1,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": null
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-015",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 3,
+          "bm25_rank": 4,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-005",
+          "relevance_grade": 2,
+          "hybrid_rank": 6,
+          "bm25_rank": 8,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 5,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-007",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 1,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-008",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": 9,
+          "dense_rank": 9
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-016",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 6,
+          "bm25_rank": 2,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 4,
+          "bm25_rank": 1,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-005",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 3,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 6,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-007",
+          "relevance_grade": 2,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-008",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": null,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-009",
+          "relevance_grade": 1,
+          "hybrid_rank": 5,
+          "bm25_rank": null,
+          "dense_rank": 1
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-017",
+      "answerability": "answerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-002",
+          "relevance_grade": 2,
+          "hybrid_rank": 4,
+          "bm25_rank": 2,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-003",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 3,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-005",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": 8,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-006",
+          "relevance_grade": 2,
+          "hybrid_rank": 5,
+          "bm25_rank": 6,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-007",
+          "relevance_grade": 2,
+          "hybrid_rank": 7,
+          "bm25_rank": null,
+          "dense_rank": 4
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-018",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:6.1:chunk-009",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 7
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-019",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.6:chunk-001",
+          "relevance_grade": 1,
+          "hybrid_rank": 1,
+          "bm25_rank": 2,
+          "dense_rank": 1
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-020",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": null,
+          "dense_rank": 5
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-005",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": 8,
+          "dense_rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": 2,
+          "bm25_rank": 1,
+          "dense_rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+          "relevance_grade": 2,
+          "hybrid_rank": 1,
+          "bm25_rank": 2,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+          "relevance_grade": 1,
+          "hybrid_rank": 3,
+          "bm25_rank": 4,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-008",
+          "relevance_grade": 1,
+          "hybrid_rank": null,
+          "bm25_rank": null,
+          "dense_rank": 8
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+          "relevance_grade": 2,
+          "hybrid_rank": 4,
+          "bm25_rank": 7,
+          "dense_rank": 2
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-021",
+      "answerability": "unanswerable",
+      "qrel_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-002",
+          "relevance_grade": 1,
+          "hybrid_rank": 1,
+          "bm25_rank": 1,
+          "dense_rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-003",
+          "relevance_grade": 1,
+          "hybrid_rank": 2,
+          "bm25_rank": 3,
+          "dense_rank": 1
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-005",
+          "relevance_grade": 1,
+          "hybrid_rank": 3,
+          "bm25_rank": 2,
+          "dense_rank": 4
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-006",
+          "relevance_grade": 1,
+          "hybrid_rank": 6,
+          "bm25_rank": 9,
+          "dense_rank": 7
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-007",
+          "relevance_grade": 1,
+          "hybrid_rank": 5,
+          "bm25_rank": 10,
+          "dense_rank": 3
+        }
+      ]
+    },
+    {
+      "qid": "q-v1-022",
+      "answerability": "unanswerable",
+      "qrel_ranks": []
+    }
+  ]
+}

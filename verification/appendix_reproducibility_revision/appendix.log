@@ -1,0 +1,78 @@
+{
+  "scope": "technical_appendix_only",
+  "experiment": {
+    "accepted": 604,
+    "evaluated": 604,
+    "judge_a": 604,
+    "judge_b": 604,
+    "planned": 624,
+    "failed": 20,
+    "human_cells": 158,
+    "human_criteria": 233,
+    "acta_records": 159,
+    "convention_records": 1,
+    "consensus_cells": 446,
+    "scales": {
+      "faithfulness": [
+        0,
+        2
+      ],
+      "factual_correctness": [
+        0,
+        2
+      ],
+      "behavior_ok": [
+        0,
+        2
+      ],
+      "citations_ok": [
+        0,
+        1
+      ]
+    },
+    "criterion_denominators": {
+      "faithfulness": 604,
+      "factual_correctness": 600,
+      "behavior_ok": 604,
+      "citations_ok": 604
+    },
+    "criterion_provenance": {
+      "consenso_jueces": 2183,
+      "validacion_humana": 233
+    },
+    "full_cell_key_checked": true
+  },
+  "attempts": {
+    "accepted": 614,
+    "failed": 60
+  },
+  "base_behavior": {
+    "answer": 17,
+    "abstain": 4,
+    "grounded_correction": 5
+  },
+  "operational_files": {
+    "operational.csv": 12,
+    "operational_summary.csv": 24,
+    "operational_cells.csv": 624,
+    "paired_contrasts.csv": 72
+  },
+  "frozen_artifact_integrity": true,
+  "document_checked": true,
+  "new_inference": false,
+  "full_experimental_test_suite": false,
+  "document": {
+    "source": "tfm_v2_4_apendices_tecnicos.qmd",
+    "pdf": "tfm_apendices_tecnicos_AndresGonzalezSanchez.pdf",
+    "pdf_pages": 9,
+    "tables_checked": 2,
+    "shell_blocks_checked": 7,
+    "notebooks_checked": 5,
+    "reproduction_entrypoint": "notebooks",
+    "shell_blocks_whole_and_copyable": true,
+    "unresolved_references": [],
+    "source_sha256": "f3d9d0d05ac59cfc49aa585bb852dcd1746ffa4770bd2d0c2c241c4c159ead88",
+    "pdf_sha256": "5990bd34fcb17270bbd00051fa8605fec1f0615ed80795f62042498b10209e9e"
+  }
+}
+

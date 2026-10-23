@@ -1,0 +1,40 @@
+{
+  "path_base": "v2_root",
+  "status": "ir_complete_generation_55_accepted_1_failed_rag_evaluation_running",
+  "execution_configuration": "outputs/explicitness_configuration.json",
+  "execution_verification": "outputs/explicitness_verification.json",
+  "retrieval_only_adapter": "scripts/explicitness_campaign.py",
+  "adapter_path_compatibility_verified": true,
+  "historical_cli_note": "Direct historical CLIs require adjudication and compute metrics; not used for pending variants.",
+  "experiments": {
+    "explicitness_v2": {
+      "pairs": "data/golden/variants/explicitness_pairs_v1_consolidated.jsonl",
+      "review": "docs/explicitness_pairs_current.md",
+      "output_root": "outputs",
+      "n_base_questions": 7,
+      "n_formulations": 14,
+      "final_qrels_ready": true,
+      "qrels": "outputs/local_runs/provenance_correction_v2_20260921/qrels_explicitness_v2.tsv",
+      "qrels_provenance": "outputs/local_runs/provenance_correction_v2_20260921/qrels_explicitness_v2_provenance.jsonl",
+      "adjudication_mode_counts": {
+        "human_confirmed_reuse": 98,
+        "assistant_delegated_blind": 122
+      },
+      "rag_evaluation_config": "outputs/local_runs/rag_explicitness_eval_gemma3_v2/evaluation_config.json"
+    },
+    "golden_expansion_v2": {
+      "status": "not_started",
+      "base": "data/golden/golden_set_pilot_v1_1.jsonl"
+    }
+  },
+  "shared_inputs": {
+    "data/golden/golden_set_pilot_v1.jsonl": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "data/golden/qrels_golden_set_pooled_v1_22q.tsv": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+    "data/golden/pool_bm25_dense_v1_22q.jsonl": "092c45694d614b7a31f85a794d331cc2e349c8e64c277361b856630ad261c6eb"
+  },
+  "scripts_directory": "scripts",
+  "script_path_compatibility_verified": false,
+  "corpus_changed": false,
+  "historical_provenance_path_mapping": "config/migration_from_v1.json"
+}

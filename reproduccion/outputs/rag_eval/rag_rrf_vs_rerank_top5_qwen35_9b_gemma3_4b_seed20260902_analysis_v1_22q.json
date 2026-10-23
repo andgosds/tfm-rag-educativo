@@ -1,0 +1,940 @@
+{
+  "row_count": 44,
+  "overall": {
+    "rrf": {
+      "row_count": 22,
+      "faithfulness_n": 20,
+      "faithfulness_mean": 0.7375,
+      "factual_correctness_n": 15,
+      "factual_correctness_mean": 0.8866666666666667,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.8636363636363636,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 1.0,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 1.0,
+      "behavior_judge_score_n": 22,
+      "behavior_judge_score_mean": 1.2727272727272727,
+      "generation_latency_ms_n": 22,
+      "generation_latency_ms_mean": 6223.509846090731,
+      "generation_latency_ms_total": 136917.21661399608,
+      "generation_latency_ms_p95": 8131.380345001162,
+      "prompt_tokens_n": 22,
+      "prompt_tokens_mean": 2399.9545454545455,
+      "prompt_tokens_total": 52799.0,
+      "prompt_tokens_p95": 2862.0,
+      "completion_tokens_n": 22,
+      "completion_tokens_mean": 79.77272727272727,
+      "completion_tokens_total": 1755.0,
+      "completion_tokens_p95": 121.0,
+      "responses_requiring_retry": 0
+    },
+    "rrf_rerank": {
+      "row_count": 22,
+      "faithfulness_n": 17,
+      "faithfulness_mean": 0.6680672268907564,
+      "factual_correctness_n": 15,
+      "factual_correctness_mean": 0.9146666666666667,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.9090909090909091,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 1.0,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 1.0,
+      "behavior_judge_score_n": 22,
+      "behavior_judge_score_mean": 1.2727272727272727,
+      "generation_latency_ms_n": 22,
+      "generation_latency_ms_mean": 7332.109091500156,
+      "generation_latency_ms_total": 161306.40001300344,
+      "generation_latency_ms_p95": 9314.849643000343,
+      "prompt_tokens_n": 22,
+      "prompt_tokens_mean": 2841.818181818182,
+      "prompt_tokens_total": 62520.0,
+      "prompt_tokens_p95": 4456.0,
+      "completion_tokens_n": 22,
+      "completion_tokens_mean": 104.54545454545455,
+      "completion_tokens_total": 2300.0,
+      "completion_tokens_p95": 173.0,
+      "responses_requiring_retry": 2
+    }
+  },
+  "by_expected_behavior": {
+    "rrf": {
+      "abstain": {
+        "row_count": 7,
+        "faithfulness_n": 6,
+        "faithfulness_mean": 0.20833333333333334,
+        "factual_correctness_n": 0,
+        "factual_correctness_mean": null,
+        "reported_behavior_match_n": 7,
+        "reported_behavior_match_mean": 1.0,
+        "citation_validity_n": 7,
+        "citation_validity_mean": 1.0,
+        "citation_presence_n": 7,
+        "citation_presence_mean": 1.0,
+        "behavior_judge_score_n": 7,
+        "behavior_judge_score_mean": 0.0
+      },
+      "answer": {
+        "row_count": 13,
+        "faithfulness_n": 12,
+        "faithfulness_mean": 0.9583333333333334,
+        "factual_correctness_n": 13,
+        "factual_correctness_mean": 0.9176923076923077,
+        "reported_behavior_match_n": 13,
+        "reported_behavior_match_mean": 0.7692307692307693,
+        "citation_validity_n": 13,
+        "citation_validity_mean": 1.0,
+        "citation_presence_n": 13,
+        "citation_presence_mean": 1.0,
+        "behavior_judge_score_n": 13,
+        "behavior_judge_score_mean": 2.0
+      },
+      "grounded_correction": {
+        "row_count": 2,
+        "faithfulness_n": 2,
+        "faithfulness_mean": 1.0,
+        "factual_correctness_n": 2,
+        "factual_correctness_mean": 0.685,
+        "reported_behavior_match_n": 2,
+        "reported_behavior_match_mean": 1.0,
+        "citation_validity_n": 2,
+        "citation_validity_mean": 1.0,
+        "citation_presence_n": 2,
+        "citation_presence_mean": 1.0,
+        "behavior_judge_score_n": 2,
+        "behavior_judge_score_mean": 1.0
+      }
+    },
+    "rrf_rerank": {
+      "abstain": {
+        "row_count": 7,
+        "faithfulness_n": 6,
+        "faithfulness_mean": 0.08333333333333333,
+        "factual_correctness_n": 0,
+        "factual_correctness_mean": null,
+        "reported_behavior_match_n": 7,
+        "reported_behavior_match_mean": 1.0,
+        "citation_validity_n": 7,
+        "citation_validity_mean": 1.0,
+        "citation_presence_n": 7,
+        "citation_presence_mean": 1.0,
+        "behavior_judge_score_n": 7,
+        "behavior_judge_score_mean": 0.0
+      },
+      "answer": {
+        "row_count": 13,
+        "faithfulness_n": 9,
+        "faithfulness_mean": 0.9841269841269842,
+        "factual_correctness_n": 13,
+        "factual_correctness_mean": 0.9361538461538461,
+        "reported_behavior_match_n": 13,
+        "reported_behavior_match_mean": 0.8461538461538461,
+        "citation_validity_n": 13,
+        "citation_validity_mean": 1.0,
+        "citation_presence_n": 13,
+        "citation_presence_mean": 1.0,
+        "behavior_judge_score_n": 13,
+        "behavior_judge_score_mean": 2.0
+      },
+      "grounded_correction": {
+        "row_count": 2,
+        "faithfulness_n": 2,
+        "faithfulness_mean": 1.0,
+        "factual_correctness_n": 2,
+        "factual_correctness_mean": 0.775,
+        "reported_behavior_match_n": 2,
+        "reported_behavior_match_mean": 1.0,
+        "citation_validity_n": 2,
+        "citation_validity_mean": 1.0,
+        "citation_presence_n": 2,
+        "citation_presence_mean": 1.0,
+        "behavior_judge_score_n": 2,
+        "behavior_judge_score_mean": 1.0
+      }
+    }
+  },
+  "paired": {
+    "faithfulness": {
+      "metric": "faithfulness",
+      "n": 17,
+      "rerank_wins": 3,
+      "ties": 13,
+      "rrf_wins": 1,
+      "mean_delta_rerank_minus_rrf": -0.023109243697478993,
+      "per_query": [
+        {
+          "qid": "q-v1-001",
+          "rrf": 0.6666666666666666,
+          "rrf_rerank": 1.0,
+          "delta": 0.33333333333333337
+        },
+        {
+          "qid": "q-v1-002",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-003",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-004",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-005",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-008",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-009",
+          "rrf": 1.0,
+          "rrf_rerank": 0.0,
+          "delta": -1.0
+        },
+        {
+          "qid": "q-v1-010",
+          "rrf": 0.0,
+          "rrf_rerank": 0.25,
+          "delta": 0.25
+        },
+        {
+          "qid": "q-v1-011",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-012",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-016",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-017",
+          "rrf": 0.8333333333333334,
+          "rrf_rerank": 0.8571428571428571,
+          "delta": 0.023809523809523725
+        },
+        {
+          "qid": "q-v1-018",
+          "rrf": 0.25,
+          "rrf_rerank": 0.25,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-019",
+          "rrf": 0.0,
+          "rrf_rerank": 0.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-020",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-021",
+          "rrf": 0.0,
+          "rrf_rerank": 0.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-022",
+          "rrf": 0.0,
+          "rrf_rerank": 0.0,
+          "delta": 0.0
+        }
+      ]
+    },
+    "factual_correctness": {
+      "metric": "factual_correctness",
+      "n": 15,
+      "rerank_wins": 4,
+      "ties": 9,
+      "rrf_wins": 2,
+      "mean_delta_rerank_minus_rrf": 0.027999999999999994,
+      "per_query": [
+        {
+          "qid": "q-v1-001",
+          "rrf": 0.75,
+          "rrf_rerank": 0.86,
+          "delta": 0.10999999999999999
+        },
+        {
+          "qid": "q-v1-002",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-003",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-004",
+          "rrf": 0.8,
+          "rrf_rerank": 1.0,
+          "delta": 0.19999999999999996
+        },
+        {
+          "qid": "q-v1-005",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-006",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-008",
+          "rrf": 0.8,
+          "rrf_rerank": 0.8,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-011",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-012",
+          "rrf": 0.8,
+          "rrf_rerank": 1.0,
+          "delta": 0.19999999999999996
+        },
+        {
+          "qid": "q-v1-013",
+          "rrf": 1.0,
+          "rrf_rerank": 0.75,
+          "delta": -0.25
+        },
+        {
+          "qid": "q-v1-014",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-015",
+          "rrf": 0.91,
+          "rrf_rerank": 0.89,
+          "delta": -0.020000000000000018
+        },
+        {
+          "qid": "q-v1-016",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-017",
+          "rrf": 0.67,
+          "rrf_rerank": 0.67,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-020",
+          "rrf": 0.57,
+          "rrf_rerank": 0.75,
+          "delta": 0.18000000000000005
+        }
+      ]
+    },
+    "reported_behavior_match": {
+      "metric": "reported_behavior_match",
+      "n": 22,
+      "rerank_wins": 1,
+      "ties": 21,
+      "rrf_wins": 0,
+      "mean_delta_rerank_minus_rrf": 0.045454545454545456,
+      "per_query": [
+        {
+          "qid": "q-v1-001",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-002",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-003",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-004",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-005",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-006",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-007",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-008",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-009",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-010",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-011",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-012",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-013",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-014",
+          "rrf": 0.0,
+          "rrf_rerank": 0.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-015",
+          "rrf": 0.0,
+          "rrf_rerank": 1.0,
+          "delta": 1.0
+        },
+        {
+          "qid": "q-v1-016",
+          "rrf": 0.0,
+          "rrf_rerank": 0.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-017",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-018",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-019",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-020",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-021",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-022",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        }
+      ]
+    },
+    "citation_validity": {
+      "metric": "citation_validity",
+      "n": 22,
+      "rerank_wins": 0,
+      "ties": 22,
+      "rrf_wins": 0,
+      "mean_delta_rerank_minus_rrf": 0.0,
+      "per_query": [
+        {
+          "qid": "q-v1-001",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-002",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-003",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-004",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-005",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-006",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-007",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-008",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-009",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-010",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-011",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-012",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-013",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-014",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-015",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-016",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-017",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-018",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-019",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-020",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-021",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-022",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        }
+      ]
+    },
+    "citation_presence": {
+      "metric": "citation_presence",
+      "n": 22,
+      "rerank_wins": 0,
+      "ties": 22,
+      "rrf_wins": 0,
+      "mean_delta_rerank_minus_rrf": 0.0,
+      "per_query": [
+        {
+          "qid": "q-v1-001",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-002",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-003",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-004",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-005",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-006",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-007",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-008",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-009",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-010",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-011",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-012",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-013",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-014",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-015",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-016",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-017",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-018",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-019",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-020",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-021",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-022",
+          "rrf": 1.0,
+          "rrf_rerank": 1.0,
+          "delta": 0.0
+        }
+      ]
+    },
+    "behavior_judge_score": {
+      "metric": "behavior_judge_score",
+      "n": 22,
+      "rerank_wins": 0,
+      "ties": 22,
+      "rrf_wins": 0,
+      "mean_delta_rerank_minus_rrf": 0.0,
+      "per_query": [
+        {
+          "qid": "q-v1-001",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-002",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-003",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-004",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-005",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-006",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-007",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-008",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-009",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-010",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-011",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-012",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-013",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-014",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-015",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-016",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-017",
+          "rrf": 2,
+          "rrf_rerank": 2,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-018",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-019",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-020",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-021",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        },
+        {
+          "qid": "q-v1-022",
+          "rrf": 0,
+          "rrf_rerank": 0,
+          "delta": 0.0
+        }
+      ]
+    }
+  },
+  "evaluation_error_count": 7
+}

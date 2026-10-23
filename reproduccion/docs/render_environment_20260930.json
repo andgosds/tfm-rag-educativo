@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-30T15:17:44.393765+02:00",
+  "scope": "R18/R20/R21 documentary audit; no render or inference executed",
+  "R": {
+    "R": "R version 4.6.1 (2026-06-24)",
+    "packages": {
+      "dplyr": "1.2.1",
+      "ggplot2": "4.0.3",
+      "jsonlite": "2.0.0",
+      "knitr": "1.51"
+    },
+    "session_info": [
+      "R version 4.6.1 (2026-06-24)",
+      "Platform: x86_64-pc-linux-gnu",
+      "Running under: Ubuntu 24.04.5 LTS",
+      "",
+      "Matrix products: default",
+      "BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 ",
+      "LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0",
+      "",
+      "locale:",
+      " [1] LC_CTYPE=es_ES.UTF-8       LC_NUMERIC=C              ",
+      " [3] LC_TIME=es_ES.UTF-8        LC_COLLATE=es_ES.UTF-8    ",
+      " [5] LC_MONETARY=es_ES.UTF-8    LC_MESSAGES=es_ES.UTF-8   ",
+      " [7] LC_PAPER=es_ES.UTF-8       LC_NAME=C                 ",
+      " [9] LC_ADDRESS=C               LC_TELEPHONE=C            ",
+      "[11] LC_MEASUREMENT=es_ES.UTF-8 LC_IDENTIFICATION=C       ",
+      "",
+      "time zone: Europe/Madrid",
+      "tzcode source: system (glibc)",
+      "",
+      "attached base packages:",
+      "[1] stats     graphics  grDevices utils     datasets  methods   base     ",
+      "",
+      "loaded via a namespace (and not attached):",
+      "[1] compiler_4.6.1 jsonlite_2.0.0"
+    ]
+  },
+  "R_probe": {
+    "command": [
+      "Rscript",
+      "-e",
+      "cat(jsonlite::toJSON(list(R=R.version.string, packages=setNames(lapply(c(\"dplyr\",\"ggplot2\",\"jsonlite\",\"knitr\"),function(p)as.character(packageVersion(p))),c(\"dplyr\",\"ggplot2\",\"jsonlite\",\"knitr\")),session_info=capture.output(sessionInfo())),auto_unbox=TRUE))"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"R\":\"R version 4.6.1 (2026-06-24)\",\"packages\":{\"dplyr\":\"1.2.1\",\"ggplot2\":\"4.0.3\",\"jsonlite\":\"2.0.0\",\"knitr\":\"1.51\"},\"session_info\":[\"R version 4.6.1 (2026-06-24)\",\"Platform: x86_64-pc-linux-gnu\",\"Running under: Ubuntu 24.04.5 LTS\",\"\",\"Matrix products: default\",\"BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 \",\"LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\",\"\",\"locale:\",\" [1] LC_CTYPE=es_ES.UTF-8       LC_NUMERIC=C              \",\" [3] LC_TIME=es_ES.UTF-8        LC_COLLATE=es_ES.UTF-8    \",\" [5] LC_MONETARY=es_ES.UTF-8    LC_MESSAGES=es_ES.UTF-8   \",\" [7] LC_PAPER=es_ES.UTF-8       LC_NAME=C                 \",\" [9] LC_ADDRESS=C               LC_TELEPHONE=C            \",\"[11] LC_MEASUREMENT=es_ES.UTF-8 LC_IDENTIFICATION=C       \",\"\",\"time zone: Europe/Madrid\",\"tzcode source: system (glibc)\",\"\",\"attached base packages:\",\"[1] stats     graphics  grDevices utils     datasets  methods   base     \",\"\",\"loaded via a namespace (and not attached):\",\"[1] compiler_4.6.1 jsonlite_2.0.0\"]}",
+    "stderr": ""
+  },
+  "quarto": {
+    "command": [
+      "quarto",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "1.8.25",
+    "stderr": ""
+  },
+  "typst_via_quarto": {
+    "command": [
+      "quarto",
+      "typst",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "typst 0.13.0 (8dce676d)"
+  },
+  "standalone_typst_on_PATH": null,
+  "limitations": [
+    "Observation of installed environment, not a package lock or clean installation proof.",
+    "Bundled Typst accessed through quarto typst; no standalone typst on PATH.",
+    "No PDF render in this task."
+  ]
+}

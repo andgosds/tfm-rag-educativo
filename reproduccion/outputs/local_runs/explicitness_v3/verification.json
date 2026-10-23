@@ -1,0 +1,25 @@
+{
+  "base_questions": 26,
+  "formulations": 52,
+  "chunks": 288,
+  "rankings": {
+    "bm25": 520,
+    "dense": 520,
+    "rrf": 520,
+    "rerank": 520
+  },
+  "technical_formulation_chunk_pairs": 828,
+  "base_chunk_union": 578,
+  "historical_technical_pool_pairs": 340,
+  "new_base_chunk_pairs": 302,
+  "seen_base_chunk_pairs": 276,
+  "new_formulation_chunk_pairs": 384,
+  "seen_formulation_chunk_pairs": 444,
+  "blind_review_units": 630,
+  "pending_reuse_units": 198,
+  "unjudged_seen_review_units": 252,
+  "final_qrels_ready": false,
+  "quality_metrics_computed": false,
+  "generation_executed": false,
+  "candidate_set_equality": true
+}

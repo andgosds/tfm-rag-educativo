@@ -1,0 +1,25 @@
+{
+  "metric_definitions": {
+    "k_values": [
+      5,
+      10
+    ],
+    "mrr": "grade 2 only (binary relevant)",
+    "ndcg": "graded 0/1/2, standard discount",
+    "recall": "grade 2 only (binary relevant)"
+  },
+  "output_csv_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/provenance_correction_v2_20260921/paired_diff_by_question.csv",
+  "output_csv_sha256": "2ffb5326d0d8e420eb3c10969d9a29a7dc8ca7e8058375bb62e68ccb0ea19512",
+  "output_json_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/provenance_correction_v2_20260921/paired_metrics_full.json",
+  "paired_differences_note": "implicit minus explicit, per base question; means over 7 base questions",
+  "protocol_id": "explicitness_paired_retrieval_metrics_v2",
+  "qrels_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/provenance_correction_v2_20260921/qrels_explicitness_v2.tsv",
+  "qrels_sha256": "96c18cb03c4ef35133d683a8aff22c0f06ecbed075486ec8644dbb0ce89bb5cf",
+  "runs_directory": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/explicitness_v2/runs",
+  "runs_sha256": {
+    "bm25": "a3543a861195217a88f7304935bb7910f02fa6a9bd53cf84f12bd8209b50dfc7",
+    "dense": "d1807426bbffef9af2b1f166b1c511ca525fcbbdcbdd36d90dc345f267a005d5",
+    "rerank": "4abf2b7119711727b71c13e2d87e9ee9e631b1d3b3430d4e20b8463c570c39c2",
+    "rrf": "8e064b411c4c75550fd10c7f2342bf2a5a934ae1ffb2020e43de4f1e1a326c5b"
+  }
+}

@@ -1,0 +1,7 @@
+{"base_qid": "q-v1-001", "manipulated_terms": ["sampling distribution", "sample mean"], "note": "Se retira la denominación técnica del estimador y de su distribución; se describe el procedimiento de muestreo."}
+{"base_qid": "q-v1-002", "manipulated_terms": ["type i error", "type ii error"], "note": "Se sustituyen los nombres de los dos errores por su descripción."}
+{"base_qid": "q-v1-003", "manipulated_terms": ["hypothesis test"], "note": "Se sustituye el nombre del procedimiento por la descripción de lo que evalúa."}
+{"base_qid": "q-v1-006", "manipulated_terms": ["confidence interval"], "note": "Se retira el nombre del intervalo; se conserva 'confidence level', que es la variable manipulada y no el objeto de la pregunta."}
+{"base_qid": "q-v1-012", "manipulated_terms": ["confidence interval"], "note": "Mismo tratamiento que q-v1-006."}
+{"base_qid": "q-v1-014", "manipulated_terms": ["interquartile range"], "note": "Se sustituye el nombre del rango por su definición operativa ('middle 50%')."}
+{"base_qid": "q-v1-016", "manipulated_terms": ["discrete random variable", "continuous random variable"], "note": "Se retiran las dos denominaciones de variable aleatoria; se conserva la contraposición conteo/medición."}

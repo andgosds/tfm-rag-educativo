@@ -1,0 +1,13 @@
+generator_model,capacity,criterion,diff_implicit_minus_explicit,ic95_lo,ic95_hi,n_base
+gemma4:e4b,9,faithfulness,-0.2179,-0.3558,-0.0929,26
+gemma4:e4b,9,factual_correctness,-0.1795,-0.3686,-0.0064,26
+gemma4:e4b,9,behavior_ok,-0.1923,-0.3494,-0.0481,26
+gemma4:e4b,9,citations_ok,0.0128,-0.0769,0.1314,26
+qwen3.5:4b,13,faithfulness,-0.1154,-0.2596,0.0288,26
+qwen3.5:4b,13,factual_correctness,-0.141,-0.3045,0.0128,26
+qwen3.5:4b,13,behavior_ok,-0.1635,-0.3654,0.0096,26
+qwen3.5:4b,13,citations_ok,-0.0192,-0.1058,0.0673,26
+qwen3.5:9b,14,faithfulness,-0.0769,-0.2115,0.0288,26
+qwen3.5:9b,14,factual_correctness,-0.0577,-0.1442,0.0192,26
+qwen3.5:9b,14,behavior_ok,-0.0577,-0.1442,0.0288,26
+qwen3.5:9b,14,citations_ok,-0.0481,-0.1346,0.0096,26

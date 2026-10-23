@@ -1,0 +1,103 @@
+{
+  "command": "uv run --no-sync python scripts/analyze_final_experiment.py --output-dir <fresh-directory-under-outputs/local_runs/final_experiment_20260930>",
+  "no_historical_writes": true,
+  "no_model_calls": true,
+  "outputs": {
+    "analysis.json": "9db77fc713979d62f1d7333f67668fbab87d3137ac6332a27168a08af43fa0a2",
+    "availability.csv": "510c3f3840e162b9fdccc299dee69e2ef6bb54db539b8dd80256c0101b44d326",
+    "coverage.csv": "04354363a7ffc5c7ec59bafeed6d00f8a5f34ba064600e06e444c50e33dcff05",
+    "failures.csv": "05301e88b0d4efc3e11b648eb8d3120445b4140c610b29c6873f0aa2b01ac235",
+    "joined_cells.csv": "8f600ce70526f7e97a0f2fcbbf6804ef374d7dd1bc404c289113f4b28374c572",
+    "main_table.csv": "dcb1fc15d8818f42c3033857feeb953871f57ed64d693a808158f83c717cc4dd",
+    "operational.csv": "61be48cb850c460d5a9c6032dbab6c0ece7f37466e659cfe63f2e03a6e8cbdd9",
+    "operational_cells.csv": "2c35bee71032ab94c61f6031bb126ad572408d9fcbe5e3792ce513450f1bad74",
+    "operational_summary.csv": "38af879f28e2812de4aedf05b8c9d4707e1d60c44254c2adee203a805aeb3c81",
+    "operational_table.csv": "61be48cb850c460d5a9c6032dbab6c0ece7f37466e659cfe63f2e03a6e8cbdd9",
+    "paired_contrasts.csv": "9b4a30108453b2075ee62f81d3342e9154718757310de0b16bcef3287db26ad6",
+    "per_retriever.csv": "dcb1fc15d8818f42c3033857feeb953871f57ed64d693a808158f83c717cc4dd",
+    "quality_levels.csv": "4c3410c293f870f193f091207fba132443687c6c6ab741ac6d1dbc2318a749d8",
+    "report.md": "a6e908b9d8c52dba54cb0f8675c1430bf0064c25695f59ec1662644a7202b92e",
+    "results_proposed.md": "ef433426f0844dbc63bc04025cad75e26bc117736217cf448c0b244cf804715a",
+    "support_cells.csv": "bd1a549e5db68644e160ab3f764019bfb2fafd1965f7b6fa37b1c7f78e0bd84e"
+  },
+  "python": "3.14.0",
+  "sources": {
+    "outputs/local_runs/generation_scaling_v3/eval_final_v3.jsonl": {
+      "n_rows": 604,
+      "sha256": "c017ee322141bce3f88a68dfe2457e991f90bf54f6f136fad80fed8c771bf071"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_bm25_top5_gemma4_e4b.jsonl": {
+      "n_rows": 48,
+      "sha256": "d905587a119bab301c3e0cdbfc34e593dbab6fa98aa5f428addb057eec052afb"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_bm25_top5_gemma4_e4b_failures.jsonl": {
+      "n_rows": 4,
+      "sha256": "9646d106ad87d006475761416e78937a1c37a9c7cdb281ec791ee818370021cd"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_bm25_top5_qwen35_4b.jsonl": {
+      "n_rows": 52,
+      "sha256": "447ed24e2cd72850c0ccfce566f1fa5876a9622cf46684593c80af45bb5513e4"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_bm25_top5_qwen35_9b.jsonl": {
+      "n_rows": 52,
+      "sha256": "481fb7d3663d74a09b3240023b9c3d024a6734353f4bbb504c0fe6b813d69d96"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_dense_top5_gemma4_e4b.jsonl": {
+      "n_rows": 49,
+      "sha256": "41ea6c1adb9b553db106fe21d5ea711c2ed900f9c93fcd798c24c5414687a9e8"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_dense_top5_gemma4_e4b_failures.jsonl": {
+      "n_rows": 3,
+      "sha256": "a75e9e0e519d5f4af783b1100134e78a63fa4d9a82572959544fe605cd50d4b7"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_dense_top5_qwen35_4b.jsonl": {
+      "n_rows": 52,
+      "sha256": "14e8c6d113e066923fac51d147f834f1c73ca5eb3f307f5f99c4f076e9b85e20"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_dense_top5_qwen35_9b.jsonl": {
+      "n_rows": 52,
+      "sha256": "d3ea2a4931a0e64f3c8f326e1cc1d6a027adf2a303f2a547aa54404a73014e8b"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rerank_top5_gemma4_e4b.jsonl": {
+      "n_rows": 47,
+      "sha256": "ab4cc3dea0795e2cc629dba60679e91c0fc9962ff9673d055deb6621e69f2217"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rerank_top5_gemma4_e4b_failures.jsonl": {
+      "n_rows": 5,
+      "sha256": "b73a25d9ebcaacea0b1458af4fb2a69f6c45072c46aaf3e877e781180a2beaa4"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rerank_top5_qwen35_4b.jsonl": {
+      "n_rows": 52,
+      "sha256": "a554d38aff369b8f9a084dc3f26f5331d8ae4558e11ac8b114ae3bfb79d2b8a7"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rerank_top5_qwen35_9b.jsonl": {
+      "n_rows": 52,
+      "sha256": "6eec7c8d539582afc4423cb2bce1e3792f2b4ff3d0ae0c6726e4efb50b07bc1e"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rrf_top5_gemma4_e4b.jsonl": {
+      "n_rows": 44,
+      "sha256": "ef235a125b845b8205736d252ec80f8a42a2d01eaa24ed68602e305adb5f73ff"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rrf_top5_gemma4_e4b_failures.jsonl": {
+      "n_rows": 8,
+      "sha256": "bcb58f4790e7ea6e00795155d364b9875dec0135e6f8afd4380eafbcbe4cba88"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rrf_top5_qwen35_4b.jsonl": {
+      "n_rows": 52,
+      "sha256": "4b6df2552f6a2fe177c9b359c041cbfc6fbb041dafffd51d4b802697d41473f2"
+    },
+    "outputs/local_runs/generation_scaling_v3/rag_rrf_top5_qwen35_9b.jsonl": {
+      "n_rows": 52,
+      "sha256": "e7061b2f300963904ae793ea63dd9636effa6b0db537d69c4f07c9da9e6667e0"
+    },
+    "scripts/analysis_capacity_v3.py": {
+      "sha256": "4bfee1b54c39defe502dede6318830606e8792d24cd4d84a35b33730b4ceffb1"
+    },
+    "scripts/analyze_final_experiment.py": {
+      "sha256": "90a056f96937489717dcb58a165176c46838fc4c65308ef5995178c25077680c"
+    },
+    "scripts/run_rag_generation.py": {
+      "sha256": "a815698215a5826ee5363eda4e871ca92fd0066ab3c8fdb6819addef2d1dc64a"
+    }
+  }
+}

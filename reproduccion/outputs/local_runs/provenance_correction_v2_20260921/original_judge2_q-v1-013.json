@@ -1,0 +1,15 @@
+[
+ {
+  "qid": "q-v1-013",
+  "reviewer_type": "llm",
+  "reviewer_id": "judge-2-glm-5.3-xhigh",
+  "model_version": "opencode-go/glm-5.3; reasoning_effort=xhigh",
+  "prompt_version": "golden_set_review_prompt_v1",
+  "answerability_decision": "answerable",
+  "evidence_sufficient_decision": true,
+  "reference_answer_decision": "accept",
+  "rationale": "Corpus-bounded check confirms both sides of the comparison. Verbatim verification (whitespace-normalized) of all four quotes succeeded against their chunks: 8.1:chunk-001 states that a CI for a population mean with known population standard deviation is based on the CLT conclusion that sample means follow an approximately normal distribution, grounding the normal side; 8.2:chunk-003 states that the practice now is to use the Student's t-distribution whenever s is used as an estimate for sigma, that t-scores follow a Student's t-distribution with n - 1 degrees of freedom, that df come from the calculation of s, and that for each sample size n there is a different t-distribution. A full-corpus search for possible alternative/stronger evidence found the complementary statements (exact shape depends on df in 8.2:chunk-004; df = n - 1 in 8.2:chunk-006 and openstax_principles_ds:4.1:chunk-012) but none that changes the answerability decision; none of the extra chunks is needed beyond the canonical pair to support the complete reference answer, and the gold answer's 'normal when sigma known / t when sigma estimated by s / n - 1 df' is fully and minimally covered by the two canonical chunks. Minor caveats not affecting the decisions: the gold answer's phrase 'which determine its exact shape' is most literally stated in the non-canonical 8.2:chunk-004 ('The exact shape of the Student's t-distribution depends on the degrees of freedom'), while the canonical chunk-003 only supports it via 'for each sample size n, there is a different Student's t-distribution'; and the approximately-normal population condition for the t procedure is stated in chunk-003, so it is supported. Normative formulas in the quotes are stripped to placeholders by the PDF text layer, but no numeric content of the reference answer depends on them.",
+  "confidence": 0.9,
+  "execution_date": "2026-09-21"
+ }
+]

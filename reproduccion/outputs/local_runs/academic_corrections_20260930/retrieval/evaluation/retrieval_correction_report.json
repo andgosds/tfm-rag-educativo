@@ -1,0 +1,564 @@
+{
+  "before_after": [
+    {
+      "after": 0.3728174603174603,
+      "before": 0.3728174603174603,
+      "delta": 0.0,
+      "k": 5,
+      "method": "bm25",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.3038461538461539,
+      "before": 0.3038461538461539,
+      "delta": 0.0,
+      "k": 5,
+      "method": "bm25",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5448717948717948,
+      "before": 0.5448717948717948,
+      "delta": 0.0,
+      "k": 5,
+      "method": "bm25",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.6829493373491251,
+      "before": 0.779596991210613,
+      "delta": -0.09664765386148788,
+      "k": 5,
+      "method": "bm25",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.5065247252747253,
+      "before": 0.5065247252747253,
+      "delta": 0.0,
+      "k": 10,
+      "method": "bm25",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.22500000000000003,
+      "before": 0.22500000000000003,
+      "delta": 0.0,
+      "k": 10,
+      "method": "bm25",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.547008547008547,
+      "before": 0.547008547008547,
+      "delta": 0.0,
+      "k": 10,
+      "method": "bm25",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.7062394410919206,
+      "before": 0.8872068274985446,
+      "delta": -0.18096738640662402,
+      "k": 10,
+      "method": "bm25",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.38260073260073263,
+      "before": 0.38260073260073263,
+      "delta": 0.0,
+      "k": 5,
+      "method": "dense",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.31538461538461543,
+      "before": 0.31538461538461543,
+      "delta": 0.0,
+      "k": 5,
+      "method": "dense",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5208333333333333,
+      "before": 0.5208333333333333,
+      "delta": 0.0,
+      "k": 5,
+      "method": "dense",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.6452405175428308,
+      "before": 0.7399581652225872,
+      "delta": -0.09471764767975632,
+      "k": 5,
+      "method": "dense",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.5175213675213676,
+      "before": 0.5175213675213676,
+      "delta": 0.0,
+      "k": 10,
+      "method": "dense",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.22692307692307695,
+      "before": 0.22692307692307695,
+      "delta": 0.0,
+      "k": 10,
+      "method": "dense",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5257173382173381,
+      "before": 0.5257173382173381,
+      "delta": 0.0,
+      "k": 10,
+      "method": "dense",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.6772392861175022,
+      "before": 0.8520754602223478,
+      "delta": -0.17483617410484564,
+      "k": 10,
+      "method": "dense",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.42963980463980467,
+      "before": 0.42963980463980467,
+      "delta": 0.0,
+      "k": 5,
+      "method": "rerank",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.35,
+      "before": 0.35,
+      "delta": 0.0,
+      "k": 5,
+      "method": "rerank",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5961538461538461,
+      "before": 0.5961538461538461,
+      "delta": 0.0,
+      "k": 5,
+      "method": "rerank",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.7332930528987094,
+      "before": 0.8154618022841466,
+      "delta": -0.08216874938543717,
+      "k": 5,
+      "method": "rerank",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.5475503663003664,
+      "before": 0.5475503663003664,
+      "delta": 0.0,
+      "k": 10,
+      "method": "rerank",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.24615384615384617,
+      "before": 0.24615384615384617,
+      "delta": 0.0,
+      "k": 10,
+      "method": "rerank",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5993589743589743,
+      "before": 0.5993589743589743,
+      "delta": 0.0,
+      "k": 10,
+      "method": "rerank",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.7349125143462774,
+      "before": 0.9002301105130441,
+      "delta": -0.16531759616676678,
+      "k": 10,
+      "method": "rerank",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.42655677655677654,
+      "before": 0.42655677655677654,
+      "delta": 0.0,
+      "k": 5,
+      "method": "rrf",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.3384615384615385,
+      "before": 0.3384615384615385,
+      "delta": 0.0,
+      "k": 5,
+      "method": "rrf",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5727564102564102,
+      "before": 0.5727564102564102,
+      "delta": 0.0,
+      "k": 5,
+      "method": "rrf",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.7188858790651328,
+      "before": 0.8046541799768214,
+      "delta": -0.08576830091168863,
+      "k": 5,
+      "method": "rrf",
+      "metric": "ndcg",
+      "n_base": 26
+    },
+    {
+      "after": 0.5475503663003664,
+      "before": 0.5475503663003664,
+      "delta": 0.0,
+      "k": 10,
+      "method": "rrf",
+      "metric": "recall",
+      "n_base": 26
+    },
+    {
+      "after": 0.24615384615384617,
+      "before": 0.24615384615384617,
+      "delta": 0.0,
+      "k": 10,
+      "method": "rrf",
+      "metric": "precision",
+      "n_base": 26
+    },
+    {
+      "after": 0.5727564102564102,
+      "before": 0.5727564102564102,
+      "delta": 0.0,
+      "k": 10,
+      "method": "rrf",
+      "metric": "mrr",
+      "n_base": 26
+    },
+    {
+      "after": 0.7282507284720694,
+      "before": 0.8965195358749066,
+      "delta": -0.16826880740283723,
+      "k": 10,
+      "method": "rrf",
+      "metric": "ndcg",
+      "n_base": 26
+    }
+  ],
+  "before_source": "frozen historical per_base.csv",
+  "cohorts": {
+    "all_pairs": {
+      "aggregates": [
+        {
+          "k": 5,
+          "method": "bm25",
+          "mrr": 0.5448717948717948,
+          "n_base": 26,
+          "ndcg": 0.6829493373491251,
+          "precision": 0.3038461538461539,
+          "recall": 0.3728174603174603
+        },
+        {
+          "k": 10,
+          "method": "bm25",
+          "mrr": 0.547008547008547,
+          "n_base": 26,
+          "ndcg": 0.7062394410919206,
+          "precision": 0.22500000000000003,
+          "recall": 0.5065247252747253
+        },
+        {
+          "k": 5,
+          "method": "dense",
+          "mrr": 0.5208333333333333,
+          "n_base": 26,
+          "ndcg": 0.6452405175428308,
+          "precision": 0.31538461538461543,
+          "recall": 0.38260073260073263
+        },
+        {
+          "k": 10,
+          "method": "dense",
+          "mrr": 0.5257173382173381,
+          "n_base": 26,
+          "ndcg": 0.6772392861175022,
+          "precision": 0.22692307692307695,
+          "recall": 0.5175213675213676
+        },
+        {
+          "k": 5,
+          "method": "rerank",
+          "mrr": 0.5961538461538461,
+          "n_base": 26,
+          "ndcg": 0.7332930528987094,
+          "precision": 0.35,
+          "recall": 0.42963980463980467
+        },
+        {
+          "k": 10,
+          "method": "rerank",
+          "mrr": 0.5993589743589743,
+          "n_base": 26,
+          "ndcg": 0.7349125143462774,
+          "precision": 0.24615384615384617,
+          "recall": 0.5475503663003664
+        },
+        {
+          "k": 5,
+          "method": "rrf",
+          "mrr": 0.5727564102564102,
+          "n_base": 26,
+          "ndcg": 0.7188858790651328,
+          "precision": 0.3384615384615385,
+          "recall": 0.42655677655677654
+        },
+        {
+          "k": 10,
+          "method": "rrf",
+          "mrr": 0.5727564102564102,
+          "n_base": 26,
+          "ndcg": 0.7282507284720694,
+          "precision": 0.24615384615384617,
+          "recall": 0.5475503663003664
+        }
+      ],
+      "base_qids": [
+        "q-v1-001",
+        "q-v1-002",
+        "q-v1-003",
+        "q-v1-004",
+        "q-v1-005",
+        "q-v1-006",
+        "q-v1-007",
+        "q-v1-008",
+        "q-v1-011",
+        "q-v1-012",
+        "q-v1-013",
+        "q-v1-014",
+        "q-v1-015",
+        "q-v1-016",
+        "q-v1-017",
+        "q-v1-019",
+        "q-v1-020",
+        "q-v1-022",
+        "q-v3-001",
+        "q-v3-002",
+        "q-v3-003",
+        "q-v3-004",
+        "q-v3-005",
+        "q-v3-006",
+        "q-v3-007",
+        "q-v3-008"
+      ],
+      "n_base": 26
+    },
+    "grade2_eligible": {
+      "aggregates": [
+        {
+          "k": 5,
+          "method": "bm25",
+          "mrr": 0.7083333333333333,
+          "n_base": 20,
+          "ndcg": 0.6959111379077305,
+          "precision": 0.395,
+          "recall": 0.4846626984126984
+        },
+        {
+          "k": 10,
+          "method": "bm25",
+          "mrr": 0.711111111111111,
+          "n_base": 20,
+          "ndcg": 0.7328813576940881,
+          "precision": 0.29250000000000004,
+          "recall": 0.6584821428571429
+        },
+        {
+          "k": 5,
+          "method": "dense",
+          "mrr": 0.6770833333333333,
+          "n_base": 20,
+          "ndcg": 0.7009433866835881,
+          "precision": 0.41000000000000003,
+          "recall": 0.49738095238095237
+        },
+        {
+          "k": 10,
+          "method": "dense",
+          "mrr": 0.6834325396825396,
+          "n_base": 20,
+          "ndcg": 0.7428133533368075,
+          "precision": 0.29500000000000004,
+          "recall": 0.6727777777777778
+        },
+        {
+          "k": 5,
+          "method": "rerank",
+          "mrr": 0.775,
+          "n_base": 20,
+          "ndcg": 0.7770154449192136,
+          "precision": 0.45499999999999996,
+          "recall": 0.558531746031746
+        },
+        {
+          "k": 10,
+          "method": "rerank",
+          "mrr": 0.7791666666666667,
+          "n_base": 20,
+          "ndcg": 0.7855209195315546,
+          "precision": 0.32,
+          "recall": 0.7118154761904762
+        },
+        {
+          "k": 5,
+          "method": "rrf",
+          "mrr": 0.7445833333333333,
+          "n_base": 20,
+          "ndcg": 0.7468331350869122,
+          "precision": 0.44000000000000006,
+          "recall": 0.5545238095238095
+        },
+        {
+          "k": 10,
+          "method": "rrf",
+          "mrr": 0.7445833333333333,
+          "n_base": 20,
+          "ndcg": 0.7688802508127051,
+          "precision": 0.32,
+          "recall": 0.7118154761904762
+        }
+      ],
+      "base_qids": [
+        "q-v1-001",
+        "q-v1-002",
+        "q-v1-003",
+        "q-v1-004",
+        "q-v1-005",
+        "q-v1-006",
+        "q-v1-008",
+        "q-v1-011",
+        "q-v1-012",
+        "q-v1-013",
+        "q-v1-014",
+        "q-v1-015",
+        "q-v1-016",
+        "q-v1-017",
+        "q-v1-020",
+        "q-v3-001",
+        "q-v3-002",
+        "q-v3-004",
+        "q-v3-005",
+        "q-v3-008"
+      ],
+      "n_base": 20
+    }
+  },
+  "correction": "R01: global qrel IDCG independent of retrieved candidates",
+  "counts": {
+    "per_base": 208,
+    "per_query": 416,
+    "qrels": 578,
+    "run_rows": {
+      "bm25": 520,
+      "dense": 520,
+      "rerank": 520,
+      "rrf": 520
+    }
+  },
+  "definitions": {
+    "mrr": "reciprocal rank of first grade-2 hit in top-k",
+    "ndcg": "gain 2^grade-1; log2(rank+1); IDCG over ALL base qrels at k",
+    "no_grade2": "legacy all-pairs Recall/MRR zero retained; separate grade2-eligible sensitivity",
+    "no_positive_gain": "nDCG zero when global IDCG zero",
+    "precision": "grade-2 hits / k, even if fewer than k retrieved",
+    "recall": "grade-2 hits / all known grade-2 qrels for base"
+  },
+  "inputs": {
+    "bm25": {
+      "filename": "explicitness_v3_bm25.jsonl",
+      "sha256": "89c9bd8d45ff092cfdb37365868c3ff44efebe1483132e4a1c35f0937d16408b"
+    },
+    "dense": {
+      "filename": "explicitness_v3_dense.jsonl",
+      "sha256": "8146050a86e13299d1d317fadb9d9ca71678ac1810d60029b55f95df2c8dc0ba"
+    },
+    "historical_per_base": {
+      "filename": "per_base.csv",
+      "sha256": "5ad4dd44176db8211224b31c7fc13a4b1edf7b24d7bf9c69093e8dbc5c82916d"
+    },
+    "qrels": {
+      "filename": "qrels_final_v3.jsonl",
+      "sha256": "18ce8d47fefaec3524e863f263cfa19d4b87f896931c90b1bc14aaecec6d7e18"
+    },
+    "rerank": {
+      "filename": "explicitness_v3_rerank.jsonl",
+      "sha256": "7bdb6fdf82b8a06c8135378559f1e88329ed2897169ca6fdf594b07465a5d9b6"
+    },
+    "rrf": {
+      "filename": "explicitness_v3_rrf.jsonl",
+      "sha256": "6ff7b67b4c094b7ebb8027695340e76d8b6b1f84ca011e679eb9fb4887b9c3a9"
+    }
+  },
+  "interpretation": "Descriptive correction and sensitivity, not hypothesis confirmation.",
+  "no_grade2_base_qids": [
+    "q-v1-007",
+    "q-v1-019",
+    "q-v1-022",
+    "q-v3-003",
+    "q-v3-006",
+    "q-v3-007"
+  ],
+  "outputs": {
+    "aggregate_metrics.csv": "e5ecbec0e5f7305232f1dd5dbdac5e10499c74fc40a12e614c607997bccddb77",
+    "before_after.csv": "c577973de4b85f8a430567b00674c875b8e129dfefd574c2718531fcdbf4d6bd",
+    "per_base.csv": "d5e7f6ab58082852e1162295206ae6cc7c27891453ce3a3741617b98e0799f8f",
+    "per_query.csv": "ccf5ae3674fb156f297c5b63301c3f2714278e26a8caa21c67b9d6a47f4afb06"
+  },
+  "qrel_scope": "base-question union shared across formulations and methods; not variant-specific",
+  "schema_version": 1,
+  "unit": "base question; mean of two formulations, then macro mean over base questions",
+  "unjudged_policy": "unjudged run chunks scored as 0 by frozen convention; does not assert true irrelevance"
+}

@@ -1,0 +1,31 @@
+{
+  "experiment_id": "rag_four_retrievers_top5_v1_22q",
+  "judge_provider": "opencode-go",
+  "judge_model": "glm-5.3-flash",
+  "judge_seed": 20260902,
+  "ragas_max_tokens": 4096,
+  "behavior_max_tokens": 4096,
+  "judge_reasoning_effort": "low",
+  "ragas_version": "0.4.3",
+  "row_count": 22,
+  "conditions": {
+    "dense": {
+      "row_count": 22,
+      "faithfulness_n": 22,
+      "faithfulness_mean": 0.7632575757575758,
+      "factual_correctness_n": 15,
+      "factual_correctness_mean": 0.7100000000000001,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.8181818181818182,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 0.9545454545454546,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 0.9545454545454546,
+      "behavior_judge_score_n": 22,
+      "behavior_judge_score_mean": 1.9090909090909092,
+      "evaluation_latency_ms_total": 1099295.5459740006,
+      "evaluation_latency_ms_mean": 49967.97936245457
+    }
+  },
+  "evaluation_error_count": 0
+}

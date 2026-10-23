@@ -1,0 +1,20 @@
+[project]
+name = "tfm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "datasets>=5.0.0",
+    "jupyter>=1.1.1",
+    "lemminflect>=0.2.3",
+    "pymupdf>=1.28.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

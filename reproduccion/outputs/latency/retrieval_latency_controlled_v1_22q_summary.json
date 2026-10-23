@@ -1,0 +1,93 @@
+{
+  "benchmark_id": "retrieval_latency_controlled_v1_22q",
+  "protocol": "integrated_serial_query_latency_v1",
+  "warmup_rounds": 5,
+  "repetitions": 30,
+  "seed": 20260831,
+  "query_count": 22,
+  "sample_count_per_condition": 660,
+  "top_k": 10,
+  "fusion": {
+    "method": "rrf",
+    "k0": 60
+  },
+  "timing": {
+    "clock": "time.perf_counter_ns",
+    "cuda_synchronization": true,
+    "models_and_indices_preloaded": true,
+    "condition_execution": "serial"
+  },
+  "hardware": {
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 2060 SUPER"
+  },
+  "models": {
+    "dense": {
+      "model_id": "intfloat/e5-base-v2",
+      "revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+      "batch_size": 1,
+      "max_seq_length": 512
+    },
+    "reranker": {
+      "model_id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+      "batch_size": 16,
+      "max_seq_length": 512
+    }
+  },
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.2",
+    "torch": "2.13.0+cu130",
+    "sentence_transformers": "5.7.0"
+  },
+  "inputs": {
+    "chunks_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/processed/chunks_v1.jsonl",
+    "chunks_sha256": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "golden_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/golden_set_pilot_v1.jsonl",
+    "golden_sha256": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "document_embeddings_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/embeddings/dense_e5_base_v2_pooled_v1_22q_documents.npy",
+    "document_embeddings_sha256": "744672a4b94a1bce8729e51c187cf77a87fcc1c536e2a3201c91d6acbc439b73"
+  },
+  "conditions": {
+    "bm25": {
+      "sample_count": 660,
+      "mean_ms": 2.668316293939394,
+      "median_ms": 2.5093555,
+      "p95_ms": 3.4212685499999984,
+      "std_ms": 0.6332193029555047,
+      "min_ms": 1.975702,
+      "max_ms": 5.315033
+    },
+    "dense": {
+      "sample_count": 660,
+      "mean_ms": 6.806171903030303,
+      "median_ms": 6.639101500000001,
+      "p95_ms": 7.744669,
+      "std_ms": 0.46160177967742433,
+      "min_ms": 6.250529,
+      "max_ms": 9.843101
+    },
+    "hybrid_rrf_serial": {
+      "sample_count": 660,
+      "mean_ms": 9.487518677272728,
+      "median_ms": 9.2808285,
+      "p95_ms": 11.77668645,
+      "std_ms": 0.8809451469139796,
+      "min_ms": 8.311002,
+      "max_ms": 13.529264
+    },
+    "hybrid_rrf_rerank_serial": {
+      "sample_count": 660,
+      "mean_ms": 47.291512872727274,
+      "median_ms": 47.457559,
+      "p95_ms": 52.222256949999995,
+      "std_ms": 3.3566075366766963,
+      "min_ms": 38.583342,
+      "max_ms": 56.975037
+    }
+  },
+  "raw_output_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/latency/retrieval_latency_controlled_v1_22q_raw.csv",
+  "summary_csv_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/latency/retrieval_latency_controlled_v1_22q_summary.csv"
+}

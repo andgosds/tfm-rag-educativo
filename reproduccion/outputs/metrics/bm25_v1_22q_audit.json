@@ -1,0 +1,358 @@
+{
+  "run_id": "bm25_v1_22q",
+  "query_count": 22,
+  "answerable_query_count": 13,
+  "unanswerable_query_count": 9,
+  "qrel_count": 24,
+  "grade_counts": {
+    "1": 2,
+    "2": 22
+  },
+  "aggregate_metrics": {
+    "precision_at_5": 0.15384615384615385,
+    "recall_at_5": 0.46153846153846156,
+    "mrr_at_5": 0.3333333333333333,
+    "ndcg_at_5": 0.34080687079768346,
+    "precision_at_10": 0.13076923076923078,
+    "recall_at_10": 0.8589743589743589,
+    "mrr_at_10": 0.40384615384615385,
+    "ndcg_at_10": 0.49155812805382326
+  },
+  "queries_with_grade2_hit_at_5": 7,
+  "queries_with_grade2_hit_at_10": 13,
+  "grade2_qrels_retrieved_at_5": 10,
+  "grade2_qrels_retrieved_at_10": 17,
+  "grade2_qrel_total": 22,
+  "grade1_qrels_retrieved_at_10": 1,
+  "answerable_top_score": {
+    "min": 11.728932416313523,
+    "mean": 25.87712972954271,
+    "max": 42.43097607521994
+  },
+  "unanswerable_top_score": {
+    "min": 9.388826022457895,
+    "mean": 18.10238518221898,
+    "max": 25.745645397352583
+  },
+  "answerable_score_margin": {
+    "min": 0.09378015772376003,
+    "mean": 4.144826473339359,
+    "max": 10.624830895649684
+  },
+  "unanswerable_score_margin": {
+    "min": 0.6491651225048205,
+    "mean": 1.9731874570219514,
+    "max": 5.8042679431164625
+  },
+  "per_query": {
+    "q-v1-001": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 6,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.3562071871080222,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+          "grade": 2,
+          "rank": 6
+        }
+      ]
+    },
+    "q-v1-002": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 1,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 1.0,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:9.2:chunk-001",
+          "grade": 2,
+          "rank": 1
+        }
+      ]
+    },
+    "q-v1-003": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 4,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.4306765580733931,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.2:chunk-003",
+          "grade": 2,
+          "rank": 4
+        }
+      ]
+    },
+    "q-v1-004": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 6,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.3562071871080222,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-008",
+          "grade": 2,
+          "rank": 6
+        }
+      ]
+    },
+    "q-v1-005": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 6,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.3562071871080222,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.3:chunk-006",
+          "grade": 2,
+          "rank": 6
+        }
+      ]
+    },
+    "q-v1-006": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 6,
+      "recall_at_5": 0.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.3562071871080222,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+          "grade": 2,
+          "rank": 6
+        }
+      ]
+    },
+    "q-v1-007": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-008": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-009": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-010": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-011": {
+      "relevant_grade2_count": 1,
+      "first_grade2_rank": 3,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.41311732856427996,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:6.1:chunk-002",
+          "grade": 2,
+          "rank": 3
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:6.1:chunk-003",
+          "grade": 1,
+          "rank": null
+        }
+      ]
+    },
+    "q-v1-012": {
+      "relevant_grade2_count": 2,
+      "first_grade2_rank": 8,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.5,
+      "ndcg_at_10": 0.1934264036172708,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+          "grade": 2,
+          "rank": 8
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+          "grade": 2,
+          "rank": null
+        }
+      ]
+    },
+    "q-v1-013": {
+      "relevant_grade2_count": 3,
+      "first_grade2_rank": 4,
+      "recall_at_5": 0.3333333333333333,
+      "recall_at_10": 0.3333333333333333,
+      "ndcg_at_10": 0.24155420501850214,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-001",
+          "grade": 2,
+          "rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+          "grade": 2,
+          "rank": null
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-002",
+          "grade": 1,
+          "rank": 6
+        },
+        {
+          "chunk_id": "openstax_intro_stats_2e:8.2:chunk-003",
+          "grade": 2,
+          "rank": 4
+        }
+      ]
+    },
+    "q-v1-014": {
+      "relevant_grade2_count": 3,
+      "first_grade2_rank": 1,
+      "recall_at_5": 0.6666666666666666,
+      "recall_at_10": 0.6666666666666666,
+      "ndcg_at_10": 0.7039180890341348,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-004",
+          "grade": 2,
+          "rank": 3
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-005",
+          "grade": 2,
+          "rank": 1
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.3:chunk-006",
+          "grade": 2,
+          "rank": null
+        }
+      ]
+    },
+    "q-v1-015": {
+      "relevant_grade2_count": 3,
+      "first_grade2_rank": 8,
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.6666666666666666,
+      "ndcg_at_10": 0.28930792834276164,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-005",
+          "grade": 2,
+          "rank": 8
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-008",
+          "grade": 2,
+          "rank": null
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+          "grade": 2,
+          "rank": 9
+        }
+      ]
+    },
+    "q-v1-016": {
+      "relevant_grade2_count": 2,
+      "first_grade2_rank": 1,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 1.0,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-002",
+          "grade": 2,
+          "rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:3.5:chunk-003",
+          "grade": 2,
+          "rank": 1
+        }
+      ]
+    },
+    "q-v1-017": {
+      "relevant_grade2_count": 2,
+      "first_grade2_rank": 2,
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.6934264036172708,
+      "judged_ranks": [
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-002",
+          "grade": 2,
+          "rank": 2
+        },
+        {
+          "chunk_id": "openstax_principles_ds:4.4:chunk-003",
+          "grade": 2,
+          "rank": 3
+        }
+      ]
+    },
+    "q-v1-018": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-019": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-020": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-021": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    },
+    "q-v1-022": {
+      "relevant_grade2_count": 0,
+      "first_grade2_rank": null,
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "ndcg_at_10": null,
+      "judged_ranks": []
+    }
+  }
+}

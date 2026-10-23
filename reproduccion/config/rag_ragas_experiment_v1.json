@@ -1,0 +1,57 @@
+{
+  "experiment_id": "rag_rrf_vs_rerank_top5_v1_22q",
+  "conditions": [
+    {
+      "id": "rrf",
+      "retrieval_run": "outputs/runs/hybrid_rrf_k60_pooled_v1_22q.jsonl",
+      "rag_output": "outputs/rag/rag_rrf_top5_qwen35_9b_v1_22q.jsonl"
+    },
+    {
+      "id": "rrf_rerank",
+      "retrieval_run": "outputs/runs/hybrid_rrf_k60_minilm_l6_rerank_pooled_v1_22q.jsonl",
+      "rag_output": "outputs/rag/rag_rrf_rerank_top5_qwen35_9b_v1_22q.jsonl"
+    }
+  ],
+  "question_count": 22,
+  "response_count": 44,
+  "top_k": 5,
+  "generator": {
+    "provider": "ollama",
+    "model": "qwen3.5:9b",
+    "temperature": 0,
+    "seed": 20260902,
+    "max_output_tokens": 300,
+    "prompt_version": "rag_answer_prompt_v1",
+    "max_contract_attempts": 3
+  },
+  "judge": {
+    "provider": "ollama",
+    "model": "gemma3:4b",
+    "temperature": 0,
+    "seed": 20260902,
+    "behavior_prompt_version": "rag_behavior_rubric_v1",
+    "ragas_version": "0.4.3"
+  },
+  "metrics": {
+    "ragas": ["faithfulness", "factual_correctness"],
+    "deterministic": [
+      "reported_behavior_match",
+      "citation_validity",
+      "citation_presence"
+    ],
+    "auxiliary": ["behavior_judge_score"]
+  },
+  "expected_behavior_counts_per_condition": {
+    "answer": 13,
+    "grounded_correction": 2,
+    "abstain": 7
+  },
+  "risk_queue": {
+    "low_metric_threshold": 0.5,
+    "metric_disagreement_threshold": 0.5,
+    "behavior_judge_full_score": 2
+  },
+  "canonical_scores_output": "outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_gemma3_4b_seed20260902_scores_v1_22q.jsonl",
+  "canonical_summary_output": "outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_gemma3_4b_seed20260902_summary_v1_22q.json",
+  "canonical_risk_queue_output": "outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_gemma3_4b_seed20260902_risk_queue_v1_22q.jsonl"
+}

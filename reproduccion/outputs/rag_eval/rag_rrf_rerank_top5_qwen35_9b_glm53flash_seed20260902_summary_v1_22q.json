@@ -1,0 +1,28 @@
+{
+  "experiment_id": "rag_rrf_vs_rerank_top5_v1_22q",
+  "judge_provider": "opencode-go",
+  "judge_model": "glm-5.3-flash",
+  "judge_seed": 20260902,
+  "ragas_version": "0.4.3",
+  "row_count": 22,
+  "conditions": {
+    "rrf_rerank": {
+      "row_count": 22,
+      "faithfulness_n": 13,
+      "faithfulness_mean": 0.5769230769230769,
+      "factual_correctness_n": 7,
+      "factual_correctness_mean": 0.6385714285714286,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.9090909090909091,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 1.0,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 1.0,
+      "behavior_judge_score_n": 0,
+      "behavior_judge_score_mean": null,
+      "evaluation_latency_ms_total": 1458500.1786290004,
+      "evaluation_latency_ms_mean": 66295.46266495457
+    }
+  },
+  "evaluation_error_count": 22
+}

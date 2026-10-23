@@ -1,0 +1,1050 @@
+{
+  "batch_size": 10,
+  "n_units": 578,
+  "n_batches": 58,
+  "prompt_version": "qrels_review_prompt_v3.md",
+  "batches": [
+    {
+      "batch_id": "batch-001",
+      "file": "judging/batches/batch-001.md",
+      "units": [
+        "q-v1-001::openstax_intro_stats_2e:7.1:chunk-001",
+        "q-v1-001::openstax_intro_stats_2e:7.1:chunk-002",
+        "q-v1-001::openstax_intro_stats_2e:7.1:chunk-003",
+        "q-v1-001::openstax_intro_stats_2e:7.1:chunk-004",
+        "q-v1-001::openstax_intro_stats_2e:7.1:chunk-006",
+        "q-v1-001::openstax_intro_stats_2e:7.2:chunk-002",
+        "q-v1-001::openstax_intro_stats_2e:7.4:chunk-002",
+        "q-v1-001::openstax_intro_stats_2e:7.intro:chunk-001",
+        "q-v1-001::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v1-001::openstax_intro_stats_2e:8.1:chunk-011"
+      ],
+      "n_units": 10,
+      "n_chars": 22630
+    },
+    {
+      "batch_id": "batch-002",
+      "file": "judging/batches/batch-002.md",
+      "units": [
+        "q-v1-001::openstax_intro_stats_2e:8.1:chunk-012",
+        "q-v1-001::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v1-001::openstax_intro_stats_2e:9.2:chunk-004",
+        "q-v1-001::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v1-001::openstax_principles_ds:3.2:chunk-004",
+        "q-v1-001::openstax_principles_ds:3.2:chunk-005",
+        "q-v1-001::openstax_principles_ds:4.1:chunk-006",
+        "q-v1-001::openstax_principles_ds:4.1:chunk-007",
+        "q-v1-001::openstax_principles_ds:4.1:chunk-015",
+        "q-v1-001::openstax_principles_ds:4.1:chunk-016"
+      ],
+      "n_units": 10,
+      "n_chars": 24604
+    },
+    {
+      "batch_id": "batch-003",
+      "file": "judging/batches/batch-003.md",
+      "units": [
+        "q-v1-001::openstax_principles_ds:4.1:chunk-017",
+        "q-v1-001::openstax_principles_ds:4.1:chunk-021",
+        "q-v1-001::openstax_principles_ds:4.1:chunk-022",
+        "q-v1-002::openstax_intro_stats_2e:9.1:chunk-001",
+        "q-v1-002::openstax_intro_stats_2e:9.1:chunk-002",
+        "q-v1-002::openstax_intro_stats_2e:9.2:chunk-001",
+        "q-v1-002::openstax_intro_stats_2e:9.2:chunk-002",
+        "q-v1-002::openstax_intro_stats_2e:9.2:chunk-003",
+        "q-v1-002::openstax_intro_stats_2e:9.2:chunk-004",
+        "q-v1-002::openstax_intro_stats_2e:9.3:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 24228
+    },
+    {
+      "batch_id": "batch-004",
+      "file": "judging/batches/batch-004.md",
+      "units": [
+        "q-v1-002::openstax_intro_stats_2e:9.4:chunk-002",
+        "q-v1-002::openstax_intro_stats_2e:9.4:chunk-003",
+        "q-v1-002::openstax_intro_stats_2e:9.4:chunk-006",
+        "q-v1-002::openstax_intro_stats_2e:9.5:chunk-005",
+        "q-v1-002::openstax_intro_stats_2e:9.5:chunk-013",
+        "q-v1-002::openstax_intro_stats_2e:9.5:chunk-015",
+        "q-v1-002::openstax_intro_stats_2e:9.5:chunk-017",
+        "q-v1-002::openstax_intro_stats_2e:9.intro:chunk-002",
+        "q-v1-002::openstax_principles_ds:4.2:chunk-002",
+        "q-v1-002::openstax_principles_ds:4.2:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 23172
+    },
+    {
+      "batch_id": "batch-005",
+      "file": "judging/batches/batch-005.md",
+      "units": [
+        "q-v1-002::openstax_principles_ds:4.2:chunk-007",
+        "q-v1-002::openstax_principles_ds:4.2:chunk-010",
+        "q-v1-002::openstax_principles_ds:4.2:chunk-033",
+        "q-v1-003::openstax_intro_stats_2e:6.2:chunk-004",
+        "q-v1-003::openstax_intro_stats_2e:9.4:chunk-002",
+        "q-v1-003::openstax_intro_stats_2e:9.5:chunk-001",
+        "q-v1-003::openstax_intro_stats_2e:9.5:chunk-016",
+        "q-v1-003::openstax_intro_stats_2e:9.5:chunk-021",
+        "q-v1-003::openstax_intro_stats_2e:9.5:chunk-022",
+        "q-v1-003::openstax_intro_stats_2e:9.6:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 23862
+    },
+    {
+      "batch_id": "batch-006",
+      "file": "judging/batches/batch-006.md",
+      "units": [
+        "q-v1-003::openstax_intro_stats_2e:9.intro:chunk-001",
+        "q-v1-003::openstax_intro_stats_2e:9.intro:chunk-002",
+        "q-v1-003::openstax_principles_ds:4.1:chunk-015",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-001",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-002",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-003",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-004",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-005",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-010",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-011"
+      ],
+      "n_units": 10,
+      "n_chars": 24338
+    },
+    {
+      "batch_id": "batch-007",
+      "file": "judging/batches/batch-007.md",
+      "units": [
+        "q-v1-003::openstax_principles_ds:4.2:chunk-014",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-018",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-021",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-023",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-024",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-027",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-034",
+        "q-v1-003::openstax_principles_ds:4.2:chunk-035",
+        "q-v1-003::openstax_principles_ds:4.3:chunk-016",
+        "q-v1-003::openstax_principles_ds:4.4:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 25094
+    },
+    {
+      "batch_id": "batch-008",
+      "file": "judging/batches/batch-008.md",
+      "units": [
+        "q-v1-004::openstax_principles_ds:3.1:chunk-002",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-003",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-005",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-006",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-007",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-008",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-009",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-010",
+        "q-v1-004::openstax_principles_ds:3.1:chunk-011",
+        "q-v1-004::openstax_principles_ds:3.2:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 24099
+    },
+    {
+      "batch_id": "batch-009",
+      "file": "judging/batches/batch-009.md",
+      "units": [
+        "q-v1-004::openstax_principles_ds:3.3:chunk-004",
+        "q-v1-004::openstax_principles_ds:3.3:chunk-005",
+        "q-v1-004::openstax_principles_ds:3.3:chunk-006",
+        "q-v1-005::openstax_principles_ds:4.1:chunk-001",
+        "q-v1-005::openstax_principles_ds:4.2:chunk-025",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-002",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-003",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-005",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-006",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-007"
+      ],
+      "n_units": 10,
+      "n_chars": 26140
+    },
+    {
+      "batch_id": "batch-010",
+      "file": "judging/batches/batch-010.md",
+      "units": [
+        "q-v1-005::openstax_principles_ds:4.3:chunk-008",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-009",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-010",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-011",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-012",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-013",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-017",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-019",
+        "q-v1-005::openstax_principles_ds:4.3:chunk-021",
+        "q-v1-005::openstax_principles_ds:4.intro:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 26778
+    },
+    {
+      "batch_id": "batch-011",
+      "file": "judging/batches/batch-011.md",
+      "units": [
+        "q-v1-006::openstax_intro_stats_2e:8.1:chunk-002",
+        "q-v1-006::openstax_intro_stats_2e:8.1:chunk-003",
+        "q-v1-006::openstax_intro_stats_2e:8.1:chunk-005",
+        "q-v1-006::openstax_intro_stats_2e:8.1:chunk-010",
+        "q-v1-006::openstax_intro_stats_2e:8.1:chunk-011",
+        "q-v1-006::openstax_intro_stats_2e:8.1:chunk-012",
+        "q-v1-006::openstax_intro_stats_2e:8.2:chunk-005",
+        "q-v1-006::openstax_intro_stats_2e:8.2:chunk-008",
+        "q-v1-006::openstax_intro_stats_2e:8.2:chunk-009",
+        "q-v1-006::openstax_intro_stats_2e:8.3:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 24320
+    },
+    {
+      "batch_id": "batch-012",
+      "file": "judging/batches/batch-012.md",
+      "units": [
+        "q-v1-006::openstax_intro_stats_2e:8.3:chunk-002",
+        "q-v1-006::openstax_intro_stats_2e:8.3:chunk-005",
+        "q-v1-006::openstax_intro_stats_2e:8.3:chunk-006",
+        "q-v1-006::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-006::openstax_intro_stats_2e:8.6:chunk-001",
+        "q-v1-006::openstax_intro_stats_2e:8.6:chunk-003",
+        "q-v1-006::openstax_intro_stats_2e:8.intro:chunk-002",
+        "q-v1-006::openstax_intro_stats_2e:8.intro:chunk-003",
+        "q-v1-006::openstax_intro_stats_2e:8.intro:chunk-004",
+        "q-v1-006::openstax_principles_ds:4.1:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 24728
+    },
+    {
+      "batch_id": "batch-013",
+      "file": "judging/batches/batch-013.md",
+      "units": [
+        "q-v1-006::openstax_principles_ds:4.1:chunk-004",
+        "q-v1-006::openstax_principles_ds:4.1:chunk-010",
+        "q-v1-007::openstax_intro_stats_2e:6.2:chunk-002",
+        "q-v1-007::openstax_intro_stats_2e:6.2:chunk-003",
+        "q-v1-007::openstax_intro_stats_2e:6.2:chunk-008",
+        "q-v1-007::openstax_intro_stats_2e:8.2:chunk-003",
+        "q-v1-007::openstax_intro_stats_2e:8.2:chunk-008",
+        "q-v1-007::openstax_intro_stats_2e:8.3:chunk-001",
+        "q-v1-007::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-007::openstax_intro_stats_2e:8.5:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 24356
+    },
+    {
+      "batch_id": "batch-014",
+      "file": "judging/batches/batch-014.md",
+      "units": [
+        "q-v1-007::openstax_intro_stats_2e:9.1:chunk-003",
+        "q-v1-007::openstax_principles_ds:3.1:chunk-003",
+        "q-v1-007::openstax_principles_ds:3.1:chunk-008",
+        "q-v1-007::openstax_principles_ds:3.1:chunk-010",
+        "q-v1-007::openstax_principles_ds:3.2:chunk-002",
+        "q-v1-007::openstax_principles_ds:4.1:chunk-009",
+        "q-v1-007::openstax_principles_ds:4.1:chunk-010",
+        "q-v1-007::openstax_principles_ds:4.2:chunk-003",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-001",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 25221
+    },
+    {
+      "batch_id": "batch-015",
+      "file": "judging/batches/batch-015.md",
+      "units": [
+        "q-v1-007::openstax_principles_ds:4.3:chunk-003",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-004",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-005",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-006",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-007",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-012",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-020",
+        "q-v1-007::openstax_principles_ds:4.3:chunk-021",
+        "q-v1-007::openstax_principles_ds:4.4:chunk-001",
+        "q-v1-007::openstax_principles_ds:4.intro:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 26466
+    },
+    {
+      "batch_id": "batch-016",
+      "file": "judging/batches/batch-016.md",
+      "units": [
+        "q-v1-008::openstax_intro_stats_2e:7.1:chunk-001",
+        "q-v1-008::openstax_intro_stats_2e:7.1:chunk-002",
+        "q-v1-008::openstax_intro_stats_2e:7.1:chunk-003",
+        "q-v1-008::openstax_intro_stats_2e:7.1:chunk-006",
+        "q-v1-008::openstax_intro_stats_2e:7.2:chunk-002",
+        "q-v1-008::openstax_intro_stats_2e:7.2:chunk-003",
+        "q-v1-008::openstax_intro_stats_2e:7.3:chunk-002",
+        "q-v1-008::openstax_intro_stats_2e:7.intro:chunk-001",
+        "q-v1-008::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v1-008::openstax_intro_stats_2e:8.1:chunk-011"
+      ],
+      "n_units": 10,
+      "n_chars": 22521
+    },
+    {
+      "batch_id": "batch-017",
+      "file": "judging/batches/batch-017.md",
+      "units": [
+        "q-v1-008::openstax_intro_stats_2e:8.1:chunk-012",
+        "q-v1-008::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v1-008::openstax_intro_stats_2e:8.2:chunk-004",
+        "q-v1-008::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-008::openstax_intro_stats_2e:8.6:chunk-001",
+        "q-v1-008::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v1-008::openstax_principles_ds:3.2:chunk-004",
+        "q-v1-008::openstax_principles_ds:4.1:chunk-006",
+        "q-v1-008::openstax_principles_ds:4.1:chunk-010",
+        "q-v1-008::openstax_principles_ds:4.1:chunk-011"
+      ],
+      "n_units": 10,
+      "n_chars": 24758
+    },
+    {
+      "batch_id": "batch-018",
+      "file": "judging/batches/batch-018.md",
+      "units": [
+        "q-v1-008::openstax_principles_ds:4.1:chunk-017",
+        "q-v1-008::openstax_principles_ds:4.1:chunk-018",
+        "q-v1-008::openstax_principles_ds:4.1:chunk-022",
+        "q-v1-008::openstax_principles_ds:4.1:chunk-026",
+        "q-v1-008::openstax_principles_ds:4.2:chunk-001",
+        "q-v1-011::openstax_intro_stats_2e:6.1:chunk-002",
+        "q-v1-011::openstax_intro_stats_2e:6.1:chunk-003",
+        "q-v1-011::openstax_intro_stats_2e:6.1:chunk-005",
+        "q-v1-011::openstax_intro_stats_2e:6.2:chunk-003",
+        "q-v1-011::openstax_intro_stats_2e:6.2:chunk-005"
+      ],
+      "n_units": 10,
+      "n_chars": 24176
+    },
+    {
+      "batch_id": "batch-019",
+      "file": "judging/batches/batch-019.md",
+      "units": [
+        "q-v1-011::openstax_intro_stats_2e:6.intro:chunk-001",
+        "q-v1-011::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v1-011::openstax_intro_stats_2e:8.2:chunk-003",
+        "q-v1-011::openstax_intro_stats_2e:8.2:chunk-004",
+        "q-v1-011::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-011::openstax_intro_stats_2e:9.intro:chunk-001",
+        "q-v1-011::openstax_principles_ds:3.1:chunk-003",
+        "q-v1-011::openstax_principles_ds:3.1:chunk-004",
+        "q-v1-011::openstax_principles_ds:3.2:chunk-001",
+        "q-v1-011::openstax_principles_ds:3.2:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 24813
+    },
+    {
+      "batch_id": "batch-020",
+      "file": "judging/batches/batch-020.md",
+      "units": [
+        "q-v1-011::openstax_principles_ds:3.2:chunk-005",
+        "q-v1-011::openstax_principles_ds:3.5:chunk-013",
+        "q-v1-011::openstax_principles_ds:3.5:chunk-014",
+        "q-v1-011::openstax_principles_ds:4.2:chunk-013",
+        "q-v1-011::openstax_principles_ds:4.2:chunk-015",
+        "q-v1-012::openstax_intro_stats_2e:8.1:chunk-001",
+        "q-v1-012::openstax_intro_stats_2e:8.1:chunk-002",
+        "q-v1-012::openstax_intro_stats_2e:8.1:chunk-010",
+        "q-v1-012::openstax_intro_stats_2e:8.1:chunk-011",
+        "q-v1-012::openstax_intro_stats_2e:8.1:chunk-012"
+      ],
+      "n_units": 10,
+      "n_chars": 26203
+    },
+    {
+      "batch_id": "batch-021",
+      "file": "judging/batches/batch-021.md",
+      "units": [
+        "q-v1-012::openstax_intro_stats_2e:8.2:chunk-001",
+        "q-v1-012::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v1-012::openstax_intro_stats_2e:8.3:chunk-003",
+        "q-v1-012::openstax_intro_stats_2e:8.3:chunk-010",
+        "q-v1-012::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-012::openstax_intro_stats_2e:8.5:chunk-001",
+        "q-v1-012::openstax_intro_stats_2e:8.6:chunk-001",
+        "q-v1-012::openstax_intro_stats_2e:8.intro:chunk-002",
+        "q-v1-012::openstax_principles_ds:4.1:chunk-003",
+        "q-v1-012::openstax_principles_ds:4.1:chunk-004"
+      ],
+      "n_units": 10,
+      "n_chars": 25834
+    },
+    {
+      "batch_id": "batch-022",
+      "file": "judging/batches/batch-022.md",
+      "units": [
+        "q-v1-012::openstax_principles_ds:4.1:chunk-010",
+        "q-v1-012::openstax_principles_ds:4.1:chunk-011",
+        "q-v1-012::openstax_principles_ds:4.1:chunk-017",
+        "q-v1-012::openstax_principles_ds:4.1:chunk-018",
+        "q-v1-013::openstax_intro_stats_2e:8.1:chunk-001",
+        "q-v1-013::openstax_intro_stats_2e:8.1:chunk-002",
+        "q-v1-013::openstax_intro_stats_2e:8.1:chunk-003",
+        "q-v1-013::openstax_intro_stats_2e:8.1:chunk-004",
+        "q-v1-013::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v1-013::openstax_intro_stats_2e:8.2:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 26942
+    },
+    {
+      "batch_id": "batch-023",
+      "file": "judging/batches/batch-023.md",
+      "units": [
+        "q-v1-013::openstax_intro_stats_2e:8.2:chunk-004",
+        "q-v1-013::openstax_intro_stats_2e:8.2:chunk-006",
+        "q-v1-013::openstax_intro_stats_2e:8.2:chunk-008",
+        "q-v1-013::openstax_intro_stats_2e:8.3:chunk-003",
+        "q-v1-013::openstax_intro_stats_2e:8.intro:chunk-002",
+        "q-v1-013::openstax_intro_stats_2e:8.intro:chunk-003",
+        "q-v1-013::openstax_intro_stats_2e:8.intro:chunk-004",
+        "q-v1-013::openstax_intro_stats_2e:9.4:chunk-001",
+        "q-v1-013::openstax_principles_ds:4.1:chunk-007",
+        "q-v1-013::openstax_principles_ds:4.1:chunk-011"
+      ],
+      "n_units": 10,
+      "n_chars": 27847
+    },
+    {
+      "batch_id": "batch-024",
+      "file": "judging/batches/batch-024.md",
+      "units": [
+        "q-v1-013::openstax_principles_ds:4.1:chunk-012",
+        "q-v1-013::openstax_principles_ds:4.1:chunk-014",
+        "q-v1-013::openstax_principles_ds:4.1:chunk-025",
+        "q-v1-013::openstax_principles_ds:4.1:chunk-026",
+        "q-v1-013::openstax_principles_ds:4.2:chunk-011",
+        "q-v1-014::openstax_intro_stats_2e:6.2:chunk-008",
+        "q-v1-014::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v1-014::openstax_intro_stats_2e:9.5:chunk-001",
+        "q-v1-014::openstax_principles_ds:3.1:chunk-003",
+        "q-v1-014::openstax_principles_ds:3.1:chunk-005"
+      ],
+      "n_units": 10,
+      "n_chars": 26650
+    },
+    {
+      "batch_id": "batch-025",
+      "file": "judging/batches/batch-025.md",
+      "units": [
+        "q-v1-014::openstax_principles_ds:3.1:chunk-007",
+        "q-v1-014::openstax_principles_ds:3.1:chunk-008",
+        "q-v1-014::openstax_principles_ds:3.1:chunk-009",
+        "q-v1-014::openstax_principles_ds:3.1:chunk-010",
+        "q-v1-014::openstax_principles_ds:3.1:chunk-011",
+        "q-v1-014::openstax_principles_ds:3.2:chunk-001",
+        "q-v1-014::openstax_principles_ds:3.2:chunk-002",
+        "q-v1-014::openstax_principles_ds:3.2:chunk-003",
+        "q-v1-014::openstax_principles_ds:3.3:chunk-001",
+        "q-v1-014::openstax_principles_ds:3.3:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 24338
+    },
+    {
+      "batch_id": "batch-026",
+      "file": "judging/batches/batch-026.md",
+      "units": [
+        "q-v1-014::openstax_principles_ds:3.3:chunk-003",
+        "q-v1-014::openstax_principles_ds:3.3:chunk-004",
+        "q-v1-014::openstax_principles_ds:3.3:chunk-005",
+        "q-v1-014::openstax_principles_ds:3.3:chunk-006",
+        "q-v1-014::openstax_principles_ds:4.1:chunk-020",
+        "q-v1-014::openstax_principles_ds:4.1:chunk-024",
+        "q-v1-015::openstax_intro_stats_2e:6.4:chunk-001",
+        "q-v1-015::openstax_intro_stats_2e:7.3:chunk-003",
+        "q-v1-015::openstax_intro_stats_2e:8.intro:chunk-002",
+        "q-v1-015::openstax_intro_stats_2e:9.4:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 24883
+    },
+    {
+      "batch_id": "batch-027",
+      "file": "judging/batches/batch-027.md",
+      "units": [
+        "q-v1-015::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v1-015::openstax_intro_stats_2e:9.4:chunk-005",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-002",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-003",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-005",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-006",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-007",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-008",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-009",
+        "q-v1-015::openstax_principles_ds:3.1:chunk-010"
+      ],
+      "n_units": 10,
+      "n_chars": 24769
+    },
+    {
+      "batch_id": "batch-028",
+      "file": "judging/batches/batch-028.md",
+      "units": [
+        "q-v1-015::openstax_principles_ds:3.1:chunk-011",
+        "q-v1-015::openstax_principles_ds:4.1:chunk-020",
+        "q-v1-015::openstax_principles_ds:4.2:chunk-008",
+        "q-v1-016::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v1-016::openstax_intro_stats_2e:8.6:chunk-003",
+        "q-v1-016::openstax_intro_stats_2e:9.2:chunk-001",
+        "q-v1-016::openstax_principles_ds:3.1:chunk-003",
+        "q-v1-016::openstax_principles_ds:3.1:chunk-004",
+        "q-v1-016::openstax_principles_ds:3.3:chunk-002",
+        "q-v1-016::openstax_principles_ds:3.4:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 23403
+    },
+    {
+      "batch_id": "batch-029",
+      "file": "judging/batches/batch-029.md",
+      "units": [
+        "q-v1-016::openstax_principles_ds:3.4:chunk-002",
+        "q-v1-016::openstax_principles_ds:3.4:chunk-003",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-002",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-003",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-004",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-005",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-006",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-007",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-008",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-009"
+      ],
+      "n_units": 10,
+      "n_chars": 25656
+    },
+    {
+      "batch_id": "batch-030",
+      "file": "judging/batches/batch-030.md",
+      "units": [
+        "q-v1-016::openstax_principles_ds:3.5:chunk-010",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-011",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-012",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-013",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-014",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-017",
+        "q-v1-016::openstax_principles_ds:3.5:chunk-018",
+        "q-v1-017::openstax_intro_stats_2e:9.1:chunk-001",
+        "q-v1-017::openstax_intro_stats_2e:9.1:chunk-002",
+        "q-v1-017::openstax_intro_stats_2e:9.3:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 26405
+    },
+    {
+      "batch_id": "batch-031",
+      "file": "judging/batches/batch-031.md",
+      "units": [
+        "q-v1-017::openstax_intro_stats_2e:9.4:chunk-003",
+        "q-v1-017::openstax_intro_stats_2e:9.4:chunk-006",
+        "q-v1-017::openstax_intro_stats_2e:9.5:chunk-003",
+        "q-v1-017::openstax_intro_stats_2e:9.5:chunk-007",
+        "q-v1-017::openstax_intro_stats_2e:9.intro:chunk-001",
+        "q-v1-017::openstax_principles_ds:4.2:chunk-001",
+        "q-v1-017::openstax_principles_ds:4.2:chunk-003",
+        "q-v1-017::openstax_principles_ds:4.2:chunk-004",
+        "q-v1-017::openstax_principles_ds:4.2:chunk-022",
+        "q-v1-017::openstax_principles_ds:4.2:chunk-024"
+      ],
+      "n_units": 10,
+      "n_chars": 23998
+    },
+    {
+      "batch_id": "batch-032",
+      "file": "judging/batches/batch-032.md",
+      "units": [
+        "q-v1-017::openstax_principles_ds:4.2:chunk-025",
+        "q-v1-017::openstax_principles_ds:4.2:chunk-033",
+        "q-v1-017::openstax_principles_ds:4.4:chunk-001",
+        "q-v1-017::openstax_principles_ds:4.4:chunk-002",
+        "q-v1-017::openstax_principles_ds:4.4:chunk-003",
+        "q-v1-017::openstax_principles_ds:4.4:chunk-005",
+        "q-v1-017::openstax_principles_ds:4.4:chunk-006",
+        "q-v1-017::openstax_principles_ds:4.4:chunk-007",
+        "q-v1-019::openstax_intro_stats_2e:6.1:chunk-001",
+        "q-v1-019::openstax_intro_stats_2e:7.3:chunk-010"
+      ],
+      "n_units": 10,
+      "n_chars": 24513
+    },
+    {
+      "batch_id": "batch-033",
+      "file": "judging/batches/batch-033.md",
+      "units": [
+        "q-v1-019::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v1-019::openstax_intro_stats_2e:8.6:chunk-001",
+        "q-v1-019::openstax_intro_stats_2e:8.6:chunk-002",
+        "q-v1-019::openstax_intro_stats_2e:8.6:chunk-003",
+        "q-v1-019::openstax_intro_stats_2e:9.4:chunk-003",
+        "q-v1-019::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v1-019::openstax_intro_stats_2e:9.4:chunk-005",
+        "q-v1-019::openstax_principles_ds:3.1:chunk-010",
+        "q-v1-019::openstax_principles_ds:3.1:chunk-011",
+        "q-v1-019::openstax_principles_ds:3.5:chunk-016"
+      ],
+      "n_units": 10,
+      "n_chars": 23596
+    },
+    {
+      "batch_id": "batch-034",
+      "file": "judging/batches/batch-034.md",
+      "units": [
+        "q-v1-019::openstax_principles_ds:3.5:chunk-017",
+        "q-v1-019::openstax_principles_ds:4.1:chunk-020",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-008",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-017",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-020",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-022",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-025",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-028",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-029",
+        "q-v1-019::openstax_principles_ds:4.2:chunk-033"
+      ],
+      "n_units": 10,
+      "n_chars": 26117
+    },
+    {
+      "batch_id": "batch-035",
+      "file": "judging/batches/batch-035.md",
+      "units": [
+        "q-v1-019::openstax_principles_ds:4.4:chunk-004",
+        "q-v1-019::openstax_principles_ds:4.4:chunk-005",
+        "q-v1-019::openstax_principles_ds:4.4:chunk-007",
+        "q-v1-020::openstax_intro_stats_2e:7.3:chunk-011",
+        "q-v1-020::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v1-020::openstax_intro_stats_2e:8.1:chunk-002",
+        "q-v1-020::openstax_intro_stats_2e:8.1:chunk-005",
+        "q-v1-020::openstax_intro_stats_2e:8.1:chunk-010",
+        "q-v1-020::openstax_intro_stats_2e:8.1:chunk-011",
+        "q-v1-020::openstax_intro_stats_2e:8.1:chunk-012"
+      ],
+      "n_units": 10,
+      "n_chars": 23671
+    },
+    {
+      "batch_id": "batch-036",
+      "file": "judging/batches/batch-036.md",
+      "units": [
+        "q-v1-020::openstax_intro_stats_2e:8.2:chunk-005",
+        "q-v1-020::openstax_intro_stats_2e:8.2:chunk-008",
+        "q-v1-020::openstax_intro_stats_2e:8.2:chunk-009",
+        "q-v1-020::openstax_intro_stats_2e:8.3:chunk-001",
+        "q-v1-020::openstax_intro_stats_2e:8.3:chunk-002",
+        "q-v1-020::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-020::openstax_intro_stats_2e:8.6:chunk-003",
+        "q-v1-020::openstax_intro_stats_2e:8.intro:chunk-002",
+        "q-v1-020::openstax_intro_stats_2e:8.intro:chunk-003",
+        "q-v1-020::openstax_intro_stats_2e:9.4:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 22386
+    },
+    {
+      "batch_id": "batch-037",
+      "file": "judging/batches/batch-037.md",
+      "units": [
+        "q-v1-020::openstax_principles_ds:4.1:chunk-010",
+        "q-v1-020::openstax_principles_ds:4.1:chunk-011",
+        "q-v1-020::openstax_principles_ds:4.1:chunk-020",
+        "q-v1-020::openstax_principles_ds:4.1:chunk-025",
+        "q-v1-022::openstax_intro_stats_2e:8.2:chunk-005",
+        "q-v1-022::openstax_intro_stats_2e:8.2:chunk-008",
+        "q-v1-022::openstax_intro_stats_2e:8.4:chunk-001",
+        "q-v1-022::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v1-022::openstax_intro_stats_2e:9.1:chunk-001",
+        "q-v1-022::openstax_intro_stats_2e:9.1:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 25262
+    },
+    {
+      "batch_id": "batch-038",
+      "file": "judging/batches/batch-038.md",
+      "units": [
+        "q-v1-022::openstax_intro_stats_2e:9.4:chunk-001",
+        "q-v1-022::openstax_intro_stats_2e:9.4:chunk-002",
+        "q-v1-022::openstax_intro_stats_2e:9.6:chunk-001",
+        "q-v1-022::openstax_principles_ds:3.2:chunk-006",
+        "q-v1-022::openstax_principles_ds:4.1:chunk-018",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-005",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-006",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-007",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-010",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-017"
+      ],
+      "n_units": 10,
+      "n_chars": 24337
+    },
+    {
+      "batch_id": "batch-039",
+      "file": "judging/batches/batch-039.md",
+      "units": [
+        "q-v1-022::openstax_principles_ds:4.2:chunk-023",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-024",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-025",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-029",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-033",
+        "q-v1-022::openstax_principles_ds:4.2:chunk-034",
+        "q-v1-022::openstax_principles_ds:4.3:chunk-002",
+        "q-v1-022::openstax_principles_ds:4.3:chunk-006",
+        "q-v1-022::openstax_principles_ds:4.3:chunk-009",
+        "q-v1-022::openstax_principles_ds:4.3:chunk-017"
+      ],
+      "n_units": 10,
+      "n_chars": 25842
+    },
+    {
+      "batch_id": "batch-040",
+      "file": "judging/batches/batch-040.md",
+      "units": [
+        "q-v1-022::openstax_principles_ds:4.4:chunk-001",
+        "q-v1-022::openstax_principles_ds:4.4:chunk-002",
+        "q-v1-022::openstax_principles_ds:4.4:chunk-005",
+        "q-v1-022::openstax_principles_ds:4.4:chunk-007",
+        "q-v3-001::openstax_intro_stats_2e:6.1:chunk-001",
+        "q-v3-001::openstax_intro_stats_2e:6.intro:chunk-001",
+        "q-v3-001::openstax_intro_stats_2e:7.1:chunk-001",
+        "q-v3-001::openstax_intro_stats_2e:7.1:chunk-002",
+        "q-v3-001::openstax_intro_stats_2e:7.1:chunk-003",
+        "q-v3-001::openstax_intro_stats_2e:7.1:chunk-004"
+      ],
+      "n_units": 10,
+      "n_chars": 24641
+    },
+    {
+      "batch_id": "batch-041",
+      "file": "judging/batches/batch-041.md",
+      "units": [
+        "q-v3-001::openstax_intro_stats_2e:7.1:chunk-005",
+        "q-v3-001::openstax_intro_stats_2e:7.2:chunk-002",
+        "q-v3-001::openstax_intro_stats_2e:7.2:chunk-003",
+        "q-v3-001::openstax_intro_stats_2e:7.3:chunk-002",
+        "q-v3-001::openstax_intro_stats_2e:7.3:chunk-011",
+        "q-v3-001::openstax_intro_stats_2e:7.3:chunk-012",
+        "q-v3-001::openstax_intro_stats_2e:7.3:chunk-013",
+        "q-v3-001::openstax_intro_stats_2e:7.intro:chunk-001",
+        "q-v3-001::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v3-001::openstax_intro_stats_2e:9.4:chunk-001"
+      ],
+      "n_units": 10,
+      "n_chars": 23945
+    },
+    {
+      "batch_id": "batch-042",
+      "file": "judging/batches/batch-042.md",
+      "units": [
+        "q-v3-001::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v3-001::openstax_principles_ds:3.5:chunk-001",
+        "q-v3-001::openstax_principles_ds:3.5:chunk-014",
+        "q-v3-001::openstax_principles_ds:4.1:chunk-006",
+        "q-v3-001::openstax_principles_ds:4.1:chunk-007",
+        "q-v3-002::openstax_intro_stats_2e:6.1:chunk-001",
+        "q-v3-002::openstax_intro_stats_2e:6.1:chunk-006",
+        "q-v3-002::openstax_intro_stats_2e:6.1:chunk-009",
+        "q-v3-002::openstax_intro_stats_2e:6.2:chunk-001",
+        "q-v3-002::openstax_intro_stats_2e:6.2:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 25054
+    },
+    {
+      "batch_id": "batch-043",
+      "file": "judging/batches/batch-043.md",
+      "units": [
+        "q-v3-002::openstax_intro_stats_2e:6.intro:chunk-001",
+        "q-v3-002::openstax_intro_stats_2e:7.1:chunk-003",
+        "q-v3-002::openstax_intro_stats_2e:7.1:chunk-004",
+        "q-v3-002::openstax_intro_stats_2e:7.1:chunk-006",
+        "q-v3-002::openstax_intro_stats_2e:7.intro:chunk-001",
+        "q-v3-002::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v3-002::openstax_intro_stats_2e:8.1:chunk-003",
+        "q-v3-002::openstax_intro_stats_2e:8.1:chunk-010",
+        "q-v3-002::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v3-002::openstax_intro_stats_2e:8.6:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 22770
+    },
+    {
+      "batch_id": "batch-044",
+      "file": "judging/batches/batch-044.md",
+      "units": [
+        "q-v3-002::openstax_intro_stats_2e:8.intro:chunk-003",
+        "q-v3-002::openstax_intro_stats_2e:8.intro:chunk-004",
+        "q-v3-002::openstax_intro_stats_2e:9.4:chunk-001",
+        "q-v3-002::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v3-002::openstax_intro_stats_2e:9.4:chunk-005",
+        "q-v3-002::openstax_intro_stats_2e:9.5:chunk-004",
+        "q-v3-002::openstax_principles_ds:3.5:chunk-013",
+        "q-v3-002::openstax_principles_ds:3.5:chunk-014",
+        "q-v3-002::openstax_principles_ds:3.5:chunk-016",
+        "q-v3-002::openstax_principles_ds:3.5:chunk-020"
+      ],
+      "n_units": 10,
+      "n_chars": 24518
+    },
+    {
+      "batch_id": "batch-045",
+      "file": "judging/batches/batch-045.md",
+      "units": [
+        "q-v3-002::openstax_principles_ds:4.3:chunk-017",
+        "q-v3-002::openstax_principles_ds:4.3:chunk-018",
+        "q-v3-003::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v3-003::openstax_intro_stats_2e:8.1:chunk-001",
+        "q-v3-003::openstax_intro_stats_2e:8.1:chunk-002",
+        "q-v3-003::openstax_intro_stats_2e:8.1:chunk-003",
+        "q-v3-003::openstax_intro_stats_2e:8.1:chunk-012",
+        "q-v3-003::openstax_intro_stats_2e:8.2:chunk-001",
+        "q-v3-003::openstax_intro_stats_2e:8.2:chunk-002",
+        "q-v3-003::openstax_intro_stats_2e:8.3:chunk-003"
+      ],
+      "n_units": 10,
+      "n_chars": 25560
+    },
+    {
+      "batch_id": "batch-046",
+      "file": "judging/batches/batch-046.md",
+      "units": [
+        "q-v3-003::openstax_intro_stats_2e:8.3:chunk-010",
+        "q-v3-003::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v3-003::openstax_intro_stats_2e:8.intro:chunk-001",
+        "q-v3-003::openstax_intro_stats_2e:9.4:chunk-001",
+        "q-v3-003::openstax_principles_ds:3.2:chunk-004",
+        "q-v3-003::openstax_principles_ds:4.1:chunk-003",
+        "q-v3-003::openstax_principles_ds:4.1:chunk-004",
+        "q-v3-003::openstax_principles_ds:4.1:chunk-015",
+        "q-v3-003::openstax_principles_ds:4.1:chunk-016",
+        "q-v3-003::openstax_principles_ds:4.1:chunk-017"
+      ],
+      "n_units": 10,
+      "n_chars": 27440
+    },
+    {
+      "batch_id": "batch-047",
+      "file": "judging/batches/batch-047.md",
+      "units": [
+        "q-v3-003::openstax_principles_ds:4.1:chunk-018",
+        "q-v3-003::openstax_principles_ds:4.1:chunk-019",
+        "q-v3-003::openstax_principles_ds:4.2:chunk-034",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-003",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-004",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-005",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-011",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-012",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-013",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-014"
+      ],
+      "n_units": 10,
+      "n_chars": 26345
+    },
+    {
+      "batch_id": "batch-048",
+      "file": "judging/batches/batch-048.md",
+      "units": [
+        "q-v3-004::openstax_principles_ds:4.3:chunk-015",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-016",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-017",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-018",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-021",
+        "q-v3-004::openstax_principles_ds:4.3:chunk-022",
+        "q-v3-004::openstax_principles_ds:4.4:chunk-001",
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-001",
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-002",
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-004"
+      ],
+      "n_units": 10,
+      "n_chars": 24990
+    },
+    {
+      "batch_id": "batch-049",
+      "file": "judging/batches/batch-049.md",
+      "units": [
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-005",
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-007",
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-010",
+        "q-v3-005::openstax_intro_stats_2e:8.1:chunk-011",
+        "q-v3-005::openstax_intro_stats_2e:8.3:chunk-001",
+        "q-v3-005::openstax_intro_stats_2e:8.3:chunk-002",
+        "q-v3-005::openstax_intro_stats_2e:8.3:chunk-003",
+        "q-v3-005::openstax_intro_stats_2e:8.3:chunk-004",
+        "q-v3-005::openstax_intro_stats_2e:8.3:chunk-006",
+        "q-v3-005::openstax_intro_stats_2e:8.4:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 23146
+    },
+    {
+      "batch_id": "batch-050",
+      "file": "judging/batches/batch-050.md",
+      "units": [
+        "q-v3-005::openstax_intro_stats_2e:8.intro:chunk-001",
+        "q-v3-005::openstax_intro_stats_2e:8.intro:chunk-002",
+        "q-v3-005::openstax_intro_stats_2e:8.intro:chunk-003",
+        "q-v3-005::openstax_intro_stats_2e:8.intro:chunk-004",
+        "q-v3-005::openstax_intro_stats_2e:9.1:chunk-003",
+        "q-v3-005::openstax_intro_stats_2e:9.5:chunk-019",
+        "q-v3-005::openstax_intro_stats_2e:9.6:chunk-002",
+        "q-v3-005::openstax_principles_ds:3.2:chunk-004",
+        "q-v3-005::openstax_principles_ds:4.1:chunk-003",
+        "q-v3-005::openstax_principles_ds:4.1:chunk-004"
+      ],
+      "n_units": 10,
+      "n_chars": 23811
+    },
+    {
+      "batch_id": "batch-051",
+      "file": "judging/batches/batch-051.md",
+      "units": [
+        "q-v3-005::openstax_principles_ds:4.1:chunk-009",
+        "q-v3-005::openstax_principles_ds:4.1:chunk-010",
+        "q-v3-005::openstax_principles_ds:4.1:chunk-014",
+        "q-v3-005::openstax_principles_ds:4.1:chunk-015",
+        "q-v3-006::openstax_intro_stats_2e:8.2:chunk-003",
+        "q-v3-006::openstax_intro_stats_2e:9.4:chunk-003",
+        "q-v3-006::openstax_principles_ds:3.5:chunk-001",
+        "q-v3-006::openstax_principles_ds:3.5:chunk-006",
+        "q-v3-006::openstax_principles_ds:3.5:chunk-009",
+        "q-v3-006::openstax_principles_ds:3.5:chunk-014"
+      ],
+      "n_units": 10,
+      "n_chars": 25208
+    },
+    {
+      "batch_id": "batch-052",
+      "file": "judging/batches/batch-052.md",
+      "units": [
+        "q-v3-006::openstax_principles_ds:4.1:chunk-018",
+        "q-v3-006::openstax_principles_ds:4.2:chunk-017",
+        "q-v3-006::openstax_principles_ds:4.2:chunk-022",
+        "q-v3-006::openstax_principles_ds:4.2:chunk-030",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-001",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-002",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-006",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-012",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-014",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-016"
+      ],
+      "n_units": 10,
+      "n_chars": 26133
+    },
+    {
+      "batch_id": "batch-053",
+      "file": "judging/batches/batch-053.md",
+      "units": [
+        "q-v3-006::openstax_principles_ds:4.3:chunk-017",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-018",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-021",
+        "q-v3-006::openstax_principles_ds:4.3:chunk-022",
+        "q-v3-006::openstax_principles_ds:4.4:chunk-001",
+        "q-v3-006::openstax_principles_ds:4.4:chunk-007",
+        "q-v3-006::openstax_principles_ds:4.intro:chunk-001",
+        "q-v3-007::openstax_intro_stats_2e:7.intro:chunk-002",
+        "q-v3-007::openstax_intro_stats_2e:8.1:chunk-011",
+        "q-v3-007::openstax_intro_stats_2e:8.1:chunk-012"
+      ],
+      "n_units": 10,
+      "n_chars": 24034
+    },
+    {
+      "batch_id": "batch-054",
+      "file": "judging/batches/batch-054.md",
+      "units": [
+        "q-v3-007::openstax_intro_stats_2e:8.4:chunk-001",
+        "q-v3-007::openstax_intro_stats_2e:8.4:chunk-002",
+        "q-v3-007::openstax_intro_stats_2e:9.1:chunk-002",
+        "q-v3-007::openstax_intro_stats_2e:9.2:chunk-001",
+        "q-v3-007::openstax_intro_stats_2e:9.2:chunk-002",
+        "q-v3-007::openstax_intro_stats_2e:9.2:chunk-003",
+        "q-v3-007::openstax_intro_stats_2e:9.4:chunk-002",
+        "q-v3-007::openstax_intro_stats_2e:9.4:chunk-003",
+        "q-v3-007::openstax_intro_stats_2e:9.4:chunk-004",
+        "q-v3-007::openstax_intro_stats_2e:9.4:chunk-005"
+      ],
+      "n_units": 10,
+      "n_chars": 23681
+    },
+    {
+      "batch_id": "batch-055",
+      "file": "judging/batches/batch-055.md",
+      "units": [
+        "q-v3-007::openstax_intro_stats_2e:9.5:chunk-013",
+        "q-v3-007::openstax_intro_stats_2e:9.5:chunk-020",
+        "q-v3-007::openstax_intro_stats_2e:9.5:chunk-022",
+        "q-v3-007::openstax_principles_ds:3.1:chunk-002",
+        "q-v3-007::openstax_principles_ds:4.1:chunk-016",
+        "q-v3-007::openstax_principles_ds:4.2:chunk-008",
+        "q-v3-007::openstax_principles_ds:4.2:chunk-014",
+        "q-v3-007::openstax_principles_ds:4.2:chunk-018",
+        "q-v3-007::openstax_principles_ds:4.2:chunk-023",
+        "q-v3-007::openstax_principles_ds:4.2:chunk-034"
+      ],
+      "n_units": 10,
+      "n_chars": 25178
+    },
+    {
+      "batch_id": "batch-056",
+      "file": "judging/batches/batch-056.md",
+      "units": [
+        "q-v3-007::openstax_principles_ds:4.2:chunk-035",
+        "q-v3-007::openstax_principles_ds:4.3:chunk-010",
+        "q-v3-007::openstax_principles_ds:4.4:chunk-001",
+        "q-v3-008::openstax_intro_stats_2e:7.3:chunk-006",
+        "q-v3-008::openstax_intro_stats_2e:7.3:chunk-011",
+        "q-v3-008::openstax_intro_stats_2e:9.2:chunk-001",
+        "q-v3-008::openstax_intro_stats_2e:9.4:chunk-001",
+        "q-v3-008::openstax_principles_ds:3.1:chunk-001",
+        "q-v3-008::openstax_principles_ds:3.2:chunk-004",
+        "q-v3-008::openstax_principles_ds:3.4:chunk-002"
+      ],
+      "n_units": 10,
+      "n_chars": 25960
+    },
+    {
+      "batch_id": "batch-057",
+      "file": "judging/batches/batch-057.md",
+      "units": [
+        "q-v3-008::openstax_principles_ds:3.4:chunk-004",
+        "q-v3-008::openstax_principles_ds:3.4:chunk-005",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-001",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-002",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-003",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-004",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-005",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-006",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-007",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-009"
+      ],
+      "n_units": 10,
+      "n_chars": 26552
+    },
+    {
+      "batch_id": "batch-058",
+      "file": "judging/batches/batch-058.md",
+      "units": [
+        "q-v3-008::openstax_principles_ds:3.5:chunk-010",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-011",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-012",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-013",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-014",
+        "q-v3-008::openstax_principles_ds:3.5:chunk-017",
+        "q-v3-008::openstax_principles_ds:4.1:chunk-002",
+        "q-v3-008::openstax_principles_ds:4.2:chunk-025"
+      ],
+      "n_units": 8,
+      "n_chars": 22635
+    }
+  ]
+}

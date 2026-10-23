@@ -1,0 +1,27 @@
+{
+  "run_id": "bm25_v1_22q",
+  "document_count": 288,
+  "query_count": 22,
+  "metric_query_count": 13,
+  "unanswerable_query_count": 9,
+  "retrieval_text_field": "retrieval_text",
+  "tokenizer": "[a-z0-9]+",
+  "k1": 1.5,
+  "b": 0.75,
+  "top_k": 10,
+  "cutoffs": [
+    5,
+    10
+  ],
+  "binary_relevance_grade": 2,
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "index_build_latency_ms": 23.189758001535665,
+  "total_query_latency_ms": 45.621639997989405,
+  "mean_query_latency_ms": 2.0737109089995185,
+  "vocabulary_size": 3578,
+  "corpus_token_count": 88093
+}

@@ -1,0 +1,30 @@
+# Entornos locales y cachés
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.quarto/
+_freeze/
+.Rhistory
+.RData
+.Renviron
+.DS_Store
+
+# Credenciales y configuración privada
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Salidas nuevas de reproducción; las fuentes congeladas sí se versionan
+**/REPLAY_*/
+reproduccion/outputs/local_runs/reanalisis_*/
+reproduccion/outputs/local_runs/entrega_replay_*/
+reproduccion/outputs/local_runs/NUEVO_*/
+reproduccion/outputs/local_runs/NUEVA_*/
+
+# Auxiliares de render
+*.typ

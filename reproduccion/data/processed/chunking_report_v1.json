@@ -1,0 +1,28 @@
+{
+  "chunking_method": "section_paragraphs_300w_overlap60_v1",
+  "parameters": {
+    "boundary": "section",
+    "target_words": 300,
+    "max_words": 380,
+    "min_words": 100,
+    "overlap_words": 60,
+    "overlap_unit": "complete_text_units"
+  },
+  "input_page_records": 190,
+  "total_chunks": 288,
+  "documents": 2,
+  "chapters": 6,
+  "sections": 36,
+  "formula_risk_chunks": 5,
+  "chunks_below_100_words": 0,
+  "chunks_above_380_words": 0,
+  "word_count": {
+    "minimum": 107,
+    "mean": 281.62,
+    "median": 291.0,
+    "p25": 281.0,
+    "p75": 296.0,
+    "maximum": 327
+  },
+  "output_file": "chunks_v1.jsonl"
+}

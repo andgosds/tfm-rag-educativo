@@ -1,0 +1,125 @@
+{
+  "runs": [
+    {
+      "run": "release_run1",
+      "returncode": 0,
+      "stdout": {
+        "by_expected_behavior": {
+          "abstain": 95,
+          "answer": 389,
+          "grounded_correction": 120
+        },
+        "n_accepted": 604,
+        "n_failed": 20,
+        "n_planned": 624,
+        "unavailable_by_criterion": {
+          "behavior_ok": 0,
+          "citations_ok": 0,
+          "factual_correctness": 4,
+          "faithfulness": 0
+        }
+      }
+    },
+    {
+      "run": "release_run2",
+      "returncode": 0,
+      "stdout": {
+        "by_expected_behavior": {
+          "abstain": 95,
+          "answer": 389,
+          "grounded_correction": 120
+        },
+        "n_accepted": 604,
+        "n_failed": 20,
+        "n_planned": 624,
+        "unavailable_by_criterion": {
+          "behavior_ok": 0,
+          "citations_ok": 0,
+          "factual_correctness": 4,
+          "faithfulness": 0
+        }
+      }
+    }
+  ],
+  "n_files": 15,
+  "all_bytes_identical": true,
+  "files": {
+    "coverage.csv": {
+      "sha256": "04354363a7ffc5c7ec59bafeed6d00f8a5f34ba064600e06e444c50e33dcff05",
+      "byte_identical": true
+    },
+    "failures.csv": {
+      "sha256": "05301e88b0d4efc3e11b648eb8d3120445b4140c610b29c6873f0aa2b01ac235",
+      "byte_identical": true
+    },
+    "h5_comparaciones.csv": {
+      "sha256": "df445c04d6f5e6ae466f729b412ca704a96c51f00bb6d55bd579545a9fd5ce7c",
+      "byte_identical": true
+    },
+    "h5_comparaciones_common.csv": {
+      "sha256": "a0cbb12be07bb15ac273f161ccc8f1bc0ccb4927aac2179116bf6aefe9cacec4",
+      "byte_identical": true
+    },
+    "h5_separacion.csv": {
+      "sha256": "401a1ac0b902dd22bc6ebac6d0ff0200093d0700e2ea191a5aa071eeaa0ceb1e",
+      "byte_identical": true
+    },
+    "h5_separacion_common.csv": {
+      "sha256": "b853f1680fc921f925e249ca76bf1fb296140011ecf80aeba0c4572b55749a14",
+      "byte_identical": true
+    },
+    "h6_explicitud.csv": {
+      "sha256": "4b9a792b2d527747c149b3b39603381e3ee189e85e8eaa4e94d127084c352019",
+      "byte_identical": true
+    },
+    "h6_explicitud_common.csv": {
+      "sha256": "8504e6c348f53c6fececcc3916771a553facd39f802c80d8d91e5d303d727a04",
+      "byte_identical": true
+    },
+    "h6_interaccion.csv": {
+      "sha256": "e72d9ac9e04f8c74c06bb8a5f9fd839c41244e0e79a35977da9fb25b4555d903",
+      "byte_identical": true
+    },
+    "h6_niveles.csv": {
+      "sha256": "90cbf4a20f18862e23b2ea6303a2b32d094ed18a87196701bda99198c945445d",
+      "byte_identical": true
+    },
+    "h6_niveles_common.csv": {
+      "sha256": "ddf0a5e63e41880d892242164b92231610764b65f0d59023809a7efd171190e8",
+      "byte_identical": true
+    },
+    "h6_pendientes.csv": {
+      "sha256": "63ef6c0d9929bff0df650f34ee038fcc6c9c8804ed887b5d416c091b19f33f0d",
+      "byte_identical": true
+    },
+    "hash_manifest.json": {
+      "sha256": "80ef9aca4ada360ef9f154ec7b938c1d5a620a84a8b31c9d170a63f80c84dd3c",
+      "byte_identical": true
+    },
+    "joined_cells.csv": {
+      "sha256": "8f600ce70526f7e97a0f2fcbbf6804ef374d7dd1bc404c289113f4b28374c572",
+      "byte_identical": true
+    },
+    "tables.json": {
+      "sha256": "a9947abee4efd9aa4167d8973acd986360b0841169a051eadaf4d5297e10197b",
+      "byte_identical": true
+    }
+  },
+  "trace_recomputation": {
+    "n_contrasts": 648,
+    "passed": true
+  },
+  "protected_generation_campaign": {
+    "n_files": 674,
+    "all_bytes_unchanged": true,
+    "snapshot_sha256": "e02436aacc1c0e9c4cdee56988f9d33529a2c01dd8746c3531404aa502553dd7"
+  },
+  "sources_manifest": "release_run1/hash_manifest.json",
+  "supersedes_validation_only": [
+    "run1",
+    "run2",
+    "final_run1",
+    "final_run2"
+  ],
+  "reason": "Release adds fully common H5 capacity supports and keeps separate available/common formulation effects; use release_run1 for the memoria."
+}

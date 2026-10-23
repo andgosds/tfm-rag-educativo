@@ -1,0 +1,489 @@
+{
+  "verified_at_utc": "2026-09-21T16:59:20.094848+00:00",
+  "scope": "generation only; not completed RAG evaluation",
+  "counts": {
+    "bm25": {
+      "accepted": 14,
+      "failed": 0,
+      "total": 14,
+      "resume_inference_calls": 0
+    },
+    "dense": {
+      "accepted": 14,
+      "failed": 0,
+      "total": 14,
+      "resume_inference_calls": 0
+    },
+    "rrf": {
+      "accepted": 14,
+      "failed": 0,
+      "total": 14,
+      "resume_inference_calls": 0
+    },
+    "rerank": {
+      "accepted": 13,
+      "failed": 1,
+      "total": 14,
+      "resume_inference_calls": 0
+    }
+  },
+  "accepted_total": 55,
+  "failed_total": 1,
+  "coverage_total": 56,
+  "coverage": [
+    {
+      "condition": "bm25",
+      "qid": "q-v1-001__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-001__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-002__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-002__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-003__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-003__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-006__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-006__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-012__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-012__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-014__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-014__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-016__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "bm25",
+      "qid": "q-v1-016__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-001__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-001__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-002__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-002__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-003__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-003__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-006__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-006__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-012__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-012__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-014__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-014__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-016__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "dense",
+      "qid": "q-v1-016__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-001__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-001__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-002__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-002__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-003__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-003__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-006__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-006__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-012__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-012__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-014__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-014__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-016__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rrf",
+      "qid": "q-v1-016__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-001__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-001__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-002__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-002__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-003__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-003__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-006__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-012__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-012__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-014__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-014__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-016__explicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-016__implicit",
+      "status": "accepted"
+    },
+    {
+      "condition": "rerank",
+      "qid": "q-v1-006__explicit",
+      "status": "failed"
+    }
+  ],
+  "preservation": {
+    "gen_rrf.log": {
+      "original_bytes": 1007,
+      "prefix_sha256": "c87dee9690c49f64305ad8ae426d0e72e876b8bc3ca5b1ef98fdde37029422e8",
+      "byte_identical": true
+    },
+    "rag_rerank_top5_qwen35_9b_v2_14q.jsonl": {
+      "original_bytes": 66214,
+      "prefix_sha256": "e42ce61ab83a4acbd22ec28f021ad268dab1ec33df45b98e0edaf2a9de140ff1",
+      "byte_identical": false
+    },
+    "gen_rerank_retry.log": {
+      "original_bytes": 1636,
+      "prefix_sha256": "a62474629bab9c0d59d6a1e80882799d510608353bb13210889256b29ad6e5a4",
+      "byte_identical": true
+    },
+    "rag_rrf_top5_qwen35_9b_v2_14q_metadata.json": {
+      "original_bytes": 584,
+      "prefix_sha256": "210baf3d6ec173355b081186291d692f4238e7479107ea7fce7b1c5060bb3455",
+      "byte_identical": true
+    },
+    "rag_bm25_top5_qwen35_9b_v2_14q_metadata.json": {
+      "original_bytes": 586,
+      "prefix_sha256": "72815672b73f0fe4146b9cd8a80f17de7494dfb52734f34186903738a504d910",
+      "byte_identical": true
+    },
+    "gen_dense.log": {
+      "original_bytes": 1011,
+      "prefix_sha256": "bdf0836a65a0996a26fd8c3b4764f2fbc2ed1b9052c782ff230e63f22ea0c920",
+      "byte_identical": true
+    },
+    "rag_rrf_top5_qwen35_9b_v2_14q.jsonl": {
+      "original_bytes": 151706,
+      "prefix_sha256": "6f36e50b9ce009f071640579e25682f76603d9993f35fc2c36763f28d494f8b0",
+      "byte_identical": true
+    },
+    "rag_bm25_top5_qwen35_9b_v2_14q.jsonl": {
+      "original_bytes": 154889,
+      "prefix_sha256": "f2ce3dbaa86b57011785a0d11b11967b3c8dd6438772eb521dd2231f2002c07c",
+      "byte_identical": true
+    },
+    "golden_variants_14q.jsonl": {
+      "original_bytes": 9999,
+      "prefix_sha256": "2377073dd14d1312d6a307f204f1c75aca41cbae89240dc835aecfd6550f29cd",
+      "byte_identical": true
+    },
+    "rag_dense_top5_qwen35_9b_v2_14q.jsonl": {
+      "original_bytes": 152080,
+      "prefix_sha256": "9a945e94bac28fefa1079bbfff0b2973751191956d29c077b4f5796e96b07eef",
+      "byte_identical": true
+    },
+    "rag_dense_top5_qwen35_9b_v2_14q_metadata.json": {
+      "original_bytes": 588,
+      "prefix_sha256": "d0f26eddd1800bd05c9b61d01a4d13367a326f214d91156a4e66861ab258cfa9",
+      "byte_identical": true
+    },
+    "gen_rerank.log": {
+      "original_bytes": 1636,
+      "prefix_sha256": "a62474629bab9c0d59d6a1e80882799d510608353bb13210889256b29ad6e5a4",
+      "byte_identical": true
+    }
+  },
+  "checks": {
+    "exact_unique_56_units": true,
+    "context_text_and_top5_order": true,
+    "accepted_exact_citations_and_raw_parse": true,
+    "metadata_input_hashes": true,
+    "resume_no_inference_all_conditions": true,
+    "existing_accepted_bytes_preserved": true
+  },
+  "diagnosis": {
+    "historical_failed_qid": "q-v1-006__explicit",
+    "historical_failed_batches": 2,
+    "attempts_per_historical_batch": 3,
+    "historical_raw_usage_latency": "unavailable; lost by old runner; not reconstructed",
+    "diagnostic_calls": 1,
+    "diagnostic_campaign_acceptance": false,
+    "diagnostic_usage": {
+      "generation_latency_ms": 19815.082834999885,
+      "ollama_total_duration_ns": 19801327417,
+      "ollama_load_duration_ns": 12673587122,
+      "prompt_tokens": 2915,
+      "completion_tokens": 131,
+      "raw_generation_text": "BEHAVIOR: answer\nANSWER: Increasing the confidence level from 90% to 95% increases the width of the confidence interval because a higher confidence level requires a larger critical value (z-score), which in turn increases the error bound, necessitating a wider range to ensure the true population mean is captured with greater certainty.\nCITATIONS: openstax_intro_stats_2e:8.1:chunk-011,openstax_intro_stats_2e:8.1:chunk-010,[openstax_principles_ds:4.1:chunk-010]"
+    },
+    "observed_cause": "Model emits brackets around one otherwise supplied chunk ID; strict validator correctly rejects the non-exact token. No stripping/remapping applied.",
+    "historical_causality_limit": "Single replay reproduces same validation error; original six raw attempts are unavailable, so their exact token defects cannot be asserted."
+  },
+  "contract": {
+    "model": "qwen3.5:9b",
+    "prompt": "rag_answer_prompt_v1",
+    "temperature": 0,
+    "seed": 20260902,
+    "top_k": 5,
+    "num_predict": 300,
+    "max_attempts": 3
+  },
+  "local_backend_at_verification": {
+    "version": {
+      "version": "0.30.8"
+    },
+    "models": [
+      {
+        "name": "qwen3.5:9b",
+        "model": "qwen3.5:9b",
+        "modified_at": "2026-03-02T21:18:31.280527008+01:00",
+        "size": 6594474711,
+        "digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "9.7B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 4096
+        },
+        "capabilities": [
+          "vision",
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "tests": {
+    "command": ".venv/bin/python -m pytest v2/tests -q",
+    "exit_code": 0,
+    "result": "........................................................................ [ 46%]\n........................................................................ [ 92%]\n...........                                                              [100%]\n155 passed in 3.36s",
+    "tdd": "Four red-green checks observed: terminal usage, continuation/resume, malformed output retention, wrong-condition resume guard."
+  },
+  "limits": [
+    "No judges or paid APIs called; generation acceptance does not establish correctness or faithfulness.",
+    "Historical failed usage/latency are unknown: no complete campaign cost/latency aggregate is defensible.",
+    "Sequential and resumed execution batches, plus residual backend nondeterminism, remain validity threats.",
+    "Backend digest was captured now, not pinned/recorded at the original three completed conditions.",
+    "Historical reviewer attribution requires a separate audit: blind assistant decisions were labelled andres; claimed gpt5.6/glm5.3 subagent reviews lack verified model selection. Source adjudications not altered here.",
+    "v1 already had unrelated working-tree changes at task entry; this task did not modify v1.",
+    "Runner persists terminal model-contract failures; transport/programming errors still abort rather than being mislabelled model failures."
+  ],
+  "sha256": {
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/data/golden/answerability_resolutions_v1_22q.json": "cd70b77fa7a410aca84c5737ef4cc0588217df736039c9244bc3067658a5d190",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/explicitness_v2/runs/explicitness_v2_bm25.jsonl": "a3543a861195217a88f7304935bb7910f02fa6a9bd53cf84f12bd8209b50dfc7",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/explicitness_v2/runs/explicitness_v2_dense.jsonl": "d1807426bbffef9af2b1f166b1c511ca525fcbbdcbdd36d90dc345f267a005d5",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/explicitness_v2/runs/explicitness_v2_rerank.jsonl": "4abf2b7119711727b71c13e2d87e9ee9e631b1d3b3430d4e20b8463c570c39c2",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/explicitness_v2/runs/explicitness_v2_rrf.jsonl": "8e064b411c4c75550fd10c7f2342bf2a5a934ae1ffb2020e43de4f1e1a326c5b",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/citation_diagnostic_single_attempt.json": "4e5113c212bc292e52634667108aca4914462de5126275451e08b08cd001c9a1",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/diagnose_and_resume.py": "54ef73638fca66bfd55ba739d46c47df7da9e85662d2b4adabbe3c99bda919a7",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/gen_dense.log": "bdf0836a65a0996a26fd8c3b4764f2fbc2ed1b9052c782ff230e63f22ea0c920",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/gen_rerank.log": "a62474629bab9c0d59d6a1e80882799d510608353bb13210889256b29ad6e5a4",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/gen_rerank_retry.log": "a62474629bab9c0d59d6a1e80882799d510608353bb13210889256b29ad6e5a4",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/gen_resume_audited.log": "a27b8f7a5bd7fe8c8e240db71839e63e1781d3fa868543e5ad8563d961ce3ee9",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/gen_rrf.log": "c87dee9690c49f64305ad8ae426d0e72e876b8bc3ca5b1ef98fdde37029422e8",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/golden_variants_14q.jsonl": "2377073dd14d1312d6a307f204f1c75aca41cbae89240dc835aecfd6550f29cd",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_bm25_top5_qwen35_9b_v2_14q.jsonl": "f2ce3dbaa86b57011785a0d11b11967b3c8dd6438772eb521dd2231f2002c07c",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_bm25_top5_qwen35_9b_v2_14q_metadata.json": "72815672b73f0fe4146b9cd8a80f17de7494dfb52734f34186903738a504d910",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_dense_top5_qwen35_9b_v2_14q.jsonl": "9a945e94bac28fefa1079bbfff0b2973751191956d29c077b4f5796e96b07eef",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_dense_top5_qwen35_9b_v2_14q_metadata.json": "d0f26eddd1800bd05c9b61d01a4d13367a326f214d91156a4e66861ab258cfa9",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_rerank_top5_qwen35_9b_v2_14q.jsonl": "11a2ccfd90a02559d5272b0d2740a997a869692b2fba607690ccd21f40772f8b",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_rerank_top5_qwen35_9b_v2_14q_failures.jsonl": "55e9ea9c6ec2ade836fc94291f786af0bc2ded5a36ed5d53cda75934bce8d57d",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_rerank_top5_qwen35_9b_v2_14q_metadata.json": "0601ea4fa21377176f2e9a82e7953fa51816978e3229895f229db5a1bf22b053",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_rrf_top5_qwen35_9b_v2_14q.jsonl": "6f36e50b9ce009f071640579e25682f76603d9993f35fc2c36763f28d494f8b0",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/rag_rrf_top5_qwen35_9b_v2_14q_metadata.json": "210baf3d6ec173355b081186291d692f4238e7479107ea7fce7b1c5060bb3455",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/resume_baseline_manifest.json": "16a19ad8476aed5c3c1055b201a117ca16522209465f3f940a2605d54285e7fd",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/test_suite.log": "78e061b4aac0e7599153efea2a2b0373e4287c7a888a9a2e425f3697d841b953",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/rag_explicitness_v2/verify_resume.py": "ac1ba79b980e4a4c64f758081ebbb07e0dc24cb6f0e56f25b5b22e0eaf7a52b7",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/scripts/run_rag_generation.py": "c0ab5cda3cf8e24c1745dffc5b83c0af68e8129933e5c8d07641504ebde94515",
+    "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/tests/test_run_rag_generation.py": "3de1e0a90c0c7603e23cdc66eb3973722dfc4488c82f08ce42f68259f95379b7"
+  }
+}

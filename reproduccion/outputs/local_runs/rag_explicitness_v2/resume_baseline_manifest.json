@@ -1,0 +1,50 @@
+{
+  "v2/outputs/local_runs/rag_explicitness_v2/gen_rrf.log": {
+    "sha256": "c87dee9690c49f64305ad8ae426d0e72e876b8bc3ca5b1ef98fdde37029422e8",
+    "size": 1007
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_rerank_top5_qwen35_9b_v2_14q.jsonl": {
+    "sha256": "e42ce61ab83a4acbd22ec28f021ad268dab1ec33df45b98e0edaf2a9de140ff1",
+    "size": 66214
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/gen_rerank_retry.log": {
+    "sha256": "a62474629bab9c0d59d6a1e80882799d510608353bb13210889256b29ad6e5a4",
+    "size": 1636
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_rrf_top5_qwen35_9b_v2_14q_metadata.json": {
+    "sha256": "210baf3d6ec173355b081186291d692f4238e7479107ea7fce7b1c5060bb3455",
+    "size": 584
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_bm25_top5_qwen35_9b_v2_14q_metadata.json": {
+    "sha256": "72815672b73f0fe4146b9cd8a80f17de7494dfb52734f34186903738a504d910",
+    "size": 586
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/gen_dense.log": {
+    "sha256": "bdf0836a65a0996a26fd8c3b4764f2fbc2ed1b9052c782ff230e63f22ea0c920",
+    "size": 1011
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_rrf_top5_qwen35_9b_v2_14q.jsonl": {
+    "sha256": "6f36e50b9ce009f071640579e25682f76603d9993f35fc2c36763f28d494f8b0",
+    "size": 151706
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_bm25_top5_qwen35_9b_v2_14q.jsonl": {
+    "sha256": "f2ce3dbaa86b57011785a0d11b11967b3c8dd6438772eb521dd2231f2002c07c",
+    "size": 154889
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/golden_variants_14q.jsonl": {
+    "sha256": "2377073dd14d1312d6a307f204f1c75aca41cbae89240dc835aecfd6550f29cd",
+    "size": 9999
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_dense_top5_qwen35_9b_v2_14q.jsonl": {
+    "sha256": "9a945e94bac28fefa1079bbfff0b2973751191956d29c077b4f5796e96b07eef",
+    "size": 152080
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/rag_dense_top5_qwen35_9b_v2_14q_metadata.json": {
+    "sha256": "d0f26eddd1800bd05c9b61d01a4d13367a326f214d91156a4e66861ab258cfa9",
+    "size": 588
+  },
+  "v2/outputs/local_runs/rag_explicitness_v2/gen_rerank.log": {
+    "sha256": "a62474629bab9c0d59d6a1e80882799d510608353bb13210889256b29ad6e5a4",
+    "size": 1636
+  }
+}

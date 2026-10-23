@@ -1,0 +1,15 @@
+[
+ {
+  "qid": "q-v1-013",
+  "reviewer_type": "llm",
+  "reviewer_id": "judge-1-gpt-5.6-sol-high",
+  "model_version": "openai-codex/gpt-5.6-sol; reasoning_effort=high",
+  "prompt_version": "golden_set_review_prompt_v1",
+  "answerability_decision": "answerable",
+  "evidence_sufficient_decision": true,
+  "reference_answer_decision": "accept",
+  "rationale": "All four quotations were verified verbatim in the corresponding frozen-corpus chunks after whitespace/newline normalization (8.1:chunk-001, 8.1:chunk-002, 8.2:chunk-002, 8.2:chunk-003). The canonical pair is minimally sufficient for the complete reference answer: 8.1:chunk-001 states that a confidence interval for a population mean with known population standard deviation is based on the CLT conclusion that the sampling distribution of sample means is approximately normal (the known-σ / normal case), while 8.2:chunk-003 states the practice of using Student's t-distribution whenever s estimates σ, that t-scores follow a Student's t-distribution with n − 1 degrees of freedom for a simple random sample from an approximately normal population, and explains why the degrees of freedom equal n − 1 (n deviations that must sum to zero, so only n − 1 vary freely). Every claim in the gold answer — normal when σ known, t when σ estimated by s, n − 1 df, and their role under the SRS/approximately-normal conditions — is grounded in these two chunks, and the two non-canonical chunks only add historical/methodological context without contradiction (8.2:chunk-002 confirms the normal distribution cannot be used when small samples replace σ with s). A corpus-wide check of the cited sections found no opposing evidence. One minor cosmetic note: the 8.2:chunk-003 quote contains the corpus's own broken inline formula ('t = ,' and a blank for the deviations expression), but the quotation is a faithful transcription of the chunk text, so it does not affect support or sufficiency.",
+  "confidence": 0.92,
+  "execution_date": "2026-09-21"
+ }
+]

@@ -1,0 +1,78 @@
+{
+  "comparison_id": "pool_three_judges_2026-08-24",
+  "candidate_count": 321,
+  "prompt_version": "pool_review_prompt_v1",
+  "judges": [
+    {
+      "reviewer_id": "pool-judge-1-gpt-5.6-sol-high",
+      "model_version": "openai-codex/gpt-5.6-sol",
+      "execution_date": "2026-08-17",
+      "grade_counts": {"0": 108, "1": 147, "2": 66}
+    },
+    {
+      "reviewer_id": "pool-judge-2-glm-5.3-xhigh",
+      "model_version": "opencode-go/glm-5.3",
+      "execution_date": "2026-08-17",
+      "grade_counts": {"0": 62, "1": 199, "2": 60}
+    },
+    {
+      "reviewer_id": "pool-judge-3-kimi-k3-max",
+      "model_version": "opencode-go/kimi-k3; reasoning=max",
+      "execution_date": "2026-08-24",
+      "prompt_artifact": "v1/config/pool_review_prompt_v1_kimi_2026-08-24.md",
+      "grade_counts": {"0": 173, "1": 121, "2": 27},
+      "canonical_counts": {"no": 294, "uncertain": 10, "yes": 17},
+      "answerability_conflict_count": 0
+    }
+  ],
+  "agreement": {
+    "unanimous_count": 120,
+    "majority_available_count": 308,
+    "all_different_count": 13,
+    "pairwise_exact": {
+      "gpt_glm": 200,
+      "gpt_kimi": 185,
+      "glm_kimi": 163
+    }
+  },
+  "human_review_protocol": {
+    "protocol_id": "three_judge_risk_directed_v1",
+    "include_any_judge_grade_2": true,
+    "include_all_judges_disagree": true,
+    "include_answerability_conflict": true,
+    "preserve_existing_human_decisions": true,
+    "audit_unanimous_grade_0": 10,
+    "audit_unanimous_grade_1": 10,
+    "sampling_seed": "three-judge-risk-directed-v1",
+    "selected_candidate_count": 109,
+    "already_reviewed_at_selection_count": 7,
+    "final_reviewed_count": 109,
+    "pending_count": 0,
+    "final_grade_counts": {"0": 14, "1": 45, "2": 50},
+    "final_canonical_count": 16,
+    "final_provenance_counts": {
+      "direct_user_decisions": 23,
+      "assistant_delegated_decisions": 70,
+      "user_advised_after_assistant_review": 16
+    },
+    "selection_reason_counts": {
+      "all_judges_disagree": 13,
+      "answerability_conflict": 6,
+      "any_judge_grade_2": 87,
+      "audit_unanimous_grade_0": 10,
+      "audit_unanimous_grade_1": 10,
+      "existing_human_decision": 7
+    }
+  },
+  "qrels_updated": true,
+  "pooled_qrels": {
+    "path": "v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+    "original_qrel_count": 24,
+    "added_qrel_count": 95,
+    "final_qrel_count": 119,
+    "grade_counts": {"1": 47, "2": 72},
+    "answerability_conflict_grade_2_count": 6,
+    "sha256": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+    "provenance_sha256": "f9c7072395106730d5e3eeeefda9d4720f881850421908e0694fd3ef1aa16906"
+  }
+}

@@ -1,0 +1,15 @@
+{"model": "qwen3.5:4b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true, "citas": ["openstax_intro_stats_2e:7.1:chunk-003"], "citas_exactas": true}
+{"model": "qwen3.5:4b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true, "citas": ["openstax_intro_stats_2e:8.1:chunk-011"], "citas_exactas": true}
+{"model": "qwen3.5:4b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true, "citas": [], "citas_exactas": true}
+{"model": "qwen3.5:9b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true, "citas": ["openstax_intro_stats_2e:7.1:chunk-003"], "citas_exactas": true}
+{"model": "qwen3.5:9b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true, "citas": ["openstax_intro_stats_2e:8.1:chunk-011"], "citas_exactas": true}
+{"model": "qwen3.5:9b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true, "citas": [], "citas_exactas": true}
+{"model": "gemma4:e2b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true, "citas": ["chunk-003"], "citas_exactas": false}
+{"model": "gemma4:e2b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true, "citas": ["chunk-011"], "citas_exactas": false}
+{"model": "gemma4:e2b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true, "citas": [], "citas_exactas": true}
+{"model": "gemma4:e4b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true, "citas": ["openstax_intro_stats_2e:7.1:chunk-003"], "citas_exactas": true}
+{"model": "gemma4:e4b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true, "citas": ["openstax_intro_stats_2e:8.1:chunk-011"], "citas_exactas": true}
+{"model": "gemma4:e4b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true, "citas": [], "citas_exactas": true}
+{"model": "gemma4:12b", "caso": "ordinaria", "contrato": false, "esperado": "answer", "salida": ""}
+{"model": "gemma4:12b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true, "citas": ["openstax_intro_stats_2e:8.1:chunk-011"], "citas_exactas": true}
+{"model": "gemma4:12b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true, "citas": [], "citas_exactas": true}

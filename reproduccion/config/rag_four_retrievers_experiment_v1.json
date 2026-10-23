@@ -1,0 +1,99 @@
+{
+  "comparison_id": "rag_four_retrievers_top5_v1_22q",
+  "design": "controlled_four_condition_rag_run",
+  "created_at": "2026-09-05T11:05:48+02:00",
+  "conditions": [
+    {
+      "id": "bm25",
+      "generation_batch": "fourway_20260905",
+      "retrieval_run": "outputs/runs/bm25_pooled_v1_22q.jsonl",
+      "rag_output": "outputs/rag/rag_bm25_top5_qwen35_9b_v1_22q.jsonl"
+    },
+    {
+      "id": "dense",
+      "generation_batch": "fourway_20260905",
+      "retrieval_run": "outputs/runs/dense_e5_base_v2_pooled_v1_22q.jsonl",
+      "rag_output": "outputs/rag/rag_dense_top5_qwen35_9b_v1_22q.jsonl"
+    },
+    {
+      "id": "rrf",
+      "generation_batch": "fourway_20260905",
+      "retrieval_run": "outputs/runs/hybrid_rrf_k60_pooled_v1_22q.jsonl",
+      "rag_output": "outputs/rag/rag_rrf_top5_qwen35_9b_fourway_v1_22q.jsonl"
+    },
+    {
+      "id": "rrf_rerank",
+      "generation_batch": "fourway_20260905",
+      "retrieval_run": "outputs/runs/hybrid_rrf_k60_minilm_l6_rerank_pooled_v1_22q.jsonl",
+      "rag_output": "outputs/rag/rag_rrf_rerank_top5_qwen35_9b_fourway_v1_22q.jsonl"
+    }
+  ],
+  "question_count_per_condition": 22,
+  "response_count": 88,
+  "top_k": 5,
+  "generator": {
+    "provider": "ollama",
+    "model": "qwen3.5:9b",
+    "temperature": 0,
+    "seed": 20260902,
+    "max_output_tokens": 300,
+    "prompt_version": "rag_answer_prompt_v1",
+    "max_contract_attempts": 3
+  },
+  "judges": {
+    "primary": {
+      "provider": "opencode-go",
+      "model": "glm-5.3-flash",
+      "reasoning_effort": "low",
+      "temperature": 0,
+      "seed": 20260902,
+      "behavior_prompt_version": "rag_behavior_rubric_v2",
+      "max_output_tokens": 4096,
+      "max_attempts": 3,
+      "session_ids_by_condition": {
+        "bm25": "36666545-c198-59ed-8d4b-ef7164cc5bf9",
+        "dense": "79ea5b14-48f4-581d-bd1d-f5a5ec719d15",
+        "rrf": "11bf3dcc-e88c-50dc-9a31-9921c749e602",
+        "rrf_rerank": "238e1d06-916c-5196-95d3-8a9bbc312958"
+      },
+      "ragas_version": "0.4.3"
+    },
+    "sensitivity": {
+      "provider": "ollama",
+      "model": "gemma3:4b",
+      "temperature": 0,
+      "seed": 20260902,
+      "behavior_prompt_version": "rag_behavior_rubric_v1",
+      "ragas_version": "0.4.3"
+    }
+  },
+  "metrics": {
+    "ragas": ["faithfulness", "factual_correctness"],
+    "deterministic": [
+      "reported_behavior_match",
+      "citation_validity",
+      "citation_presence"
+    ],
+    "auxiliary": ["behavior_judge_score"]
+  },
+  "expected_behavior_counts_per_condition": {
+    "answer": 13,
+    "grounded_correction": 2,
+    "abstain": 7
+  },
+  "risk_queue": {
+    "include_non_answer_behavior": true,
+    "include_any_evaluation_error": true,
+    "include_behavior_score_disagreement": true,
+    "include_reported_behavior_mismatch": true,
+    "low_metric_threshold": 0.5,
+    "metric_disagreement_threshold": 0.5,
+    "preserve_prior_human_adjudications": true
+  },
+  "analysis": {
+    "paired_by_qid": true,
+    "all_unordered_condition_pairs": true,
+    "ordinary_answers_grounded_corrections_and_abstentions_reported_separately": true
+  },
+  "validity_caution": "The four conditions were executed sequentially rather than in a balanced interleaved order. Model, prompt, decoding, questions and context budget remained fixed, but residual backend nondeterminism or temporal drift cannot be completely excluded."
+}

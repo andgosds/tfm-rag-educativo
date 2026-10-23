@@ -1,0 +1,52 @@
+{
+  "run_id": "hybrid_rrf_k60_minilm_l6_rerank_pooled_v1_22q",
+  "method": "hybrid_cross_encoder_reranking",
+  "source_run_id": "hybrid_rrf_k60_pooled_v1_22q",
+  "source_run_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/runs/hybrid_rrf_k60_pooled_v1_22q.jsonl",
+  "source_run_sha256": "ab278eb83292cd9dad89a9df37f1c961f4aa6e3b45c3260e055f5885b1ee00e8",
+  "model_id": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "model_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "model_license": "apache-2.0",
+  "model_language": "en",
+  "model_training_dataset": "sentence-transformers/msmarco",
+  "max_seq_length": 512,
+  "batch_size": 16,
+  "device": "cuda",
+  "candidate_depth": 10,
+  "tie_break": "descending_rerank_score_then_ascending_chunk_id",
+  "document_count": 288,
+  "query_count": 22,
+  "metric_query_count": 13,
+  "unanswerable_query_count": 9,
+  "cutoffs": [
+    5,
+    10
+  ],
+  "binary_relevance_grade": 2,
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "chunks_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/processed/chunks_v1.jsonl",
+  "chunks_sha256": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+  "golden_set_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/golden_set_pilot_v1.jsonl",
+  "golden_set_sha256": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+  "qrels_source_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+  "qrels_sha256": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+  "pair_count": 220,
+  "truncated_pair_count": 17,
+  "max_observed_pair_tokens": 747,
+  "model_load_latency_ms": 1882.5643849995686,
+  "total_rerank_latency_ms": 983.1977710000501,
+  "mean_rerank_latency_ms": 44.69080777272955,
+  "mean_query_latency_serial_estimate_ms": 53.105838227069896,
+  "mean_query_latency_parallel_estimate_ms": 51.03598095444216,
+  "latency_interpretation": "measured_cross_encoder_reranking_plus_source_retrieval_estimates",
+  "python_version": "3.12.13",
+  "package_versions": {
+    "numpy": "2.5.2",
+    "sentence_transformers": "5.7.0",
+    "torch": "2.13.0+cu130"
+  }
+}

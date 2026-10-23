@@ -1,0 +1,9 @@
+run_id,query_scope,metric,k,value,query_count
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,precision,5,0.47692307692307695,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,recall,5,0.5128205128205128,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,mrr,5,0.7884615384615384,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,ndcg,5,0.5907367229013141,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,precision,10,0.3923076923076923,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,recall,10,0.8076923076923077,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,mrr,10,0.7884615384615384,13
+bm25_pooled_v1_22q,answerable_with_grade2_qrels,ndcg,10,0.7052456002466913,13

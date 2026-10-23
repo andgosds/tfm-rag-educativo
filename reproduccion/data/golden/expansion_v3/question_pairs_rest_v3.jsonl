@@ -1,0 +1,22 @@
+{"base_qid": "q-v1-004", "explicitness": "explicit", "question": "Why is the median a suitable measure of center when a dataset contains extreme outliers?"}
+{"base_qid": "q-v1-004", "explicitness": "implicit", "question": "Why is the middle value of the ordered dataset a suitable measure of center when a dataset contains extreme outliers?"}
+{"base_qid": "q-v1-005", "explicitness": "explicit", "question": "What two aspects of the relationship between an independent and a dependent variable are summarized by the correlation coefficient?"}
+{"base_qid": "q-v1-005", "explicitness": "implicit", "question": "What two aspects of the relationship between an independent and a dependent variable are summarized by the measure of linear association between them?"}
+{"base_qid": "q-v1-007", "explicitness": "explicit", "question": "According to the selected sources, what is the Pearson correlation between weekly study time and final exam score?"}
+{"base_qid": "q-v1-007", "explicitness": "implicit", "question": "According to the selected sources, what value describes how strongly weekly study time and final exam score move together in a straight-line pattern?"}
+{"base_qid": "q-v1-008", "explicitness": "explicit", "question": "Why does the standard error of the sample mean increase as the sample size becomes larger?"}
+{"base_qid": "q-v1-008", "explicitness": "implicit", "question": "Why does the standard deviation of the sampling distribution of the mean increase as the sample size becomes larger?"}
+{"base_qid": "q-v1-011", "explicitness": "explicit", "question": "For a standardized normal variable, what values define its center and spread, and how should the sign and magnitude of its standardized score be interpreted?"}
+{"base_qid": "q-v1-011", "explicitness": "implicit", "question": "For the normal distribution in its reference form, what values define its center and spread, and how should the sign and magnitude of its standardized score be interpreted?"}
+{"base_qid": "q-v1-013", "explicitness": "explicit", "question": "Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the latter case?"}
+{"base_qid": "q-v1-013", "explicitness": "implicit", "question": "Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how does the number of deviations that are free to vary enter the latter case?"}
+{"base_qid": "q-v1-015", "explicitness": "explicit", "question": "How do the ordinary mean, a trimmed mean, and the median respond differently to extreme observations?"}
+{"base_qid": "q-v1-015", "explicitness": "implicit", "question": "How do the ordinary mean, the mean computed after discarding a fixed fraction of the lowest and highest values, and the median respond differently to extreme observations?"}
+{"base_qid": "q-v1-017", "explicitness": "explicit", "question": "When is one-way ANOVA an appropriate choice, and how are its null and alternative hypotheses framed?"}
+{"base_qid": "q-v1-017", "explicitness": "implicit", "question": "When is one-way ANOVA an appropriate choice, and how are the two competing claims that it tests framed?"}
+{"base_qid": "q-v1-019", "explicitness": "explicit", "question": "According to the selected sources, what is the Shapiro-Wilk p-value for the women's heights dataset?"}
+{"base_qid": "q-v1-019", "explicitness": "implicit", "question": "According to the selected sources, what is the p-value of the formal test of normality applied to the women's heights dataset?"}
+{"base_qid": "q-v1-020", "explicitness": "explicit", "question": "Why does increasing the confidence level make the confidence interval narrower when all other inputs are fixed?"}
+{"base_qid": "q-v1-020", "explicitness": "implicit", "question": "Why does increasing the probability attached to the interval make the confidence interval narrower when all other inputs are fixed?"}
+{"base_qid": "q-v1-022", "explicitness": "explicit", "question": "How should a chi-square test of independence be conducted for a contingency table?"}
+{"base_qid": "q-v1-022", "explicitness": "implicit", "question": "How should one proceed to test whether two categorical variables are related in a contingency table?"}

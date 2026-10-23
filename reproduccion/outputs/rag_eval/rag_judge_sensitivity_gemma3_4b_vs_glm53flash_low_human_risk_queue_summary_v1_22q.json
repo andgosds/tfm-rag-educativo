@@ -1,0 +1,39 @@
+{
+  "source_case_count": 44,
+  "queued_case_count": 28,
+  "queued_unique_qids": 15,
+  "by_condition": {
+    "rrf": 13,
+    "rrf_rerank": 15
+  },
+  "by_expected_behavior": {
+    "abstain": 14,
+    "answer": 10,
+    "grounded_correction": 4
+  },
+  "reason_counts": {
+    "behavior_score_disagreement": 19,
+    "factual_correctness_interjudge_delta_at_least_0.5": 2,
+    "faithfulness_interjudge_delta_at_least_0.5": 2,
+    "gemma_evaluation_error": 7,
+    "gemma_faithfulness_below_0.5": 11,
+    "glm_factual_correctness_below_0.5": 2,
+    "glm_faithfulness_below_0.5": 10,
+    "reported_behavior_mismatch": 5,
+    "sensitive_behavior:abstain": 14,
+    "sensitive_behavior:grounded_correction": 4
+  },
+  "rules": {
+    "include_non_answer_behavior": true,
+    "include_any_evaluation_error": true,
+    "include_behavior_score_disagreement": true,
+    "include_reported_behavior_mismatch": true,
+    "low_metric_threshold": 0.5,
+    "interjudge_absolute_delta_threshold": 0.5
+  },
+  "sources": {
+    "gemma3_4b": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_gemma3_4b_seed20260902_scores_v1_22q.jsonl",
+    "glm53flash_low": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_glm53flash_low_rubricv2_max4096_retry3_seed20260902_scores_v1_22q.jsonl"
+  },
+  "output": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/outputs/rag_eval/rag_judge_sensitivity_gemma3_4b_vs_glm53flash_low_human_risk_queue_v1_22q.jsonl"
+}

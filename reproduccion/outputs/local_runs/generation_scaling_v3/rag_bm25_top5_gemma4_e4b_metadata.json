@@ -1,0 +1,17 @@
+{
+  "experiment_id": "gen_v3_bm25_gemma4_e4b",
+  "retrieval_condition": "bm25",
+  "row_count": 52,
+  "rows_written": 48,
+  "accepted_count": 48,
+  "failed_count": 4,
+  "top_k": 5,
+  "generator_model": "gemma4:e4b",
+  "prompt_version": "rag_answer_prompt_v1",
+  "input_sha256": {
+    "retrieval_run": "89c9bd8d45ff092cfdb37365868c3ff44efebe1483132e4a1c35f0937d16408b",
+    "chunks": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "golden": "866b75af5de3258c9affc53b1188313d79b3c24fc0a19d1a804c440cd40d49e0",
+    "resolutions": "cd70b77fa7a410aca84c5737ef4cc0588217df736039c9244bc3067658a5d190"
+  }
+}

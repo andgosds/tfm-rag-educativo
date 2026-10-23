@@ -1,0 +1,56 @@
+{
+  "campaign": "explicitness_v2",
+  "mode": "retrieval_only",
+  "paths": {
+    "pairs": "v2/data/golden/variants/explicitness_pairs_v1_consolidated.jsonl",
+    "chunks": "v1/data/processed/chunks_v1.jsonl",
+    "prior": "v1/data/golden/pool_bm25_dense_v1_22q.jsonl",
+    "golden": "v1/data/golden/golden_set_pilot_v1.jsonl",
+    "human": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+  },
+  "input_sha256": {
+    "v2/data/golden/variants/explicitness_pairs_v1_consolidated.jsonl": "083d8f4c9c3dc0d21e6665b054bc5d4f6dff33c12f949788ad164fb12e66538e",
+    "v1/data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "v1/data/golden/pool_bm25_dense_v1_22q.jsonl": "092c45694d614b7a31f85a794d331cc2e349c8e64c277361b856630ad261c6eb",
+    "v1/data/golden/golden_set_pilot_v1.jsonl": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl": "a44f8f66cb3f802813c761c251d5ac3cee866b605be48a4d4fb39b2769187c49"
+  },
+  "top_k": 10,
+  "fusion_depth": 10,
+  "k0": 60,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "dense_model": "intfloat/e5-base-v2",
+  "dense_revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "device": "cuda",
+  "batch_size": 16,
+  "max_seq_length": 512,
+  "dtype": "float32",
+  "document_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "normalize_embeddings": true,
+  "search": "exact_numpy_dot_product",
+  "indexed_field": "retrieval_text",
+  "tie_break": "score_descending_then_chunk_id_ascending",
+  "seed": 0,
+  "generation": false,
+  "paid_api_calls": false,
+  "metrics": false,
+  "final_qrels_ready": false,
+  "historical_reuse": "pending_equivalence_confirmation_for_every_formulation",
+  "model_access": "local_files_only_offline",
+  "command": "PYTHONDONTWRITEBYTECODE=1 uv run --project v1/environments/dense --no-sync python v2/scripts/explicitness_campaign.py --output v2/outputs/explicitness_v2",
+  "implementation_sha256": {
+    "v2/scripts/explicitness_campaign.py": "51774b55c8560f2fe1868a555b3ed85a54e168698f3270faa8d13758a2c5f615",
+    "v1/scripts/run_bm25.py": "70d4a0f2ab13a5910e8dd96c5feb5ef1e02c2e4ee7d585deb9f682ba118f0c67",
+    "v1/scripts/run_dense.py": "a61ea871b06e31252ae41c57cea784446cfaf9177e902ca4ac9d5623749c8b6a",
+    "v1/scripts/run_hybrid_rrf.py": "c709002d48a704b0980e44c721f28e41f01d6a80c45d367f088bda757ddcb9c7",
+    "v1/scripts/run_reranker.py": "aa25afe2287f5e2111c401539969a679fd7709fc5297a4e2a0121e8f464b9ce0"
+  },
+  "environment_sha256": {
+    "v1/environments/dense/pyproject.toml": "e3b82e43e155b3382a9816ba9e44c02f400c537c14296d5fabd0716eda79c3b8",
+    "v1/environments/dense/uv.lock": "f082efc815e88a8bc03ec4b01e52cca7d90af0d16ee42d708f45440ac8e33c9d"
+  }
+}

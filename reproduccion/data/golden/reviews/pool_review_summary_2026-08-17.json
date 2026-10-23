@@ -1,0 +1,452 @@
+{
+  "candidate_count": 321,
+  "grade_pair_counts": {
+    "0/0": 43,
+    "0/1": 61,
+    "0/2": 4,
+    "1/0": 18,
+    "1/1": 115,
+    "1/2": 14,
+    "2/0": 1,
+    "2/1": 23,
+    "2/2": 42
+  },
+  "by_qid": {
+    "q-v1-001": {
+      "candidate_count": 16,
+      "grade_agreement": 7,
+      "grade_disagreement": 9,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 4,
+        "0/1": 2,
+        "1/0": 3,
+        "1/1": 1,
+        "2/1": 4,
+        "2/2": 2
+      },
+      "disagreement_pool_ids": [
+        "q-v1-001-pool-001",
+        "q-v1-001-pool-002",
+        "q-v1-001-pool-003",
+        "q-v1-001-pool-007",
+        "q-v1-001-pool-009",
+        "q-v1-001-pool-012",
+        "q-v1-001-pool-014",
+        "q-v1-001-pool-015",
+        "q-v1-001-pool-016"
+      ]
+    },
+    "q-v1-002": {
+      "candidate_count": 12,
+      "grade_agreement": 9,
+      "grade_disagreement": 3,
+      "conflicts": 0,
+      "pairs": {
+        "1/1": 5,
+        "2/1": 3,
+        "2/2": 4
+      },
+      "disagreement_pool_ids": [
+        "q-v1-002-pool-004",
+        "q-v1-002-pool-007",
+        "q-v1-002-pool-008"
+      ]
+    },
+    "q-v1-003": {
+      "candidate_count": 16,
+      "grade_agreement": 6,
+      "grade_disagreement": 10,
+      "conflicts": 0,
+      "pairs": {
+        "1/0": 1,
+        "1/1": 4,
+        "1/2": 4,
+        "2/1": 5,
+        "2/2": 2
+      },
+      "disagreement_pool_ids": [
+        "q-v1-003-pool-001",
+        "q-v1-003-pool-002",
+        "q-v1-003-pool-007",
+        "q-v1-003-pool-009",
+        "q-v1-003-pool-010",
+        "q-v1-003-pool-012",
+        "q-v1-003-pool-013",
+        "q-v1-003-pool-014",
+        "q-v1-003-pool-015",
+        "q-v1-003-pool-016"
+      ]
+    },
+    "q-v1-004": {
+      "candidate_count": 11,
+      "grade_agreement": 10,
+      "grade_disagreement": 1,
+      "conflicts": 0,
+      "pairs": {
+        "1/1": 8,
+        "2/1": 1,
+        "2/2": 2
+      },
+      "disagreement_pool_ids": [
+        "q-v1-004-pool-003"
+      ]
+    },
+    "q-v1-005": {
+      "candidate_count": 11,
+      "grade_agreement": 7,
+      "grade_disagreement": 4,
+      "conflicts": 0,
+      "pairs": {
+        "0/1": 1,
+        "0/2": 1,
+        "1/1": 6,
+        "1/2": 1,
+        "2/1": 1,
+        "2/2": 1
+      },
+      "disagreement_pool_ids": [
+        "q-v1-005-pool-002",
+        "q-v1-005-pool-007",
+        "q-v1-005-pool-010",
+        "q-v1-005-pool-011"
+      ]
+    },
+    "q-v1-006": {
+      "candidate_count": 16,
+      "grade_agreement": 7,
+      "grade_disagreement": 9,
+      "conflicts": 0,
+      "pairs": {
+        "0/1": 5,
+        "0/2": 1,
+        "1/1": 5,
+        "1/2": 2,
+        "2/1": 1,
+        "2/2": 2
+      },
+      "disagreement_pool_ids": [
+        "q-v1-006-pool-007",
+        "q-v1-006-pool-008",
+        "q-v1-006-pool-009",
+        "q-v1-006-pool-010",
+        "q-v1-006-pool-011",
+        "q-v1-006-pool-014",
+        "q-v1-006-pool-015",
+        "q-v1-006-pool-016",
+        "q-v1-006-pool-017"
+      ]
+    },
+    "q-v1-007": {
+      "candidate_count": 16,
+      "grade_agreement": 11,
+      "grade_disagreement": 5,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 8,
+        "0/1": 5,
+        "1/1": 3
+      },
+      "disagreement_pool_ids": [
+        "q-v1-007-pool-002",
+        "q-v1-007-pool-006",
+        "q-v1-007-pool-008",
+        "q-v1-007-pool-012",
+        "q-v1-007-pool-016"
+      ]
+    },
+    "q-v1-008": {
+      "candidate_count": 17,
+      "grade_agreement": 12,
+      "grade_disagreement": 5,
+      "conflicts": 3,
+      "pairs": {
+        "0/0": 3,
+        "1/0": 3,
+        "1/1": 8,
+        "2/1": 2,
+        "2/2": 1
+      },
+      "disagreement_pool_ids": [
+        "q-v1-008-pool-002",
+        "q-v1-008-pool-003",
+        "q-v1-008-pool-005",
+        "q-v1-008-pool-012",
+        "q-v1-008-pool-016"
+      ]
+    },
+    "q-v1-009": {
+      "candidate_count": 15,
+      "grade_agreement": 9,
+      "grade_disagreement": 6,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 3,
+        "0/1": 4,
+        "1/1": 5,
+        "1/2": 1,
+        "2/1": 1,
+        "2/2": 1
+      },
+      "disagreement_pool_ids": [
+        "q-v1-009-pool-002",
+        "q-v1-009-pool-003",
+        "q-v1-009-pool-009",
+        "q-v1-009-pool-010",
+        "q-v1-009-pool-011",
+        "q-v1-009-pool-015"
+      ]
+    },
+    "q-v1-010": {
+      "candidate_count": 18,
+      "grade_agreement": 2,
+      "grade_disagreement": 16,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 2,
+        "0/1": 16
+      },
+      "disagreement_pool_ids": [
+        "q-v1-010-pool-001",
+        "q-v1-010-pool-002",
+        "q-v1-010-pool-003",
+        "q-v1-010-pool-004",
+        "q-v1-010-pool-005",
+        "q-v1-010-pool-006",
+        "q-v1-010-pool-007",
+        "q-v1-010-pool-008",
+        "q-v1-010-pool-009",
+        "q-v1-010-pool-010",
+        "q-v1-010-pool-011",
+        "q-v1-010-pool-012",
+        "q-v1-010-pool-013",
+        "q-v1-010-pool-014",
+        "q-v1-010-pool-015",
+        "q-v1-010-pool-016"
+      ]
+    },
+    "q-v1-011": {
+      "candidate_count": 15,
+      "grade_agreement": 12,
+      "grade_disagreement": 3,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 2,
+        "0/1": 3,
+        "1/1": 8,
+        "2/2": 2
+      },
+      "disagreement_pool_ids": [
+        "q-v1-011-pool-007",
+        "q-v1-011-pool-012",
+        "q-v1-011-pool-013"
+      ]
+    },
+    "q-v1-012": {
+      "candidate_count": 14,
+      "grade_agreement": 11,
+      "grade_disagreement": 3,
+      "conflicts": 0,
+      "pairs": {
+        "0/1": 2,
+        "0/2": 1,
+        "1/1": 8,
+        "2/2": 3
+      },
+      "disagreement_pool_ids": [
+        "q-v1-012-pool-008",
+        "q-v1-012-pool-010",
+        "q-v1-012-pool-014"
+      ]
+    },
+    "q-v1-013": {
+      "candidate_count": 12,
+      "grade_agreement": 5,
+      "grade_disagreement": 7,
+      "conflicts": 0,
+      "pairs": {
+        "0/1": 1,
+        "1/0": 1,
+        "1/1": 1,
+        "1/2": 2,
+        "2/0": 1,
+        "2/1": 2,
+        "2/2": 4
+      },
+      "disagreement_pool_ids": [
+        "q-v1-013-pool-003",
+        "q-v1-013-pool-006",
+        "q-v1-013-pool-008",
+        "q-v1-013-pool-010",
+        "q-v1-013-pool-011",
+        "q-v1-013-pool-012",
+        "q-v1-013-pool-014"
+      ]
+    },
+    "q-v1-014": {
+      "candidate_count": 12,
+      "grade_agreement": 9,
+      "grade_disagreement": 3,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 2,
+        "0/1": 1,
+        "0/2": 1,
+        "1/0": 1,
+        "1/1": 7
+      },
+      "disagreement_pool_ids": [
+        "q-v1-014-pool-001",
+        "q-v1-014-pool-005",
+        "q-v1-014-pool-008"
+      ]
+    },
+    "q-v1-015": {
+      "candidate_count": 11,
+      "grade_agreement": 10,
+      "grade_disagreement": 1,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 5,
+        "0/1": 1,
+        "1/1": 2,
+        "2/2": 3
+      },
+      "disagreement_pool_ids": [
+        "q-v1-015-pool-009"
+      ]
+    },
+    "q-v1-016": {
+      "candidate_count": 15,
+      "grade_agreement": 9,
+      "grade_disagreement": 6,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 3,
+        "0/1": 5,
+        "1/1": 1,
+        "2/1": 1,
+        "2/2": 5
+      },
+      "disagreement_pool_ids": [
+        "q-v1-016-pool-007",
+        "q-v1-016-pool-008",
+        "q-v1-016-pool-009",
+        "q-v1-016-pool-013",
+        "q-v1-016-pool-016",
+        "q-v1-016-pool-017"
+      ]
+    },
+    "q-v1-017": {
+      "candidate_count": 12,
+      "grade_agreement": 10,
+      "grade_disagreement": 2,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 1,
+        "1/0": 2,
+        "1/1": 6,
+        "2/2": 3
+      },
+      "disagreement_pool_ids": [
+        "q-v1-017-pool-010",
+        "q-v1-017-pool-012"
+      ]
+    },
+    "q-v1-018": {
+      "candidate_count": 15,
+      "grade_agreement": 12,
+      "grade_disagreement": 3,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 1,
+        "0/1": 3,
+        "1/1": 11
+      },
+      "disagreement_pool_ids": [
+        "q-v1-018-pool-001",
+        "q-v1-018-pool-006",
+        "q-v1-018-pool-010"
+      ]
+    },
+    "q-v1-019": {
+      "candidate_count": 17,
+      "grade_agreement": 5,
+      "grade_disagreement": 12,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 1,
+        "0/1": 12,
+        "1/1": 4
+      },
+      "disagreement_pool_ids": [
+        "q-v1-019-pool-003",
+        "q-v1-019-pool-005",
+        "q-v1-019-pool-006",
+        "q-v1-019-pool-007",
+        "q-v1-019-pool-008",
+        "q-v1-019-pool-009",
+        "q-v1-019-pool-010",
+        "q-v1-019-pool-012",
+        "q-v1-019-pool-013",
+        "q-v1-019-pool-015",
+        "q-v1-019-pool-016",
+        "q-v1-019-pool-017"
+      ]
+    },
+    "q-v1-020": {
+      "candidate_count": 16,
+      "grade_agreement": 12,
+      "grade_disagreement": 4,
+      "conflicts": 3,
+      "pairs": {
+        "1/1": 9,
+        "1/2": 4,
+        "2/2": 3
+      },
+      "disagreement_pool_ids": [
+        "q-v1-020-pool-005",
+        "q-v1-020-pool-006",
+        "q-v1-020-pool-011",
+        "q-v1-020-pool-012"
+      ]
+    },
+    "q-v1-021": {
+      "candidate_count": 14,
+      "grade_agreement": 6,
+      "grade_disagreement": 8,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 1,
+        "1/0": 6,
+        "1/1": 1,
+        "2/1": 2,
+        "2/2": 4
+      },
+      "disagreement_pool_ids": [
+        "q-v1-021-pool-001",
+        "q-v1-021-pool-005",
+        "q-v1-021-pool-007",
+        "q-v1-021-pool-008",
+        "q-v1-021-pool-011",
+        "q-v1-021-pool-012",
+        "q-v1-021-pool-013",
+        "q-v1-021-pool-014"
+      ]
+    },
+    "q-v1-022": {
+      "candidate_count": 20,
+      "grade_agreement": 19,
+      "grade_disagreement": 1,
+      "conflicts": 0,
+      "pairs": {
+        "0/0": 7,
+        "1/0": 1,
+        "1/1": 12
+      },
+      "disagreement_pool_ids": [
+        "q-v1-022-pool-015"
+      ]
+    }
+  }
+}

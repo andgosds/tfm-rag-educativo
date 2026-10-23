@@ -1,0 +1,245 @@
+{
+  "generated_at": "2026-09-28T11:08:57+02:00",
+  "n_cells": 604,
+  "human_validated_cells": 158,
+  "criteria": [
+    "faithfulness",
+    "factual_correctness",
+    "behavior_ok",
+    "citations_ok"
+  ],
+  "by_generator_condition": {
+    "qwen3.5:4b|bm25": {
+      "n": 52,
+      "faithfulness": 1.538,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.608,
+      "factual_correctness_n": 51,
+      "behavior_ok": 1.615,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.904,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.308
+    },
+    "qwen3.5:4b|dense": {
+      "n": 52,
+      "faithfulness": 1.769,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.615,
+      "factual_correctness_n": 52,
+      "behavior_ok": 1.577,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.904,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.462
+    },
+    "qwen3.5:4b|rrf": {
+      "n": 52,
+      "faithfulness": 1.808,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.692,
+      "factual_correctness_n": 52,
+      "behavior_ok": 1.712,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.904,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.519
+    },
+    "qwen3.5:4b|rerank": {
+      "n": 52,
+      "faithfulness": 1.846,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.692,
+      "factual_correctness_n": 52,
+      "behavior_ok": 1.692,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.904,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.442
+    },
+    "gemma4:e4b|bm25": {
+      "n": 48,
+      "faithfulness": 1.792,
+      "faithfulness_n": 48,
+      "factual_correctness": 1.562,
+      "factual_correctness_n": 48,
+      "behavior_ok": 1.562,
+      "behavior_ok_n": 48,
+      "citations_ok": 0.938,
+      "citations_ok_n": 48,
+      "label_ok_rate": 0.75
+    },
+    "gemma4:e4b|dense": {
+      "n": 49,
+      "faithfulness": 1.857,
+      "faithfulness_n": 49,
+      "factual_correctness": 1.625,
+      "factual_correctness_n": 48,
+      "behavior_ok": 1.592,
+      "behavior_ok_n": 49,
+      "citations_ok": 0.959,
+      "citations_ok_n": 49,
+      "label_ok_rate": 0.735
+    },
+    "gemma4:e4b|rrf": {
+      "n": 44,
+      "faithfulness": 1.818,
+      "faithfulness_n": 44,
+      "factual_correctness": 1.628,
+      "factual_correctness_n": 43,
+      "behavior_ok": 1.614,
+      "behavior_ok_n": 44,
+      "citations_ok": 1,
+      "citations_ok_n": 44,
+      "label_ok_rate": 0.727
+    },
+    "gemma4:e4b|rerank": {
+      "n": 47,
+      "faithfulness": 1.809,
+      "faithfulness_n": 47,
+      "factual_correctness": 1.447,
+      "factual_correctness_n": 47,
+      "behavior_ok": 1.468,
+      "behavior_ok_n": 47,
+      "citations_ok": 0.915,
+      "citations_ok_n": 47,
+      "label_ok_rate": 0.766
+    },
+    "qwen3.5:9b|bm25": {
+      "n": 52,
+      "faithfulness": 1.904,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.635,
+      "factual_correctness_n": 52,
+      "behavior_ok": 1.673,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.981,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.808
+    },
+    "qwen3.5:9b|dense": {
+      "n": 52,
+      "faithfulness": 1.827,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.673,
+      "factual_correctness_n": 52,
+      "behavior_ok": 1.75,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.962,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.788
+    },
+    "qwen3.5:9b|rrf": {
+      "n": 52,
+      "faithfulness": 1.981,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.765,
+      "factual_correctness_n": 51,
+      "behavior_ok": 1.75,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.981,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.865
+    },
+    "qwen3.5:9b|rerank": {
+      "n": 52,
+      "faithfulness": 1.942,
+      "faithfulness_n": 52,
+      "factual_correctness": 1.769,
+      "factual_correctness_n": 52,
+      "behavior_ok": 1.788,
+      "behavior_ok_n": 52,
+      "citations_ok": 0.942,
+      "citations_ok_n": 52,
+      "label_ok_rate": 0.846
+    }
+  },
+  "by_generator": {
+    "qwen3.5:4b": {
+      "n": 208,
+      "faithfulness": 1.74,
+      "faithfulness_n": 208,
+      "factual_correctness": 1.652,
+      "factual_correctness_n": 207,
+      "behavior_ok": 1.649,
+      "behavior_ok_n": 208,
+      "citations_ok": 0.904,
+      "citations_ok_n": 208,
+      "label_ok_rate": 0.433
+    },
+    "gemma4:e4b": {
+      "n": 188,
+      "faithfulness": 1.819,
+      "faithfulness_n": 188,
+      "factual_correctness": 1.565,
+      "factual_correctness_n": 186,
+      "behavior_ok": 1.559,
+      "behavior_ok_n": 188,
+      "citations_ok": 0.952,
+      "citations_ok_n": 188,
+      "label_ok_rate": 0.745
+    },
+    "qwen3.5:9b": {
+      "n": 208,
+      "faithfulness": 1.913,
+      "faithfulness_n": 208,
+      "factual_correctness": 1.71,
+      "factual_correctness_n": 207,
+      "behavior_ok": 1.74,
+      "behavior_ok_n": 208,
+      "citations_ok": 0.966,
+      "citations_ok_n": 208,
+      "label_ok_rate": 0.827
+    }
+  },
+  "by_condition": {
+    "bm25": {
+      "n": 152,
+      "faithfulness": 1.743,
+      "faithfulness_n": 152,
+      "factual_correctness": 1.603,
+      "factual_correctness_n": 151,
+      "behavior_ok": 1.618,
+      "behavior_ok_n": 152,
+      "citations_ok": 0.941,
+      "citations_ok_n": 152,
+      "label_ok_rate": 0.618
+    },
+    "dense": {
+      "n": 153,
+      "faithfulness": 1.817,
+      "faithfulness_n": 153,
+      "factual_correctness": 1.638,
+      "factual_correctness_n": 152,
+      "behavior_ok": 1.641,
+      "behavior_ok_n": 153,
+      "citations_ok": 0.941,
+      "citations_ok_n": 153,
+      "label_ok_rate": 0.66
+    },
+    "rrf": {
+      "n": 148,
+      "faithfulness": 1.872,
+      "faithfulness_n": 148,
+      "factual_correctness": 1.699,
+      "factual_correctness_n": 146,
+      "behavior_ok": 1.696,
+      "behavior_ok_n": 148,
+      "citations_ok": 0.959,
+      "citations_ok_n": 148,
+      "label_ok_rate": 0.703
+    },
+    "rerank": {
+      "n": 151,
+      "faithfulness": 1.868,
+      "faithfulness_n": 151,
+      "factual_correctness": 1.642,
+      "factual_correctness_n": 151,
+      "behavior_ok": 1.656,
+      "behavior_ok_n": 151,
+      "citations_ok": 0.921,
+      "citations_ok_n": 151,
+      "label_ok_rate": 0.682
+    }
+  }
+}

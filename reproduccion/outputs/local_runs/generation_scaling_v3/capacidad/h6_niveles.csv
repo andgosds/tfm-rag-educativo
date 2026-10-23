@@ -1,0 +1,4 @@
+generator_model,capacity,n_rows,faithfulness,faithfulness_ic95,faithfulness_n_base,factual_correctness,factual_correctness_ic95,factual_correctness_n_base,behavior_ok,behavior_ok_ic95,behavior_ok_n_base,citations_ok,citations_ok_ic95,citations_ok_n_base
+gemma4:e4b,9,188,1.7966,"[1.6894, 1.888]",26,1.5386,"[1.3603, 1.6975]",26,1.5562,"[1.3475, 1.739]",26,0.9418,"[0.899, 0.9787]",26
+qwen3.5:4b,13,208,1.7404,"[1.6346, 1.8413]",26,1.6525,"[1.4856, 1.7837]",26,1.649,"[1.476, 1.7885]",26,0.9038,"[0.8413, 0.9567]",26
+qwen3.5:9b,14,208,1.9135,"[1.8558, 1.9663]",26,1.7026,"[1.4732, 1.8798]",26,1.7404,"[1.5144, 1.9135]",26,0.9663,"[0.9231, 0.9952]",26

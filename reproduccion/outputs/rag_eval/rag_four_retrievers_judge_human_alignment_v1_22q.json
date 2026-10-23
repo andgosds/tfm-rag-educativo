@@ -1,0 +1,2350 @@
+{
+  "audit_scope": {
+    "risk_queue_case_count": 61,
+    "unique_qid_count": 21,
+    "all_cases_adjudicated": true,
+    "selection": "risk_directed_nonrandom_subset"
+  },
+  "judges": {
+    "gemma3_4b": {
+      "judge_key": "gemma3_4b",
+      "judge_name": "Gemma 3 4B",
+      "risk_queue_case_count": 61,
+      "faithfulness": {
+        "human_applicable_n": 33,
+        "judge_available_on_applicable_n": 26,
+        "missing_on_applicable_n": 7,
+        "human_not_applicable_n": 28,
+        "judge_scored_not_applicable_n": 23,
+        "mae_on_applicable": 0.03365384615384615,
+        "applicable_cases": [
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-011",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-012",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-017",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.875
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-013",
+            "retrieval_condition": "dense",
+            "human_label": "partially_supported",
+            "human": 0.5,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "dense",
+            "human_label": "partially_supported",
+            "human": 0.5,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "dense",
+            "human_label": "unsupported",
+            "human": 0.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-002",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.75
+          }
+        ],
+        "not_applicable_cases": [
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.25
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          }
+        ]
+      },
+      "factual_correctness": {
+        "human_applicable_n": 33,
+        "judge_available_on_applicable_n": 33,
+        "missing_on_applicable_n": 0,
+        "human_not_applicable_n": 28,
+        "judge_scored_not_applicable_n": 0,
+        "mae_on_applicable": 0.15636363636363637,
+        "applicable_cases": [
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "bm25",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.67
+          },
+          {
+            "qid": "q-v1-011",
+            "retrieval_condition": "bm25",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-012",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.86
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "bm25",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-017",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.67
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.57
+          },
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "dense",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-013",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "dense",
+            "human_label": "incorrect",
+            "human": 0.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.91
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.57
+          },
+          {
+            "qid": "q-v1-002",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.89
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.75
+          }
+        ],
+        "not_applicable_cases": [
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          }
+        ]
+      },
+      "behavior": {
+        "human_applicable_n": 61,
+        "judge_available_on_applicable_n": 61,
+        "missing_on_applicable_n": 0,
+        "exact_agreement_n": 28,
+        "exact_agreement_rate": 0.45901639344262296,
+        "mae_on_applicable": 1.0491803278688525,
+        "disagreements": [
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-011",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "answer",
+            "human": 1.0,
+            "judge": 2.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "answer",
+            "human": 1.0,
+            "judge": 2.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "grounded_correction",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "dense",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "grounded_correction",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "grounded_correction",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf_rerank",
+            "expected_behavior": "abstain",
+            "human": 2.0,
+            "judge": 0.0
+          }
+        ],
+        "by_expected_behavior": {
+          "abstain": {
+            "human_applicable_n": 28,
+            "judge_available_on_applicable_n": 28,
+            "missing_on_applicable_n": 0,
+            "exact_agreement_n": 0,
+            "exact_agreement_rate": 0.0,
+            "mae_on_applicable": 2.0,
+            "disagreements": [
+              {
+                "qid": "q-v1-007",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-009",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-010",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-018",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-019",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-021",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-022",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-007",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-009",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-010",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-018",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-019",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-021",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-022",
+                "retrieval_condition": "dense",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-007",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-009",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-010",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-018",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-019",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-021",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-022",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-007",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-009",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-010",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-018",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-019",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-021",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-022",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "abstain",
+                "human": 2.0,
+                "judge": 0.0
+              }
+            ]
+          },
+          "answer": {
+            "human_applicable_n": 25,
+            "judge_available_on_applicable_n": 25,
+            "missing_on_applicable_n": 0,
+            "exact_agreement_n": 23,
+            "exact_agreement_rate": 0.92,
+            "mae_on_applicable": 0.08,
+            "disagreements": [
+              {
+                "qid": "q-v1-011",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "answer",
+                "human": 1.0,
+                "judge": 2.0
+              },
+              {
+                "qid": "q-v1-014",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "answer",
+                "human": 1.0,
+                "judge": 2.0
+              }
+            ]
+          },
+          "grounded_correction": {
+            "human_applicable_n": 8,
+            "judge_available_on_applicable_n": 8,
+            "missing_on_applicable_n": 0,
+            "exact_agreement_n": 5,
+            "exact_agreement_rate": 0.625,
+            "mae_on_applicable": 0.75,
+            "disagreements": [
+              {
+                "qid": "q-v1-020",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "grounded_correction",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-020",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "grounded_correction",
+                "human": 2.0,
+                "judge": 0.0
+              },
+              {
+                "qid": "q-v1-020",
+                "retrieval_condition": "rrf_rerank",
+                "expected_behavior": "grounded_correction",
+                "human": 2.0,
+                "judge": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "evaluation_error_case_count": 12
+    },
+    "glm53flash_low": {
+      "judge_key": "glm53flash_low",
+      "judge_name": "GLM 5.3 Flash (low)",
+      "risk_queue_case_count": 61,
+      "faithfulness": {
+        "human_applicable_n": 33,
+        "judge_available_on_applicable_n": 33,
+        "missing_on_applicable_n": 0,
+        "human_not_applicable_n": 28,
+        "judge_scored_not_applicable_n": 28,
+        "mae_on_applicable": 0.08513708513708514,
+        "applicable_cases": [
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.8571428571428571
+          },
+          {
+            "qid": "q-v1-011",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-012",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.8333333333333334
+          },
+          {
+            "qid": "q-v1-017",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "bm25",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.8333333333333334
+          },
+          {
+            "qid": "q-v1-013",
+            "retrieval_condition": "dense",
+            "human_label": "partially_supported",
+            "human": 0.5,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "dense",
+            "human_label": "partially_supported",
+            "human": 0.5,
+            "judge": 0.3333333333333333
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "dense",
+            "human_label": "unsupported",
+            "human": 0.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "dense",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.6
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-002",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.6
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 0.8333333333333334
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "supported",
+            "human": 1.0,
+            "judge": 1.0
+          }
+        ],
+        "not_applicable_cases": [
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": 0.0
+          }
+        ]
+      },
+      "factual_correctness": {
+        "human_applicable_n": 33,
+        "judge_available_on_applicable_n": 33,
+        "missing_on_applicable_n": 0,
+        "human_not_applicable_n": 28,
+        "judge_scored_not_applicable_n": 0,
+        "mae_on_applicable": 0.31606060606060604,
+        "applicable_cases": [
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "bm25",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 0.4
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-011",
+            "retrieval_condition": "bm25",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-012",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.67
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "bm25",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-017",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "bm25",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.67
+          },
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "dense",
+            "human_label": "partially_correct",
+            "human": 0.5,
+            "judge": 0.57
+          },
+          {
+            "qid": "q-v1-004",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-013",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.67
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.86
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "dense",
+            "human_label": "incorrect",
+            "human": 0.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "dense",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.75
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-002",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-005",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.0
+          },
+          {
+            "qid": "q-v1-006",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-008",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          },
+          {
+            "qid": "q-v1-014",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.67
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-016",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.5
+          },
+          {
+            "qid": "q-v1-020",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "correct",
+            "human": 1.0,
+            "judge": 0.8
+          }
+        ],
+        "not_applicable_cases": [
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "bm25",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "dense",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-007",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-009",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-010",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-018",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-019",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-021",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          },
+          {
+            "qid": "q-v1-022",
+            "retrieval_condition": "rrf_rerank",
+            "human_label": "not_applicable",
+            "human": null,
+            "judge": null
+          }
+        ]
+      },
+      "behavior": {
+        "human_applicable_n": 61,
+        "judge_available_on_applicable_n": 61,
+        "missing_on_applicable_n": 0,
+        "exact_agreement_n": 59,
+        "exact_agreement_rate": 0.9672131147540983,
+        "mae_on_applicable": 0.03278688524590164,
+        "disagreements": [
+          {
+            "qid": "q-v1-001",
+            "retrieval_condition": "bm25",
+            "expected_behavior": "answer",
+            "human": 2.0,
+            "judge": 1.0
+          },
+          {
+            "qid": "q-v1-015",
+            "retrieval_condition": "rrf",
+            "expected_behavior": "answer",
+            "human": 2.0,
+            "judge": 1.0
+          }
+        ],
+        "by_expected_behavior": {
+          "abstain": {
+            "human_applicable_n": 28,
+            "judge_available_on_applicable_n": 28,
+            "missing_on_applicable_n": 0,
+            "exact_agreement_n": 28,
+            "exact_agreement_rate": 1.0,
+            "mae_on_applicable": 0.0,
+            "disagreements": []
+          },
+          "answer": {
+            "human_applicable_n": 25,
+            "judge_available_on_applicable_n": 25,
+            "missing_on_applicable_n": 0,
+            "exact_agreement_n": 23,
+            "exact_agreement_rate": 0.92,
+            "mae_on_applicable": 0.08,
+            "disagreements": [
+              {
+                "qid": "q-v1-001",
+                "retrieval_condition": "bm25",
+                "expected_behavior": "answer",
+                "human": 2.0,
+                "judge": 1.0
+              },
+              {
+                "qid": "q-v1-015",
+                "retrieval_condition": "rrf",
+                "expected_behavior": "answer",
+                "human": 2.0,
+                "judge": 1.0
+              }
+            ]
+          },
+          "grounded_correction": {
+            "human_applicable_n": 8,
+            "judge_available_on_applicable_n": 8,
+            "missing_on_applicable_n": 0,
+            "exact_agreement_n": 8,
+            "exact_agreement_rate": 1.0,
+            "mae_on_applicable": 0.0,
+            "disagreements": []
+          }
+        }
+      },
+      "evaluation_error_case_count": 0
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "dataset_version": "golden_set_pilot_v1_1",
+  "created_at": "2026-09-18T18:24:49.384532+00:00",
+  "previous_dataset": "v1/data/golden/golden_set_pilot_v1.jsonl",
+  "previous_sha256": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+  "qid": "q-v1-013",
+  "old_question": "Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the Student t case?",
+  "new_question": "Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the latter case?",
+  "reason": "Retirar la pista Student t de la pregunta sin cambiar la necesidad informativa.",
+  "wording_change_authorized_by": "andres",
+  "reference_and_evidence": "Retenidas; compatibles según revisión del asistente. No se han vuelto a adjudicar.",
+  "review_status": "Se vacían reviews y human_adjudication y se marca draft solo en q-v1-013; sus revisiones históricas permanecen en v1.",
+  "qrels_reuse_confirmed": false,
+  "historical_results": "Corresponden a v1; no atribuirlos a esta formulación.",
+  "variant_pair": "La pareja q-v1-013 del borrador de explicitud pertenece a v1 y no se traslada automáticamente a v1.1.",
+  "active_experiment_configs_changed": false
+}

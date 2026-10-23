@@ -1,0 +1,16 @@
+{
+  "rubric_version": "concept_explicitness_pairs_v1",
+  "status": "draft_pending_human_review",
+  "n_base_questions": 13,
+  "screening_counts": {
+    "candidate": 7,
+    "needs_revision": 6
+  },
+  "input_sha256": {
+    "v1/data/golden/golden_set_pilot_v1.jsonl": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+    "v1/data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a"
+  },
+  "originals_modified": false,
+  "experiments_executed": false
+}

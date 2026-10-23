@@ -1,0 +1,15 @@
+[project]
+name = "tfm-dense-retrieval"
+version = "0.1.0"
+description = "Isolated dense retrieval environment for the TFM"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy>=2.0,<3",
+    "sentence-transformers>=5,<6",
+    "torch>=2.6,<3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+]

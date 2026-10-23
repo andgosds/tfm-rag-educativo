@@ -1,0 +1,9 @@
+run_id,query_scope,metric,k,value,query_count
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,precision,5,0.6153846153846154,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,recall,5,0.6634615384615384,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,mrr,5,0.7435897435897435,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,ndcg,5,0.7154889262511606,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,precision,10,0.3923076923076923,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,recall,10,0.8301282051282051,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,mrr,10,0.7435897435897435,13
+dense_e5_base_v2_pooled_v1_22q,answerable_with_grade2_qrels,ndcg,10,0.7490920981639437,13

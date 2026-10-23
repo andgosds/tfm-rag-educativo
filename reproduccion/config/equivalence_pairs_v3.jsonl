@@ -1,0 +1,8 @@
+{"base_qid": "q-v3-001", "manipulated_terms": ["Central Limit Theorem"], "note": "Se sustituye el nombre del teorema por una descripción de lo que hace con las medias y las sumas muestrales."}
+{"base_qid": "q-v3-002", "manipulated_terms": ["normally distributed"], "note": "Se sustituye el nombre de la distribución por su descripción geométrica; se conserva 'standard deviation', que es la magnitud sobre la que se pregunta."}
+{"base_qid": "q-v3-003", "manipulated_terms": ["sample size"], "note": "Se retira el nombre del tamaño muestral y se describe por lo que hay que recoger; se conserva 'error bound' por ser la magnitud dada, no el objeto de la pregunta."}
+{"base_qid": "q-v3-004", "manipulated_terms": ["regression"], "note": "Se retira el término 'regression'; se conserva 'slope' e 'intercept'/'crossing point' por ser las magnitudes pedidas."}
+{"base_qid": "q-v3-005", "manipulated_terms": ["confidence level"], "note": "Se sustituye el nombre del nivel de confianza por la descripción del porcentaje que lo representa."}
+{"base_qid": "q-v3-006", "manipulated_terms": ["logistic regression"], "note": "Se retira el nombre del modelo; la descripción conserva 'regression' solo en la versión implícita como parte de la descripción genérica, por lo que el término declarado es la locución completa."}
+{"base_qid": "q-v3-007", "manipulated_terms": ["power"], "note": "Se sustituye 'power' por la descripción de la capacidad de detectar un efecto real."}
+{"base_qid": "q-v3-008", "manipulated_terms": ["sampling distribution"], "note": "Se retira el nombre de la distribución de muestreo; se conserva 'probability distribution' por ser el objeto del que se parte."}

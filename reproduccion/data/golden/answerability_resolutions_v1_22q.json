@@ -1,0 +1,44 @@
+{
+  "protocol_id": "false_premise_answerability_resolution_v1",
+  "adjudication_date": "2026-08-24",
+  "adjudicated_by": "andres",
+  "policy": {
+    "answerability": "Unchanged: the question remains unanswerable as phrased because its premise is false.",
+    "retrieval": "Grade-2 chunks that directly refute the premise are retained as contradiction evidence.",
+    "expected_behavior": "The system should reject the false premise and provide a grounded correction rather than fabricate the requested explanation or abstain without explanation."
+  },
+  "resolutions": [
+    {
+      "resolution_id": "answerability-q-v1-008-v1",
+      "qid": "q-v1-008",
+      "decision": "keep_unanswerable_with_contradiction_evidence",
+      "answerability": "unanswerable",
+      "unanswerable_category": "false_premise",
+      "expected_response_behavior": "grounded_correction",
+      "evidence_role": "contradiction",
+      "corrective_reference_answer": "The standard error of the sample mean does not increase as the sample size becomes larger. It equals the population standard deviation divided by the square root of the sample size, so it decreases as the sample size increases.",
+      "evidence_chunk_ids": [
+        "openstax_intro_stats_2e:7.1:chunk-001",
+        "openstax_intro_stats_2e:7.1:chunk-002",
+        "openstax_intro_stats_2e:7.3:chunk-002"
+      ],
+      "decision_rationale": "The question cannot be answered under its stated premise, but the corpus contains direct evidence that supports a grounded correction."
+    },
+    {
+      "resolution_id": "answerability-q-v1-020-v1",
+      "qid": "q-v1-020",
+      "decision": "keep_unanswerable_with_contradiction_evidence",
+      "answerability": "unanswerable",
+      "unanswerable_category": "false_premise",
+      "expected_response_behavior": "grounded_correction",
+      "evidence_role": "contradiction",
+      "corrective_reference_answer": "Increasing the confidence level does not make the confidence interval narrower when all other inputs are fixed. It increases the critical value and the margin of error, which makes the confidence interval wider.",
+      "evidence_chunk_ids": [
+        "openstax_intro_stats_2e:8.1:chunk-010",
+        "openstax_intro_stats_2e:8.1:chunk-011",
+        "openstax_principles_ds:4.1:chunk-010"
+      ],
+      "decision_rationale": "The question cannot be answered under its stated premise, but the corpus contains direct evidence that supports a grounded correction."
+    }
+  ]
+}

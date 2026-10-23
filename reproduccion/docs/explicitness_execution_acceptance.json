@@ -1,0 +1,19 @@
+{
+  "status": "retrieval_complete_review_pending",
+  "canonical_run": "v2/outputs/explicitness_v2",
+  "real_reproduction_run": "v2/outputs/explicitness_v2_reproduction",
+  "full_suite_command": "PYTHONDONTWRITEBYTECODE=1 uv run --no-sync python -m pytest -p no:cacheprovider v1/tests v2/tests -q",
+  "tests_passed": 116,
+  "tests_failed": 0,
+  "exact_rankings_and_scores_reproduced_excluding_timing": true,
+  "pools_byte_identical": true,
+  "embeddings_byte_identical": true,
+  "frozen_input_and_implementation_hashes_match": true,
+  "exact_run_schema_and_qid_rank_checks": true,
+  "rrf_reranker_candidate_sets_equal": true,
+  "protected_v1_files": 277,
+  "changed_protected_v1_files": [],
+  "historical_older_queue_adjudications_missing_from_final_queue": [],
+  "initial_environment_issue": "Full suite in dense environment: 108 passed, 7 extraction tests failed because PyMuPDF is absent; rerun in existing root project environment succeeded, no dependency changes.",
+  "not_executed": ["generation", "paid_API_calls", "new_qrels", "human_adjudication", "automatic_judges", "final_quality_metrics", "repeated_latency_benchmark", "commits"]
+}

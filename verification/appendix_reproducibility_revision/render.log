@@ -1,0 +1,24 @@
+
+[1mpandoc --output tfm_v2_4_apendices_tecnicos.typ[22m
+  to: typst
+  standalone: true
+  shift-heading-level-by: -1
+  default-image-extension: svg
+  wrap: none
+  citeproc: false
+  toc: true
+  toc-depth: 2
+  variables: {}
+  
+[1mmetadata[22m
+  title: Comparación de técnicas de recuperación de información en un sistema RAG educativo
+  subtitle: Apéndices técnicos C, D y E
+  author: Andrés González Sánchez
+  date: '2026-10-14'
+  lang: es
+  papersize: a4
+  
+[typst]: Compiling tfm_v2_4_apendices_tecnicos.typ to tfm_v2_4_apendices_tecnicos.pdf...DONE
+
+Output created: tfm_apendices_tecnicos_AndresGonzalezSanchez.pdf
+

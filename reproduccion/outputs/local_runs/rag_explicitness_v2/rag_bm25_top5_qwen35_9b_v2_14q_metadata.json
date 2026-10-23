@@ -1,0 +1,15 @@
+{
+  "experiment_id": "rag_explicitness_v2_bm25_top5",
+  "retrieval_condition": "bm25",
+  "row_count": 14,
+  "rows_written": 14,
+  "top_k": 5,
+  "generator_model": "qwen3.5:9b",
+  "prompt_version": "rag_answer_prompt_v1",
+  "input_sha256": {
+    "retrieval_run": "a3543a861195217a88f7304935bb7910f02fa6a9bd53cf84f12bd8209b50dfc7",
+    "chunks": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "golden": "2377073dd14d1312d6a307f204f1c75aca41cbae89240dc835aecfd6550f29cd",
+    "resolutions": "cd70b77fa7a410aca84c5737ef4cc0588217df736039c9244bc3067658a5d190"
+  }
+}

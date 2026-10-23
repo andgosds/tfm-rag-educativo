@@ -1,0 +1,31 @@
+{
+  "experiment_id": "rag_four_retrievers_top5_v1_22q",
+  "judge_provider": "ollama",
+  "judge_model": "gemma3:4b",
+  "judge_seed": 20260902,
+  "ragas_max_tokens": 1024,
+  "behavior_max_tokens": 250,
+  "judge_reasoning_effort": null,
+  "ragas_version": "0.4.3",
+  "row_count": 22,
+  "conditions": {
+    "dense": {
+      "row_count": 22,
+      "faithfulness_n": 20,
+      "faithfulness_mean": 0.6666666666666667,
+      "factual_correctness_n": 15,
+      "factual_correctness_mean": 0.8246666666666668,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.8181818181818182,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 0.9545454545454546,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 0.9545454545454546,
+      "behavior_judge_score_n": 22,
+      "behavior_judge_score_mean": 1.2727272727272727,
+      "evaluation_latency_ms_total": 829866.5427900014,
+      "evaluation_latency_ms_mean": 37721.206490454606
+    }
+  },
+  "evaluation_error_count": 2
+}

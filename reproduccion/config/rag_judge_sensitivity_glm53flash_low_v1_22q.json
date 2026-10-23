@@ -1,0 +1,55 @@
+{
+  "experiment_id": "rag_judge_sensitivity_gemma3_4b_vs_glm53flash_low_v1_22q",
+  "execution_date": "2026-09-03",
+  "case_alignment": {
+    "key": ["retrieval_condition", "qid"],
+    "aligned_case_count": 44,
+    "conditions": ["rrf", "rrf_rerank"],
+    "questions_per_condition": 22
+  },
+  "frozen_components": {
+    "generated_responses": true,
+    "retrieved_contexts_and_order": true,
+    "references": true,
+    "ragas_version": "0.4.3",
+    "metrics": ["faithfulness", "factual_correctness", "behavior_judge_score"],
+    "factual_correctness_applicable_cases_per_condition": 15
+  },
+  "baseline_judge": {
+    "provider": "ollama",
+    "model": "gemma3:4b",
+    "temperature": 0,
+    "seed": 20260902,
+    "behavior_prompt_version": "rag_behavior_rubric_v1",
+    "scores": "outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_gemma3_4b_seed20260902_scores_v1_22q.jsonl",
+    "scores_sha256": "4bb23cc9769a151cb29b10d2cd07c22d70056f1a87435cfb32162e52dc874824"
+  },
+  "alternative_judge": {
+    "provider": "opencode-go",
+    "base_url": "https://opencode.ai/zen/go/v1",
+    "model": "glm-5.3-flash",
+    "temperature": 0,
+    "seed": 20260902,
+    "reasoning_effort": "low",
+    "max_tokens": 4096,
+    "behavior_prompt_version": "rag_behavior_rubric_v2",
+    "scores": "outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_glm53flash_low_rubricv2_max4096_retry3_seed20260902_scores_v1_22q.jsonl",
+    "scores_sha256": "52c67aec3b0b6152b027dabeae223be47c7ece88fa5baa24f10196413aee2ae9"
+  },
+  "outputs": {
+    "glm_paired_analysis": "outputs/rag_eval/rag_rrf_vs_rerank_top5_qwen35_9b_glm53flash_low_rubricv2_max4096_retry3_seed20260902_analysis_v1_22q.json",
+    "judge_comparison": "outputs/rag_eval/rag_judge_sensitivity_gemma3_4b_vs_glm53flash_low_v1_22q.json",
+    "judge_comparison_sha256": "5918dcb1800c5ceae4dd21e1052e9622ef0ef58a2be15a961896bd7e8ebb2ec8",
+    "human_risk_queue": "outputs/rag_eval/rag_judge_sensitivity_gemma3_4b_vs_glm53flash_low_human_risk_queue_v1_22q.jsonl",
+    "human_risk_queue_sha256": "aae633cf0132b79668e5c37692d6b70d41fc932cc576e2f821d55384120b47b7",
+    "human_risk_queue_summary": "outputs/rag_eval/rag_judge_sensitivity_gemma3_4b_vs_glm53flash_low_human_risk_queue_summary_v1_22q.json"
+  },
+  "interpretation_constraints": [
+    "Compare judge means only on common valid cases when availability differs.",
+    "Treat Faithfulness on abstentions as diagnostic rather than substantive evidence of response quality.",
+    "Treat behavior scores as auxiliary because Gemma systematically assigns score 0 to correct abstentions.",
+    "Do not infer API cost from behavior-token counts because RAGAS token usage is unavailable.",
+    "Do not treat sequential local and concurrent remote evaluation latency as a controlled benchmark.",
+    "Human adjudication of the 28-pair risk queue is complete; consolidated behavior gives precedence to those decisions."
+  ]
+}

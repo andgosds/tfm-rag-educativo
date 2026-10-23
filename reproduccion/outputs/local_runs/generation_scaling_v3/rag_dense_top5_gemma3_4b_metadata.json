@@ -1,0 +1,17 @@
+{
+  "experiment_id": "gen_v3_dense_gemma3_4b",
+  "retrieval_condition": "dense",
+  "row_count": 52,
+  "rows_written": 40,
+  "accepted_count": 40,
+  "failed_count": 12,
+  "top_k": 5,
+  "generator_model": "gemma3:4b",
+  "prompt_version": "rag_answer_prompt_v1",
+  "input_sha256": {
+    "retrieval_run": "8146050a86e13299d1d317fadb9d9ca71678ac1810d60029b55f95df2c8dc0ba",
+    "chunks": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "golden": "866b75af5de3258c9affc53b1188313d79b3c24fc0a19d1a804c440cd40d49e0",
+    "resolutions": "cd70b77fa7a410aca84c5737ef4cc0588217df736039c9244bc3067658a5d190"
+  }
+}

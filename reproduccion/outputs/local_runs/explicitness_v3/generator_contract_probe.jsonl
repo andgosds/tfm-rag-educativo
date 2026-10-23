@@ -1,0 +1,9 @@
+{"model": "qwen3.5:2b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true}
+{"model": "qwen3.5:2b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true}
+{"model": "qwen3.5:2b", "caso": "no_respondible", "contrato": false, "esperado": "abstain", "salida": ""}
+{"model": "qwen3.5:4b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true}
+{"model": "qwen3.5:4b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true}
+{"model": "qwen3.5:4b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true}
+{"model": "qwen3.5:9b", "caso": "ordinaria", "contrato": true, "conducta": "answer", "esperado": "answer", "coincide": true}
+{"model": "qwen3.5:9b", "caso": "premisa_falsa", "contrato": true, "conducta": "grounded_correction", "esperado": "grounded_correction", "coincide": true}
+{"model": "qwen3.5:9b", "caso": "no_respondible", "contrato": true, "conducta": "abstain", "esperado": "abstain", "coincide": true}

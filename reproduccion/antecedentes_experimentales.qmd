@@ -1,0 +1,944 @@
+---
+title: "Antecedentes experimentales del TFM"
+subtitle: "Material complementario: desarrollo metodológico y resultados previos"
+author: "Andrés González Sánchez"
+date: "2026-09-30"
+lang: es
+bibliography: bibliografia/tfm_bibliografia_semilla.bib
+csl: bibliografia/apa.csl
+citeproc: true
+format:
+  typst:
+    toc: true
+    toc-depth: 3
+    papersize: a4
+---
+
+# Alcance del material complementario
+
+Este documento conserva los resultados previos y sus instrumentos: la evaluación de 22 preguntas con 88 respuestas y la exploración de siete parejas, con 55 respuestas válidas y un fallo. Su función es documentar el desarrollo metodológico y permitir auditar la evidencia anterior. No sustituye la comparación final de 26 parejas y tres generadores de la memoria principal, ni se suman sus muestras o puntuaciones a ella. Las referencias numéricas a secciones de la memoria anterior se conservan como contexto histórico; las tablas y figuras citadas mediante anclas pertenecen a este suplemento.
+
+El benchmark controlado de recuperación se mantiene como evidencia operativa complementaria. Sus cifras no son mediciones de la campaña final. La raíz operativa sigue siendo esta carpeta; los datos y juicios originales no se modifican.
+
+```{r}
+#| include: false
+library(dplyr)
+library(ggplot2)
+library(jsonlite)
+```
+
+# 5. Golden set y anotación
+
+## 5.1. Diseño y selección de preguntas
+
+El golden set se diseñó desde el corpus. Las preguntas respondibles se anclaron a contenido de los 288 fragmentos; las no respondibles se construyeron para comprobar límites, insuficiencia de evidencia y premisas falsas. La respondibilidad depende del corpus, no solo del tema. La construcción siguió cinco etapas: propuesta en inglés, clasificación semántica y conductual, anclaje de evidencia con citas literales, respuesta de referencia y validación. El piloto reunió diez preguntas y un segundo lote añadió doce. La ampliación v3 incorporó otras ocho hasta completar el inventario de treinta preguntas base.
+
+El tipo semántico distingue cuatro categorías: **factual**, que pide un dato o una definición concretos; **explicativa**, que pide el porqué o el mecanismo; **comparativa**, que contrapone dos conceptos, magnitudes o procedimientos; y **procedimental**, que pide los pasos de un método. La clasificación semántica se anotó de forma independiente de la respondibilidad, porque el tipo no determina si el corpus contiene la respuesta: una pregunta factual también puede carecer de ella. Esta separación permite comparar tipos sin confundirlos con la conducta que exige cada caso, y evita que la ambigüedad o la dificultad conceptual se traten como si fueran explicitud.
+
+En el piloto de 22 preguntas, trece son respondibles y nueve no pueden contestarse tal como están planteadas: dos exigen corregir premisas falsas y siete requieren abstención. Cuatro de las respondibles utilizan conjuntos canónicos multichunk. El inventario ampliado reúne 17 tareas de respuesta ordinaria, cuatro de corrección y nueve de abstención; 26 preguntas disponen de parejas de formulación ejecutadas. Inventario y subconjunto emparejado no tienen el mismo denominador.
+
+El segundo lote del piloto incorporó siete preguntas respondibles y cinco no respondibles. En la revisión humana inicial se aceptaron siete propuestas y se revisaron cinco. Después, dos jueces automáticos confirmaron la respondibilidad y la revisión manual resolvió dos discrepancias de gradación antes de adjudicar los doce registros. La ampliación posterior a treinta preguntas no alcanza el crecimiento inicialmente previsto a 100–200; el tamaño sigue siendo una limitación.
+
+### 5.1.1. Inventario del conjunto
+
+Los inventarios siguientes recogen la totalidad del conjunto, pregunta a pregunta, con el tipo semántico, la categoría de respondibilidad, la conducta que exige y si dispone de pareja de formulación. La unidad sigue siendo la pregunta base: cada ficha reúne la información de una pregunta, sin contar sus reformulaciones como unidades independientes.
+
+
+**q-v1-001** — How does increasing the sample size affect the sampling distribution of the sample mean?
+
+tipo: explicativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-002** — How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?
+
+tipo: comparativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-003** — What sequence of steps should be followed to conduct a hypothesis test?
+
+tipo: procedimental; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-004** — Why is the median a suitable measure of center when a dataset contains extreme outliers?
+
+tipo: explicativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-005** — What two aspects of the relationship between an independent and a dependent variable are summarized by the correlation coefficient?
+
+tipo: factual; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-006** — If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?
+
+tipo: comparativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-007** — According to the selected sources, what is the Pearson correlation between weekly study time and final exam score?
+
+tipo: factual; respondibilidad: falta de evidencia; conducta: abstención; par: sí.
+
+**q-v1-008** — Why does the standard error of the sample mean increase as the sample size becomes larger?
+
+tipo: explicativa; respondibilidad: premisa falsa; conducta: corrección con base; par: sí.
+
+**q-v1-009** — How do Pearson correlation and Spearman rank correlation differ in their assumptions and sensitivity to outliers?
+
+tipo: comparativa; respondibilidad: evidencia insuficiente; conducta: abstención; par: —.
+
+**q-v1-010** — How should a Bayesian credible interval for a population mean be computed using a conjugate prior?
+
+tipo: procedimental; respondibilidad: fuera de alcance; conducta: abstención; par: —.
+
+**q-v1-011** — For a standardized normal variable, what values define its center and spread, and how should the sign and magnitude of its standardized score be interpreted?
+
+tipo: factual; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-012** — With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?
+
+tipo: explicativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-013** — Which distribution should be used to construct a confidence interval for a population mean when the population standard deviation is known versus when it is estimated by the sample standard deviation, and how do degrees of freedom enter the latter case?
+
+tipo: comparativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-014** — What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?
+
+tipo: procedimental; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-015** — How do the ordinary mean, a trimmed mean, and the median respond differently to extreme observations?
+
+tipo: comparativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-016** — How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?
+
+tipo: comparativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-017** — When is one-way ANOVA an appropriate choice, and how are its null and alternative hypotheses framed?
+
+tipo: procedimental; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v1-018** — What is the quartile-normalized z-score, and how does it combine the interquartile range with the standard deviation?
+
+tipo: factual; respondibilidad: entidad inexistente; conducta: abstención; par: —.
+
+**q-v1-019** — According to the selected sources, what is the Shapiro-Wilk p-value for the women's heights dataset?
+
+tipo: factual; respondibilidad: falta de evidencia; conducta: abstención; par: sí.
+
+**q-v1-020** — Why does increasing the confidence level make the confidence interval narrower when all other inputs are fixed?
+
+tipo: explicativa; respondibilidad: premisa falsa; conducta: corrección con base; par: sí.
+
+**q-v1-021** — How do one-way ANOVA and the Kruskal-Wallis test differ in their distributional assumptions and interpretation?
+
+tipo: comparativa; respondibilidad: evidencia insuficiente; conducta: abstención; par: —.
+
+**q-v1-022** — How should a chi-square test of independence be conducted for a contingency table?
+
+tipo: procedimental; respondibilidad: fuera de alcance; conducta: abstención; par: sí.
+
+
+Las ocho preguntas de la ampliación completan las treinta preguntas base; sus parejas de formulación se construyeron con la rúbrica de §5.5 y se ejecutaron en la campaña v3.
+
+
+**q-v3-001** — Is it true that the Central Limit Theorem can only be applied when the population from which the samples are drawn follows a normal distribution?
+
+tipo: factual; respondibilidad: premisa falsa; conducta: corrección con base; par: sí.
+
+**q-v3-002** — Is it true that about 95% of the values of a normally distributed variable lie within one standard deviation of the mean?
+
+tipo: factual; respondibilidad: premisa falsa; conducta: corrección con base; par: sí.
+
+**q-v3-003** — How is the required sample size determined when a study must estimate a population mean within a given error bound, and how does the calculation differ when it must estimate a population proportion?
+
+tipo: comparativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v3-004** — How is a straight-line regression model fitted to a scatterplot and used for prediction, and what do its slope and intercept represent?
+
+tipo: procedimental; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v3-005** — What does the confidence level of an interval estimate represent?
+
+tipo: factual; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+**q-v3-006** — How is a logistic regression model fitted to a binary outcome, and how are its coefficients interpreted?
+
+tipo: procedimental; respondibilidad: fuera de alcance; conducta: abstención; par: sí.
+
+**q-v3-007** — By how much does the power of a test increase when the sample size doubles at a fixed significance level?
+
+tipo: procedimental; respondibilidad: evidencia insuficiente; conducta: abstención; par: sí.
+
+**q-v3-008** — How do discrete and continuous probability distributions relate to the sampling distributions used in statistical inference?
+
+tipo: explicativa; respondibilidad: respondible; conducta: respuesta; par: sí.
+
+
+## 5.2. Respuestas y evidencias de referencia
+
+A cada pregunta respondible se le asignó una respuesta de referencia breve, junto con los fragmentos que aportan la evidencia necesaria. La redacción se basó en la evidencia anotada. La referencia no sustituye a los fragmentos: permite valorar la corrección, mientras que el contexto efectivamente recuperado permite valorar la fundamentación.
+
+Los identificadores estables y las citas literales permiten recorrer la relación entre cada pregunta y sus chunks relevantes. Dentro de ellos se señaló el conjunto canónico mínimo necesario para elaborar la respuesta. Separar este conjunto de los fragmentos redundantes ayuda a interpretar los errores: permite examinar si la recuperación falló, si el contexto era insuficiente o si el problema apareció en la generación final.
+
+## 5.3. Protocolo de anotación
+
+Para graduar la contribución de cada chunk se utilizó una **escala de relevancia 0/1/2**. Un grado 0 corresponde a un fragmento que no contribuye a responder; el grado 1 señala información relacionada, pero insuficiente; y el grado 2 identifica evidencia directamente útil, sola o junto con otros fragmentos. El registro principal conserva los juicios positivos de grados 1 y 2. Los de grado 0 permanecen documentados en la adjudicación del pool.
+
+El esquema del conjunto de evaluación reúne las condiciones que debe conservar cada registro: versiones del corpus y del chunking, idioma, tipo de pregunta, respondibilidad, referencia, evidencias, procedencia y revisión. Para los chunks con riesgo de fórmula, el protocolo exige verificar la expresión en la fuente y documentarlo antes de utilizarla como evidencia matemática. Los qrels juzgan, en cualquier caso, el texto extraído disponible para el sistema, no una fórmula reconstruida de forma implícita.
+
+## 5.4. Control de calidad y limitaciones
+
+El control de calidad se apoyó en la revisión de las preguntas, las comprobaciones de consistencia y la resolución explícita de las dudas. Un validador automático revisó el formato y la unicidad de los identificadores, comprobó que los chunks existieran y que las citas fueran literales, y contrastó la coherencia entre respuesta, evidencia y estado de revisión.
+
+Los estados **borrador**, **revisado** y **adjudicado** distinguen la anotación inicial, su revisión y la resolución final. Mediante prompts versionados, modelos lingüísticos actuaron como jueces auxiliares de respondibilidad, suficiencia y referencia. Se conservaron decisiones y justificaciones separadas. La validación de las preguntas del piloto correspondió al autor; la procedencia de los juicios de relevancia posteriores distingue decisiones humanas, asistidas y consensos automáticos. Adjudicado no significa, por sí solo, anotado por varios humanos independientes.
+
+Para revisar las doce preguntas de la ampliación se empleó una instrucción de evaluación común con dos jueces aislados. Hubo coincidencia en las doce etiquetas de respondibilidad y en sus cinco categorías de no respondibilidad. El desacuerdo se situó en dos gradaciones, que la revisión manual resolvió antes de la adjudicación final.
+
+La ampliación de los qrels se realizó mediante un pool formado por la unión de los top-10 de BM25 y dense, para evitar favorecer retrospectivamente a un recuperador. Se reunieron 340 candidatos únicos, de los cuales 19 ya estaban juzgados y 321 eran nuevos. La copia ciega oculta las puntuaciones y el recuperador de procedencia. La clasificación auxiliar se ejecutó con una instrucción común y los jueces GPT-5.6-sol, GLM-5.3 y Kimi k3. Los tres coincidieron en 120 candidatos, hubo mayoría en 308 y en 13 se asignaron grados 0/1/2 diferentes.
+
+La **adjudicación dirigida por riesgo, con decisiones humanas y asistidas**, comprende 109 candidatos: 23 decisiones directas del autor, 70 del asistente bajo un criterio definido y 16 discrepancias consultadas al autor. Incluye posibles grados 2, desacuerdos completos, conflictos de respondibilidad y una muestra determinista de consensos. La clasificación auxiliar no se incorpora automáticamente a los qrels; el apéndice F conserva la procedencia de la resolución.
+
+La gradación de relevancia se apoya en una **hoja ciega** que recoge, en cada unidad, una pregunta y un fragmento candidato, y pide asignar un grado 0/1/2 según el fragmento sirva para responder. La copia que recibe el juez no contiene ni las puntuaciones de los recuperadores ni el sistema que recuperó el candidato. Sin esa ceguera, el juicio quedaría influido por la posición del fragmento en el ranking, y los qrels medirían al final qué tan bien recupera cada estrategia aquello que ella misma considera relevante: el círculo que la comparación pretende evitar.
+
+La unidad de gradación es el par **pregunta base × fragmento**, no el par formulación × fragmento. Dado que R1 y R2 garantizan que las dos redacciones de una pareja piden lo mismo y esperan la misma conducta, el grado es único y se juzga una sola vez para las dos. La hoja muestra sin embargo las dos redacciones, de forma deliberada: si quien revisa no puede asignar un único grado que valga para ambas, el caso se registra como conflicto de equivalencia y no se promedia. Esa comprobación sostiene el propio colapso, que reduce las 630 unidades del pool a 462 juicios sin pérdida de cobertura.
+
+## 5.5. Pares de formulación explícita e implícita
+
+Para estudiar la sensibilidad del sistema a cómo se formula la pregunta, parte del conjunto se somete a dos versiones que conservan la misma necesidad informativa y difieren en el vocabulario empleado. La comparación no pretende medir dificultad conceptual ni ambigüedad: manipula una única dimensión, la explicitud del término técnico.
+
+La **versión explícita** emplea el término de la fuente, presente literal o morfológicamente en el fragmento que contiene la respuesta. La **versión implícita** retira ese término y formula la misma necesidad con lenguaje descriptivo o cotidiano. No basta con sustituirlo por un sinónimo técnico, porque eso restauraría el solape léxico que se pretende eliminar.
+
+La validez de cada pareja se comprueba mediante una rúbrica de tres criterios:
+
+| ID | Criterio | Qué comprueba |
+|---|---|---|
+| **R1** | Intención idéntica | Ambas versiones piden el mismo contenido; la implícita no resulta más vaga ni añade una exigencia nueva |
+| **R2** | Conducta esperada idéntica | Si una versión se responde, la otra también; si una exige corrección o abstención, la otra exige la misma |
+| **R3** | Término técnico retirado | El término que declara la pareja aparece en la versión explícita y no aparece en la implícita |
+
+: *Rúbrica de equivalencia de los pares de formulación explícita e implícita* {#tbl-rubrica-equivalencia}
+
+R1 y R2 se aplican por revisión manual, con una justificación breve por criterio, y un juez automático las repite de forma aislada sobre todas las parejas, sin ver la valoración humana. Las discrepancias se listan y se resuelven mediante adjudicación documentada. R3, en cambio, se determina por cómputo sobre el término técnico que cada pareja declara manipular: se exige que ese término esté presente en la versión explícita y ausente en la implícita, comprobado por coincidencia de lemas, de modo que un plural o una flexión cuentan como presencia. Declarar el término manipulado deja la comprobación abierta a auditoría.
+
+Esta medida se eligió en lugar de un cociente de solape léxico global por una razón concreta. Al sustituir un término técnico compacto por una descripción, la descripción reutiliza vocabulario general del fragmento —*sample data*, *population parameter*—, y el cociente puede subir aunque el término se haya retirado por completo. Un indicador así quedaría confundido por la longitud y el vocabulario de la paráfrasis, y llegaría a reprobar parejas que sí manipulan la explicitud. El solape de lemas se conserva como dato descriptivo en los artefactos, no como criterio de aceptación.
+
+Las parejas que suspenden cualquiera de los tres criterios se excluyen y se anota el motivo. No se reformulan para salvarlas, porque una pareja que altera más de una dimensión no permite atribuir el efecto observado. De forma análoga, se descartan las preguntas genuinamente ambiguas, que admitirían varias interpretaciones válidas y exigirían otro protocolo de generación y evaluación.
+
+La unidad de comparación es la **pregunta base**, no cada versión por separado: las reformulaciones de una misma pregunta se contabilizan por separado y no aumentan el número de preguntas independientes del conjunto.
+
+Esta rúbrica se fijó por escrito después de ejecutar la campaña exploratoria, y las siete parejas se sometieron después a una comprobación retrospectiva con el mismo instrumento. R3 resultó aprobado en las siete, con la verificación por cómputo de los términos declarados. R1 y R2 se valoraron de forma aislada y se sometieron después a ratificación humana, que confirmó las siete parejas. La única reserva surgió en q-v1-003, cuya versión implícita describe el procedimiento de forma algo más amplia que la explícita: habla de evaluar una afirmación sobre una población, cuando el término retirado designa un contraste de hipótesis concreto. La revisión resolvió la pareja como apta, puesto que la necesidad informativa se mantiene dentro del mismo contenido y ambas versiones admiten la misma respuesta de referencia. La secuencia —primero la campaña, después la formalización de la rúbrica— se declara como limitación en §9.4. La ampliación v3 sometió las diecinueve parejas nuevas a la misma rúbrica, ya fijada por escrito antes de su gradación, hasta completar las 26 parejas ejecutadas (apartado «Ampliación v3» de §8.5).
+
+# 6. Diseño experimental
+
+## 6.1. Arquitectura y variables
+
+El estudio avanza en tres campañas que comparten corpus y recuperadores, pero no todos sus instrumentos de evaluación. La @tbl-campanas delimita sus muestras. Los resultados del piloto se conservan como resultados históricos; la ampliación no los convierte en estimaciones sobre treinta preguntas.
+
+| Campaña | Preguntas y formulaciones | Generación válida | Función |
+|---|---|---|---|
+| Piloto comparativo | 22 preguntas, redacción original | 88 respuestas con Qwen 3.5 9B | Comparación de cuatro estrategias y benchmark de latencia |
+| Explicitud exploratoria v2 | 7 parejas, 14 formulaciones | 55 respuestas; 1 fallo | Origen de las hipótesis sobre reformulación |
+| Ampliación v3 | Inventario de 30 bases; 26 parejas, 52 formulaciones ejecutadas | 604 respuestas de 624 celdas previstas, tres generadores | Contrastes de explicitud y comparación entre generadores |
+
+: *Alcance y función de las campañas* {#tbl-campanas}
+
+La hipótesis original de §2.3 corresponde al piloto. H1–H6 proceden del protocolo v3 y sus enmiendas, no de una renumeración de esa hipótesis. La @tbl-hipotesis identifica qué se compara. Los criterios añadidos durante esta revisión —soporte celular común, ajuste Holm y sensibilidad por conducta esperada— se declaran como reanálisis posteriores; no se atribuyen al pre-registro.
+
+| Hipótesis | Predicción registrada | Campaña e indicadores |
+|---|---|---|
+| Original | El híbrido con reranking mejora recuperación y groundedness frente a los métodos individuales | Piloto: IR y Faithfulness de RAGAS, junto con latencia |
+| H1 | La formulación implícita degrada recuperación en las cuatro estrategias | v3: Recall y nDCG en cortes 5 y 10 |
+| H2 | BM25 pierde cobertura; dense e híbridos conservan cobertura y pierden orden | v3: Recall y MRR en corte 10, diferencias por base |
+| H3 | Solo dense traslada el deterioro de recuperación a conducta | v3: efecto de formulación en conducta, dentro de cada generador |
+| H4 | RRF conserva el mejor compromiso de recuperación, respuesta y latencia | v3 y benchmark histórico, sin función de utilidad ni umbral operativo predefinidos |
+| H5 | La separación entre estrategias se mantiene o disminuye con la capacidad | v3: diferencias entre estrategias por generador e interacción |
+| H6 | Aumentan fundamentación y corrección; se conserva el signo del efecto de explicitud | v3: diferencias entre generadores y efecto de formulación, con IC |
+
+: *Correspondencia entre hipótesis, campañas e indicadores* {#tbl-hipotesis}
+
+El pipeline parte de la consulta y encadena la recuperación, la fusión o reordenación cuando corresponde, la selección del contexto y la generación de la respuesta. BM25 y dense elaboran rankings propios; RRF fusiona sus top-10 y el cross-encoder reordena los diez candidatos de RRF. Al final de este recorrido, cada condición entrega sus cinco primeros fragmentos al mismo generador.
+
+La **variable independiente** principal es la **estrategia de recuperación**, mientras que las métricas de recuperación, respuesta y eficiencia recogen sus resultados. Para interpretar las diferencias entre estrategias, se mantienen constantes **el corpus, la segmentación, las preguntas y el contrato generativo**. Este control facilita la comparación, pero no elimina todas las fuentes de variación: la generación se ejecutó de forma secuencial y sin repeticiones, lo que limita la atribución causal.
+
+## 6.2. Configuraciones comparadas
+
+Se compararon cuatro configuraciones: BM25, dense retrieval, recuperación híbrida e híbrida con reranking. La elección permite aislar el efecto de las señales léxicas y semánticas, así como el de la reordenación final de los resultados.
+
+Las configuraciones y sus parámetros se recogen en la @tbl-apendice-config-retrieval. Una vez observados los resultados, no se añadieron variantes ni se ajustaron los modelos.
+
+La primera configuración, **BM25**, indexa el texto de cada fragmento junto con los títulos del libro, capítulo y sección. Durante la tokenización, el contenido se transforma a minúsculas y se conservan las secuencias alfanuméricas, sin aplicar stemming ni eliminar stopwords. Antes de examinar los resultados se fijaron los parámetros en $k_1=1{,}5$ y $b=0{,}75$. Para la IDF se emplea la formulación no negativa $\log(1+(N-df+0{,}5)/(df+0{,}5))$.
+
+La segunda configuración, **recuperación densa**, utiliza el modelo E5-base-v2. Representa los textos mediante embeddings normalizados de 768 dimensiones y emplea los prefijos `passage:` para los chunks y `query:` para las preguntas. La búsqueda calcula el producto escalar de forma exhaustiva sobre los 288 vectores. Se conserva el mismo texto de entrada que en BM25; dado el tamaño de la colección, no es necesario recurrir a un índice aproximado.
+
+La tercera configuración, **recuperación híbrida**, combina los rankings top-10 de BM25 y dense mediante Reciprocal Rank Fusion (RRF). El parámetro $k_0=60$ se fijó sin optimizarlo sobre el golden set. Cada chunk recibe la suma $\sum_m 1/(60+r_m)$ y, cuando hay empates, estos se resuelven por el identificador del fragmento. La fusión conserva diez resultados. Al basarse en las posiciones, evita comparar directamente las puntuaciones de los recuperadores, cuyas escalas no son equivalentes.
+
+La cuarta configuración, **híbrida con reordenación**, toma esos diez candidatos y los reordena con un *cross-encoder* MiniLM-L6-v2 entrenado en MS MARCO. El modelo procesa cada par pregunta--chunk en GPU, con una longitud máxima de 512 tokens y batch size 16. Tanto la profundidad como el modelo se fijaron antes de observar sus métricas. Los empates se resuelven mediante el identificador de chunk y el conjunto candidato debe permanecer idéntico al de RRF: lo que cambia es el orden.
+
+## 6.3. Escenarios lingüísticos
+
+En el experimento principal, el corpus, las preguntas, las respuestas de referencia y las respuestas generadas están en inglés. También se seleccionaron E5-base-v2 y MiniLM-L6-v2 para recuperar y reordenar textos en inglés. Mantener esta coincidencia lingüística permite atribuir con mayor claridad las diferencias observadas a la estrategia de recuperación, sin mezclar su efecto con la calidad de una traducción o con la alineación entre idiomas.
+
+El diseño experimental no incluye recuperación en español, búsqueda cross-lingual ni colecciones multilingües. Para incorporarlas habría que comparar modelos específicamente multilingües y construir o traducir un golden set equivalente, además de controlar la posible pérdida semántica de la traducción. No se trataría, por tanto, de ampliar sin más el experimento actual, sino de plantear otro con condiciones propias.
+
+## 6.4. Parámetros y condiciones controladas
+
+Las cifras de 22 preguntas y 88 respuestas de esta sección describen el **piloto comparativo**. La explicitud exploratoria se delimita en §8.5 y la ampliación con tres generadores en §8.6. El generador es constante entre estrategias dentro de cada campaña o nivel, no entre todas las campañas del trabajo.
+
+Las cuatro configuraciones mantienen la misma segmentación del corpus. BM25, dense retrieval, recuperación híbrida y reranking trabajan con los mismos 288 chunks, cuyos textos, metadatos e identificadores son idénticos. Así se evita atribuir al recuperador una diferencia que en realidad proceda de la granularidad de los fragmentos.
+
+Para cada consulta, BM25, dense y RRF producen un ranking top-10 que se evalúa en los cortes 5 y 10. Los qrels pooled reúnen 119 juicios positivos: 72 chunks de grado 2 y 47 de grado 1. Los agregados ordinarios se calculan sobre las trece preguntas respondibles con evidencia de grado 2. Aunque las nueve preguntas no respondibles también se ejecutan y se conservan en los runs, no se incluyen en esas métricas. Seis de sus chunks de grado 2 aportan evidencia de contradicción para q-v1-008 y q-v1-020; por esa razón, se evalúan en la tarea separada de corrección fundamentada.
+
+RRF realiza la fusión sin pesos aprendidos y con profundidad 10. El reranker mantiene esa profundidad y modifica únicamente el orden, de modo que Precision\@10 y Recall\@10 deben permanecer constantes entre ambas condiciones. Las diferencias posibles se sitúan en el top-5, en la posición del primer acierto y en la calidad graduada del ranking.
+
+La comparación RAG aplica el mismo contrato a las cuatro estrategias de retrieval. BM25, dense, RRF y RRF con reranking entregan sus cinco primeros chunks a Qwen 3.5 9B mediante Ollama. Se mantienen una instrucción de generación común, la temperatura 0, una semilla fija, el límite de 300 tokens y una respuesta por pregunta y condición. Con este diseño se obtienen 88 respuestas —22 por estrategia— y se distinguen tres conductas esperadas: respuesta ordinaria para trece preguntas, corrección fundamentada para las dos premisas falsas y abstención para las siete preguntas restantes sin evidencia suficiente.
+
+Cada salida generativa contiene tres campos: conducta, respuesta y citas. Estas últimas deben coincidir exactamente con identificadores del top-5. Si aparece una cita externa, no se elimina ni se corrige de forma silenciosa: se solicita una regeneración con la lista cerrada de identificadores permitidos, hasta tres intentos. Se guardan todas las salidas brutas y se acumulan la latencia y los tokens de los intentos, de manera que la corrección no oculte el consumo que ha requerido.
+
+Las respuestas de las cuatro condiciones se generaron de nuevo bajo un único contrato; las respuestas históricas de dos finalistas no se reutilizaron como comparación principal. La ejecución se hizo de forma secuencial por condición, sin intercalar ni equilibrar las consultas. Por ello, tanto el orden temporal como el no determinismo residual del backend constituyen amenazas a la validez. También hay que distinguir el número de fragmentos de su extensión: un presupuesto de cinco chunks no garantiza igual longitud en tokens. Además, reordenar el top-10 puede modificar tanto la selección como el orden del top-5.
+
+## 6.5. Entorno y reproducibilidad
+
+El baseline BM25 se implementó en Python, sin dependencias externas específicas de recuperación, y su índice contiene 3.578 términos y 88.093 tokens. Dense y el reranker se ejecutan en un entorno aislado de Python 3.12 con PyTorch, Sentence Transformers y NumPy. Sus metadatos serializan las revisiones de los modelos y los hashes de entrada, lo que permite identificar las versiones y los datos empleados. Los comandos de reproducción se recogen en el apéndice E.
+
+Para la generación se utiliza Qwen 3.5 9B local mediante Ollama. La evaluación automática principal corresponde al juez remoto GLM 5.3 Flash, mientras que Gemma 3 4B, local mediante Ollama, se mantiene para el análisis de sensibilidad. RAGAS 0.4.3 se ejecuta en un segundo entorno aislado de Python 3.12. Las repeticiones de retrieval comprueban rankings, scores, qrels y métricas de calidad; las latencias quedan fuera de la igualdad determinista.
+
+Según la etapa, las ejecuciones guardan configuraciones, rankings, respuestas, métricas agregadas y por pregunta, tiempos y consumo de tokens. Con estos artefactos se pueden reproducir los análisis y auditar casos concretos. No se estimaron el coste energético ni la amortización del hardware.
+
+# 7. Métricas y procedimiento de evaluación
+
+## 7.1. Evaluación de recuperación
+
+Las métricas de recuperación describen aspectos distintos del resultado. Precision\@k indica qué proporción de los resultados recuperados es relevante, mientras que Recall\@k refleja la cobertura de la evidencia relevante. MRR\@k atiende a la posición del primer resultado relevante y nDCG\@k valora la calidad del ranking a partir de los grados de relevancia.
+
+Los cálculos se realizan en $k=5$ y $k=10$. Precision, Recall y MRR aplican relevancia estricta de **grado 2**; nDCG mantiene la escala 0/1/2, con ganancia $2^{rel}-1$ y descuento logarítmico. Su denominador ideal se obtiene de todos los qrels conocidos de la pregunta, no de los fragmentos que recuperó cada método. Así, el ideal es común a todos los métodos para una misma pregunta y corte.
+
+Los agregados ordinarios son la media macro de las trece preguntas respondibles con qrels de grado 2. Quedan fuera las nueve no respondibles, incluidas las dos premisas falsas que cuentan con evidencia de contradicción. Leídas en conjunto, estas métricas permiten examinar la cobertura, la rapidez de acceso y la calidad del orden. Los resultados por pregunta completan esa lectura, pues permiten detectar fallos puntuales que la media puede ocultar.
+
+## 7.2. Evaluación de respuestas RAG
+
+Las respuestas de BM25, dense, RRF y RRF con reranking se comparan sobre las mismas 22 preguntas. En cada condición, Qwen 3.5 9B recibe los cinco primeros chunks recuperados, hasta reunir 88 respuestas en el experimento. Se mantienen constantes el modelo generativo, el prompt, la temperatura, la semilla, la longitud máxima de salida y el presupuesto de contexto. Con ello, la diferencia experimental principal reside en la evidencia que cada estrategia de retrieval selecciona y ordena.
+
+En este trabajo, el *groundedness* se operacionaliza mediante la métrica **Faithfulness** de RAGAS, que estima el respaldo de las afirmaciones de la respuesta en el contexto recuperado [@es2024ragas].
+
+RAGAS 0.4.3 calcula **Faithfulness** y **Factual Correctness**, que examinan la respuesta desde perspectivas diferentes. Faithfulness la descompone en afirmaciones y estima qué proporción puede inferirse de los contextos suministrados. Factual Correctness contrasta esas afirmaciones con la respuesta de referencia y se aplica a las trece respuestas ordinarias y las dos correcciones fundamentadas de cada condición. En las abstenciones sin afirmaciones sustantivas no hay contenido que evaluar mediante estas métricas. Sus puntuaciones automáticas de Faithfulness se guardan en los artefactos originales, pero se consideran no aplicables en la interpretación adjudicada; Factual Correctness tampoco se calcula en esas abstenciones.
+
+Para estudiar la sensibilidad al juez se mantienen fijas las respuestas, las referencias y los contextos. La evaluación de conducta emplea la primera versión de la rúbrica con Gemma y la segunda con GLM, por lo que se compara el conjunto modelo–rúbrica, no un efecto puro del modelo. Aunque las métricas RAGAS conservan su contrato, esa diferencia impide atribuir únicamente al modelo el mayor acuerdo conductual.
+
+Gemma 3 4B se ejecuta localmente mediante Ollama y GLM 5.3 Flash actúa como juez remoto con esfuerzo de razonamiento bajo. Ambos pertenecen a familias distintas de Qwen, el modelo generativo. Para RAGAS y la rúbrica de conducta, GLM utiliza temperatura 0, semilla 20260902 y un máximo de 4096 tokens. Tras la auditoría humana, se adopta como juez automático principal por su completitud y su mayor alineación conductual. Gemma se mantiene para el análisis de sensibilidad.
+
+Las métricas de respuesta complementan a las de recuperación, pero no las sustituyen. Precision, Recall, MRR y nDCG describen cobertura y orden a partir de qrels adjudicados; las métricas RAGAS dependen de un modelo evaluador. Un smoke test repetido con Gemma obtuvo Faithfulness de 0,5 y 1,0 para el mismo caso, aun manteniendo temperatura y semilla. Fijar estos parámetros mejora la trazabilidad, pero no garantiza determinismo ni equivale a evaluación humana. La ampliación v3 utiliza una rúbrica ordinal distinta, no una nueva ejecución de RAGAS; sus puntuaciones se delimitan en §7.6.
+
+## 7.3. Evaluación de la abstención
+
+Se distinguen tres categorías de conducta esperada. La **respuesta ordinaria** (*Answer*) requiere responder con sustento a las trece preguntas respondibles. En q-v1-008 y q-v1-020, la **corrección fundamentada** (*Grounded correction*) exige rechazar explícitamente la premisa falsa y aportar la relación correcta. Para las siete preguntas restantes, la **abstención** (*Abstain*) exige reconocer la insuficiencia de los contextos, sin completar la respuesta con conocimiento externo.
+
+Cada salida declara la conducta adoptada y sus citas. Mediante comprobaciones deterministas, el evaluador verifica que la conducta declarada coincida con la esperada, que todas las citas pertenezcan al top-5 suministrado y que estén presentes cuando la respuesta o la corrección las requieran. Si se espera una abstención, se exige que no haya citas.
+
+La validez implementada combina la pertenencia al contexto y la exigencia de citas en respuestas y correcciones. Por eso, un cero no implica necesariamente que se haya inventado un identificador: también puede señalar una abstención indebida sin citas. Estas comprobaciones permiten distinguir los incumplimientos formales de la calidad semántica de lo respondido.
+
+La adecuación global se examina además con una rúbrica ciega de 0 a 2. La puntuación 2 representa el cumplimiento completo de la conducta esperada; 1 corresponde a una respuesta parcialmente adecuada; y 0, a una conducta incorrecta. El prompt del juez no revela la condición de recuperación. La puntuación automática ayuda a localizar casos de riesgo, pero la decisión humana prevalece cuando hay adjudicación. Una abstención limpia recibe conducta 2; si no contiene afirmaciones sustantivas, Faithfulness y Factual Correctness se consideran no aplicables.
+
+## 7.4. Evaluación de eficiencia
+
+La latencia de recuperación se midió con un benchmark integrado, manteniendo cargados los índices y los modelos. Se realizaron cinco rondas de calentamiento y treinta repeticiones de las 22 consultas por condición, y se guardaron tanto las mediciones individuales como sus resúmenes. Las operaciones de dense y reranking se delimitaron mediante sincronización CUDA. La ejecución serial permitió mantener un criterio común de comparación.
+
+En la generación se registraron por separado la latencia y los tokens de entrada y salida, incluidos los intentos correctivos. Estos tiempos son descriptivos: a diferencia del benchmark de recuperación, el lote se ejecutó secuencialmente y sin repeticiones controladas. La ejecución local evita cargos variables de generación por API, pero eso no convierte el sistema en gratuito. No se midieron la energía, la memoria ni la amortización.
+
+## 7.5. Agregación y evaluación manual
+
+Para cada condición, las métricas automáticas se resumen mediante la media y el número de observaciones disponibles. Las seis comparaciones entre pares se calculan por qid, de modo que se contrastan las respuestas de las cuatro estrategias a las mismas 22 preguntas. Cada indicador conserva el delta medio y el número de victorias, empates y derrotas. Las ausencias y los errores del evaluador se cuentan por separado, sin eliminarlos de forma silenciosa.
+
+La auditoría humana se concentra en los casos de mayor riesgo. La cola de revisión reúne errores del evaluador, desacuerdos entre Gemma y GLM, puntuaciones de conducta inferiores a 2, discrepancias entre la conducta declarada y la esperada, y diferencias amplias entre métricas RAGAS. Con estos criterios, el proceso abarca 61 pares condición--pregunta de 21 qids únicos: 28 abstenciones, ocho correcciones fundamentadas y 25 respuestas ordinarias.
+
+La adjudicación de Faithfulness distingue entre *supported*, *partially supported*, *unsupported* y *not applicable*. Para Factual Correctness se emplean *correct*, *partially correct*, *incorrect* y *not applicable*, mientras que la conducta conserva la escala 0/1/2. La comparación entre jueces y etiquetas humanas utiliza una codificación ordinal explícita de 0, 0,5 y 1, limitada a los casos aplicables. También se cuentan las puntuaciones que un juez emite cuando la revisión humana determina que la métrica no procede. Al haberse seleccionado la muestra por riesgo, el acuerdo observado permite diagnosticar fallos, pero no estimar la precisión poblacional de cada juez.
+
+La conducta final mantiene separados la puntuación automática, la puntuación consolidada y la fuente de la decisión. En los 61 casos revisados **prevalece la adjudicación humana**; GLM aporta los 27 casos restantes. Las salidas automáticas originales no se modifican al combinar ambas fuentes. Los agregados definitivos se recalculan desde la capa consolidada, lo que mantiene la trazabilidad entre las puntuaciones automáticas y las decisiones humanas.
+
+## 7.6. Instrumentos y análisis de la ampliación
+
+Los instrumentos cambian entre campañas (@tbl-instrumentos). En v3, los campos históricos denominados *faithfulness* y *factual correctness* son **fundamentación y corrección según una rúbrica ordinal**, no proporciones calculadas por RAGAS. Las coincidencias de nombre no autorizan a comparar sus valores absolutos con los del piloto.
+
+| Campaña | Instrumento y escala | Jueces y aplicabilidad | Citas |
+|---|---|---|---|
+| Piloto | RAGAS 0.4.3, contenido 0–1; conducta 0–2 | GLM principal y Gemma de sensibilidad; 15 tareas de contenido por estrategia; 22 de conducta | Pertenencia de IDs y presencia exigida, comprobación formal 0–1 |
+| Explicitud v2 | RAGAS 0.4.3, contenido 0–1; conducta 0–2 | Gemma 3 4B; 55 evaluaciones, disponibilidad por criterio; 16 casos auditados | Validez formal 0–1 |
+| Ampliación v3 | Rúbrica v3.2: fundamentación, corrección y conducta 0–2 | Dos jueces en sesiones aisladas; consenso o validación humana de discrepancias; 604 celdas | Soporte semántico de las citas, rúbrica 0–1; etiqueta declarada comprobada aparte |
+
+: *Instrumentos y denominadores por campaña* {#tbl-instrumentos}
+
+En v3, las 95 respuestas con abstención esperada recibieron puntuaciones numéricas de contenido en la evaluación final. Esto difiere de la regla general de no aplicabilidad de abstenciones sin afirmaciones y limita la fidelidad al plan inicial. No se modifican retrospectivamente esos juicios. El reanálisis presenta el contenido de tareas de respuesta y corrección por separado; el agregado que incluye abstenciones queda como sensibilidad. Conducta y citas conservan todas las tareas aplicables.
+
+Las diferencias se calculan primero sobre **celdas comunes exactas**, y después se promedian dentro de cada pregunta base. Al comparar generadores se igualan pregunta, formulación y recuperador; al comparar formulaciones se igualan base, recuperador y generador. Los intervalos del reanálisis proceden de 5.000 remuestreos de preguntas base con semilla 20260928, sin considerar cada formulación una unidad independiente. Los niveles sobre respuestas disponibles son descriptivos y no sustituyen esos contrastes emparejados.
+
+La inferencia de retrieval utiliza el test de signos binomial exacto bilateral, con p igual al doble de la cola menor y exclusión de empates [@smucker2007significance]. Se muestran p nominal y ajuste Holm posterior en dos familias: dieciséis contrastes principales de Recall/nDCG y dieciséis complementarios de Precision/MRR, cuatro métodos por dos cortes. Esta organización no estaba fijada en el pre-registro; hace explícita la multiplicidad sin convertir la revisión en confirmación retrospectiva. Los IC bootstrap de generación son puntuales, sin ajuste simultáneo, y se interpretan con cautela.
+
+# 8. Resultados anteriores
+
+## 8.1. Comparación de recuperación del piloto
+
+La comparación principal reúne las cuatro estrategias bajo una misma evaluación: los 119 qrels pooled y las trece preguntas respondibles. Esto permite contrastar sus resultados sin que cambie la evidencia juzgada. Las etapas del piloto y de ampliación de juicios se documentan en el apéndice F, pero sus métricas no deben mezclarse con las de esta comparación.
+
+El cross-encoder actúa sobre los diez candidatos de RRF: cambia su orden, sin añadir ni eliminar chunks. Se utilizó MiniLM-L6-v2 con los parámetros fijados en el diseño experimental. La evaluación comprende los mismos trece casos respondibles; las nueve preguntas no respondibles también se conservaron en el run.
+
+| Métrica   |   BM25 |  Dense |    RRF | RRF + reranking |
+|-----------|-------:|-------:|-------:|----------------:|
+| Precision | 0,4769 | 0,6154 | 0,5846 |      **0,6308** |
+| Recall    | 0,5128 | 0,6635 | 0,6506 |      **0,7083** |
+| MRR       | 0,7885 | 0,7436 | 0,8846 |      **0,9231** |
+| nDCG      | 0,5907 | 0,7155 | 0,7431 |      **0,7976** |
+
+: *Recuperación del piloto en top-5* {#tbl-retrieval-piloto-top5}
+
+| Métrica   |   BM25 |  Dense |        RRF | RRF + reranking |
+|-----------|-------:|-------:|-----------:|----------------:|
+| Precision | 0,3923 | 0,3923 | **0,4231** |      **0,4231** |
+| Recall    | 0,8077 | 0,8301 | **0,8846** |      **0,8846** |
+| MRR       | 0,7885 | 0,7436 |     0,8846 |      **0,9231** |
+| nDCG      | 0,7052 | 0,7491 |     0,8167 |      **0,8483** |
+
+: *Recuperación del piloto en top-10* {#tbl-retrieval-piloto-top10}
+
+*Nota.* El reranker conserva los diez candidatos de RRF. Por construcción, Precision y Recall en $k=10$ no pueden cambiar.
+
+El reranker obtiene los valores más altos en todas las métricas a cinco documentos, así como en MRR\@10 y nDCG\@10. Respecto a RRF, Precision\@5 aumenta 0,0462, Recall\@5 aumenta 0,0577 y nDCG\@5 aumenta 0,0545. La cobertura completa en top-5 pasa de tres a cuatro preguntas: en q-v1-012, la reordenación consigue reunir toda la evidencia en las primeras cinco posiciones.
+
+En cambio, Precision\@10 y Recall\@10 permanecen iguales. La conservación del conjunto top-10 se confirmó comparando los identificadores por qid, ya que la igualdad de las métricas no sería suficiente para demostrarla. Dentro de ese conjunto sí puede cambiar el top-5 y, por tanto, los contextos que recibe el generador. La cobertura completa en top-10 se mantiene en ocho de trece preguntas.
+
+## 8.2. Calidad de las respuestas RAG del piloto
+
+Se evaluaron 88 respuestas, 22 por estrategia, y GLM completó las puntuaciones sin errores. RRF alcanza la mayor Factual Correctness automática, mientras que BM25 mantiene una pequeña ventaja descriptiva en Faithfulness sobre los quince casos aplicables. Al incorporar las 61 adjudicaciones, las dos condiciones híbridas llegan a la puntuación máxima de conducta. BM25 conserva dos respuestas parcialmente adecuadas y dense, una abstención indebida. Conviene distinguir ambos planos: **una conducta plenamente adecuada no implica que el contenido sea perfecto**.
+
+| Indicador de calidad | BM25 | Dense | RRF | RRF + reranking |
+|---------------|--------------:|--------------:|--------------:|--------------:|
+| Factual Correctness automática, 15 casos | 0,7167 | 0,7100 | **0,8087** | 0,7733 |
+| Coincidencia de conducta declarada | 0,8636 | 0,8182 | 0,8636 | **0,9091** |
+| Conducta automática GLM, escala 0--2 | 1,8636 | 1,9091 | 1,9545 | **2,0000** |
+| Conducta consolidada, escala 0--2 | 1,9091 | 1,9091 | **2,0000** | **2,0000** |
+| Validez formal de citas | **1,0000** | 0,9545 | **1,0000** | **1,0000** |
+| Presencia o ausencia correcta de citas | **1,0000** | 0,9545 | **1,0000** | **1,0000** |
+
+: *Calidad de las respuestas RAG en las cuatro estrategias* {#tbl-calidad-rag}
+
+*Nota.* Faithfulness y Factual Correctness son estimaciones automáticas de GLM. La conducta consolidada sustituye la puntuación automática solo en los casos con adjudicación humana. La validez formal comprueba identificadores y requisitos de presencia, no el soporte semántico de cada afirmación.
+
+Para comparar el contenido se utilizan quince tareas por condición: trece respuestas ordinarias y dos correcciones fundamentadas. La revisión humana consideró que las 28 abstenciones esperadas no eran aplicables a las métricas de contenido. Por eso, las medias globales de Faithfulness que incluyen esas abstenciones se mantienen solo como diagnóstico en el apéndice D.
+
+| Métrica aplicable, 15 casos |   BM25 |  Dense |    RRF | RRF + reranking |
+|-----------------------------|-------:|-------:|-------:|----------------:|
+| Faithfulness                | 0,9460 | 0,8528 | 0,9400 |          0,9156 |
+| Factual Correctness         | 0,7167 | 0,7100 | 0,8087 |          0,7733 |
+
+: *Métricas automáticas sobre tareas de contenido evaluable del piloto* {#tbl-rag-aplicable}
+
+*Nota.* Selección por conducta esperada: trece respuestas ordinarias y dos correcciones. La abstención indebida de dense en q-v1-016 se mantiene con puntuación cero; no se excluye por la conducta declarada. Las 28 abstenciones esperadas del experimento fueron revisadas como no aplicables.
+
+En las comparaciones emparejadas, RRF supera a BM25 y dense en Factual Correctness, con deltas de +0,0920 y +0,0987. Su Faithfulness sobre los quince casos de contenido evaluable también supera a dense, aunque queda ligeramente por debajo de BM25. El reranking no prolonga esa mejora: respecto a RRF, reduce tanto Faithfulness aplicable como Factual Correctness. Los deltas globales de Faithfulness del apéndice D incluyen abstenciones no aplicables, de modo que no sirven para seleccionar un ganador en fundamentación. **Estas diferencias describen lo observado; no prueban una superioridad estadística.**
+
+```{r}
+#| label: fig-calidad-rag
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Comparación de las métricas automáticas de calidad entre las cuatro estrategias de retrieval."
+#| fig-width: 7
+#| fig-height: 4.2
+
+rag_eval <- fromJSON(
+  "outputs/rag_eval/rag_four_retrievers_glm53flash_applicable_analysis_v1_22q.json"
+)$overall
+
+condiciones_rag <- c(
+  bm25 = "BM25",
+  dense = "Dense",
+  rrf = "RRF",
+  rrf_rerank = "RRF + reranking"
+)
+
+calidad_rag <- bind_rows(lapply(names(condiciones_rag), function(clave) {
+  tibble(
+    condicion = condiciones_rag[[clave]],
+    metrica = c("Faithfulness", "Factual Correctness"),
+    valor = c(
+      rag_eval[[clave]]$faithfulness_mean,
+      rag_eval[[clave]]$factual_correctness_mean
+    )
+  )
+})) |>
+  mutate(condicion = factor(condicion, levels = unname(condiciones_rag)))
+
+ggplot(calidad_rag, aes(x = metrica, y = valor, fill = condicion)) +
+  geom_col(position = position_dodge(width = 0.72), width = 0.62) +
+  geom_text(
+    aes(label = format(round(valor, 3), nsmall = 3, decimal.mark = ",")),
+    position = position_dodge(width = 0.72),
+    vjust = -0.45,
+    size = 3.2
+  ) +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.2), expand = expansion(mult = c(0, 0.08))) +
+  scale_fill_manual(values = c(
+    "BM25" = "#777777",
+    "Dense" = "#6488A8",
+    "RRF" = "#315C8C",
+    "RRF + reranking" = "#C56A31"
+  )) +
+  labs(x = NULL, y = "Puntuación media", fill = "Condición") +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "bottom", panel.grid.major.x = element_blank())
+```
+
+*Nota.* Ambas métricas se calculan sobre quince casos por condición: trece tareas de respuesta ordinaria y dos de corrección fundamentada. Se excluyen las siete abstenciones esperadas, pero se conserva la abstención indebida de dense en una tarea respondible. Son puntuaciones automáticas de GLM, no métricas humanas consolidadas.
+
+## 8.3. Eficiencia operativa del piloto
+
+### Recuperación: benchmark controlado
+
+La latencia de las cuatro condiciones se midió dentro de un único proceso, una vez cargados los índices, embeddings y modelos. El protocolo incluyó cinco rondas completas de calentamiento y treinta repeticiones de las 22 preguntas, con un orden aleatorio reproducible en cada ronda. Así se obtuvieron 660 muestras por condición. La ejecución fue serial y sincronizó CUDA antes y después de dense y reranking.
+
+| Condición      | Media (ms) | Mediana (ms) | p95 (ms) | Desv. estándar (ms) |
+|----------------|-----------:|-------------:|---------:|--------------------:|
+| BM25           |       2,67 |         2,51 |     3,42 |                0,63 |
+| Dense          |       6,81 |         6,64 |     7,74 |                0,46 |
+| RRF            |       9,49 |         9,28 |    11,78 |                0,88 |
+| RRF + reranker |      47,29 |        47,46 |    52,22 |                3,36 |
+
+: *Latencia controlada de las cuatro condiciones de retrieval* {#tbl-latencia-retrieval}
+
+*Nota.* Cada condición contiene 660 mediciones después de cinco rondas de calentamiento. La ejecución fue serial en una NVIDIA GeForce RTX 2060 SUPER.
+
+```{r}
+#| label: fig-calidad-latencia
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Compromiso entre calidad del ranking y latencia media de retrieval."
+#| fig-width: 7
+#| fig-height: 4.5
+
+rutas_metricas <- c(
+  BM25 = "outputs/metrics/bm25_pooled_v1_22q_metrics.csv",
+  Dense = "outputs/metrics/dense_e5_base_v2_pooled_v1_22q_metrics.csv",
+  RRF = "outputs/metrics/hybrid_rrf_k60_pooled_v1_22q_metrics.csv",
+  "RRF + reranking" = "outputs/metrics/hybrid_rrf_k60_minilm_l6_rerank_pooled_v1_22q_metrics.csv"
+)
+
+calidad_retrieval <- bind_rows(lapply(names(rutas_metricas), function(nombre) {
+  read.csv(rutas_metricas[[nombre]]) |>
+    filter(metric == "ndcg", k == 10) |>
+    transmute(condicion = nombre, ndcg_10 = value)
+}))
+
+latencia_retrieval <- read.csv(
+  "outputs/latency/retrieval_latency_controlled_v1_22q_summary.csv"
+) |>
+  mutate(
+    condicion = recode(
+      condition,
+      bm25 = "BM25",
+      dense = "Dense",
+      hybrid_rrf_serial = "RRF",
+      hybrid_rrf_rerank_serial = "RRF + reranking"
+    )
+  ) |>
+  select(condicion, mean_ms)
+
+tradeoff <- left_join(calidad_retrieval, latencia_retrieval, by = "condicion") |>
+  mutate(condicion = factor(
+    condicion,
+    levels = c("BM25", "Dense", "RRF", "RRF + reranking")
+  )) |>
+  arrange(condicion)
+
+ggplot(tradeoff, aes(x = mean_ms, y = ndcg_10, group = 1)) +
+  geom_path(color = "#7A7A7A", linewidth = 0.6) +
+  geom_point(aes(color = condicion), size = 3.4) +
+  geom_text(
+    aes(label = condicion),
+    nudge_y = c(-0.012, 0.012, -0.012, 0.012),
+    nudge_x = c(0, 0, 0, 0),
+    size = 3.1,
+    check_overlap = TRUE
+  ) +
+  scale_x_log10(breaks = c(2.5, 5, 10, 20, 50), labels = c("2,5", "5", "10", "20", "50")) +
+  scale_y_continuous(limits = c(0.68, 0.87), breaks = seq(0.70, 0.85, 0.05)) +
+  scale_color_manual(values = c(
+    "BM25" = "#777777",
+    "Dense" = "#6488A8",
+    "RRF" = "#315C8C",
+    "RRF + reranking" = "#C56A31"
+  )) +
+  labs(x = "Latencia media (ms, escala logarítmica)", y = "nDCG@10") +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "none")
+```
+
+*Nota.* Cada punto combina nDCG\@10 con la latencia media del benchmark controlado. El eje horizontal utiliza escala logarítmica para mantener legibles las cuatro condiciones.
+
+Frente a dense, RRF añade 2,68 ms y multiplica la latencia media por 1,39. Ese incremento acompaña mejoras de 0,0545 en Recall\@10, 0,1410 en MRR\@10 y 0,0676 en nDCG\@10. Al considerar conjuntamente la calidad recuperada y el tiempo añadido, esta es la mejora marginal más equilibrada del experimento.
+
+El paso de RRF al reranker exige 37,80 ms adicionales y multiplica la latencia completa por 4,98. No cambia Recall\@10, aunque MRR\@10 aumenta 0,0385 y nDCG\@10 aumenta 0,0316. La ganancia relativa de nDCG\@10 es del 3,87 %: se obtiene un orden mejor, pero con una latencia cercana a cinco veces la de RRF.
+
+Las cuatro condiciones se ejecutan localmente, por lo que no tienen un coste variable por API. Esto no significa que el cálculo sea gratuito: dense y reranking consumen GPU, memoria y energía, dimensiones que no se midieron. Además, los tiempos se obtuvieron con una RTX 2060 SUPER, batch size 1 para consultas dense y un corpus de 288 chunks. No pueden trasladarse directamente a otro hardware ni a condiciones distintas de concurrencia o escala.
+
+### Generación: registros descriptivos
+
+| Indicador de eficiencia | BM25 | Dense | RRF | RRF + reranking |
+|---------------|--------------:|--------------:|--------------:|--------------:|
+| Latencia media de generación (ms) | 6598,98 | **6372,89** | 7190,01 | 8217,10 |
+| Latencia p95 de generación (ms) | 9029,51 | **8176,74** | 9242,41 | 11382,40 |
+| Tokens medios de entrada | 2425,41 | 2508,64 | **2399,95** | 2841,82 |
+| Tokens medios de salida | 83,91 | 86,68 | **79,77** | 104,55 |
+| Respuestas con regeneración correctiva | **0** | 1 | **0** | 2 |
+
+: *Eficiencia de la generación RAG del piloto* {#tbl-eficiencia-rag}
+
+*Nota.* Una ejecución secuencial por condición, sin calentamiento ni repeticiones controladas de generación. Los tiempos y tokens incluyen los intentos correctivos cuando existen; p95 usa el rango más próximo superior. Son registros descriptivos, no un benchmark controlado ni una estimación causal del efecto del recuperador. La generación local no genera cargos variables por API; energía y amortización no se midieron.
+
+Dense registra la menor latencia generativa, mientras RRF utiliza el contexto más corto y produce las respuestas más breves. En comparación con el reranking, RRF reduce la entrada media en 442 tokens, la salida en 25 tokens y la generación en aproximadamente 1,03 segundos. BM25 y RRF no necesitan regeneraciones correctivas; dense necesita una y el reranker, dos. La ejecución local evita el cargo variable por API, pero el consumo de GPU, energía y memoria no se monetizó.
+
+## 8.4. Errores y sensibilidad al evaluador del piloto
+
+La mejora media del reranking convive con pérdidas en preguntas concretas. En q-v1-013, Precision\@5 desciende de 1,0 a 0,6 y Recall\@5 de 0,4167 a 0,25. En q-v1-017, Recall\@5 pasa de 0,75 a 0,5, pese a que el primer relevante mejora del rango 2 al 1. Estos casos muestran que favorecer una evidencia inmediata no siempre permite conservar la mejor cobertura en las primeras posiciones.
+
+La ventana de 512 tokens se supera en diecisiete de los 220 pares. Entre los pares truncados están los tres chunks relevantes de q-v1-013 presentes en top-10. No puede concluirse, solo por esta coincidencia, que la truncación sea la causa del retroceso. Sí obliga a interpretar el resultado con cautela, porque el cross-encoder no pudo evaluar íntegramente esos pasajes.
+
+La comprobación de reproducibilidad distinguió las capas del experimento. Al repetir BM25 se obtuvieron rankings, scores, qrels y métricas idénticos; además, RRF y el reranking utilizan desempates deterministas. La evaluación generativa presenta otra dificultad: temperatura 0 y semilla fija no garantizan que el juez devuelva exactamente la misma salida. La variación del smoke test de Gemma llevó a realizar una segunda evaluación con GLM y a auditar humanamente los casos de riesgo.
+
+| Indicador en la cola de riesgo        |     Gemma 3 4B |   GLM 5.3 Flash |
+|---------------------------------------|---------------:|----------------:|
+| Errores explícitos de evaluación      |             12 |               0 |
+| Acuerdo exacto en conducta            | 28/61 (45,9 %) |  59/61 (96,7 %) |
+| MAE de conducta                       |         1,0492 |          0,0328 |
+| Acuerdo en respuestas ordinarias      | 23/25 (92,0 %) |  23/25 (92,0 %) |
+| Acuerdo en abstenciones               |   0/28 (0,0 %) | 28/28 (100,0 %) |
+| Acuerdo en correcciones fundamentadas |   5/8 (62,5 %) |   8/8 (100,0 %) |
+| Faithfulness aplicable disponible     |          26/33 |           33/33 |
+| MAE de Faithfulness aplicable         |         0,0337 |          0,0851 |
+| MAE de Factual Correctness aplicable  |         0,1564 |          0,3161 |
+
+: *Alineación de los jueces automáticos con la adjudicación humana del piloto* {#tbl-alineacion-jueces}
+
+*Nota.* Los 61 casos pertenecen a una cola seleccionada por riesgo. Los porcentajes describen esa muestra y no estiman la precisión poblacional de los jueces.
+
+Cuando Gemma devuelve una puntuación de Faithfulness o Factual Correctness, sus valores se aproximan a las etiquetas humanas. Sin embargo, acumula doce casos con errores de evaluación y muestra fallos sistemáticos en conducta. A menudo reconoce en la justificación que una abstención es adecuada, pero le asigna 0; también invierte la interpretación de algunas correcciones de q-v1-020. Esta contradicción entre la justificación y la puntuación explica su acuerdo conductual del 45,9 % en la cola de riesgo.
+
+GLM completa los 88 casos. En la cola de riesgo coincide con la adjudicación humana en todas las abstenciones y correcciones fundamentadas; sus dos desacuerdos corresponden a respuestas ordinarias y a diferencias de severidad entre las puntuaciones 1 y 2. Esto apunta a una aplicación consistente de las conductas sensibles, sin resolver por completo la valoración de respuestas parcialmente completas. Para estas sigue siendo necesaria la adjudicación.
+
+Otro problema aparece al decidir si una métrica es aplicable. La auditoría considera Faithfulness no aplicable en 28 abstenciones limpias, pero Gemma puntúa 23 de ellas y GLM, las 28. Las puntuaciones se conservan en los resultados originales para mantener el registro de la ejecución, no como adjudicaciones humanas. En cambio, ambos pipelines excluyen las abstenciones de Factual Correctness.
+
+La elección de GLM como juez automático principal responde a su completitud y a su alineación conductual; Gemma se conserva para analizar la sensibilidad al evaluador. No se asume con ello que GLM sea mejor en todas las métricas, pues Gemma presenta menor error ordinal en los casos RAGAS disponibles. Tampoco debe generalizarse el 96,7 % de acuerdo de GLM: procede de una muestra no aleatoria seleccionada por riesgo, no de una estimación general de precisión. Los casos que condicionan la conclusión experimental siguen requiriendo revisión humana.
+
+## 8.5. Efecto de la formulación explícita e implícita {#sec-explicitness-retrieval}
+
+Las secciones anteriores evalúan preguntas formuladas con el vocabulario de la fuente. Conviene comprobar hasta qué punto ese resultado se sostiene cuando la consulta retira los términos técnicos. Para ello, siete de las preguntas base se reformularon en dos versiones, explícita e implícita, que conservan la intención pero difieren en la cobertura léxica, y se ejecutaron las cuatro estrategias sobre las mismas. Las parejas se construyeron según el principio de equivalencia que formaliza la rúbrica de §5.5 y @tbl-rubrica-equivalencia, si bien esa rúbrica quedó fijada por escrito con posterioridad a esta campaña. El conjunto resultante suma catorce formulaciones y 168 diferencias emparejadas.
+
+Dos precisiones evitan confundir esta campaña con las anteriores. Primero, la recuperación se calcula sobre qrels propios construidos por *pooling*, con Recall y MRR definidos sobre el grado 2 y nDCG sobre la escala 0/1/2, de modo que sus valores absolutos no son comparables con los de la comparación principal. Segundo, la generación se evaluó con un juez local distinto, Gemma 3 4B, y se sometió a una auditoría humana de 16 pares seleccionados por riesgo, no a una revisión completa. Estas medidas sirven para comparar formulaciones entre sí, no para estimar la calidad poblacional del sistema.
+
+En recuperación, el efecto de la reformulación no es unidireccional, sino que separa cobertura y orden. Al pasar de explícita a implícita, BM25 pierde 0,163 de Recall\@10 y casi no cambia su MRR\@10, mientras que las otras tres estrategias conservan la cobertura —dense solo cede 0,002— y en cambio ceden posición: MRR\@10 cae 0,191 en dense, 0,214 en RRF y 0,186 en el híbrido con *reranking*. BM25 sufre por coincidencia léxica y los métodos que incorporan señal semántica por el orden en que devuelven la evidencia.
+
+| Estrategia | Recall\@5 | Recall\@10 | Precision\@5 | Precision\@10 | MRR\@10 | nDCG\@10 |
+|---|---|---|---|---|---|---|
+| BM25 | 0,508 → 0,475 | 0,760 → 0,598 | 0,514 → 0,429 | 0,414 → 0,300 | 0,679 → 0,691 | 0,756 → 0,703 |
+| Dense | 0,708 → 0,606 | 0,855 → 0,853 | 0,743 → 0,571 | 0,471 → 0,414 | 0,857 → 0,667 | 0,887 → 0,818 |
+| RRF | 0,595 → 0,555 | 0,841 → 0,804 | 0,600 → 0,514 | 0,457 → 0,386 | 1,000 → 0,786 | 0,878 → 0,814 |
+| RRF + *reranking* | 0,684 → 0,584 | 0,841 → 0,804 | 0,714 → 0,543 | 0,457 → 0,386 | 1,000 → 0,814 | 0,889 → 0,833 |
+
+: *Recuperación por formulación en la campaña de explicitud, de explícita a implícita. Precision sigue el mismo criterio estricto que Recall y MRR: solo el grado 2 cuenta como relevante* {#tbl-expl-recuperacion}
+
+Precision matiza esa lectura. Desciende en las cuatro estrategias —entre 0,057 y 0,171—, lo que indica que la reformulación no solo cambia qué evidencia se alcanza o en qué orden, sino cuántos resultados irrelevantes ocupan el presupuesto de cinco y diez fragmentos. El efecto es especialmente acusado en el *reranking* y en dense a cinco posiciones, los dos métodos que mejoraban el orden en la formulación explícita.
+
+El patrón aparece en varias preguntas, aunque solo hay siete preguntas base independientes. Las 28 comparaciones —cuatro estrategias por siete preguntas— no constituyen 28 unidades independientes. El retroceso supera a la mejora en las métricas de cobertura y orden, y MRR presenta más empates que cambios.
+
+| Métrica | Mejora | Empate | Retroceso |
+|---|---:|---:|---:|
+| Recall\@5 | 10 | 1 | 17 |
+| Recall\@10 | 6 | 6 | 16 |
+| Precision\@5 | 4 | 9 | 15 |
+| Precision\@10 | 5 | 7 | 16 |
+| MRR\@5 | 3 | 15 | 10 |
+| MRR\@10 | 3 | 15 | 10 |
+| nDCG\@5 | 9 | 1 | 18 |
+| nDCG\@10 | 9 | 0 | 19 |
+
+: *Mejoras, empates y retrocesos al pasar de explícita a implícita, sobre 28 comparaciones emparejadas por pregunta base y estrategia* {#tbl-expl-victorias}
+
+La suficiencia de la evidencia, calculada sobre el conjunto canónico de cada pregunta, muestra un matiz que las métricas de cobertura ocultan. El *reranking* recupera el conjunto canónico completo en las cuatro celdas. Dense y RRF lo hacen en la formulación explícita y ceden en la implícita. BM25, en cambio, **mejora** a cinco posiciones al pasar a implícita, de 0,571 a 0,857, pese a perder 0,163 de Recall\@10 en la misma transición.
+
+| Estrategia | Estricta\@5 | Estricta\@10 | Parcial\@5 | Parcial\@10 |
+|---|---|---|---|---|
+| BM25 | 0,571 → 0,857 | 1,000 → 0,857 | 0,571 → 0,857 | 1,000 → 0,857 |
+| Dense | 1,000 → 0,714 | 1,000 → 0,857 | 1,000 → 0,857 | 1,000 → 0,857 |
+| RRF | 1,000 → 0,714 | 1,000 → 1,000 | 1,000 → 0,714 | 1,000 → 1,000 |
+| RRF + *reranking* | 1,000 → 1,000 | 1,000 → 1,000 | 1,000 → 1,000 | 1,000 → 1,000 |
+
+: *Suficiencia de la evidencia, de explícita a implícita. Estricta exige el conjunto canónico completo; parcial, al menos un fragmento del conjunto* {#tbl-expl-suficiencia}
+
+La divergencia entre Recall y suficiencia es el resultado más interesante de esta medición. BM25 recupera menos evidencia de grado 2 en conjunto, pero concentra mejor el fragmento que basta para responder. Esto confirma que **recuperar toda la evidencia relevante conocida y recuperar evidencia suficiente para responder no son el mismo objetivo**, y que una métrica puede empeorar mientras la otra mejora. El matiz apoya leer Recall junto a la suficiencia y no como sustituto de ella.
+
+Conviene no sobreinterpretarlo. El cálculo se apoya en las siete preguntas de la campaña y solo cuatro de los trece conjuntos canónicos del *golden set* son multichunk; así, la diferencia entre suficiencia estricta y parcial solo llega a ser visible en unos pocos casos, y por eso ambas columnas coinciden casi por completo.
+
+### Generación y conducta del sistema {#sec-explicitness-generation}
+
+La generación exploratoria produjo **55 respuestas válidas y una unidad fallida** de 56 celdas previstas. Hay 27 parejas completas condición × pregunta, que reúnen 54 respuestas; la respuesta restante no tiene contraparte válida. La @tbl-expl-generacion muestra medias marginales disponibles, no diferencias emparejadas. BM25, RRF y reranking conservan conducta 2 y validez formal de citas en ambas formulaciones; dense presenta deterioro descriptivo en los indicadores considerados.
+
+| Estrategia | Faithfulness | Factual Correctness | Conducta 0–2 | Citas válidas |
+|---|---|---|---|---|
+| BM25 | 1,000 → 1,000 (5/7) | 0,944 → 0,910 (7/7) | 2,000 → 2,000 (7/7) | 1,000 → 1,000 (7/7) |
+| Dense | 1,000 → 0,857 (6/7) | 0,924 → 0,793 (7/7) | 2,000 → 1,714 (7/7) | 1,000 → 0,857 (7/7) |
+| RRF | 0,944 → 1,000 (6/6) | 0,917 → 0,956 (7/7) | 2,000 → 2,000 (7/7) | 1,000 → 1,000 (7/7) |
+| RRF + *reranking* | 1,000 → 0,972 (5/6) | 0,922 → 0,980 (6/7) | 2,000 → 2,000 (6/7) | 1,000 → 1,000 (6/7) |
+
+: *Medias marginales de generación exploratoria, de explícita a implícita; entre paréntesis, n explícita/n implícita* {#tbl-expl-generacion}
+
+| Estrategia | Δ Faithfulness (n) | Δ Factual Correctness (n) | Δ Conducta (n) | Δ Citas (n) |
+|---|---:|---:|---:|---:|
+| BM25 | 0,000 (5) | −0,034 (7) | 0,000 (7) | 0,000 (7) |
+| Dense | −0,167 (6) | −0,131 (7) | −0,286 (7) | −0,143 (7) |
+| RRF | +0,056 (6) | +0,039 (7) | 0,000 (7) | 0,000 (7) |
+| RRF + *reranking* | −0,033 (5) | +0,055 (6) | 0,000 (6) | 0,000 (6) |
+
+: *Diferencias emparejadas implícita − explícita en generación exploratoria, con n de parejas disponibles por criterio* {#tbl-expl-generacion-pareada}
+
+El resultado sugiere un desacople entre recuperación y generación: el deterioro del ranking no se acompaña de un deterioro conductual en todas las estrategias. Dense pierde 0,286 puntos de conducta en sus siete pares, pero el patrón no demuestra por sí solo que la evidencia ausente cause el fallo. La muestra reducida y las métricas parcialmente disponibles impiden establecer robustez o equivalencia. Esa expectativa exploratoria dio lugar a H3, que debe valorarse de nuevo dentro de cada generador en v3.
+
+# Documentación complementaria
+
+## B. Golden set y anotación
+
+Este apéndice delimita el golden set y los qrels del **piloto**. El inventario ampliado de treinta bases y sus 26 parejas se describe en §5.1.1 y §5.5; la cadena documental v3 se recoge en E.3.
+
+Las 22 preguntas del golden set del piloto están en inglés y tienen estado adjudicado: trece son respondibles y nueve no respondibles. El contrato `golden_set_v1`, recogido en `v2/config/golden_set_schema_v1.json`, establece el corpus, el método de chunking, el idioma, la respondibilidad, las evidencias, las revisiones auxiliares y la adjudicación humana. Esto mantiene una base común para la anotación.
+
+| Tipo de pregunta | Respondibles | No respondibles |  Total |
+|------------------|-------------:|----------------:|-------:|
+| Factual          |            2 |               3 |      5 |
+| Explicativa      |            3 |               2 |      5 |
+| Comparativa      |            5 |               2 |      7 |
+| Procedimental    |            3 |               2 |      5 |
+| **Total**        |       **13** |           **9** | **22** |
+
+: *Distribución del golden set del piloto por tipo y respondibilidad* {#tbl-apendice-golden-piloto}
+
+Las nueve preguntas no respondibles responden a cinco causas distintas. Dos quedan fuera del alcance, una utiliza una entidad o concepto inexistente, dos parten de una premisa falsa, dos carecen de evidencia y dos cuentan con evidencia insuficiente. Entre las respondibles, cuatro necesitan más de un chunk canónico. Esta variedad permite evaluar respuestas ordinarias, correcciones fundamentadas y abstenciones, sin equiparar el tipo semántico de pregunta con la disponibilidad de evidencia.
+
+| Elemento | Definición operacional |
+|------------------------------------|------------------------------------|
+| Grado 0 | El chunk no contribuye a responder la pregunta |
+| Grado 1 | El chunk aporta contexto relacionado, pero insuficiente |
+| Grado 2 | El chunk contiene evidencia directamente útil, por sí solo o combinado |
+| Evidencia canónica | Conjunto mínimo de chunks de grado 2 necesario para construir la respuesta |
+| Evidencia suficiente | La pregunta puede responderse con el corpus sin conocimiento externo |
+| Adjudicación | Decisión final que prevalece sobre las revisiones auxiliares |
+
+: *Criterios de anotación del golden set* {#tbl-apendice-anotacion}
+
+Al unir los top-10 de BM25 y dense retrieval, el pooling reunió 340 candidatos únicos. Un triage ciego con tres jueces permitió dirigir la revisión por riesgo hacia 109 candidatos. El resultado positivo se recoge en `v2/data/golden/qrels_golden_set_pooled_v1_22q.tsv`, con 119 qrels: 47 de grado 1 y 72 de grado 2. Los grados 0 se conservan en los artefactos de adjudicación, diferenciados de los candidatos que nunca llegaron a juzgarse.
+
+Las principales decisiones pueden verse en tres casos. q-v1-013 exige comparar información y es respondible, aunque necesita evidencia repartida entre varios chunks. q-v1-020 parte de una premisa falsa que debe rechazarse con tres chunks de contradicción. En cambio, q-v1-010 queda fuera del alcance y requiere abstenerse sin añadir afirmaciones sustantivas. Las resoluciones de premisas falsas están en `v2/data/golden/answerability_resolutions_v1_22q.json`; las preguntas originales no se reescribieron.
+
+## C. Configuración experimental
+
+Las configuraciones siguientes corresponden al piloto y a sus entornos registrados. La ampliación v3 conserva recuperadores y corpus, pero incorpora tres generadores y una rúbrica distinta; su configuración y sus metadatos figuran en E.3.
+
+Las cuatro condiciones de retrieval se evalúan con los mismos 288 chunks, las 22 preguntas, los qrels pooled y los cortes en cinco y diez resultados. En Precision, Recall y MRR solo el grado 2 cuenta como relevancia estricta, mientras nDCG conserva la escala 0/1/2.
+
+| Condición | Configuración principal | Profundidad y desempate |
+|------------------------|------------------------|------------------------|
+| BM25 | Tokenización `[a-z0-9]+`, $k_1=1,5$, $b=0,75$ | top-10; score descendente e identificador de chunk |
+| Dense | `intfloat/e5-base-v2`, embeddings normalizados de 768 dimensiones | top-10; producto escalar exacto e identificador de chunk |
+| RRF | Fusión de los top-10 de BM25 y dense, $k_0=60$ | top-10; score RRF descendente e identificador de chunk |
+| RRF + reranking | `cross-encoder/ms-marco-MiniLM-L6-v2` sobre los diez candidatos de RRF | conserva diez candidatos; score del cross-encoder e identificador de chunk |
+
+: *Configuraciones de retrieval comparadas* {#tbl-apendice-config-retrieval}
+
+Para la recuperación densa se utilizó E5-base-v2, con los prefijos `query:` y `passage:`, longitud máxima de 512 tokens, lotes de 16 y búsqueda exhaustiva sobre NumPy. Para la reordenación se utilizó MiniLM-L6-v2, también con longitud máxima de 512 tokens y lotes de 16, en ejecución CUDA. Las revisiones exactas de los modelos se conservan en los metadatos de ejecución. La elección de modelos y parámetros no se hizo después de observar las métricas.
+
+En la evaluación RAG del piloto, el generador permanece fijo. Entre estrategias solo varían la selección y el orden de los cinco contextos que recibe.
+
+| Componente | Configuración |
+|------------------------------------|------------------------------------|
+| Condiciones RAG | BM25, dense, RRF y RRF + reranking, todas con top-5 |
+| Generador | Qwen 3.5 9B mediante Ollama |
+| Decodificación | Temperatura 0, semilla 20260902, máximo 300 tokens |
+| Prompt | `rag_answer_prompt_v1` |
+| Respuestas | 22 por condición; 88 en total |
+| Juez principal | GLM 5.3 Flash, temperatura 0, semilla 20260902, razonamiento bajo |
+| Juez de sensibilidad | Gemma 3 4B, temperatura 0, semilla 20260902 |
+| Métricas RAGAS | Faithfulness y Factual Correctness, versión 0.4.3 |
+| Métricas deterministas | Conducta declarada, validez y presencia de citas |
+| Conducta final | Adjudicación humana en 61 casos; GLM en los 27 restantes |
+
+: *Configuración de la evaluación RAG del piloto* {#tbl-apendice-rag-config}
+
+Dense y RAG utilizan entornos separados, situados en `v2/environments/dense/` y `v2/environments/rag/`, cada uno con su `pyproject.toml` y `uv.lock`. El benchmark de retrieval se ejecutó con Python 3.12.13, NumPy 2.5.2, PyTorch 2.13.0+cu130 y Sentence Transformers 5.7.0, sobre una NVIDIA GeForce RTX 2060 SUPER. La generación y los modelos locales no originaron cargos variables por API. No se midieron el consumo energético ni la amortización del hardware.
+
+```{=typst}
+#pagebreak()
+```
+
+## D. Resultados completos
+
+### D.1. Faithfulness global: diagnóstico no aplicable a la selección
+
+| Indicador                         |   BM25 |  Dense |    RRF | RRF + reranking |
+|-----------------------------------|-------:|-------:|-------:|----------------:|
+| Faithfulness automática, 22 casos | 0,7814 | 0,7633 | 0,7318 |          0,7379 |
+
+: *Faithfulness global conservada como diagnóstico del evaluador* {#tbl-apendice-faithfulness-global}
+
+*Nota.* Incluye siete abstenciones esperadas por condición, sin contenido evaluable. Estas medias y los deltas globales siguientes no se utilizan para comparar fundamentación; la comparación principal utiliza quince casos por condición.
+
+Se conservan a continuación las seis comparaciones emparejadas. El delta expresa la segunda estrategia menos la primera, de modo que un signo positivo favorece a la segunda.
+
+| Comparación | Delta Faithfulness | Delta Factual Correctness | Delta conducta consolidada |
+|------------------|-----------------:|-----------------:|-----------------:|
+| BM25 → dense | −0,0181 | −0,0067 | 0,0000 |
+| BM25 → RRF | −0,0496 | +0,0920 | +0,0909 |
+| BM25 → RRF + reranking | −0,0435 | +0,0567 | +0,0909 |
+| Dense → RRF | −0,0314 | +0,0987 | +0,0909 |
+| Dense → RRF + reranking | −0,0254 | +0,0633 | +0,0909 |
+| RRF → RRF + reranking | +0,0061 | −0,0353 | 0,0000 |
+
+: *Deltas emparejados de las respuestas RAG del piloto* {#tbl-apendice-rag-pareado}
+
+*Nota.* Faithfulness usa 22 pares por comparación e incluye las puntuaciones automáticas de las abstenciones; Factual Correctness utiliza 15 pares con referencia; la conducta consolidada utiliza los 22 pares y da precedencia a la adjudicación humana.
+
+| Comparación de conducta | Victorias de la segunda | Empates | Victorias de la primera |
+|------------------|-----------------:|-----------------:|-----------------:|
+| BM25 → dense | 2 | 19 | 1 |
+| BM25 → RRF | 2 | 20 | 0 |
+| BM25 → RRF + reranking | 2 | 20 | 0 |
+| Dense → RRF | 1 | 21 | 0 |
+| Dense → RRF + reranking | 1 | 21 | 0 |
+| RRF → RRF + reranking | 0 | 22 | 0 |
+
+: *Victorias y empates en conducta consolidada del piloto* {#tbl-apendice-rag-conducta}
+
+Los resultados por caso incluyen rankings y evaluaciones que no se reproducen íntegramente en la memoria. Para facilitar su consulta y análisis, se guardan en formatos legibles por máquina, organizados según su función:
+
+- `v2/outputs/metrics/`: métricas agregadas y por pregunta;
+- `v2/outputs/runs/`: rankings top-10 de cada condición;
+- `v2/outputs/latency/`: muestras crudas y resumen del benchmark;
+- `v2/outputs/rag/`: respuestas, intentos y metadatos de generación;
+- `v2/outputs/rag_eval/`: puntuaciones, análisis emparejados y colas de riesgo.
+
+En `rag_eval/`, los archivos canónicos del experimento completo usan el prefijo `rag_four_retrievers_` y las terminaciones `analysis_v1_22q.json`, `human_alignment_v1_22q.json` o `consolidated_v1_22q.json`. Los nombres distinguen la comparación de GLM, la alineación de los jueces y la conducta final. Así pueden localizarse sin mezclarlos con el piloto histórico de dos condiciones.
+
+El registro permite localizar también los principales errores cualitativos. En q-v1-003, el corte de RRF en diez candidatos deja fuera parte de la evidencia. q-v1-013 reúne una cobertura multichunk difícil y truncación en el reranker. Por su parte, Gemma aplica de forma inconsistente la rúbrica conductual a abstenciones y correcciones de premisas falsas. Estos casos se conservaron como resultados, sin utilizarlos para reajustar los modelos.
+
+## F. Evolución del piloto y de los qrels
+
+Este apéndice conserva los resultados de las etapas previas a la comparación final. Al interpretarlos debe tenerse presente que las diferencias entre versiones de qrels reflejan cambios en la evidencia juzgada, no mejoras de los recuperadores, cuyos rankings se mantuvieron.
+
+### F.1. Ejecuciones iniciales
+
+La primera ejecución válida fue `bm25_v1`, con diez preguntas destinadas a comprobar el pipeline antes de ampliar la anotación. Una vez adjudicado el segundo lote, `bm25_v1_22q` se ejecutó sobre las 22 preguntas en inglés: trece respondibles y nueve no respondibles. Sus 220 resultados conservan puntuaciones, rangos, latencia y grados de relevancia.
+
+La ampliación no cambió la configuración del recuperador. Aumentó la base empírica e incorporó preguntas multichunk, pero seguía siendo una baseline. Por sí sola no permitía comparar técnicas ni suponer que los qrels cubrían toda la relevancia posible del corpus.
+
+### F.2. BM25 con qrels originales
+
+| Métrica   |  $k=5$ | $k=10$ |
+|-----------|-------:|-------:|
+| Precision | 0,1538 | 0,1308 |
+| Recall    | 0,4615 | 0,8590 |
+| MRR       | 0,3333 | 0,4038 |
+| nDCG      | 0,3408 | 0,4916 |
+
+: *Resultados iniciales de BM25 con los qrels originales* {#tbl-bm25-original}
+
+*Nota.* Medias macro sobre las trece preguntas respondibles. Precision, Recall y MRR consideran relevante únicamente el grado 2; nDCG conserva los grados 0/1/2.
+
+Las métricas agregadas son medias macro de trece preguntas. BM25 encuentra al menos un chunk de grado 2 en top-5 para siete preguntas y en top-10 para las trece. Ahora bien, dentro del top-10 solo aparecen diecisiete de los 22 qrels de grado 2. Esto explica que todas las consultas respondibles tengan un primer acierto y, aun así, Recall\@10 sea 0,8590: en varias preguntas multichunk falta parte de la evidencia directa.
+
+La lectura de las métricas depende del criterio de relevancia. Precision, Recall y MRR solo consideran relevante el grado 2, mientras nDCG conserva los grados 0/1/2. Por ejemplo, el chunk de grado 1 situado en rango 6 para q-v1-013 mejora nDCG, pero no se considera evidencia suficiente en las métricas binarias. Los 24 juicios adjudicados de estos qrels son conocidos, aunque no agotan todos los chunks que podrían ser relevantes.
+
+### F.3. Cobertura inicial por pregunta
+
+| QID      | Grados 2 | Rangos completos | Recall\@10 |
+|----------|---------:|------------------|-----------:|
+| q-v1-001 |        1 | 6                |       1,00 |
+| q-v1-002 |        1 | 1                |       1,00 |
+| q-v1-003 |        1 | 4                |       1,00 |
+| q-v1-004 |        1 | 6                |       1,00 |
+| q-v1-005 |        1 | 6                |       1,00 |
+| q-v1-006 |        1 | 6                |       1,00 |
+| q-v1-011 |        1 | 3                |       1,00 |
+| q-v1-012 |        2 | 8, 12            |       0,50 |
+| q-v1-013 |        3 | 4, 16, 37        |       0,33 |
+| q-v1-014 |        3 | 1, 3, 14         |       0,67 |
+| q-v1-015 |        3 | 8, 9, 19         |       0,67 |
+| q-v1-016 |        2 | 1, 2             |       1,00 |
+| q-v1-017 |        2 | 2, 3             |       1,00 |
+
+: *Cobertura por pregunta del baseline BM25 con los qrels originales* {#tbl-bm25-cobertura-original}
+
+*Nota.* Los rangos completos indican la posición de todos los chunks de grado 2 en el ranking completo. Recall se informa en el corte de diez resultados.
+
+En q-v1-016 y q-v1-017, la consulta comparte vocabulario discriminativo con las definiciones y se alcanza una cobertura multichunk completa. No ocurre lo mismo en q-v1-013: BM25 sitúa en top-10 solo una de las tres evidencias de grado 2, mientras las otras quedan en los rangos 16 y 37. Este contraste muestra la dificultad de reunir información distribuida entre secciones, más allá de encontrar un primer resultado relevante.
+
+El detalle de estos resultados puede consultarse en `bm25_v1_22q_per_query.csv`, `bm25_v1_22q.jsonl` y el informe `bm25_v1_22q.md`.
+
+### F.4. Comparación inicial con dense
+
+La ejecución `dense_e5_base_v2_22q` mantiene los mismos 288 chunks, preguntas y qrels que BM25. Recupera algún chunk de grado 2 en top-5 para nueve de las trece preguntas respondibles y en top-10 para doce. Dense supera a BM25 en MRR y nDCG en ambos cortes, además de Recall\@5. BM25, sin embargo, conserva mayor Recall\@10 y es el único de los dos que encuentra algún grado 2 en top-10 para las trece consultas.
+
+| Métrica   | BM25 \@5 | Dense \@5 | BM25 \@10 | Dense \@10 |
+|-----------|---------:|----------:|----------:|-----------:|
+| Precision |   0,1538 |    0,1692 |    0,1308 |     0,1231 |
+| Recall    |   0,4615 |    0,5897 |    0,8590 |     0,8205 |
+| MRR       |   0,3333 |    0,5000 |    0,4038 |     0,5305 |
+| nDCG      |   0,3408 |    0,4673 |    0,4916 |     0,5508 |
+
+: *Comparación inicial entre BM25 y dense retrieval* {#tbl-bm25-dense-original}
+
+*Nota.* Resultados calculados con los 24 juicios originales, antes de ampliar los qrels mediante pooling.
+
+Esta comparación era provisional y se basaba en 13 consultas evaluables. Dense mejora la posición de la primera evidencia y la calidad del orden, sin resolver por ello toda la cobertura multichunk. En q-v1-013 coloca una evidencia en rango 1, pero deja otras en 13 y 25; en q-v1-016 no encuentra ningún qrel de grado 2 en top-10, aunque BM25 había situado ambos en las posiciones 1 y 2. Estas diferencias daban motivos para probar recuperación híbrida, no para declarar un ganador en aquella etapa.
+
+El límite de 512 tokens obligó al encoder a truncar 15 de los 288 pasajes; ninguno contenía qrels conocidos. La carga del modelo requirió 12,46 s y la codificación offline del corpus, 5,69 s. La latencia media de consulta fue de 6,54 ms en la RTX 2060 SUPER. Comparar directamente estas medidas con BM25 sin distinguir el hardware, la fase de carga y la naturaleza de la operación llevaría a una lectura incompleta.
+
+### F.5. Ampliación del pool
+
+La primera comparación BM25–dense compartía los 24 juicios originales, pero esos juicios no eran exhaustivos. Para reducir la limitación se unieron ambos rankings top-10 en un pool ciego de 340 candidatos. Tres jueces auxiliares de familias distintas revisaron los 321 candidatos nuevos con `pool_review_prompt_v1`. Sus grados se guardaron como diagnóstico, no como anotación final.
+
+Mediante `three_judge_risk_directed_v1`, la adjudicación se centró en 109 candidatos seleccionados por riesgo. La revisión cerró 14 grados 0, 45 grados 1 y 50 grados 2; de estos últimos, 16 se marcaron como evidencia canónica. La procedencia permite distinguir 23 decisiones directas del autor, 70 tomadas por un asistente automático bajo un criterio predefinido y 16 discrepancias fuertes resueltas mediante consulta explícita al autor. No se trata, por tanto, de 109 anotaciones humanas independientes.
+
+El constructor reproducible mantuvo los 24 qrels originales y agregó 95 decisiones positivas en otro archivo. Así se obtuvieron 119 qrels pooled, con 47 de grado 1 y 72 de grado 2. Seis grados 2 corresponden a q-v1-008 y q-v1-020, preguntas con premisas falsas. La revisión independiente mantuvo ambas como no respondibles y clasificó esos chunks como evidencia de contradicción. En estos casos se espera rechazar la premisa y ofrecer una corrección fundamentada; no equivale a responder la explicación solicitada ni a abstenerse por falta de evidencia. Las nueve preguntas no respondibles siguen fuera de los agregados ordinarios de retrieval.
+
+| Métrica   | BM25 \@5 | Dense \@5 | BM25 \@10 | Dense \@10 |
+|-----------|---------:|----------:|----------:|-----------:|
+| Precision |   0,4769 |    0,6154 |    0,3923 |     0,3923 |
+| Recall    |   0,5128 |    0,6635 |    0,8077 |     0,8301 |
+| MRR       |   0,7885 |    0,7436 |    0,7885 |     0,7436 |
+| nDCG      |   0,5907 |    0,7155 |    0,7052 |     0,7491 |
+
+: *Comparación entre BM25 y dense retrieval con los qrels pooled* {#tbl-bm25-dense-pooled}
+
+*Nota.* Medias macro sobre trece preguntas respondibles. Los qrels pooled proceden del top-10 de BM25 y dense y no son exhaustivos.
+
+Al utilizar los qrels pooled, dense supera a BM25 en Precision, Recall y nDCG en top-5, y conserva una pequeña ventaja en Recall y nDCG en top-10. BM25 obtiene mayor MRR en los dos cortes, mientras Precision\@10 queda empatada. Dense reúne toda la evidencia de tres consultas en top-5 y seis en top-10; BM25 lo hace en cero y cinco, respectivamente. El patrón apunta a una complementariedad: dense aporta mayor cobertura y calidad global del orden, mientras BM25 adelanta la primera evidencia.
+
+El aumento general de las métricas no significa que los recuperadores hayan mejorado. Sus rankings no cambiaron; lo que se redujo fue la incompletitud de los qrels. Además, el pool se construyó con el top-10 de esos mismos sistemas. La reevaluación ofrece una base común para comparar BM25 y dense, pero no es independiente ni exhaustiva y puede favorecer a los métodos que aportaron los candidatos.
+
+### F.6. Incorporación de RRF
+
+La condición híbrida fusiona los top-10 de BM25 y dense mediante Reciprocal Rank Fusion. Conserva los 288 chunks, las 22 preguntas, los cortes de evaluación y el hash de los qrels pooled. El parámetro $k_0=60$ quedó fijado antes de revisar los resultados, sin ajustar pesos sobre el conjunto de evaluación.
+
+| Métrica   | BM25 \@5 |  Dense \@5 |    RRF \@5 | BM25 \@10 | Dense \@10 |   RRF \@10 |
+|-----------|----------:|----------:|----------:|----------:|----------:|----------:|
+| Precision |   0,4769 | **0,6154** |     0,5846 |    0,3923 |     0,3923 | **0,4231** |
+| Recall    |   0,5128 | **0,6635** |     0,6506 |    0,8077 |     0,8301 | **0,8846** |
+| MRR       |   0,7885 |     0,7436 | **0,8846** |    0,7885 |     0,7436 | **0,8846** |
+| nDCG      |   0,5907 |     0,7155 | **0,7431** |    0,7052 |     0,7491 | **0,8167** |
+
+: *Resultados de BM25, dense retrieval y la fusión RRF* {#tbl-resultados-rrf}
+
+*Nota.* La negrita identifica el mejor valor de cada corte, no una diferencia inferencialmente significativa.
+
+Entre estas tres condiciones, RRF alcanza los mejores valores en las cuatro métricas a diez documentos. Reúne la evidencia completa de ocho de las trece preguntas, frente a cinco de BM25 y seis de dense. La mejora de MRR y nDCG en ambos cortes indica que combina primeros aciertos fuertes con un orden mejor de la evidencia graduada.
+
+La ventaja agregada no se repite en todos los indicadores ni en todas las preguntas. Dense conserva 0,0308 más en Precision\@5 y 0,0128 más en Recall\@5. En q-v1-003, Recall\@10 de RRF baja a 0,50, frente a 0,75 de BM25 y 0,625 de dense: la reordenación deja parte de la evidencia fuera de las diez posiciones conservadas. Fusionar los resultados mejora el conjunto, pero no garantiza mantener cada acierto de los recuperadores de origen.
+
+Cuando los rankings ya están calculados, fusionarlos añade una media observada de 0,0077 ms por consulta. La estimación de latencia híbrida media es de 8,42 ms en serie y 6,35 ms en paralelo. Estas cifras combinan los tiempos registrados en los runs de origen; no sustituyen las mediciones de un benchmark controlado con calentamiento y repeticiones.
+
+Los 220 pares pregunta--chunk del run híbrido ya formaban parte del pool técnico BM25+dense de 340 pares. El pool incremental no incorpora candidatos: aporta cero, porque la fusión solo utiliza los top-10 con los que se construyó aquel pool. Se mantienen así los mismos juicios y también su amenaza de validez. Los qrels no son exhaustivos y proceden de los dos recuperadores que alimentan RRF.
+
+# Bibliografía {.unnumbered}
+
+::: {#refs}
+:::

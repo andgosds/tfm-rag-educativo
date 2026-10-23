@@ -1,0 +1,277 @@
+{
+  "extraction_method": "pymupdf_blocks_v1",
+  "total_books": 2,
+  "total_records": 190,
+  "total_chars": 409015,
+  "total_words": 68495,
+  "books": {
+    "openstax_intro_stats_2e": {
+      "records": 91,
+      "chapters": 4,
+      "sections": 25,
+      "empty_pages": 0,
+      "short_pages_lt_100_chars": 0,
+      "total_chars": 185209,
+      "total_words": 32488,
+      "chapter_ranges": [
+        {
+          "chapter_id": "6",
+          "chapter_title": "The Normal Distribution",
+          "pdf_page_start": 347,
+          "pdf_page_end": 362,
+          "printed_page_start": 335,
+          "printed_page_end": 350,
+          "sections": [
+            {
+              "section_id": "6.intro",
+              "section_title": "Introduction",
+              "pdf_page_start": 347
+            },
+            {
+              "section_id": "6.1",
+              "section_title": "The Standard Normal Distribution",
+              "pdf_page_start": 348
+            },
+            {
+              "section_id": "6.2",
+              "section_title": "Using the Normal Distribution",
+              "pdf_page_start": 352
+            },
+            {
+              "section_id": "6.3",
+              "section_title": "Normal Distribution (Lap Times)",
+              "pdf_page_start": 359
+            },
+            {
+              "section_id": "6.4",
+              "section_title": "Normal Distribution (Pinkie Length)",
+              "pdf_page_start": 360
+            }
+          ]
+        },
+        {
+          "chapter_id": "7",
+          "chapter_title": "The Central Limit Theorem",
+          "pdf_page_start": 377,
+          "pdf_page_end": 399,
+          "printed_page_start": 365,
+          "printed_page_end": 387,
+          "sections": [
+            {
+              "section_id": "7.intro",
+              "section_title": "Introduction",
+              "pdf_page_start": 377
+            },
+            {
+              "section_id": "7.1",
+              "section_title": "The Central Limit Theorem for Sample Means (Averages)",
+              "pdf_page_start": 378
+            },
+            {
+              "section_id": "7.2",
+              "section_title": "The Central Limit Theorem for Sums",
+              "pdf_page_start": 382
+            },
+            {
+              "section_id": "7.3",
+              "section_title": "Using the Central Limit Theorem",
+              "pdf_page_start": 385
+            },
+            {
+              "section_id": "7.4",
+              "section_title": "Central Limit Theorem (Pocket Change)",
+              "pdf_page_start": 393
+            },
+            {
+              "section_id": "7.5",
+              "section_title": "Central Limit Theorem (Cookie Recipes)",
+              "pdf_page_start": 396
+            }
+          ]
+        },
+        {
+          "chapter_id": "8",
+          "chapter_title": "Confidence Intervals",
+          "pdf_page_start": 417,
+          "pdf_page_end": 443,
+          "printed_page_start": 405,
+          "printed_page_end": 431,
+          "sections": [
+            {
+              "section_id": "8.intro",
+              "section_title": "Introduction",
+              "pdf_page_start": 417
+            },
+            {
+              "section_id": "8.1",
+              "section_title": "A Single Population Mean using the Normal Distribution",
+              "pdf_page_start": 419
+            },
+            {
+              "section_id": "8.2",
+              "section_title": "A Single Population Mean using the Student t Distribution",
+              "pdf_page_start": 428
+            },
+            {
+              "section_id": "8.3",
+              "section_title": "A Population Proportion",
+              "pdf_page_start": 432
+            },
+            {
+              "section_id": "8.4",
+              "section_title": "Confidence Interval (Home Costs)",
+              "pdf_page_start": 439
+            },
+            {
+              "section_id": "8.5",
+              "section_title": "Confidence Interval (Place of Birth)",
+              "pdf_page_start": 441
+            },
+            {
+              "section_id": "8.6",
+              "section_title": "Confidence Interval (Women's Heights)",
+              "pdf_page_start": 442
+            }
+          ]
+        },
+        {
+          "chapter_id": "9",
+          "chapter_title": "Hypothesis Testing with One Sample",
+          "pdf_page_start": 473,
+          "pdf_page_end": 497,
+          "printed_page_start": 461,
+          "printed_page_end": 485,
+          "sections": [
+            {
+              "section_id": "9.intro",
+              "section_title": "Introduction",
+              "pdf_page_start": 473
+            },
+            {
+              "section_id": "9.1",
+              "section_title": "Null and Alternative Hypotheses",
+              "pdf_page_start": 474
+            },
+            {
+              "section_id": "9.2",
+              "section_title": "Outcomes and the Type I and Type II Errors",
+              "pdf_page_start": 476
+            },
+            {
+              "section_id": "9.3",
+              "section_title": "Probability Distribution Needed for Hypothesis Testing",
+              "pdf_page_start": 478
+            },
+            {
+              "section_id": "9.4",
+              "section_title": "Rare Events, the Sample, Decision and Conclusion",
+              "pdf_page_start": 479
+            },
+            {
+              "section_id": "9.5",
+              "section_title": "Additional Information and Full Hypothesis Test Examples",
+              "pdf_page_start": 481
+            },
+            {
+              "section_id": "9.6",
+              "section_title": "Hypothesis Testing of a Single Mean and Single Proportion",
+              "pdf_page_start": 495
+            }
+          ]
+        }
+      ],
+      "title": "Introductory Statistics 2e",
+      "included_chapters": "6-9",
+      "output_file": "introductory_statistics_2e_pages.jsonl"
+    },
+    "openstax_principles_ds": {
+      "records": 99,
+      "chapters": 2,
+      "sections": 11,
+      "empty_pages": 0,
+      "short_pages_lt_100_chars": 1,
+      "total_chars": 223806,
+      "total_words": 36007,
+      "chapter_ranges": [
+        {
+          "chapter_id": "3",
+          "chapter_title": "Descriptive Statistics: Statistical Measurements and Probability Distributions",
+          "pdf_page_start": 113,
+          "pdf_page_end": 149,
+          "printed_page_start": 103,
+          "printed_page_end": 139,
+          "sections": [
+            {
+              "section_id": "3.intro",
+              "section_title": "Introduction",
+              "pdf_page_start": 113
+            },
+            {
+              "section_id": "3.1",
+              "section_title": "Measures of Center",
+              "pdf_page_start": 114
+            },
+            {
+              "section_id": "3.2",
+              "section_title": "Measures of Variation",
+              "pdf_page_start": 120
+            },
+            {
+              "section_id": "3.3",
+              "section_title": "Measures of Position",
+              "pdf_page_start": 125
+            },
+            {
+              "section_id": "3.4",
+              "section_title": "Probability Theory",
+              "pdf_page_start": 129
+            },
+            {
+              "section_id": "3.5",
+              "section_title": "Discrete and Continuous Probability Distributions",
+              "pdf_page_start": 137
+            }
+          ]
+        },
+        {
+          "chapter_id": "4",
+          "chapter_title": "Inferential Statistics and Regression Analysis",
+          "pdf_page_start": 155,
+          "pdf_page_end": 216,
+          "printed_page_start": 145,
+          "printed_page_end": 206,
+          "sections": [
+            {
+              "section_id": "4.intro",
+              "section_title": "Introduction",
+              "pdf_page_start": 155
+            },
+            {
+              "section_id": "4.1",
+              "section_title": "Statistical Inference and Confidence Intervals",
+              "pdf_page_start": 156
+            },
+            {
+              "section_id": "4.2",
+              "section_title": "Hypothesis Testing",
+              "pdf_page_start": 175
+            },
+            {
+              "section_id": "4.3",
+              "section_title": "Correlation and Linear Regression Analysis",
+              "pdf_page_start": 197
+            },
+            {
+              "section_id": "4.4",
+              "section_title": "Analysis of Variance (ANOVA)",
+              "pdf_page_start": 212
+            }
+          ]
+        }
+      ],
+      "title": "Principles of Data Science",
+      "included_chapters": "3-4",
+      "output_file": "principles_of_data_science_pages.jsonl"
+    }
+  }
+}

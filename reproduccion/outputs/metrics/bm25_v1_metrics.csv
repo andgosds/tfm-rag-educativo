@@ -1,0 +1,9 @@
+run_id,query_scope,metric,k,value,query_count
+bm25_v1,answerable_with_positive_qrels,precision,5,0.06666666666666667,6
+bm25_v1,answerable_with_positive_qrels,recall,5,0.3333333333333333,6
+bm25_v1,answerable_with_positive_qrels,mrr,5,0.20833333333333334,6
+bm25_v1,answerable_with_positive_qrels,ndcg,5,0.23844609301223219,6
+bm25_v1,answerable_with_positive_qrels,precision,10,0.10000000000000002,6
+bm25_v1,answerable_with_positive_qrels,recall,10,1.0,6
+bm25_v1,answerable_with_positive_qrels,mrr,10,0.3194444444444444,6
+bm25_v1,answerable_with_positive_qrels,ndcg,10,0.475917551084247,6

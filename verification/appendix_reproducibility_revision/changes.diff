@@ -1,0 +1,181 @@
+--- previous_appendix.qmd
++++ current_appendix.qmd
+@@ -78,70 +78,70 @@
+ 
+ ## E. Reproducción
+ 
+-### E.1. Paquete experimental y requisitos
+-
+-Los procedimientos requieren una copia del **paquete experimental v2**, con sus datos, código, configuraciones y resultados congelados. Este PDF documenta ese paquete, pero no contiene esos archivos ni presupone su acceso público. Disponer únicamente de los PDF de la entrega no permite ejecutar los comandos.
+-
+-Las rutas siguientes son relativas a la raíz del paquete, identificada por `pyproject.toml`, `uv.lock`, `scripts/` y `data/`. No dependen de la carpeta donde se haya depositado este PDF ni llevan un segundo prefijo v2.
++### E.1. Paquete de reproducción y requisitos
++
++La reproducción requiere el paquete de entrega completo, con los datos, el código y los resultados congelados. Los PDF están separados del material ejecutable. Disponer únicamente de los documentos no permite repetir los análisis.
+ 
+ ```text
+-v2/
+-├── config/        inventarios y configuraciones
+-├── data/          corpus, fragmentos y golden set
+-├── scripts/       recuperación, evaluación y análisis
+-├── environments/  entornos de inferencia separados
+-├── outputs/       resultados y fuentes congeladas
+-├── docs/          protocolos y validación técnica
+-└── tests/         pruebas del pipeline
+-```
+-
+-El entorno general se gestiona con uv. Su versión de Python debe satisfacer `pyproject.toml` (Python 3.14 o superior). Si el entorno todavía no existe, se prepara desde la raíz con `uv sync --locked`. Los comandos con `--no-sync` presuponen ese entorno instalado. La recuperación neuronal y la generación tienen entornos separados bajo `environments/` y requisitos adicionales de modelos y backend.
+-
+-### E.2. Validación offline y reanálisis
+-
+-La validación específica comprueba los recuentos, la procedencia de los juicios, la integridad de artefactos congelados y la correspondencia entre este apéndice, sus tablas y su PDF. No modifica la memoria de analista ni la de sponsor. Se ejecuta desde la raíz del paquete:
+-
+-```bash
++v2_entrega_final/
++├── documentos/       PDF de la entrega
++├── reproduccion/     fuentes y paquete ejecutable
++│   ├── notebooks/    recorrido de reproducción
++│   ├── scripts/      implementación de los análisis
++│   ├── data/         corpus, preguntas y evidencias
++│   ├── config/       contratos y configuraciones
++│   ├── outputs/      fuentes y resultados congelados
++│   ├── environments/ entornos de inferencia
++│   ├── docs/         protocolos y validadores
++│   └── tests/        pruebas del pipeline
++└── verification/     informes y cuadernos ejecutados
++```
++
++Las rutas de código y datos de este documento son relativas a **reproduccion/**. Esta carpeta contiene también las fuentes QMD, pyproject.toml y uv.lock. No se necesitan las carpetas originales v1 o v2.
++
++El entorno general requiere Python 3.14 o superior y uv. Desde la raíz de la entrega se instala el entorno y se abre Jupyter Lab:
++
++```bash
++cd reproduccion
++uv sync --locked --group dev
++uv run --no-sync jupyter lab notebooks
++```
++
++En Jupyter debe seleccionarse el kernel del entorno del proyecto. Los comandos siguientes se ejecutan desde reproduccion/. La recuperación neuronal y la generación tienen entornos separados bajo environments/ y requisitos adicionales de modelos y servicios.
++
++### E.2. Reproducción mediante notebooks
++
++Los cinco notebooks de reproduccion/notebooks/ constituyen la vía principal para reproducir los resultados. Presentan las fuentes, ejecutan los análisis mediante los scripts incluidos y muestran las tablas obtenidas. Se recomienda seguirlos en este orden:
++
++1. **00. Entorno, corpus y dataset.** Comprueba los documentos de origen, la fragmentación y las unidades del experimento. Archivo: `00_entorno_corpus_y_dataset.ipynb`.
++2. **01. Preguntas, evidencias y qrels.** Examina las dos formulaciones, las conductas esperadas y los grados y procedencia de la relevancia. Archivo: `01_preguntas_evidencias_y_qrels.ipynb`.
++3. **02. Recuperación y explicitud.** Recalcula las métricas y el contraste explícita–implícita a partir de rankings y qrels congelados. Archivo: `02_recuperacion_y_explicitud.ipynb`.
++4. **03. Respuestas, evaluación y decisiones.** Comprueba cobertura, fallos y procedencia de las puntuaciones. Permite leer una respuesta junto a los fragmentos recuperados. Archivo: `03_respuestas_evaluacion_y_decisiones.ipynb`.
++5. **04. Comparaciones finales y verificación.** Ejecuta el reanálisis completo, compara los resultados con las referencias y muestra las tablas finales de calidad, disponibilidad y tiempos. Archivo: `04_comparaciones_finales_y_verificacion.ipynb`.
++
++Cada cuaderno puede ejecutarse de arriba abajo con Restart Kernel and Run All, sin depender de las variables de otro notebook. Los cuadernos 00, 01 y 03 leen las fuentes y hacen comprobaciones en memoria. El 02 recalcula recuperación y explicitud. El **04 reproduce los 35 CSV** del análisis completo y exige que coincidan byte a byte con las referencias congeladas. Puede ejecutarse directamente para comprobar los resultados numéricos de la entrega.
++
++Los cuadernos de análisis crean destinos nuevos con prefijo REPLAY_ bajo outputs/local_runs/final_experiment_20260930/. Repetir su ejecución no sobrescribe las fuentes, las decisiones ni los documentos. Los scripts mantienen una única implementación de las métricas y de los contrastes estadísticos.
++
++La colección completa también puede ejecutarse desde consola:
++
++```bash
++uv run --no-sync python notebooks/verify_notebooks.py
++```
++
++El verificador utiliza un kernel nuevo para cada cuaderno, comprueba la ejecución de todas las celdas y guarda cinco copias ejecutadas y un informe en un destino REPLAY_ nuevo. Las copias de la comprobación de entrega y su informe están en verification/notebooks/ y verification/notebooks_validation.json, respecto a la raíz del repositorio. Las instrucciones de uso se encuentran en notebooks/README.md.
++
++Como alternativa, el mismo reanálisis completo y la validación específica del apéndice pueden lanzarse sin abrir Jupyter:
++
++```bash
++uv run --no-sync python scripts/reproduce_offline.py \
++  --run-id tribunal_01
+ uv run --no-sync python docs/validar_apendices.py
+ ```
+ 
+-La opción `--data-only` omite la comprobación del documento y permite auditar los datos antes del render. El resultado se imprime en JSON. No se ejecuta inferencia ni se escriben juicios. Esta comprobación no equivale a ejecutar toda la suite experimental.
+-
+-Los validadores documentales históricos incorporan comparaciones con versiones anteriores de la memoria. No se utilizan como criterio de aceptación de este apéndice ni se alteran para adaptarlos a las memorias ya revisadas.
+-
+-El análisis de los cuatro recuperadores dentro de cada generador se puede repetir offline en un destino nuevo:
+-
+-```bash
+-RUNS=outputs/local_runs
+-FINAL="$RUNS/final_experiment_20260930"
+-DEST="$FINAL/REPLAY_NUEVO"
+-test ! -e "$DEST" || exit 1
+-uv run --no-sync python \
+-  scripts/analyze_final_experiment.py \
+-  --output-dir "$DEST"
+-```
+-
+-Para recalcular las métricas sobre los rankings congelados y aplicar el ideal global de nDCG:
+-
+-```bash
+-RUNS=outputs/local_runs
+-IR="$RUNS/explicitness_v3"
+-DEST="$RUNS/reanalisis_NUEVO"
+-test ! -e "$DEST" || exit 1
+-uv run --no-sync python scripts/evaluate_retrieval_v3.py \
+-  --run-dir "$IR" \
+-  --qrels "$IR/qrels_final_v3.jsonl" \
+-  --methods bm25,dense,rrf,rerank \
+-  --output-dir "$DEST/retrieval"
+-uv run --no-sync python scripts/paired_explicitness_v3.py \
+-  --metrics-dir "$DEST/retrieval" \
+-  --historical-metrics-dir "$IR/retrieval_metrics_v3" \
+-  --output-dir "$DEST/paired"
+-```
+-
+-Cada repetición requiere un destino que no exista. Los directorios históricos no se sobrescriben. Los manifiestos conservan hashes de las fuentes y permiten comprobar los productos. **Repetir estos análisis no ejecuta modelos, no reconstruye juicios humanos y no constituye una nueva campaña.**
+-
+-Las recetas completas y los informes de las reproducciones anteriores están en `docs/academic_corrections_reproduction_20260930.md` y junto a las salidas de `outputs/local_runs/academic_corrections_20260930/`. Los resultados sustituidos permanecen conservados.
++La ejecución por consola requiere un identificador nuevo en cada repetición. La validación específica comprueba recuentos, procedencia, integridad de las fuentes y correspondencia entre este apéndice y su PDF. La opción `--data-only` omite la comprobación documental y permite auditar los datos antes del render. Los validadores editoriales históricos de otras versiones no son el criterio de aceptación de esta entrega.
++
++**Este procedimiento reproduce el análisis de la evidencia incluida.** No vuelve a ejecutar los modelos, no reconstruye juicios humanos ni constituye una nueva campaña. Las respuestas y las decisiones de referencia permanecen congeladas.
+ 
+ ### E.3. Nueva inferencia: otra ejecución
+ 
+@@ -180,7 +180,7 @@
+ 
+ ### E.4. Trazabilidad del experimento final
+ 
+-Las rutas son relativas a la raíz del paquete. En el inventario siguiente, G designa `outputs/local_runs/generation_scaling_v3/` e I, `outputs/local_runs/explicitness_v3/`. Los hashes completos se conservan en el informe documental citado.
++Las rutas del inventario son relativas a reproduccion/. En el inventario siguiente, G designa `outputs/local_runs/generation_scaling_v3/` e I, `outputs/local_runs/explicitness_v3/`. Los hashes completos se conservan en el informe documental citado.
+ 
+ **Parejas y golden set**
+ 
+@@ -248,17 +248,28 @@
+ 
+ El pre-registro se conserva con sus diez enmiendas. Entre plan y ejecución cambiaron los generadores admitidos, el parser, el instrumento, la conducta y el número de réplicas bootstrap. El índice externo de capacidad fue aportado por el autor sin captura o exportación recuperable y no se usa como evidencia verificada ni como escala causal. Las identidades de jueces y árbitro son las registradas en ejecución, no una demostración de independencia estadística. El juez B participó en el diseño de preguntas y A comparte proveedor con el árbitro. Ambos solapes son amenazas a la validez.
+ 
+-### E.5. Corpus y render de este apéndice
+-
+-La adquisición inicial de PDF fue manual, desde las páginas oficiales. Los hashes del inventario permiten verificar los archivos de `data/raw/openstax/`. Reextraer fórmulas produciría un corpus distinto y exigiría revisar fragmentos, qrels y resultados. El corpus congelado no se regenera durante el reanálisis.
+-
+-La fotografía del entorno histórico está en `docs/render_environment_20260930.json`: R 4.6.1, dplyr 1.2.1, ggplot2 4.0.3, jsonlite 2.0.0 y knitr 1.51, junto con Quarto 1.8.25 y Typst incluido 0.13.0. Es un registro del entorno instalado, no un lock ni una prueba de instalación limpia. Este apéndice no ejecuta bloques R.
+-
+-Su PDF se genera desde la raíz del paquete con el siguiente comando. No es necesario renderizar la memoria de analista ni la de sponsor:
++### E.5. Corpus, figuras y render del apéndice
++
++La adquisición inicial de PDF fue manual, desde las páginas oficiales. Los hashes del inventario permiten verificar los archivos de data/raw/openstax/. Reextraer fórmulas produciría un corpus distinto y exigiría revisar fragmentos, qrels y resultados. El corpus congelado no se regenera durante el reanálisis.
++
++La regeneración de figuras es opcional y requiere R con dplyr, ggplot2, jsonlite, knitr y tibble. En el cuaderno 04 se activa cambiando REGENERAR_FIGURAS de False a True. También puede ejecutarse por separado:
++
++```bash
++uv run --no-sync python scripts/reproduce_figures.py \
++  --run-id tribunal_01
++```
++
++El programa extrae literalmente los once bloques R de las fuentes finales de analista y sponsor y genera diez gráficos SVG en un destino nuevo. No modifica ni renderiza ninguna memoria. No se garantiza identidad binaria de los SVG entre entornos gráficos distintos.
++
++La fotografía del entorno histórico está en docs/render_environment_20260930.json: R 4.6.1, dplyr 1.2.1, ggplot2 4.0.3, jsonlite 2.0.0 y knitr 1.51, junto con Quarto 1.8.25 y Typst incluido 0.13.0. Es un registro del entorno instalado, no un lock ni una prueba de instalación limpia. Este apéndice no ejecuta bloques R.
++
++El PDF técnico se genera desde reproduccion/ y se coloca en documentos/ con el nombre de entrega. Este comando renderiza exclusivamente el apéndice:
+ 
+ ```bash
+ DOC=tfm_v2_4_apendices_tecnicos.qmd
+-quarto render "$DOC" --to typst
+-```
+-
+-Las comprobaciones históricas de autonomía se realizaron en una copia separada sin acceso operativo a v1, ejercitando scripts, validación y render. Que un identificador contenga v1 no implica una dependencia de esa carpeta.
++PDF=tfm_apendices_tecnicos_AndresGonzalezSanchez.pdf
++quarto render "$DOC" --to typst --output "$PDF"
++mv "$PDF" ../documentos/
++```
++
++Los cinco notebooks se han comprobado en una copia reubicada, con kernels nuevos y bloqueo desde Python de la lectura de los árboles originales y de las conexiones externas. Esa guarda no equivale a aislamiento del sistema operativo ni restringe R. No se ha verificado una instalación limpia de R ni repetido inferencia. Que un identificador contenga v1 no implica una dependencia de esa carpeta.

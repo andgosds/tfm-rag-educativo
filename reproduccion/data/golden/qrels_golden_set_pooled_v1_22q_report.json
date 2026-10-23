@@ -1,0 +1,101 @@
+{
+  "added_qrel_count": 95,
+  "answerability_conflicts": [],
+  "audited_grade_0_count": 14,
+  "binary_relevance_grade": 2,
+  "final_grade_counts": {
+    "1": 47,
+    "2": 72
+  },
+  "final_qrel_count": 119,
+  "input_paths": {
+    "adjudication": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "answerability_resolutions": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/answerability_resolutions_v1_22q.json",
+    "golden_set": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/golden_set_pilot_v1.jsonl",
+    "original_qrels": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/qrels_golden_set_v1_22q.tsv"
+  },
+  "input_sha256": {
+    "adjudication": "a44f8f66cb3f802813c761c251d5ac3cee866b605be48a4d4fb39b2769187c49",
+    "answerability_resolutions": "cd70b77fa7a410aca84c5737ef4cc0588217df736039c9244bc3067658a5d190",
+    "golden_set": "869981a669d6c54390aa2c316e6941f4ec8e2f9e8a13c10d8e9b160735b022b5",
+    "original_qrels": "5c05f61567e6dcab30ee4a567febb0cbdaf93ae92baa91a8f440d1a4c1d3bcc6"
+  },
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "original_qrel_count": 24,
+  "output_qrels_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+  "output_sha256": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+  "protocol_id": "pooled_qrels_from_three_judge_risk_adjudication_v1",
+  "provenance_path": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v1/data/golden/qrels_golden_set_pooled_v1_22q_provenance.jsonl",
+  "provenance_sha256": "29cf387b1618ea4b1fc3fbd3b60777eadce4121d4bd8afa66e8e1b5d3faf4fd7",
+  "qids_with_positive_qrels": 20,
+  "qrel_count_by_qid": {
+    "q-v1-001": 8,
+    "q-v1-002": 10,
+    "q-v1-003": 12,
+    "q-v1-004": 4,
+    "q-v1-005": 6,
+    "q-v1-006": 6,
+    "q-v1-007": 1,
+    "q-v1-008": 5,
+    "q-v1-009": 6,
+    "q-v1-011": 4,
+    "q-v1-012": 6,
+    "q-v1-013": 15,
+    "q-v1-014": 4,
+    "q-v1-015": 6,
+    "q-v1-016": 7,
+    "q-v1-017": 5,
+    "q-v1-018": 1,
+    "q-v1-019": 1,
+    "q-v1-020": 7,
+    "q-v1-021": 5
+  },
+  "resolved_answerability_conflicts": [
+    {
+      "chunk_id": "openstax_intro_stats_2e:7.1:chunk-001",
+      "evidence_role": "contradiction",
+      "grade": 2,
+      "qid": "q-v1-008",
+      "resolution_id": "answerability-q-v1-008-v1"
+    },
+    {
+      "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+      "evidence_role": "contradiction",
+      "grade": 2,
+      "qid": "q-v1-008",
+      "resolution_id": "answerability-q-v1-008-v1"
+    },
+    {
+      "chunk_id": "openstax_intro_stats_2e:7.3:chunk-002",
+      "evidence_role": "contradiction",
+      "grade": 2,
+      "qid": "q-v1-008",
+      "resolution_id": "answerability-q-v1-008-v1"
+    },
+    {
+      "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+      "evidence_role": "contradiction",
+      "grade": 2,
+      "qid": "q-v1-020",
+      "resolution_id": "answerability-q-v1-020-v1"
+    },
+    {
+      "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+      "evidence_role": "contradiction",
+      "grade": 2,
+      "qid": "q-v1-020",
+      "resolution_id": "answerability-q-v1-020-v1"
+    },
+    {
+      "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+      "evidence_role": "contradiction",
+      "grade": 2,
+      "qid": "q-v1-020",
+      "resolution_id": "answerability-q-v1-020-v1"
+    }
+  ]
+}

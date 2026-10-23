@@ -1,0 +1,44 @@
+{
+  "experiment_id": "rag_rrf_vs_rerank_top5_v1_22q",
+  "judge_model": "gemma3:4b",
+  "judge_seed": 20260902,
+  "ragas_version": "0.4.3",
+  "row_count": 44,
+  "conditions": {
+    "rrf": {
+      "row_count": 22,
+      "faithfulness_n": 20,
+      "faithfulness_mean": 0.7375,
+      "factual_correctness_n": 15,
+      "factual_correctness_mean": 0.8866666666666667,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.8636363636363636,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 1.0,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 1.0,
+      "behavior_judge_score_n": 22,
+      "behavior_judge_score_mean": 1.2727272727272727,
+      "evaluation_latency_ms_total": 848810.4789760073,
+      "evaluation_latency_ms_mean": 38582.294498909425
+    },
+    "rrf_rerank": {
+      "row_count": 22,
+      "faithfulness_n": 17,
+      "faithfulness_mean": 0.6680672268907564,
+      "factual_correctness_n": 15,
+      "factual_correctness_mean": 0.9146666666666667,
+      "reported_behavior_match_n": 22,
+      "reported_behavior_match_mean": 0.9090909090909091,
+      "citation_validity_n": 22,
+      "citation_validity_mean": 1.0,
+      "citation_presence_n": 22,
+      "citation_presence_mean": 1.0,
+      "behavior_judge_score_n": 22,
+      "behavior_judge_score_mean": 1.2727272727272727,
+      "evaluation_latency_ms_total": 816273.2188860045,
+      "evaluation_latency_ms_mean": 37103.328131182025
+    }
+  },
+  "evaluation_error_count": 7
+}

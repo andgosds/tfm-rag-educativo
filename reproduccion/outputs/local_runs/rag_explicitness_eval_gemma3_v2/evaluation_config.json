@@ -1,0 +1,29 @@
+{
+  "experiment_id": "rag_explicitness_eval_gemma3_v2",
+  "source_protocol": "config/rag_ragas_experiment_v1.json",
+  "generator": "qwen3.5:9b",
+  "judge": "gemma3:4b",
+  "judge_digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+  "ragas": "0.4.3",
+  "seed": 20260902,
+  "temperature": 0,
+  "ragas_max_tokens": 1024,
+  "behavior_max_tokens": 250,
+  "behavior_rubric": "rag_behavior_rubric_v1",
+  "accepted_count": 55,
+  "generation_failures_excluded_not_scored": 1,
+  "expected_behavior_counts": {
+    "answer": 55
+  },
+  "ordering": "qid then retrieval_condition",
+  "input_sha256": "cf4436fded5d2ba2bb3c977b92b62c94667a9f0b2e8edaaaa4b167527a79fdca",
+  "smoke_repeats": 2,
+  "smoke_result": "Faithfulness=1 FactualCorrectness=1 Behavior=2 both; no errors",
+  "limitations": [
+    "local small judge is diagnostic, not human ground truth",
+    "citation membership is not semantic citation support",
+    "abstention and correction absent from this campaign; content applicability unchanged",
+    "generated abstentions under expected answer must be separately inspected",
+    "historical generator model digest unverified; sequential resumed generation"
+  ]
+}

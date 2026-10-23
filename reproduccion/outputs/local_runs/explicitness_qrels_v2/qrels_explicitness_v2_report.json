@@ -1,0 +1,126 @@
+{
+  "audited_grade_0_count": 22,
+  "binary_relevance_grade": 2,
+  "decided_units_by_grade": {
+    "0": 22,
+    "1": 122,
+    "2": 76
+  },
+  "decided_units_by_source": {
+    "blind_review": 122,
+    "reuse_book": 98
+  },
+  "decided_units_total": 220,
+  "grade_2_total": 76,
+  "input_paths": {
+    "blind_work": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/local_runs/blind_review_queue_work.jsonl",
+    "golden_set": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/data/golden/golden_set_pilot_v1_1.jsonl",
+    "pooled_qrels_v1_22q": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+    "reuse_book": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/data/golden/variants/explicitness_reuse_adjudications_v1.jsonl",
+    "technical_pool": "/home/ags/Documentos/Aprendizaje/0Master DS/ACTUAL/TFM/v2/outputs/explicitness_v2/pools/technical_pool.jsonl"
+  },
+  "input_sha256": {
+    "blind_work": "5f0f7db90a83b0bc9044fe97164c337e39866c70cf52ee54a56adbdc9c787802",
+    "golden_set": "b0c8e76c4827155910b64b5760718dcb4c216e004345312eb7235172212a3b79",
+    "pooled_qrels_v1_22q": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+    "reuse_book": "bc456601144807712145d4fde161139333d54b0be99655460d2dc5a88f092769",
+    "technical_pool": "525a4a098f93fa73b50b9cee3a801075463cc335c8a1cd167a82381c0ca0345d"
+  },
+  "lot3_downgrades_applied": [
+    {
+      "final_grade": 1,
+      "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.4:chunk-006",
+      "rule": "lote3_option_a_downgrade"
+    },
+    {
+      "final_grade": 1,
+      "pool_id": "q-v1-002__implicit::openstax_principles_ds:4.2:chunk-007",
+      "rule": "lote3_option_a_downgrade"
+    }
+  ],
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "output_qrels_path": "outputs/local_runs/explicitness_qrels_v2/qrels_explicitness_v2.tsv",
+  "output_sha256": "96c18cb03c4ef35133d683a8aff22c0f06ecbed075486ec8644dbb0ce89bb5cf",
+  "protocol_id": "explicitness_qrels_v2_from_adjudication_campaign_v1",
+  "provenance_path": "outputs/local_runs/explicitness_qrels_v2/qrels_explicitness_v2_provenance.jsonl",
+  "provenance_sha256": "e0e70b5f3d704df3f259b9aee9c6252ccbdbf5afb6c71e40e96d0a25ee844ab8",
+  "qrel_rows_by_qid": {
+    "q-v1-001__explicit": {
+      "1": 6,
+      "2": 7
+    },
+    "q-v1-001__implicit": {
+      "1": 6,
+      "2": 9
+    },
+    "q-v1-002__explicit": {
+      "1": 9,
+      "2": 4
+    },
+    "q-v1-002__implicit": {
+      "1": 12,
+      "2": 4
+    },
+    "q-v1-003__explicit": {
+      "1": 7,
+      "2": 9
+    },
+    "q-v1-003__implicit": {
+      "1": 10,
+      "2": 5
+    },
+    "q-v1-006__explicit": {
+      "1": 13,
+      "2": 3
+    },
+    "q-v1-006__implicit": {
+      "1": 12,
+      "2": 4
+    },
+    "q-v1-012__explicit": {
+      "1": 10,
+      "2": 6
+    },
+    "q-v1-012__implicit": {
+      "1": 10,
+      "2": 5
+    },
+    "q-v1-014__explicit": {
+      "1": 8,
+      "2": 4
+    },
+    "q-v1-014__implicit": {
+      "1": 8,
+      "2": 3
+    },
+    "q-v1-016__explicit": {
+      "1": 6,
+      "2": 7
+    },
+    "q-v1-016__implicit": {
+      "1": 5,
+      "2": 6
+    }
+  },
+  "qrel_rows_total": 198,
+  "variant_qids": [
+    "q-v1-001__explicit",
+    "q-v1-001__implicit",
+    "q-v1-002__explicit",
+    "q-v1-002__implicit",
+    "q-v1-003__explicit",
+    "q-v1-003__implicit",
+    "q-v1-006__explicit",
+    "q-v1-006__implicit",
+    "q-v1-012__explicit",
+    "q-v1-012__implicit",
+    "q-v1-014__explicit",
+    "q-v1-014__implicit",
+    "q-v1-016__explicit",
+    "q-v1-016__implicit"
+  ]
+}

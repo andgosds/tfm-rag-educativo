@@ -1,0 +1,110 @@
+{
+  "execution_date": "2026-10-23T13:18:31.770311+00:00",
+  "scope": "Technical appendix E and its validation only",
+  "pdf": "documentos/tfm_apendices_tecnicos_AndresGonzalezSanchez.pdf",
+  "source": "reproduccion/tfm_v2_4_apendices_tecnicos.qmd",
+  "pages": 9,
+  "sections_C_D_unchanged": true,
+  "tables_unchanged": true,
+  "new_inference_recipes_unchanged": true,
+  "protected_documents_checked": 10,
+  "changed_documents": [
+    "reproduccion/tfm_v2_4_apendices_tecnicos.qmd",
+    "documentos/tfm_apendices_tecnicos_AndresGonzalezSanchez.pdf"
+  ],
+  "analyst_and_sponsor_unchanged": true,
+  "appendix_rendered": true,
+  "new_inference": false,
+  "appendix_validation": {
+    "scope": "technical_appendix_only",
+    "experiment": {
+      "accepted": 604,
+      "evaluated": 604,
+      "judge_a": 604,
+      "judge_b": 604,
+      "planned": 624,
+      "failed": 20,
+      "human_cells": 158,
+      "human_criteria": 233,
+      "acta_records": 159,
+      "convention_records": 1,
+      "consensus_cells": 446,
+      "scales": {
+        "faithfulness": [
+          0,
+          2
+        ],
+        "factual_correctness": [
+          0,
+          2
+        ],
+        "behavior_ok": [
+          0,
+          2
+        ],
+        "citations_ok": [
+          0,
+          1
+        ]
+      },
+      "criterion_denominators": {
+        "faithfulness": 604,
+        "factual_correctness": 600,
+        "behavior_ok": 604,
+        "citations_ok": 604
+      },
+      "criterion_provenance": {
+        "consenso_jueces": 2183,
+        "validacion_humana": 233
+      },
+      "full_cell_key_checked": true
+    },
+    "attempts": {
+      "accepted": 614,
+      "failed": 60
+    },
+    "base_behavior": {
+      "answer": 17,
+      "abstain": 4,
+      "grounded_correction": 5
+    },
+    "operational_files": {
+      "operational.csv": 12,
+      "operational_summary.csv": 24,
+      "operational_cells.csv": 624,
+      "paired_contrasts.csv": 72
+    },
+    "frozen_artifact_integrity": true,
+    "document_checked": true,
+    "new_inference": false,
+    "full_experimental_test_suite": false,
+    "document": {
+      "source": "tfm_v2_4_apendices_tecnicos.qmd",
+      "pdf": "tfm_apendices_tecnicos_AndresGonzalezSanchez.pdf",
+      "pdf_pages": 9,
+      "tables_checked": 2,
+      "shell_blocks_checked": 7,
+      "notebooks_checked": 5,
+      "reproduction_entrypoint": "notebooks",
+      "shell_blocks_whole_and_copyable": true,
+      "unresolved_references": [],
+      "source_sha256": "f3d9d0d05ac59cfc49aa585bb852dcd1746ffa4770bd2d0c2c241c4c159ead88",
+      "pdf_sha256": "5990bd34fcb17270bbd00051fa8605fec1f0615ed80795f62042498b10209e9e"
+    }
+  },
+  "tests": ".................................................................... [ 31%]\n.................................................................... [ 63%]\n........................................................................ [ 97%]\n......                                                                   [100%]\n214 passed, 8 subtests passed in 153.53s (0:02:33)",
+  "notebooks_passed": 5,
+  "executed_code_cells": 39,
+  "compared_csv_count": 35,
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      5,
+      6,
+      9
+    ],
+    "finding": "No clipping or overlapping content; complete shell blocks verified against the PDF text."
+  },
+  "evidence": "verification/appendix_reproducibility_revision/"
+}

@@ -1,0 +1,49 @@
+generator_model,model,retrieval_condition,criterion,n_accepted,n_in_scope,n_outside_scope,n_numeric,n_unavailable,n_common,n_numeric_excluded,unavailable_qids,numeric_excluded_qids
+gemma4:e4b,Gemma,bm25,faithfulness,48,40,8,40,0,34,6,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v1-017__explicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,dense,faithfulness,49,41,8,41,0,34,7,[],"[""q-v1-003__explicit"", ""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v3-003__implicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rrf,faithfulness,44,37,7,37,0,34,3,[],"[""q-v1-015__implicit"", ""q-v3-004__explicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rerank,faithfulness,47,39,8,39,0,34,5,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-017__explicit"", ""q-v3-003__explicit"", ""q-v3-003__implicit""]"
+gemma4:e4b,Gemma,bm25,factual_correctness,48,40,8,40,0,33,7,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v1-017__explicit"", ""q-v3-004__implicit"", ""q-v3-007__implicit""]"
+gemma4:e4b,Gemma,dense,factual_correctness,49,41,8,40,1,33,7,"[""q-v3-007__implicit""]","[""q-v1-003__explicit"", ""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v3-003__implicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rrf,factual_correctness,44,37,7,36,1,33,3,"[""q-v3-007__implicit""]","[""q-v1-015__implicit"", ""q-v3-004__explicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rerank,factual_correctness,47,39,8,39,0,33,6,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-017__explicit"", ""q-v3-003__explicit"", ""q-v3-003__implicit"", ""q-v3-007__implicit""]"
+gemma4:e4b,Gemma,bm25,behavior_ok,48,48,0,48,0,41,7,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v1-017__explicit"", ""q-v1-019__implicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,dense,behavior_ok,49,49,0,49,0,41,8,[],"[""q-v1-003__explicit"", ""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v1-019__implicit"", ""q-v3-003__implicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rrf,behavior_ok,44,44,0,44,0,41,3,[],"[""q-v1-015__implicit"", ""q-v3-004__explicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rerank,behavior_ok,47,47,0,47,0,41,6,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-017__explicit"", ""q-v1-019__implicit"", ""q-v3-003__explicit"", ""q-v3-003__implicit""]"
+gemma4:e4b,Gemma,bm25,citations_ok,48,48,0,48,0,41,7,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v1-017__explicit"", ""q-v1-019__implicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,dense,citations_ok,49,49,0,49,0,41,8,[],"[""q-v1-003__explicit"", ""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-015__explicit"", ""q-v1-015__implicit"", ""q-v1-019__implicit"", ""q-v3-003__implicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rrf,citations_ok,44,44,0,44,0,41,3,[],"[""q-v1-015__implicit"", ""q-v3-004__explicit"", ""q-v3-004__implicit""]"
+gemma4:e4b,Gemma,rerank,citations_ok,47,47,0,47,0,41,6,[],"[""q-v1-003__implicit"", ""q-v1-013__explicit"", ""q-v1-017__explicit"", ""q-v1-019__implicit"", ""q-v3-003__explicit"", ""q-v3-003__implicit""]"
+qwen3.5:4b,Qwen4,bm25,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:4b,Qwen4,dense,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:4b,Qwen4,rrf,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:4b,Qwen4,rerank,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:4b,Qwen4,bm25,factual_correctness,52,44,8,43,1,43,0,"[""q-v3-007__implicit""]",[]
+qwen3.5:4b,Qwen4,dense,factual_correctness,52,44,8,44,0,43,1,[],"[""q-v3-007__implicit""]"
+qwen3.5:4b,Qwen4,rrf,factual_correctness,52,44,8,44,0,43,1,[],"[""q-v3-007__implicit""]"
+qwen3.5:4b,Qwen4,rerank,factual_correctness,52,44,8,44,0,43,1,[],"[""q-v3-007__implicit""]"
+qwen3.5:4b,Qwen4,bm25,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,dense,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,rrf,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,rerank,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,bm25,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,dense,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,rrf,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:4b,Qwen4,rerank,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,bm25,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:9b,Qwen9,dense,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:9b,Qwen9,rrf,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:9b,Qwen9,rerank,faithfulness,52,44,8,44,0,44,0,[],[]
+qwen3.5:9b,Qwen9,bm25,factual_correctness,52,44,8,44,0,43,1,[],"[""q-v3-007__implicit""]"
+qwen3.5:9b,Qwen9,dense,factual_correctness,52,44,8,44,0,43,1,[],"[""q-v3-007__implicit""]"
+qwen3.5:9b,Qwen9,rrf,factual_correctness,52,44,8,43,1,43,0,"[""q-v3-007__implicit""]",[]
+qwen3.5:9b,Qwen9,rerank,factual_correctness,52,44,8,44,0,43,1,[],"[""q-v3-007__implicit""]"
+qwen3.5:9b,Qwen9,bm25,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,dense,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,rrf,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,rerank,behavior_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,bm25,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,dense,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,rrf,citations_ok,52,52,0,52,0,52,0,[],[]
+qwen3.5:9b,Qwen9,rerank,citations_ok,52,52,0,52,0,52,0,[],[]

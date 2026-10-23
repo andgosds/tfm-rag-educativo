@@ -1,0 +1,190 @@
+{
+  "counts": {
+    "total_rows": 55,
+    "reviewed_human": 16,
+    "primary_judge_retained": 39,
+    "by_decision_group": {
+      "auto": 39,
+      "A1": 10,
+      "B": 2,
+      "C": 3,
+      "A2": 1
+    },
+    "faithfulness_scored": 48,
+    "faithfulness_unavailable": 7,
+    "behavior_reclassified": 10,
+    "behavior_score_overridden": 0
+  },
+  "conditions": {
+    "bm25": {
+      "faithfulness": {
+        "n": 12,
+        "mean": 1.0
+      },
+      "factual_correctness": {
+        "n": 14,
+        "mean": 0.9271
+      },
+      "final_behavior_score": {
+        "n": 14,
+        "mean": 2.0
+      },
+      "citation_validity": {
+        "n": 14,
+        "mean": 1.0
+      },
+      "citation_presence": {
+        "n": 14,
+        "mean": 1.0
+      }
+    },
+    "dense": {
+      "faithfulness": {
+        "n": 13,
+        "mean": 0.9231
+      },
+      "factual_correctness": {
+        "n": 14,
+        "mean": 0.8586
+      },
+      "final_behavior_score": {
+        "n": 14,
+        "mean": 1.8571
+      },
+      "citation_validity": {
+        "n": 14,
+        "mean": 0.9286
+      },
+      "citation_presence": {
+        "n": 14,
+        "mean": 0.9286
+      }
+    },
+    "rerank": {
+      "faithfulness": {
+        "n": 11,
+        "mean": 0.9848
+      },
+      "factual_correctness": {
+        "n": 13,
+        "mean": 0.9531
+      },
+      "final_behavior_score": {
+        "n": 13,
+        "mean": 2.0
+      },
+      "citation_validity": {
+        "n": 13,
+        "mean": 1.0
+      },
+      "citation_presence": {
+        "n": 13,
+        "mean": 1.0
+      }
+    },
+    "rrf": {
+      "faithfulness": {
+        "n": 12,
+        "mean": 0.9722
+      },
+      "factual_correctness": {
+        "n": 14,
+        "mean": 0.9364
+      },
+      "final_behavior_score": {
+        "n": 14,
+        "mean": 2.0
+      },
+      "citation_validity": {
+        "n": 14,
+        "mean": 1.0
+      },
+      "citation_presence": {
+        "n": 14,
+        "mean": 1.0
+      }
+    }
+  },
+  "paired_explicitness": [
+    {
+      "retrieval_condition": "bm25",
+      "metric": "faithfulness",
+      "n_base_pairs": 5,
+      "mean_implicit_minus_explicit": 0.0
+    },
+    {
+      "retrieval_condition": "bm25",
+      "metric": "factual_correctness",
+      "n_base_pairs": 7,
+      "mean_implicit_minus_explicit": -0.0343
+    },
+    {
+      "retrieval_condition": "bm25",
+      "metric": "final_behavior_score",
+      "n_base_pairs": 7,
+      "mean_implicit_minus_explicit": 0.0
+    },
+    {
+      "retrieval_condition": "dense",
+      "metric": "faithfulness",
+      "n_base_pairs": 6,
+      "mean_implicit_minus_explicit": -0.1667
+    },
+    {
+      "retrieval_condition": "dense",
+      "metric": "factual_correctness",
+      "n_base_pairs": 7,
+      "mean_implicit_minus_explicit": -0.1314
+    },
+    {
+      "retrieval_condition": "dense",
+      "metric": "final_behavior_score",
+      "n_base_pairs": 7,
+      "mean_implicit_minus_explicit": -0.2857
+    },
+    {
+      "retrieval_condition": "rerank",
+      "metric": "faithfulness",
+      "n_base_pairs": 5,
+      "mean_implicit_minus_explicit": -0.0333
+    },
+    {
+      "retrieval_condition": "rerank",
+      "metric": "factual_correctness",
+      "n_base_pairs": 6,
+      "mean_implicit_minus_explicit": 0.055
+    },
+    {
+      "retrieval_condition": "rerank",
+      "metric": "final_behavior_score",
+      "n_base_pairs": 6,
+      "mean_implicit_minus_explicit": 0.0
+    },
+    {
+      "retrieval_condition": "rrf",
+      "metric": "faithfulness",
+      "n_base_pairs": 6,
+      "mean_implicit_minus_explicit": 0.0555
+    },
+    {
+      "retrieval_condition": "rrf",
+      "metric": "factual_correctness",
+      "n_base_pairs": 7,
+      "mean_implicit_minus_explicit": 0.0386
+    },
+    {
+      "retrieval_condition": "rrf",
+      "metric": "final_behavior_score",
+      "n_base_pairs": 7,
+      "mean_implicit_minus_explicit": 0.0
+    }
+  ],
+  "inputs": {
+    "scores_name": "scores.jsonl",
+    "scores_sha256": "0f4b01403268e82d7038a4ee99aed0b2f91276b7ecd2e730911d8d1b92aecb34"
+  },
+  "adjudications_name": "rag_adjudications_v2.jsonl",
+  "adjudications_sha256": "b2772387d9a78263ccae96bbd4f7baa7462b6840d0acc04841d69798045e1968",
+  "adjudicated_at": "2026-09-21T00:00:00+00:00",
+  "status": "human_adjudicated_not_population_estimate"
+}

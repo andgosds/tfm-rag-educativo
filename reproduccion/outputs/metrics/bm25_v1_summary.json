@@ -1,0 +1,21 @@
+{
+  "run_id": "bm25_v1",
+  "document_count": 288,
+  "query_count": 10,
+  "metric_query_count": 6,
+  "unanswerable_query_count": 4,
+  "retrieval_text_field": "retrieval_text",
+  "tokenizer": "[a-z0-9]+",
+  "k1": 1.5,
+  "b": 0.75,
+  "top_k": 10,
+  "cutoffs": [
+    5,
+    10
+  ],
+  "index_build_latency_ms": 24.932106000051135,
+  "total_query_latency_ms": 19.334780999997747,
+  "mean_query_latency_ms": 1.9334780999997747,
+  "vocabulary_size": 3578,
+  "corpus_token_count": 88093
+}

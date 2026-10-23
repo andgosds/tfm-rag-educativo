@@ -1,0 +1,76 @@
+{
+  "scope": "technical_appendix_only",
+  "experiment": {
+    "accepted": 604,
+    "evaluated": 604,
+    "judge_a": 604,
+    "judge_b": 604,
+    "planned": 624,
+    "failed": 20,
+    "human_cells": 158,
+    "human_criteria": 233,
+    "acta_records": 159,
+    "convention_records": 1,
+    "consensus_cells": 446,
+    "scales": {
+      "faithfulness": [
+        0,
+        2
+      ],
+      "factual_correctness": [
+        0,
+        2
+      ],
+      "behavior_ok": [
+        0,
+        2
+      ],
+      "citations_ok": [
+        0,
+        1
+      ]
+    },
+    "criterion_denominators": {
+      "faithfulness": 604,
+      "factual_correctness": 600,
+      "behavior_ok": 604,
+      "citations_ok": 604
+    },
+    "criterion_provenance": {
+      "consenso_jueces": 2183,
+      "validacion_humana": 233
+    },
+    "full_cell_key_checked": true
+  },
+  "attempts": {
+    "accepted": 614,
+    "failed": 60
+  },
+  "base_behavior": {
+    "answer": 17,
+    "abstain": 4,
+    "grounded_correction": 5
+  },
+  "operational_files": {
+    "operational.csv": 12,
+    "operational_summary.csv": 24,
+    "operational_cells.csv": 624,
+    "paired_contrasts.csv": 72
+  },
+  "frozen_artifact_integrity": true,
+  "document_checked": true,
+  "new_inference": false,
+  "full_experimental_test_suite": false,
+  "document": {
+    "source": "tfm_v2_4_apendices_tecnicos.qmd",
+    "pdf": "tfm_v2_4_apendices_tecnicos.pdf",
+    "pdf_pages": 9,
+    "tables_checked": 2,
+    "shell_blocks_checked": 6,
+    "shell_blocks_whole_and_copyable": true,
+    "unresolved_references": [],
+    "source_sha256": "fbdf8d3dcf39bff3f226e40b807e14d6c2530d34b3f536971ea1ecf4c1c2d01a",
+    "pdf_sha256": "cbfa089b0f183553c029e9bae0ea539e8e3c56a6fbbb1eb790d682ccc0b9bffe"
+  }
+}
+

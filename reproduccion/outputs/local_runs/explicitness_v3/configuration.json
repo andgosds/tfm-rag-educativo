@@ -1,0 +1,55 @@
+{
+  "campaign": "explicitness_v3",
+  "mode": "retrieval_only",
+  "paths": {
+    "pairs": "data/golden/variants/explicitness_pairs_v3_all26.jsonl",
+    "chunks": "data/processed/chunks_v1.jsonl",
+    "prior": "data/golden/pool_bm25_dense_v1_22q.jsonl",
+    "golden": "data/golden/golden_set_pilot_v1_1.jsonl",
+    "human": "data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+  },
+  "input_sha256": {
+    "data/golden/variants/explicitness_pairs_v3_all26.jsonl": "e8a32a6a598ad5ff98b6b764a1ede2b2c3c22d62a9dc99c724dfd721340e8f17",
+    "data/processed/chunks_v1.jsonl": "19a5d50c97d501f021f4c461f2bbbed5b47b89cbc0486bbadf53087b5e05ac4a",
+    "data/golden/pool_bm25_dense_v1_22q.jsonl": "092c45694d614b7a31f85a794d331cc2e349c8e64c277361b856630ad261c6eb",
+    "data/golden/golden_set_pilot_v1_1.jsonl": "da9bf5f0a259c8e9bc84be8d7231985048161283517d42a731e2d7a751c994d3",
+    "data/golden/pool_human_priority_three_judge_v1_22q.jsonl": "a44f8f66cb3f802813c761c251d5ac3cee866b605be48a4d4fb39b2769187c49"
+  },
+  "top_k": 10,
+  "fusion_depth": 10,
+  "k0": 60,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "dense_model": "intfloat/e5-base-v2",
+  "dense_revision": "f52bf8ec8c7124536f0efb74aca902b2995e5bcd",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L6-v2",
+  "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "device": "cuda",
+  "batch_size": 16,
+  "max_seq_length": 512,
+  "dtype": "float32",
+  "document_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "normalize_embeddings": true,
+  "search": "exact_numpy_dot_product",
+  "indexed_field": "retrieval_text",
+  "tie_break": "score_descending_then_chunk_id_ascending",
+  "seed": 0,
+  "generation": false,
+  "paid_api_calls": false,
+  "metrics": false,
+  "final_qrels_ready": false,
+  "model_access": "local_files_only_offline",
+  "implementation_sha256": {
+    "scripts/explicitness_campaign_v3.py": "e8a43c0c064afb5f55d34f1d1eef6a0a17c5242c829dc2cdf708bef08e1dd393",
+    "scripts/run_bm25.py": "93989720eb19348989a3a1a15f2c6f0b4d2a6eabb7afaf9d45df6065a7d79ce8",
+    "scripts/run_dense.py": "a0a630f12d65965ace02f77a6dc0a800ca54f9ef0f02f3a1c8fc1293c2855457",
+    "scripts/run_hybrid_rrf.py": "412b62f008c5b154be6a9e5cbc36c579d4af5c51c8f34e01858905bf12a4ba4b",
+    "scripts/run_reranker.py": "e28b6cc9e920bacefb64b85adb331c450be4bbfc1e0fe78fd324155bba4328a6",
+    "scripts/explicitness_campaign.py": "061319b04afdff68567f10444b6fd5639576e18d7d376a266a829cee75ec7497"
+  },
+  "environment_sha256": {
+    "environments/dense/pyproject.toml": "e3b82e43e155b3382a9816ba9e44c02f400c537c14296d5fabd0716eda79c3b8",
+    "environments/dense/uv.lock": "f082efc815e88a8bc03ec4b01e52cca7d90af0d16ee42d708f45440ac8e33c9d"
+  }
+}

@@ -1,0 +1,2670 @@
+{
+ "scope": "Adjudication workspace for the v2 explicitness campaign: grade-0 assistant confirmations and grade-1/2 reuse proposals, all pending explicit human confirmation before any qrels v2 are built.",
+ "adjudications": [
+  {
+   "pool_id": "q-v1-001__explicit::openstax_principles_ds:4.1:chunk-016",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-016",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "La unidad es un ejercicio sobre proporción de fumadores; no aporta nada necesario para la distribución de medias, ni cambia con la premisa implícita.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_principles_ds:4.1:chunk-016",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-016",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "La unidad es un ejercicio sobre proporción de fumadores; no aporta nada necesario para la distribución de medias, ni cambia con la premisa implícita.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_intro_stats_2e:8.6:chunk-001",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.6:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "Esqueleto de laboratorio con instrucciones para el estudiante; no contiene el mecanismo ni la dirección del efecto, ni siquiera como contexto necesario.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__explicit::openstax_principles_ds:4.1:chunk-020",
+   "qid": "q-v1-014__explicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "explicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-020",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "Bootstrapping y requisito de tamaño muestral; sin relación con cuartiles, IQR ni bandas de atípicos. Sin cambio entre formulaciones.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__implicit::openstax_intro_stats_2e:7.intro:chunk-002",
+   "qid": "q-v1-014__implicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "implicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?",
+   "chunk_id": "openstax_intro_stats_2e:7.intro:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "Bootstrapping y requisito de tamaño muestral; sin relación con cuartiles, IQR ni bandas de atípicos. Sin cambio entre formulaciones.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__implicit::openstax_principles_ds:4.1:chunk-020",
+   "qid": "q-v1-014__implicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "implicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-020",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "Bootstrapping y requisito de tamaño muestral; sin relación con cuartiles, IQR ni bandas de atípicos. Sin cambio entre formulaciones.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_intro_stats_2e:8.6:chunk-003",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_intro_stats_2e:8.6:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_grade_0",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Confirma el grado 0 propuesto por el asistente tras revision delegada."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:26:02.982910+00:00",
+    "grade": 0,
+    "canonical": false,
+    "rationale": "Aparece la palabra count como instrucción del ejercicio; no hay definición ni pieza de la respuesta sobre variables discretas/continuas.",
+    "historical_grade": 0,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl",
+    "historical_reviewer": "andres",
+    "historical_decision_preserved_verbatim": true,
+    "equivalence_assessment": "relevant_identical_risk-free"
+   }
+  }
+ ],
+ "grade_1_2_proposals": [
+  {
+   "pool_id": "q-v1-001__explicit::openstax_intro_stats_2e:7.1:chunk-002",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_intro_stats_2e:7.1:chunk-003",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_intro_stats_2e:7.1:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_intro_stats_2e:7.1:chunk-006",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_intro_stats_2e:7.1:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_intro_stats_2e:7.intro:chunk-002",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_intro_stats_2e:7.intro:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_intro_stats_2e:8.1:chunk-011",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_intro_stats_2e:8.2:chunk-002",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_intro_stats_2e:8.2:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_principles_ds:4.1:chunk-006",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__explicit::openstax_principles_ds:4.1:chunk-017",
+   "qid": "q-v1-001__explicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "explicit",
+   "question": "How does increasing the sample size affect the sampling distribution of the sample mean?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-017",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_intro_stats_2e:7.1:chunk-002",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_intro_stats_2e:7.1:chunk-003",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_intro_stats_2e:7.1:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_intro_stats_2e:7.1:chunk-006",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_intro_stats_2e:7.1:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_intro_stats_2e:7.intro:chunk-002",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_intro_stats_2e:7.intro:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_intro_stats_2e:8.1:chunk-011",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_intro_stats_2e:8.2:chunk-002",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_intro_stats_2e:8.2:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_principles_ds:4.1:chunk-006",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-001__implicit::openstax_principles_ds:4.1:chunk-017",
+   "qid": "q-v1-001__implicit",
+   "base_qid": "q-v1-001",
+   "explicitness": "implicit",
+   "question": "How does increasing the sample size affect the distribution of the averages obtained by repeatedly drawing samples of that size?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-017",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:41:36.841006+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa (incluye unidades de IC ya generosas en el original)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.1:chunk-001",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.1:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.2:chunk-001",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.2:chunk-002",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.2:chunk-003",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.2:chunk-004",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-004",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.3:chunk-001",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.3:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.4:chunk-006",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.4:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.5:chunk-005",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_intro_stats_2e:9.5:chunk-015",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-015",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__explicit::openstax_principles_ds:4.2:chunk-007",
+   "qid": "q-v1-002__explicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "explicit",
+   "question": "How do Type I and Type II errors differ in terms of the truth of the null hypothesis and the decision made?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-007",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.1:chunk-001",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.1:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.2:chunk-001",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.2:chunk-002",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.2:chunk-003",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.2:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.3:chunk-001",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.3:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.4:chunk-006",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.4:chunk-006",
+   "reuse_status": "confirmed_with_adjustment",
+   "human_decision": {
+    "decision": "reuse_with_grade_adjustment",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: se conserva como contexto (grado 1) para la formulacion implicita; sin rol de respuesta."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.5:chunk-005",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 2,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_intro_stats_2e:9.5:chunk-015",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-015",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-002__implicit::openstax_principles_ds:4.2:chunk-007",
+   "qid": "q-v1-002__implicit",
+   "base_qid": "q-v1-002",
+   "explicitness": "implicit",
+   "question": "In hypothesis testing, what are the two ways a decision about the null hypothesis can be wrong, considering whether that hypothesis is actually true or false?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-007",
+   "reuse_status": "confirmed_with_adjustment",
+   "human_decision": {
+    "decision": "reuse_with_grade_adjustment",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:36:01.699215+00:00",
+    "final_grade": 1,
+    "scope": "Opcion A: se conserva como contexto (grado 1) para la formulacion implicita; sin rol de respuesta."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_intro_stats_2e:9.5:chunk-016",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-016",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_intro_stats_2e:9.5:chunk-021",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-021",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_intro_stats_2e:9.5:chunk-022",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_intro_stats_2e:9.5:chunk-022",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_intro_stats_2e:9.intro:chunk-002",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_intro_stats_2e:9.intro:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-001",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-002",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-003",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-010",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-021",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-021",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-023",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-023",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-024",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-024",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__explicit::openstax_principles_ds:4.2:chunk-035",
+   "qid": "q-v1-003__explicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "explicit",
+   "question": "What sequence of steps should be followed to conduct a hypothesis test?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-035",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__implicit::openstax_principles_ds:4.2:chunk-002",
+   "qid": "q-v1-003__implicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "implicit",
+   "question": "What sequence of steps should be followed to evaluate a claim about a population using sample data?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 1,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__implicit::openstax_principles_ds:4.2:chunk-003",
+   "qid": "q-v1-003__implicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "implicit",
+   "question": "What sequence of steps should be followed to evaluate a claim about a population using sample data?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__implicit::openstax_principles_ds:4.2:chunk-023",
+   "qid": "q-v1-003__implicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "implicit",
+   "question": "What sequence of steps should be followed to evaluate a claim about a population using sample data?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-023",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-003__implicit::openstax_principles_ds:4.2:chunk-024",
+   "qid": "q-v1-003__implicit",
+   "base_qid": "q-v1-003",
+   "explicitness": "implicit",
+   "question": "What sequence of steps should be followed to evaluate a claim about a population using sample data?",
+   "chunk_id": "openstax_principles_ds:4.2:chunk-024",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_intro_stats_2e:8.1:chunk-002",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_intro_stats_2e:8.1:chunk-010",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_intro_stats_2e:8.1:chunk-011",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_intro_stats_2e:8.3:chunk-002",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.3:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_intro_stats_2e:8.3:chunk-005",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.3:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__explicit::openstax_principles_ds:4.1:chunk-010",
+   "qid": "q-v1-006__explicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "explicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the confidence interval, and why?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__implicit::openstax_intro_stats_2e:8.1:chunk-002",
+   "qid": "q-v1-006__implicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "implicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the range estimated from sample data for a population parameter, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 1,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__implicit::openstax_intro_stats_2e:8.1:chunk-010",
+   "qid": "q-v1-006__implicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "implicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the range estimated from sample data for a population parameter, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__implicit::openstax_intro_stats_2e:8.1:chunk-011",
+   "qid": "q-v1-006__implicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "implicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the range estimated from sample data for a population parameter, and why?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-006__implicit::openstax_principles_ds:4.1:chunk-010",
+   "qid": "q-v1-006__implicit",
+   "base_qid": "q-v1-006",
+   "explicitness": "implicit",
+   "question": "If all other inputs remain unchanged, how does increasing the confidence level from 90% to 95% affect the width of the range estimated from sample data for a population parameter, and why?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__explicit::openstax_intro_stats_2e:8.1:chunk-010",
+   "qid": "q-v1-012__explicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "explicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__explicit::openstax_intro_stats_2e:8.1:chunk-011",
+   "qid": "q-v1-012__explicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "explicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__explicit::openstax_intro_stats_2e:8.1:chunk-012",
+   "qid": "q-v1-012__explicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "explicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__explicit::openstax_intro_stats_2e:8.5:chunk-001",
+   "qid": "q-v1-012__explicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "explicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+   "chunk_id": "openstax_intro_stats_2e:8.5:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__explicit::openstax_principles_ds:4.1:chunk-010",
+   "qid": "q-v1-012__explicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "explicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__explicit::openstax_principles_ds:4.1:chunk-011",
+   "qid": "q-v1-012__explicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "explicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of a confidence interval?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__implicit::openstax_intro_stats_2e:8.1:chunk-011",
+   "qid": "q-v1-012__implicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "implicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:43:11.928896+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (parafrasis de confidence interval)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__implicit::openstax_intro_stats_2e:8.1:chunk-012",
+   "qid": "q-v1-012__implicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "implicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?",
+   "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:43:11.928896+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (parafrasis de confidence interval)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__implicit::openstax_intro_stats_2e:8.5:chunk-001",
+   "qid": "q-v1-012__implicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "implicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?",
+   "chunk_id": "openstax_intro_stats_2e:8.5:chunk-001",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:43:11.928896+00:00",
+    "final_grade": 1,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (parafrasis de confidence interval)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__implicit::openstax_principles_ds:4.1:chunk-010",
+   "qid": "q-v1-012__implicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "implicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:43:11.928896+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (parafrasis de confidence interval)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-012__implicit::openstax_principles_ds:4.1:chunk-011",
+   "qid": "q-v1-012__implicit",
+   "base_qid": "q-v1-012",
+   "explicitness": "implicit",
+   "question": "With confidence level and population variability held constant, how does a larger sample affect the error bound and the width of the range estimated from sample data for a population parameter?",
+   "chunk_id": "openstax_principles_ds:4.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:43:11.928896+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (parafrasis de confidence interval)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__explicit::openstax_principles_ds:3.1:chunk-011",
+   "qid": "q-v1-014__explicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "explicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 1,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__explicit::openstax_principles_ds:3.3:chunk-004",
+   "qid": "q-v1-014__explicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "explicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.3:chunk-004",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__explicit::openstax_principles_ds:3.3:chunk-005",
+   "qid": "q-v1-014__explicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "explicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.3:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__explicit::openstax_principles_ds:3.3:chunk-006",
+   "qid": "q-v1-014__explicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "explicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the interquartile range of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.3:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:46:35.099671+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion final lote 3: reutilizacion del grado historico en formulacion alternativa."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__implicit::openstax_principles_ds:3.1:chunk-011",
+   "qid": "q-v1-014__implicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "implicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__implicit::openstax_principles_ds:3.3:chunk-004",
+   "qid": "q-v1-014__implicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "implicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.3:chunk-004",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-014__implicit::openstax_principles_ds:3.3:chunk-005",
+   "qid": "q-v1-014__implicit",
+   "base_qid": "q-v1-014",
+   "explicitness": "implicit",
+   "question": "What sequence should be followed to flag unusually low or high observations using the middle 50% of an ordered dataset?",
+   "chunk_id": "openstax_principles_ds:3.3:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__explicit::openstax_principles_ds:3.5:chunk-002",
+   "qid": "q-v1-016__explicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "explicit",
+   "question": "How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:44:27.869419+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (paraphrasis fuerte count-based/measurement-based)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__explicit::openstax_principles_ds:3.5:chunk-003",
+   "qid": "q-v1-016__explicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "explicit",
+   "question": "How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:44:27.869419+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (paraphrasis fuerte count-based/measurement-based)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__explicit::openstax_principles_ds:3.5:chunk-005",
+   "qid": "q-v1-016__explicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "explicit",
+   "question": "How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:44:27.869419+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (paraphrasis fuerte count-based/measurement-based)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__explicit::openstax_principles_ds:3.5:chunk-006",
+   "qid": "q-v1-016__explicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "explicit",
+   "question": "How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:44:27.869419+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (paraphrasis fuerte count-based/measurement-based)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__explicit::openstax_principles_ds:3.5:chunk-007",
+   "qid": "q-v1-016__explicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "explicit",
+   "question": "How do discrete random variables associated with counting differ from continuous random variables associated with measurement in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-007",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "decided_at": "2026-09-21T09:44:27.869419+00:00",
+    "final_grade": 2,
+    "scope": "Confirmacion: reutilizacion del grado historico en formulacion alternativa (paraphrasis fuerte count-based/measurement-based)."
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "alt",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación alternativa; equivalencia informativa por confirmar unidad a unidad.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-002",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-002",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-003",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-003",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/golden_set_pilot_v1.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-005",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-005",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-006",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-006",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-007",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-007",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-008",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-008",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 2
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 2,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  },
+  {
+   "pool_id": "q-v1-016__implicit::openstax_principles_ds:3.5:chunk-009",
+   "qid": "q-v1-016__implicit",
+   "base_qid": "q-v1-016",
+   "explicitness": "implicit",
+   "question": "How do count-based outcomes differ from measurement-based outcomes in the kinds of numerical values they can take?",
+   "chunk_id": "openstax_principles_ds:3.5:chunk-009",
+   "reuse_status": "confirmed",
+   "human_decision": {
+    "decision": "confirm_reuse",
+    "reviewer": "andres",
+    "confirmed_at": "2026-09-19T10:32:27.681670+00:00",
+    "scope": "Reutilizacion directa en formula identica a la adjudicada historicamente.",
+    "final_grade": 1
+   },
+   "assistant_review": {
+    "reviewer": "hermes-assistant",
+    "mode": "delegated_by_user",
+    "reviewed_at": "2026-09-19T10:29:52.045398+00:00",
+    "group": "same",
+    "historical_grade": 1,
+    "proposed_action": "reuse_pending_confirmation",
+    "rationale": "Formulación idéntica a la original adjudicada; reutilización directa razonable.",
+    "equivalence_confirmed": true,
+    "historical_source": "v1/data/golden/pool_human_priority_three_judge_v1_22q.jsonl"
+   }
+  }
+ ],
+ "confirmations": {
+  "grade0_confirmed": 7,
+  "same_formulation_reuse_confirmed": 52,
+  "alternative_formulation_reuse_confirmed": 39,
+  "alternative_formulation_pending": 0,
+  "total_reuse_units": 98,
+  "confirmed_at": "2026-09-21T09:47:06.660359+00:00",
+  "by": "andres",
+  "note": "Lote 3 cerrado el 2026-09-21 en revision guiada por pregunta base. Opcion A en q-v1-002 (2 unidades conservan grado 1 como contexto, decision reuse_with_grade_adjustment). Decisiones de detalle en human_decision de cada unidad."
+ }
+}

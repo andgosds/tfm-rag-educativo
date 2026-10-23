@@ -1,0 +1,365 @@
+{
+  "scripts_checked": 51,
+  "functions_documented": 393,
+  "new_docstrings": 323,
+  "all_functional_asts_unchanged": true,
+  "files": [
+    {
+      "script": "analysis_capacity_v3.py",
+      "functions": 19,
+      "added_docstrings": 4,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "analyze_final_experiment.py",
+      "functions": 7,
+      "added_docstrings": 1,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "analyze_rag_human_adjudication.py",
+      "functions": 8,
+      "added_docstrings": 8,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "analyze_rag_results.py",
+      "functions": 9,
+      "added_docstrings": 8,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "arbitrate_rag_discrepancies_v3.py",
+      "functions": 7,
+      "added_docstrings": 4,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "benchmark_retrieval_latency.py",
+      "functions": 11,
+      "added_docstrings": 11,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_arbitration_blind_v3.py",
+      "functions": 1,
+      "added_docstrings": 1,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_chunks.py",
+      "functions": 16,
+      "added_docstrings": 9,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_expansion_v3_golden.py",
+      "functions": 3,
+      "added_docstrings": 1,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_explicitness_qrels.py",
+      "functions": 8,
+      "added_docstrings": 6,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_generation_golden_v3.py",
+      "functions": 3,
+      "added_docstrings": 3,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_pooled_qrels.py",
+      "functions": 10,
+      "added_docstrings": 10,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_premise_batches_v3.py",
+      "functions": 2,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_qrels_batches_v3.py",
+      "functions": 2,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_qrels_final_v3.py",
+      "functions": 3,
+      "added_docstrings": 3,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_rag_judge_risk_queue.py",
+      "functions": 9,
+      "added_docstrings": 9,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "build_three_judge_priority.py",
+      "functions": 7,
+      "added_docstrings": 7,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "check_equivalence_rubric.py",
+      "functions": 6,
+      "added_docstrings": 4,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "collapse_blind_queue_v3.py",
+      "functions": 5,
+      "added_docstrings": 4,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "compare_pooled_retrieval.py",
+      "functions": 7,
+      "added_docstrings": 7,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "compare_rag_judges.py",
+      "functions": 8,
+      "added_docstrings": 8,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "consolidate_rag_adjudication.py",
+      "functions": 9,
+      "added_docstrings": 8,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "consolidate_rag_behavior.py",
+      "functions": 7,
+      "added_docstrings": 7,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "contrast_qrels_v3.py",
+      "functions": 3,
+      "added_docstrings": 3,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "contraste_jueces_v3.py",
+      "functions": 3,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "evaluate_rag.py",
+      "functions": 16,
+      "added_docstrings": 16,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "evaluate_rag_remote_v3.py",
+      "functions": 4,
+      "added_docstrings": 3,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "evaluate_retrieval_v3.py",
+      "functions": 6,
+      "added_docstrings": 5,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "explicitness_blind_review_app.py",
+      "functions": 16,
+      "added_docstrings": 14,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "explicitness_campaign.py",
+      "functions": 10,
+      "added_docstrings": 10,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "explicitness_campaign_v3.py",
+      "functions": 8,
+      "added_docstrings": 8,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "explicitness_paired_metrics.py",
+      "functions": 11,
+      "added_docstrings": 7,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "extract_openstax_chapters.py",
+      "functions": 8,
+      "added_docstrings": 0,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "output_safety.py",
+      "functions": 2,
+      "added_docstrings": 1,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "paired_explicitness_v3.py",
+      "functions": 6,
+      "added_docstrings": 3,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "pool_review_app.py",
+      "functions": 15,
+      "added_docstrings": 15,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "probe_generator_contract.py",
+      "functions": 2,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "rag_review_app.py",
+      "functions": 16,
+      "added_docstrings": 16,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "reproduce_figures.py",
+      "functions": 2,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "reproduce_offline.py",
+      "functions": 2,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_arbitration_v3.py",
+      "functions": 2,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_bm25.py",
+      "functions": 14,
+      "added_docstrings": 14,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_dense.py",
+      "functions": 10,
+      "added_docstrings": 10,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_hybrid_rrf.py",
+      "functions": 8,
+      "added_docstrings": 8,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_qrels_judges_v3.py",
+      "functions": 3,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_rag_generation.py",
+      "functions": 13,
+      "added_docstrings": 13,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "run_reranker.py",
+      "functions": 9,
+      "added_docstrings": 9,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "triage_qrels_v3.py",
+      "functions": 3,
+      "added_docstrings": 2,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "validate_final_results.py",
+      "functions": 4,
+      "added_docstrings": 4,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "validate_golden_set.py",
+      "functions": 5,
+      "added_docstrings": 5,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    },
+    {
+      "script": "validate_tfm_closure.py",
+      "functions": 25,
+      "added_docstrings": 18,
+      "functional_ast_unchanged": true,
+      "syntax_valid": true
+    }
+  ]
+}

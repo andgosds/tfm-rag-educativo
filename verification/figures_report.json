@@ -1,0 +1,24 @@
+{
+  "documents_changed": false,
+  "documents_rendered": false,
+  "r_chunks_executed": 11,
+  "svg_count": 10,
+  "source_sha256": {
+    "tfm_v2_4.qmd": "65bbac361b8823e13b12427a41f1067d438b2b602bb6a3f1b99bd4088a5acc68",
+    "tfm_v2_4_sponsor.qmd": "e94f06d1b3c9f19eb77540d77d544804bb43f4d527de714cc9de420b611bfd6c"
+  },
+  "output": "outputs/local_runs/final_experiment_20260930/REPLAY_figures_standalone_01",
+  "svg_files": [
+    "fig-chunks-capitulo.svg",
+    "fig-longitud-chunks.svg",
+    "fig-recuperacion-cortes.svg",
+    "fig-recuperadores-contenido.svg",
+    "fig-diferencias-emparejadas.svg",
+    "fig-capacidad.svg",
+    "fig-tiempo-generacion.svg",
+    "fig-completitud-final.svg",
+    "fig-sponsor-recuperacion.svg",
+    "fig-sponsor-calidad.svg"
+  ],
+  "note": "Original plotting code and its assertions executed; SVG byte identity is not asserted across graphics environments."
+}

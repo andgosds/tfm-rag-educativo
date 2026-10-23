@@ -1,0 +1,155 @@
+[
+  {
+    "qid": "q-v1-001",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_intro_stats_2e:7.1:chunk-002",
+        "rank": 6
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-002",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_intro_stats_2e:9.2:chunk-001",
+        "rank": 1
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-003",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:4.2:chunk-003",
+        "rank": 4
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-004",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:3.1:chunk-008",
+        "rank": 6
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-005",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:4.3:chunk-006",
+        "rank": 6
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-006",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:4.1:chunk-010",
+        "rank": 6
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-011",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_intro_stats_2e:6.1:chunk-002",
+        "rank": 3
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-012",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_intro_stats_2e:8.1:chunk-011",
+        "rank": 8
+      },
+      {
+        "chunk_id": "openstax_intro_stats_2e:8.1:chunk-012",
+        "rank": 12
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-013",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_intro_stats_2e:8.1:chunk-001",
+        "rank": 16
+      },
+      {
+        "chunk_id": "openstax_intro_stats_2e:8.2:chunk-003",
+        "rank": 4
+      },
+      {
+        "chunk_id": "openstax_intro_stats_2e:8.1:chunk-002",
+        "rank": 37
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-014",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:3.3:chunk-004",
+        "rank": 3
+      },
+      {
+        "chunk_id": "openstax_principles_ds:3.3:chunk-005",
+        "rank": 1
+      },
+      {
+        "chunk_id": "openstax_principles_ds:3.3:chunk-006",
+        "rank": 14
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-015",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:3.1:chunk-005",
+        "rank": 8
+      },
+      {
+        "chunk_id": "openstax_principles_ds:3.1:chunk-008",
+        "rank": 19
+      },
+      {
+        "chunk_id": "openstax_principles_ds:3.1:chunk-011",
+        "rank": 9
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-016",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:3.5:chunk-002",
+        "rank": 2
+      },
+      {
+        "chunk_id": "openstax_principles_ds:3.5:chunk-003",
+        "rank": 1
+      }
+    ]
+  },
+  {
+    "qid": "q-v1-017",
+    "grade2_ranks": [
+      {
+        "chunk_id": "openstax_principles_ds:4.4:chunk-002",
+        "rank": 2
+      },
+      {
+        "chunk_id": "openstax_principles_ds:4.4:chunk-003",
+        "rank": 3
+      }
+    ]
+  }
+]

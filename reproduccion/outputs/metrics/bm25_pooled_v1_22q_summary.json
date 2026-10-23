@@ -1,0 +1,31 @@
+{
+  "run_id": "bm25_pooled_v1_22q",
+  "document_count": 288,
+  "query_count": 22,
+  "metric_query_count": 13,
+  "unanswerable_query_count": 9,
+  "answerable_without_grade2_qrels_count": 0,
+  "qrels_source": "external_tsv",
+  "qrels_source_path": "v1/data/golden/qrels_golden_set_pooled_v1_22q.tsv",
+  "qrels_sha256": "6a5cf811fd15ddf07a6b7fb39932c6917b99f781b450b950593cafc6cc0ad871",
+  "retrieval_text_field": "retrieval_text",
+  "tokenizer": "[a-z0-9]+",
+  "k1": 1.5,
+  "b": 0.75,
+  "top_k": 10,
+  "cutoffs": [
+    5,
+    10
+  ],
+  "binary_relevance_grade": 2,
+  "ndcg_relevance_grades": [
+    0,
+    1,
+    2
+  ],
+  "index_build_latency_ms": 24.003855000046315,
+  "total_query_latency_ms": 45.5368599978101,
+  "mean_query_latency_ms": 2.069857272627732,
+  "vocabulary_size": 3578,
+  "corpus_token_count": 88093
+}

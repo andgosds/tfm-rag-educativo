@@ -1,0 +1,715 @@
+{
+  "primary_judge_for_unaudited_cases": "glm53flash_low",
+  "case_count": 88,
+  "source_counts": {
+    "human_adjudication": 61,
+    "glm53flash_low": 27
+  },
+  "by_retrieval_condition": {
+    "bm25": {
+      "n": 22,
+      "automatic_mean": 1.8636363636363635,
+      "final_mean": 1.9090909090909092,
+      "human_override_n": 17
+    },
+    "dense": {
+      "n": 22,
+      "automatic_mean": 1.9090909090909092,
+      "final_mean": 1.9090909090909092,
+      "human_override_n": 16
+    },
+    "rrf": {
+      "n": 22,
+      "automatic_mean": 1.9545454545454546,
+      "final_mean": 2.0,
+      "human_override_n": 13
+    },
+    "rrf_rerank": {
+      "n": 22,
+      "automatic_mean": 2.0,
+      "final_mean": 2.0,
+      "human_override_n": 15
+    }
+  },
+  "paired": {
+    "common_qid_count": 22,
+    "rerank_wins": 0,
+    "ties": 22,
+    "rrf_wins": 0,
+    "mean_delta_rerank_minus_rrf": 0.0
+  },
+  "all_pairwise": {
+    "bm25__vs__dense": {
+      "baseline": "bm25",
+      "contender": "dense",
+      "common_qid_count": 22,
+      "contender_wins": 2,
+      "ties": 19,
+      "baseline_wins": 1,
+      "mean_delta_contender_minus_baseline": 0.0
+    },
+    "bm25__vs__rrf": {
+      "baseline": "bm25",
+      "contender": "rrf",
+      "common_qid_count": 22,
+      "contender_wins": 2,
+      "ties": 20,
+      "baseline_wins": 0,
+      "mean_delta_contender_minus_baseline": 0.09090909090909091
+    },
+    "bm25__vs__rrf_rerank": {
+      "baseline": "bm25",
+      "contender": "rrf_rerank",
+      "common_qid_count": 22,
+      "contender_wins": 2,
+      "ties": 20,
+      "baseline_wins": 0,
+      "mean_delta_contender_minus_baseline": 0.09090909090909091
+    },
+    "dense__vs__rrf": {
+      "baseline": "dense",
+      "contender": "rrf",
+      "common_qid_count": 22,
+      "contender_wins": 1,
+      "ties": 21,
+      "baseline_wins": 0,
+      "mean_delta_contender_minus_baseline": 0.09090909090909091
+    },
+    "dense__vs__rrf_rerank": {
+      "baseline": "dense",
+      "contender": "rrf_rerank",
+      "common_qid_count": 22,
+      "contender_wins": 1,
+      "ties": 21,
+      "baseline_wins": 0,
+      "mean_delta_contender_minus_baseline": 0.09090909090909091
+    },
+    "rrf__vs__rrf_rerank": {
+      "baseline": "rrf",
+      "contender": "rrf_rerank",
+      "common_qid_count": 22,
+      "contender_wins": 0,
+      "ties": 22,
+      "baseline_wins": 0,
+      "mean_delta_contender_minus_baseline": 0.0
+    }
+  },
+  "per_case": [
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-001",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-002",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-003",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-004",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-005",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-006",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-007",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-008",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-009",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-010",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-011",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 1.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-012",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-013",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-014",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 1.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-015",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-016",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-017",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-018",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-019",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-020",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-021",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "bm25",
+      "qid": "q-v1-022",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-001",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-002",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-003",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-004",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-005",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-006",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-007",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-008",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-009",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-010",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-011",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-012",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-013",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-014",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-015",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-016",
+      "automatic_behavior_score": 0.0,
+      "final_behavior_score": 0.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-017",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-018",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-019",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-020",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-021",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "dense",
+      "qid": "q-v1-022",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-001",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-002",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-003",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-004",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-005",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-006",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-007",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-008",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-009",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-010",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-011",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-012",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-013",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-014",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-015",
+      "automatic_behavior_score": 1.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-016",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-017",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-018",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-019",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-020",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-021",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf",
+      "qid": "q-v1-022",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-001",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-002",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-003",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-004",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-005",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-006",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-007",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-008",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-009",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-010",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-011",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-012",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-013",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-014",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-015",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-016",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-017",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "glm53flash_low"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-018",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-019",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-020",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-021",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    },
+    {
+      "retrieval_condition": "rrf_rerank",
+      "qid": "q-v1-022",
+      "automatic_behavior_score": 2.0,
+      "final_behavior_score": 2.0,
+      "final_behavior_source": "human_adjudication"
+    }
+  ]
+}

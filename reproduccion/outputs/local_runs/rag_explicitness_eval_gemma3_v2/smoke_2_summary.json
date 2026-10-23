@@ -1,0 +1,31 @@
+{
+  "experiment_id": "explicitness_judge_smoke_v2",
+  "judge_provider": "ollama",
+  "judge_model": "gemma3:4b",
+  "judge_seed": 20260902,
+  "ragas_max_tokens": 1024,
+  "behavior_max_tokens": 250,
+  "judge_reasoning_effort": null,
+  "ragas_version": "0.4.3",
+  "row_count": 1,
+  "conditions": {
+    "smoke": {
+      "row_count": 1,
+      "faithfulness_n": 1,
+      "faithfulness_mean": 1.0,
+      "factual_correctness_n": 1,
+      "factual_correctness_mean": 1.0,
+      "reported_behavior_match_n": 1,
+      "reported_behavior_match_mean": 1.0,
+      "citation_validity_n": 1,
+      "citation_validity_mean": 1.0,
+      "citation_presence_n": 1,
+      "citation_presence_mean": 1.0,
+      "behavior_judge_score_n": 1,
+      "behavior_judge_score_mean": 2.0,
+      "evaluation_latency_ms_total": 47613.53869300001,
+      "evaluation_latency_ms_mean": 47613.53869300001
+    }
+  },
+  "evaluation_error_count": 0
+}
